@@ -1,0 +1,454 @@
+How-to:
+   - [Calculator](#calculator)
+   - [Create user](#user)
+   - [Change password](#passwd)
+   - [Delete package](#delete)
+   - [Allow user to execute root commands](#exec)
+   - [Find file by name](#find)
+   - [Kill the tty](#tty-kill)
+   - [Lock Screen](#lock)
+   - [Mount USB](#mount)
+   - [Open console](#console)
+   - [Set environment variable](#envvar)
+   - [Switch language hotkey](#lang)
+   - [Take screenshot](#screenshot)
+   - [View computer resources](#resources)
+   - [View screen resolution](#resolution)
+   - [Who is logged in](#who)
+
+---
+### <a name="calculator" />Calculator
+
+```shell
+gnome-calculator &> /dev/null
+```
+
+---
+### <a name="user" />Create user
+
+   * Create user with GUI
+
+Press `<Super>` (`<Win>`) key and type *Users*.
+Users and groups window with *Users Settings* will open
+
+![Users Settings window](data/2018.12.05_users_settings.png)
+
+Click *Add* button to add new user.
+
+   * Create user via console
+
+Press `<Ctrl>+<Alt>+<T>` and open console window.
+
+```shell
+# Show list of all users
+cat /etc/passwd
+# or
+cut -d: -f1 /etc/passwd
+
+# Show list of all goups
+cat /etc/group
+
+# To create user with questions, directory and sceleton files
+sudo adduser username
+# Create and add user to the group
+sudo adduser username groupname
+# or without questions, dir and files (not recommended)
+#sudo useradd username
+
+# To delete user
+sudo deluser username
+# or (not recommended)
+#sudo userdel username
+# Delete directory
+#sudo rm -r /home/username  # use with caution!
+
+# Change user name
+usermod -l new_username old_username
+
+# Change user password
+sudo passwd username
+
+# Change shell for a user
+sudo chsh username
+
+# Change user detailes (name, phone, etc.)
+sudo chfn username
+
+# Create group
+sudo addgroup groupname
+# Add existing user to the group
+sudo usermod -a -G groupname username
+```
+
+---
+### <a name="passwd" />Change password
+
+*Change Password from GUI*
+
+Click the system menu at the top right corner,
+select your user name and click on *Account Settings* menu.
+
+![Account Settings menu](data/2018.12.03_account_settings.png)
+
+*Users* window will open.
+
+![Account Settings window](data/2018.12.03_users.png)
+
+On the *Users* window select *Password*. 
+
+![Account Settings window](data/2018.12.03_change_passwd.png)
+
+Enter current password. Enter new password, verify new password once again
+and click on *Change* button.
+
+*Change Password from Command Line*
+
+[Open console](#console) and enter `passwd`.
+Type current password, type new password and retype new password. 
+
+```shell
+passwd
+Changing password for lab225.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+lab225@deeplab3:~$
+
+# To change other users password
+sudo passwd username
+```
+
+---
+### <a name="delete" />Delete package
+
+```shell
+# Remove package
+sudo apt remove packagename
+# Remove user data and configuration files
+sudo apt purge packagename
+
+# Remove unused dependences
+sudo apt autoremove
+# Clean
+sudo apt clean
+
+# Or do this
+sudo apt purge --auto-remove packagename
+```
+
+---
+### <a name="exec" />Allow user to execute root commands
+
+:exclamation: **For trusted users only.** :exclamation:
+
+Relative articles:
+   * [Ubuntu Docs - Sudoers](https://help.ubuntu.com/community/Sudoers)
+   * [How To Edit the Sudoers File on Ubuntu and CentOS](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
+   * [Take Control of your Linux | sudoers file: How to with Examples](https://www.garron.me/en/linux/visudo-command-sudoers-file-sudo-default-editor.html)
+   * [FilePermissionsACLs](https://help.ubuntu.com/community/FilePermissionsACLs)
+   * [My answer on AskUbuntu.com](https://askubuntu.com/a/1098707/672237)
+
+*Allow to execute certain commands
+without granting root permissions*
+
+Create and edit file with `visudo` editor
+in the directory `/etc/sudoers.d/`.
+
+```shell
+# Create and edit file for 'website' group
+sudo visudo -f /etc/sudoers.d/website
+
+# Write into the file /etc/sudoers.d/website
+
+# Create alias for WEBMASTERS group
+User_Alias WEBMASTERS = username, vozman, romanroskach
+# Create commands alias to restart some services and view BIOS
+Cmnd_Alias RESTART = /bin/systemctl restart nginx, /bin/systemctl start slide_analysis_api, /usr/sbin/dmidecode -t bios
+# Allow members of WEBMASTERS to restart some services and view BIOS
+WEBMASTERS ALL = RESTART
+
+# To edit broken configuration file
+pkexec visudo -f /etc/sudoers.d/website
+
+# Check if it works -- view BIOS as 'username' (for root)
+sudo -u username sudo dmidecode -t bios    # should work
+sudo -u username sudo dmidecode -t memory  # should NOT work
+# Check for username account
+sudo dmidecode -t bios    # should work
+sudo dmidecode -t memory  # should NOT work
+```
+
+*Allow to write in the system folder*
+
+Give write permission to `/etc/nginx/` folder.
+
+```shell
+# Check 'webmasters' group doen't exist
+cat /etc/group | grep webmasters
+# Create 'webmasters' group
+sudo addgroup webmasters
+# Add users to 'webmasters' group
+sudo usermod -a -G webmasters username
+sudo usermod -a -G webmasters vozman
+sudo usermod -a -G webmasters romanroskach
+
+# Group assignment changes won't take effect
+# until the users log out and back in.
+
+# Create directory
+sudo mkdir /etc/nginx/
+# Check directory permissions
+ls -al /etc | grep nginx
+drwxr-xr-x   2 root root     4096 Dec  5 18:30 nginx
+
+# Change group owner of the directory
+sudo chgrp -R webmasters /etc/nginx/
+# Check that the group owner is changed
+ls -al /etc | grep nginx
+drwxr-xr-x   2 root webmasters   4096 Dec  5 18:30 nginx
+
+# Give write permission to the group
+sudo chmod -R g+w /etc/nginx/
+# Check
+ls -al /etc | grep nginx
+drwxrwxr-x   2 root webmasters   4096 Dec  5 18:30 nginx
+
+# Try to create file
+sudo -u username touch /etc/nginx/test.txt  # should work
+sudo -u username touch /etc/test.txt  # Permission denied
+```
+
+Give write permission to `/etc/systemd/system/` folder.
+
+```shell
+# List ACLs
+getfacl /etc/systemd/system
+
+getfacl: Removing leading '/' from absolute path names
+# file: etc/systemd/system
+# owner: root
+# group: root
+user::rwx
+group::r-x
+other::r-x
+
+# Add 'webmasters' group to an ACL
+sudo setfacl -m g:webmasters:rwx /etc/systemd/system
+
+# Check
+getfacl /etc/systemd/system
+
+getfacl: Removing leading '/' from absolute path names
+# file: etc/systemd/system
+# owner: root
+# group: root
+user::rwx
+group::r-x
+group:webmasters:rwx
+mask::rwx
+other::r-x
+
+sudo -u username touch /etc/systemd/system/test.txt  # should work
+sudo -u username touch /etc/systemd/test.txt  # Permission denied
+```
+
+---
+### <a name="find" />Find file by name
+
+```shell
+find / -name '*name*' 2>/dev/null
+```
+
+---
+### <a name="tty-kill" />Kill the tty
+
+```shell
+# Show who is logged in
+who
+username :1           2018-12-22 17:11 (:1)
+username pts/7        2018-12-24 10:54 (178.120.33.235)
+username pts/9        2018-12-24 12:17 (178.120.33.235)
+
+# Get the PIDs
+ps -ft pts/7
+UID        PID  PPID  C STIME TTY          TIME CMD
+username 25058 25057  0 10:54 pts/7    00:00:00 -bash
+root     26850 25058  0 11:09 pts/7    00:00:00 su admin
+admin    26859 26850  0 11:09 pts/7    00:00:00 bash
+admin    26878 26859  0 11:09 pts/7    00:00:00 mc
+
+# Use the PIDs to kill the processes
+kill 25058 26850 26859 26878
+-bash: kill: (26859) - Operation not permitted
+-bash: kill: (26878) - Operation not permitted
+
+# If the process doesn't gracefully terminate,
+# forcefully kill it by sending a SIGKILL
+kill -9 26859 26878
+# or
+kill -SIGKILL 26859 26878
+```
+
+---
+### <a name="lock" />Lock Screen
+
+To lock your screen press keys `<Ctrl>+<Alt>+<L>`.
+If it does n't work then press keys `<Win>+<L>` or
+(`<Super>+<L>`).
+
+Also click on the *System* icon in the top right corner
+of the screen and select *Lock Screen* icon/menu.
+
+From console type:
+```shell
+# Lock the screen
+gnome-screensaver-command -l
+```
+
+When your screen is locked, and you want to unlock it,
+press `<Esc>`, or swipe up from the bottom of the screen
+with your mouse. Then enter your password, and press
+`<Enter>` or click *Unlock*.
+Alternatively, just start typing your password and the lock
+curtain will be automatically raised as you type.
+
+---
+### <a name="mount" />Mount USB
+
+By default, storage devices that are plugged into the system
+mount automatically in the `/media/<username>` directory.
+
+---
+### <a name="console" />Open console
+
+Press `<CTRL>+<ALT>+<T>` keys or press `<Win>` key and enter `terminal`.
+
+---
+### <a name="envvar" />Set environment variable
+
+```shell
+PYTHONPATH=/usr/lib/python3/dist-packages/caffe
+export PYTHONPATH
+```
+
+---
+### <a name="lang" />Switch language hotkey
+
+On Ubuntu 18.04 the default shortcut is `<Win>+<Space>`.
+`<Win>` key is also called `<Super>` key.
+
+[Instructions](https://askubuntu.com/a/1029605/672237)
+for Ubuntu 18.04 LTS with Gnome desktop from Gnome Tweaks.
+
+```shell
+# Install Gnome Tweaks
+sudo apt-get install gnome-tweaks
+# Open Gnome Tweaks
+sudo gnome-tweaks &
+```
+   - Open *Gnome Tweaks* (`gnome-tweaks &`).
+   - Select *Keyboard & Mouse* tab
+   - Click *Additional Layout Options* button
+   - Expand *Switching to another layout* menu
+   - Select checkbox *Alt+Shift* there
+
+![Gnome Tweaks Keyboard & Mouse](data/2018.12.03_keyboard_layout.png)
+
+---
+### <a name="screenshot" />Take screenshot
+
+Press `<Win>` key on the keyboard and enter `screenshot`.
+Screen shot application will appear.
+
+---
+### <a name="resources" />View computer resources
+
+   * GPU
+
+```shell
+# View NVIDIA resources
+nvidia-smi
+```
+
+   * CPU
+
+```shell
+# Check memory and CPU usage per process
+top
+```
+
+   * HTOP
+
+HTOP is a lightweight text-mode process viewer packed with handy features
+such as killing processes without entering their PID,
+displaying full command lines, etc with a colour display.
+
+```shell
+# Install HTOP interactive processes viewer
+sudo apt install htop
+# Run it
+htop
+# To quit press F10 or <Q> key.
+```
+![`htop` interactive viewer](data/2018.12.04_htop_tool.png)
+
+   * System monitor GUI
+   
+Press `<Super>` or `<Win>` key, type "system monitor".
+
+Run *Gnome System Monitory* from command line:
+
+```shell
+# Run Gnome System Monitor in background
+gnome-system-monitor &
+```
+
+![System monitor GUI](data/2018.12.04_system_monitor.png)
+
+   * Show system status
+
+```shell
+systemctl status
+```
+
+Navigate with arrow keys and
+`<Home>`, `<End>`, `<Page Up>`, `<Page Down>` keys.
+Exit with `<Q>` key.
+
+![`systemctl status` command](data/2018.12.04_systemctl_status.png)
+
+   * Memory usage
+
+```shell
+# Display memory usage in MBs
+free -m
+# Read /proc/meminfo file
+cat /proc/meminfo
+# Memory usage statistics
+vmstat -s
+```
+
+   * Hardware info
+
+```shell
+# DMI table decoder
+sudo dmidecode
+# Show BIOS info
+sudo dmidecode -t bios
+```
+
+---
+### <a name="resolution" />View screen resolution
+
+`xrandr`
+
+or open *System Settings* → *Display*.
+There you'll see a *Resolution* drop-down menu.
+
+---
+### <a name="who" />Who is logged in
+
+```shell
+who
+```

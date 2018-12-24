@@ -1,0 +1,3 @@
+Articles about Technology-SG project in English and Russian.
+   1. [Сравнительный анализ вычислительных платформ для бортового микромодуля предварительного распознавания изображений](Sravnitelnyy_analiz_vychislitelnykh_platform_dlya_bortovogo_mikromodulya_predvaritelnogo_raspoznavaniya_izobrazheniy._Informatika_Tom15_№3(59)_2018.pdf)
+   2. [Comparative analysis of budget computing platforms for a portable micromodule of on-board image classification](Comparative_analysis_of_budget_computing_platforms_for_a_portable_micromodule_of_on-board_image_classification._BIG_DATA_and_Advanced_Analytics_2018.pdf)

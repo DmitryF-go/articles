@@ -1,0 +1,109 @@
+   - [Task](#task)
+   - [Installations](#install)
+   - [Snap commands](#snap)
+
+---
+### <a name="task" />Task
+
+Install different software on Ubuntu 18.04.
+
+---
+### <a name="install" />Installations
+
+**Chromium**
+
+```shell
+# Install Chromium web browser
+sudo apt install chromium-browser
+# Start Chromium in terminal background
+chromium-browser &
+# If you don't want to see application output
+chromium-browser &> /dev/null
+```
+
+**Elastix**
+
+```shell
+# Toolbox for rigid and nonrigid registration of images
+sudo apt install elastix
+# Documents for Elastix toolbox
+sudo apt install elastix-doc
+# Check installation
+elastix --version
+```
+
+**Emacs**
+
+```shell
+# Emacs editor
+sudo apt install emacs25
+```
+
+**JebBrains IntelliJ**
+
+```shell
+# Install JetBrains IntelliJ IDEA Community edition
+# https://blog.jetbrains.com/idea/2017/11/install-intellij-idea-with-snaps
+sudo snap install intellij-idea-community --classic --edge
+
+# Run JetBrains IntelliJ IDEA Community edition
+intellij-idea-community &
+```
+
+**Tmux**
+
+```shell
+# Tmux terminal multiplexer
+sudo apt install tmux
+
+# Tmux session manager
+sudo apt install tmuxp
+
+# Tmux plugin manager based on git
+sudo apt install tmux-plugin-manager
+
+# Create and manage tmux sessions easily
+sudo apt install tmuxinator
+
+# Python 2.x and 3.x scripting library and ORM for tmux
+sudo apt install python-libtmux
+sudo apt install python3-libtmux
+
+# Tmux session manager (Python 2.x and 3.x)
+sudo apt install python-tmuxp
+sudo apt install python3-tmuxp
+
+# Terminal multiplexer with instant terminal sharing
+sudo apt install tmate
+```
+
+---
+### <a name="snap" />Snap commands
+
+`snap` tool to interact with *snaps*.
+*Snaps* are packages that are mainly designed to be sandboxed and isolated
+from other system software, secure, and easily installable, upgradeable,
+degradable, and removable irrespective of its underlying system.
+
+[Video turorials](https://utappia.org/2016/04/22/how-to-search-install-remove-snap-packages-in-ubuntu)
+
+```shell
+sudo snap find                    # to list the available packages
+sudo snap install <package name>  # to install a package
+sudo snap list                    # to view all the installed snap packages
+sudo snap changes                 # to view a list of logged actions
+sudo snap refresh <package name>  # to upgrade a package to its latest available version
+sudo snap remove <package name>   # to uninstall a package
+
+# To update all snap packages
+sudo snap refresh
+
+# To remove broken snap installation
+snap changes
+# The output is:
+#   ID   Status  Spawn               Ready  Summary
+#   11   Doing   today at 16:15 +03  -      Install "intellij-idea-community" snap
+sudo snap abort 11
+# or
+sudo snap remove intellij-idea-community
+```
