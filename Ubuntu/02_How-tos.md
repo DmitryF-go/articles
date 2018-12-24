@@ -1,5 +1,6 @@
 How-to:
    - [Calculator](#calculator)
+   - [Clear out Git history](#clear-git)
    - [Create user](#user)
    - [Change password](#passwd)
    - [Delete package](#delete)
@@ -21,6 +22,29 @@ How-to:
 
 ```shell
 gnome-calculator &> /dev/null
+```
+
+---
+### <a name="clear-git" />Clear out Git history
+
+Steps to [clear out the history](https://gist.github.com/stephenhardy/5470814)
+of a git/github repository.
+
+```shell
+# Remove history from Git directory
+rm -rf .git
+
+# Recreate the repos from the current content only
+git init
+git add .
+git commit -m "Initial commit"
+
+# Push to the github remote repos ensuring you overwrite history
+git remote add origin https://github.com/foobar167/articles
+# Or try this: git remote add origin git@github.com:<YOUR ACCOUNT>/<YOUR REPOS>.git
+# Or try this: git remote add origin https://github.com/USERNAME/REPOSITORY.git
+# But try it from the beginning (rm -rf .git, etc.)
+git push -u --force origin master
 ```
 
 ---
