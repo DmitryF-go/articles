@@ -1,3 +1,6 @@
+.nowrap {
+    white-space: nowrap;
+}
 h1 {
     text-align: center;
 }
@@ -45,8 +48,26 @@ p {
 p.formula {
     text-indent: 0;
 }
-ul {
-    margin-left: 0.5em;
+ul, ol {
+    padding: 0;
+    margin-left: 3em;
     margin-top: 0;
     margin-bottom: 0.5em;
+}
+ol {
+    margin-left: 2em;
+    list-style-type: none;
+    counter-reset: item;
+}
+li > ol {
+    margin-bottom: 0;
+}
+ol > li {
+    display: table;
+    counter-increment: item;
+}
+ol > li:before {
+    content: counters(item, ".") ". ";
+    display: table-cell;
+    padding-right: 0.3em;
 }
