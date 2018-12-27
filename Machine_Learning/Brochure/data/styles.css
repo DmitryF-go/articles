@@ -10,7 +10,11 @@ div.left-left {
 div.citation {
     text-align: right;
 }
-div.image {
+div.image,
+img.formula {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -22,11 +26,24 @@ div.picture {
 span.formula {
     font-family: "Courier New", Courier, monospace;
 }
+table.formula {
+    width: 100%;
+    margin: 0;
+    table-layout: fixed;
+    border: 0;
+}
+td.formula {
+    width: 2em;
+    text-align: right;
+}
 p {
     text-indent: 2em;
     text-align: justify;
     margin-top: 0;
     margin-bottom: 0.5em;
+}
+p.formula {
+    text-indent: 0;
 }
 ul {
     margin-left: 0.5em;

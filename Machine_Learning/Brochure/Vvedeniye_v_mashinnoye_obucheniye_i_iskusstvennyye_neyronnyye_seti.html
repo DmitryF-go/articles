@@ -563,10 +563,51 @@
     В сумматоре поступающие импульсы на вход нейрона умножаются на веса входов и слаживаются:<br/>
 </p>
 
-<div class="formula">
-    <img src="https://raw.githubusercontent.com/foobar167/articles/master/Machine_Learning/Brochure/data/Formula1.1-Indutsirovannoye-lokalnoye-pole-neyrona.png"
-         alt="Индуцированное локальное поле нейрона или взвешенная сумма" /><br/>
-</div>
+<table class="formula">
+    <tr>
+        <td class="formula"></td>
+        <td><img src="https://raw.githubusercontent.com/foobar167/articles/master/Machine_Learning/Brochure/data/Formula1.1-Indutsirovannoye-lokalnoye-pole-neyrona.png"
+                 alt="Индуцированное локальное поле нейрона или взвешенная сумма" class="formula" /></td>
+        <td class="formula">(1.1)</td>
+    </tr>
+</table>
+
+<p class="formula">
+    где <span class="formula">n</span> – количество входящих синапсов;
+    <span class="formula">ω<sub>i</sub></span> – веса входов (положительные возбуждающие
+    или отрицательные тормозящие); <span class="formula">x<sub>i</sub></span> – сигналы на входах;
+    <span class="formula">C</span> – константа для формирования порога чувствительности нейрона,
+    которая называется сдвиг (bias). Функция <span class="formula">x</span> называется индуцированным
+    локальным полем нейрона или <i>взвешенной суммой</i>. Возможные значения сигналов на входах
+    нейрона <span class="formula">x<sub>i</sub></span> считают заданными в интервале
+    <span class="formula">[0,1]</span>. Сигналы на входах, в зависимости от архитектуры сети,
+    могут быть либо дискретными (только 0 или только 1), либо аналоговыми
+    (непрерывными в интервале от 0 до 1 включительно).<br/>
+</p>
+
+<p>
+    Затем к индуцированному локальному полю нейрона <span class="formula">x</span> (см. формулу 1.1)
+    применяется функция, называемая передаточной функцией <span class="formula">&fnof;(x)</span>
+    или функцией активации, функцией срабатывания, которая определяет зависимость сигнала на выходе
+    нейрона от взвешенной суммы сигналов на его входах. Использование различных передаточных функций
+    позволяет вносить нелинейность в работу нейрона и в целом нейронной сети. Без этой нелинейности
+    нейронная сеть вырождается в задачу линейной алгебры, т.е. в обычное перемножение матриц и векторов.<br/>
+</p>
+
+<p>
+    Существует множество различных передаточных функций. Самой известной передаточной функцией
+    является <i>функция Хевисайда</i> (рисунок 1.7), которая представляет собой перепад (ступеньку)
+    и записывается формулой:<br/>
+</p>
+
+<table class="formula">
+    <tr>
+        <td class="formula"></td>
+        <td><img src="https://raw.githubusercontent.com/foobar167/articles/master/Machine_Learning/Brochure/data/Formula1.2-Funktsiya-Khevisayda-ili-stupenka.png"
+                 alt="Функция Хевисайда или «ступенька»" class="formula" /></td>
+        <td class="formula">(1.2)</td>
+    </tr>
+</table>
 
 </body>
 </html>
