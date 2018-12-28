@@ -26,6 +26,10 @@ div.picture {
 span.formula {
     font-family: "Courier New", Courier, monospace;
 }
+table {
+    margin: 1em 0 1em 0;
+    padding: 0;
+}
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -37,7 +41,7 @@ th, td {
 table > caption {
     text-align: left;
     text-indent: 0;
-    margin: 1em 0 0 0;
+    margin: 0;
     padding: 0;
 }
 table.formula {
