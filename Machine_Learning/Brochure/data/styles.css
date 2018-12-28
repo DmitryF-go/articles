@@ -5,10 +5,10 @@ h1 {
     text-align: center;
 }
 div.left {
-    margin-left: 2em;
+    margin: 0 0 0 2em;
 }
 div.left-left {
-    margin-left: 4em;
+    margin: 0 0 0 4em;
 }
 div.citation {
     text-align: right;
@@ -16,18 +16,24 @@ div.citation {
 div.image,
 img.formula {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto 1em auto;
     text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
 }
 div.picture {
     text-align: center;
-    margin-top: 0.5em;
+    margin: 0.5em 0 0 0;
 }
 span.formula {
     font-family: "Courier New", Courier, monospace;
+}
+table {
+    border: 1px;
+}
+table > caption {
+    text-align: left;
+    text-indent: 0;
+    margin: 1em 0 0 0;
+    padding: 0;
 }
 table.formula {
     width: 100%;
@@ -42,17 +48,15 @@ td.formula {
 p {
     text-indent: 2em;
     text-align: justify;
-    margin-top: 0;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em 0;
+    padding: 0;
 }
 p.formula {
     text-indent: 0;
 }
 ul, ol {
     padding: 0;
-    margin-left: 3em;
-    margin-top: 0;
-    margin-bottom: 0.5em;
+    margin: 0 0 0.5em 3em;
 }
 ol {
     margin-left: 2em;
