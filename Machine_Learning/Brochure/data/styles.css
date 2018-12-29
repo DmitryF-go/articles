@@ -1,6 +1,3 @@
-.nowrap {
-    white-space: nowrap;
-}
 h1 {
     text-align: center;
 }
@@ -25,6 +22,10 @@ div.picture {
 }
 span.formula {
     font-family: "Courier New", Courier, monospace;
+    white-space: nowrap;
+}
+span.nowrap {
+    white-space: nowrap;
 }
 table {
     margin: 1em 0 1em 0;
