@@ -1,4 +1,4 @@
-![Ubuntu 18.04](https://raw.githubusercontent.com/foobar167/articles/master/Ubuntu/data/ubuntu-18-04.png)
+![Ubuntu 18.04](data/ubuntu-18-04.png)
 
 Ubuntu 18.04 instructions and articles emerged from everyday tasks
 about installation and configuration of the neural networks software
