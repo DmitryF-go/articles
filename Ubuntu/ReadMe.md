@@ -1,4 +1,9 @@
-Ubuntu 18.04 instructions and articles emerged from everyday tasks.
+![Ubuntu 18.04](https://raw.githubusercontent.com/foobar167/articles/master/Ubuntu/data/ubuntu-18-04.png)
+
+Ubuntu 18.04 instructions and articles emerged from everyday tasks
+about installation and configuration of the neural networks software
+and more.
+
    01. [Dictionary of frequently used commands](01_Commands_dictionary.md)
    02. [How-to use Ubuntu system](02_How-tos.md)
    03. [Move HOME directory to new HDD](03_Move_HOME_to_new_HDD.md)
@@ -10,3 +15,5 @@ Ubuntu 18.04 instructions and articles emerged from everyday tasks.
    09. [TensorFlow installation](09_TensorFlow_installation.md)
    10. [Neural networks software](10_Neural_networks_software.md)
    11. [Docker configuration and use](11_Docker_config.md)
+
+Updated periodically.
