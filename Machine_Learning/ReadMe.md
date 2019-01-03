@@ -1,5 +1,3 @@
-![Artificial neuron](Brochure/data/Ris1.6-Skhema-iskusstvennogo-neyrona.png){ width: 200px; }
-
 <img src="https://raw.githubusercontent.com/foobar167/articles/master/Machine_Learning/Brochure/data/Ris1.6-Skhema-iskusstvennogo-neyrona.png" alt="Artificial neuron" title="Artificial neuron" height="300" />
 
 Articles about Machine Learning (ML) in English and Russian (now in Russian only, sorry).
