@@ -1,11 +1,12 @@
 ![Ubuntu 18.04](data/ubuntu-18-04.jpg)
 
 Ubuntu 18.04 instructions and articles emerged from everyday tasks
-about installation and configuration of the neural networks software
+about installation and configuration of the
+[neural networks software](10_Neural_networks_software.md)
 and more.
 
    01. [Dictionary of frequently used commands](01_Commands_dictionary.md)
-   02. [How-to use Ubuntu system](02_How-tos.md)
+   02. [How-to use Ubuntu operating system](02_How-tos.md)
    03. [Move HOME directory to new HDD](03_Move_HOME_to_new_HDD.md)
    04. [Python and modules installation](04_Python_installation.md)
    05. [Virtual environments](05_Virtual_environments.md)
