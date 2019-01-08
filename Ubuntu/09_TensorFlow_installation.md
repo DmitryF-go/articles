@@ -501,11 +501,11 @@ It is `/usr/lib/x86_64-linux-gnu` by default.
 
    * Show version of NCCL: `dpkg -l | grep -i nccl` (2.3.7).
 
-   * Show where NCCL library is installed `find / -name '*libnccl*' 2>/dev/null`
+   * Show where NCCL library is installed: `find / -name '*libnccl*' 2>/dev/null`
 (/usr/lib/x86_64-linux-gnu).
 
-   * Compute capability of Nvidia GeForce GTX 1080 Ti is `6.1`
-(https://developer.nvidia.com/cuda-gpus).
+   * Compute capability of ```Nvidia GeForce GTX 1080 Ti``` is `6.1`
+(see https://developer.nvidia.com/cuda-gpus).
 
    * I have not used MPI support myself.
 Read ```tensorflow/contrib/mpi/README.md``` file before MPI installation.
@@ -538,7 +538,7 @@ either use bazel 0.18.0, or
 add the contents of file `~/Documents/Install/TensorFlow/tensorflow/tools/bazel.rc`
 on top of (hidden) file  `~/Documents/Install/TensorFlow/tensorflow/.tf_configure.bazelrc`.
 
-I used Bazel version 0.17.2. It's old, but it works for now (2018.12.20).
+I used Bazel version 0.17.2. It's old, but it works for now (date 2018.12.20).
 
 ```shell
 # Create backup
@@ -648,7 +648,7 @@ sudo su
 cd ~
 umask 022
 
-# Reinstall for Python 2.7
+# Reinstall packages via pip for Python 2.7
 sudo pip install -U numpy  # NumPy 1.15
 sudo pip install -U scipy
 sudo pip install -U matplotlib

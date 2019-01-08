@@ -11,8 +11,8 @@
 ### <a name="useful" />Useful links
 
    1. [How To Install and Use Docker on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
-   2. [Get Started, Part 1: Orientation and setup](https://docs.docker.com/get-started)
-   3. []()
+   2. [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall)
+   3. [Get Started, Part 1: Orientation and setup](https://docs.docker.com/get-started)
    4. []()
 
 ---
