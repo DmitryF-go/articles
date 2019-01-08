@@ -495,18 +495,19 @@ Configuration finished
 </details>
 <br/>
 
-TensorRT is installed in the same folder as file `libnvinfer.so`.
+For your information:
+   * TensorRT is installed in the same folder as file `libnvinfer.so`.
 It is `/usr/lib/x86_64-linux-gnu` by default.
 
-Version of NCCL is `dpkg -l | grep -i nccl` (2.3.7).
+   * Version of NCCL is `dpkg -l | grep -i nccl` (2.3.7).
 
-Where NCCL library is installed `find / -name '*libnccl*' 2>/dev/null`
+   * Where NCCL library is installed `find / -name '*libnccl*' 2>/dev/null`
 (/usr/lib/x86_64-linux-gnu).
 
-Compute capability of Nvidia GeForce GTX 1080 Ti is `6.1`
+   * Compute capability of Nvidia GeForce GTX 1080 Ti is `6.1`
 (https://developer.nvidia.com/cuda-gpus).
 
-I have not used MPI support myself.
+   * I have not used MPI support myself.
 Read tensorflow/contrib/mpi/README.md file first.
 
 ##### Build Tensorflow using bazel
