@@ -309,6 +309,8 @@ sudo docker pull nvidia/digits:latest
 # where <path to data> is where you have stored data sets or other files
 # necessary for DIGITS to use on your system.
 sudo nvidia-docker run -v ~:/data/ -p 5000:5000 nvidia/digits:latest
+# or
+sudo nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest
 
 libdc1394 error: Failed to initialize libdc1394
 /usr/local/lib/python2.7/dist-packages/matplotlib/font_manager.py:273: UserWarning: Matplotlib is building the font cache using fc-list. This may take a moment.

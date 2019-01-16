@@ -1,11 +1,17 @@
    - [Task](#task)
+   - [Useful links](#links)
    - [Packages for the website](#website)
+   - [Work with Nginx server](#work)
    - [Allow user to execute root commands](#grant)
    - [Correctly delete `nginx`](#nginx)
 
 ---
 ### <a name="task" />Task
    - Install software for the website http://image.org.by
+
+---
+### <a name="links" />Useful links
+   - [Ubuntu Linux: Start / Restart / Stop Nginx Web Server](https://www.cyberciti.biz/faq/nginx-restart-ubuntu-linux-command)
 
 ---
 ### <a name="website" />Packages for the website
@@ -37,6 +43,37 @@ sudo apt install python3-flask
 # a mail proxy server, and a generic TCP/UDP proxy server,
 # originally written by Igor Sysoev.
 sudo apt install nginx
+```
+
+---
+### <a name="work" />Work with Nginx server and API for it
+
+```shell
+sudo systemctl stop nginx
+sudo systemctl start nginx
+sudo systemctl restart nginx
+sudo systemctl status nginx
+sudo systemctl status nginx.service
+# or
+sudo service nginx stop
+sudo service nginx start
+sudo service nginx restart
+sudo service nginx status
+# or
+sudo nginx -s reload
+# or
+systemctl is-active nginx
+systemctl is-active slide_analysis_api
+
+# Check for the syntax error in config file
+sudo nginx -t
+# Check for nginx server log files
+sudo tail -f /var/log/nginx/error.log
+# or
+sudo journalctl -xe
+
+# There is API for Nginx server
+sudo systemctl start slide_analysis_api
 ```
 
 ---
