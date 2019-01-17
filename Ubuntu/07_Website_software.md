@@ -77,7 +77,7 @@ sudo systemctl start slide_analysis_api
 ```
 
 Two services: ```nginx``` and ```slide_analysis_api```, must start
-automatically after computer reboot.
+automatically after computer reboots.
 Service ```nginx``` start automatically after software installation
 through SysV (```man update-rc.d```).
 Service ```slide_analysis_api``` is using config file

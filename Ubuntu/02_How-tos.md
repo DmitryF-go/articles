@@ -410,9 +410,8 @@ A ```-``` before the path tells systemd to ignore a non-zero exit status
 2\. Create script file ```/etc/init.d/myscript.sh```. Run the commands:
 
 ```shell
-# Default run levels are: 2,3,4 and 5.
 # To add use
-sudo update-rc.d myscript.sh defaults
+sudo update-rc.d myscript.sh defaults  # default run levels are: 2,3,4 and 5
 # To remove use
 sudo update-rc.d -f myscript.sh remove
 ```
