@@ -1,7 +1,7 @@
    - [Task](#task)
    - [Useful links](#links)
    - [Packages for the website](#website)
-   - [Work with Nginx server](#work)
+   - [Work with Nginx server and its API](#work)
    - [Allow user to execute root commands](#grant)
    - [Correctly delete `nginx`](#nginx)
 
@@ -46,7 +46,7 @@ sudo apt install nginx
 ```
 
 ---
-### <a name="work" />Work with Nginx server and API for it
+### <a name="work" />Work with Nginx server and its API
 
 ```shell
 sudo systemctl stop nginx
@@ -76,7 +76,7 @@ sudo journalctl -xe
 sudo systemctl start slide_analysis_api
 ```
 
-Two services: ```nginx``` and ```slide_analysis_api```, have to start
+Two services: ```nginx``` and ```slide_analysis_api```, must start
 automatically after computer reboot.
 Service ```nginx``` start automatically after software installation
 through SysV (```man update-rc.d```).
