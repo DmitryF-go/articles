@@ -10,6 +10,7 @@ How-to:
    - [Lock Screen](#lock)
    - [Mount USB](#mount)
    - [Open console](#console)
+   - [Run scripts on start up](#autorun)
    - [Set environment variable](#envvar)
    - [Switch language hotkey](#lang)
    - [Take screenshot](#screenshot)
@@ -347,6 +348,133 @@ mount automatically in the `/media/<username>` directory.
 ### <a name="console" />Open console
 
 Press `<CTRL>+<ALT>+<T>` keys or press `<Win>` key and enter `terminal`.
+
+---
+### <a name="autorun" />Run scripts on start up
+
+There are several ways to run scripts on start up:
+   1. systemd (```man systemd.service```)
+   2. SysV (```man update-rc.d```). System V init (also known as classic init).
+   3. Add script to ```/etc/rc.local``` file.
+   4. cron (```man cron```)
+   5. ```~/.autorun``` and ```~/.config/systemd``` for user sessions
+      only after account login.
+
+For Ubuntu 14.04 **and older** one can use [Upstart](http://upstart.ubuntu.com/getting-started.html).
+
+1\. Create ```systemd``` unit files. Links:
+  - [How to run scripts on start up](https://askubuntu.com/a/719157/672237)
+  - [Writing unit files](https://wiki.archlinux.org/index.php/systemd#Writing_unit_files)
+  - [systemd.service - Service unit configuration](http://manpages.ubuntu.com/manpages/xenial/en/man5/systemd.service.5.html) 
+
+Create ```/etc/systemd/system/foo.service``` containing:
+
+```shell
+[Unit]
+Description=uWSGI instance to serve slide_analysis_api
+After=network.target
+
+[Service]
+User=vozman
+Group=www-data
+WorkingDirectory=/home/vozman/slide_analysis/slide_analysis_api
+Environment="PATH=/home/vozman/slide_analysis/slide_analysis_api"
+ExecStart=/home/vozman/slide_analysis/slide_analysis_api/venv/bin/uwsgi --ini /home/vozman/slide_analysis/slide_analysis_api/slide_analysis_api.ini
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Then run:
+
+```shell
+# Add slide_analysis_api to autorun
+sudo systemctl daemon-reload
+sudo systemctl enable slide_analysis_api.service
+```
+You can run multiple commands from the same service file,
+using multiple ```ExecStart``` lines:
+
+```shell
+[Service]
+ExecStart=/some/command
+ExecStart=/another/command some args
+ExecStart=-/a/third/command ignore failure
+```
+
+The command must always be given with the full path.
+If any command fails, the rest aren't run.
+A ```-``` before the path tells systemd to ignore a non-zero exit status
+(instead of considering it a failure).
+
+2\. Create script file ```/etc/init.d/myscript.sh```. Run the commands:
+
+```shell
+# Default run levels are: 2,3,4 and 5.
+# To add use
+sudo update-rc.d myscript.sh defaults
+# To remove use
+sudo update-rc.d -f myscript.sh remove
+```
+
+More info:
+   - [Part 1: How to config service to autostart after crash or reboot](https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-service-to-start-automatically-after-a-crash-or-reboot-part-1-practical-examples)
+   - [Part 2: How to config service to autostart after crash or reboot](https://www.digitalocean.com/community/tutorials/how-to-configure-a-linux-service-to-start-automatically-after-a-crash-or-reboot-part-2-reference)
+   - [How to Enable or Disable Services in Ubuntu Systemd/Upstart](https://linoxide.com/linux-how-to/enable-disable-services-ubuntu-systemd-upstart)
+   - [How can I configure a service to run at startup](https://askubuntu.com/a/9384/672237)
+
+3\. Edit the file ```/etc/rc.local```.
+```shell
+sudo nano /etc/rc.local
+```
+
+Add commands, but make sure that the line ```exit 0``` is at the end.
+
+If command runs continuously (in an infinite loop) or is likely not to exit,
+you must be sure to fork the process by adding an ampersand ```&``` to the end
+of the command, like so:
+
+```shell
+python3 /home/pi/myscript.py &
+```
+
+**Otherwise, the script will not end and the system will not boot.**
+
+The ampersand allows the command to run in a separate process and continue
+booting with the process running.
+
+4\. One approach is to add an @reboot [cron](https://en.wikipedia.org/wiki/Cron) task:
+   1. Running ```crontab -e``` will allow you to edit your cron.
+   2. Adding a line like this to it: ```@reboot /path/to/script```
+      will execute that script once your computer boots up.
+
+5\. For user sessions, you can create the systemd unit in
+```~/.config/systemd``` instead. This should work with 16.04 onwards,
+but not earlier releases of Ubuntu with systemd
+(since those still used Upstart for user sessions).
+User session units can be controlled with the same commands
+as with system services, but with the ```--user``` option added:
+
+```shell
+systemctl --user daemon-reload
+systemctl --user status foo.service
+```
+
+A shell script named ```.gnomerc``` in your home directory is automatically
+sourced each time you log in to a GNOME session. You can put arbitrary
+commands in there; environment variables that you set in this script
+will be seen by any program that you run in your session.
+
+Note that the session does not start until the ```.gnomerc``` script
+is finished; therefore, if you want to autostart some long-running program,
+you need to append ```&``` to the program invocation,
+in order to detach it from the running shell.
+
+The menu option **System -> Preferences -> Startup Applications** allows 
+to define what applications should be started when your graphical session starts
+(Ubuntu predefines quite some). This has almost the same purpose and scope
+of the ```.gnomerc``` script, except you don't need to know ```sh``` syntax
+(but neither can you use any ```sh``` programming construct).
 
 ---
 ### <a name="envvar" />Set environment variable

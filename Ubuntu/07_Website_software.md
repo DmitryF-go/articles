@@ -76,6 +76,23 @@ sudo journalctl -xe
 sudo systemctl start slide_analysis_api
 ```
 
+Two services: ```nginx``` and ```slide_analysis_api```, have to start
+automatically after computer reboot.
+Service ```nginx``` start automatically after software installation
+through SysV (```man update-rc.d```).
+Service ```slide_analysis_api``` is using config file
+```/etc/systemd/system/slide_analysis_api.service``` for autorun.
+See [how-to run scripts on start up](02_How-tos.md/#autorun) for more details.
+
+```shell
+# Add slide_analysis_api to autorun
+sudo systemctl daemon-reload
+sudo systemctl enable slide_analysis_api.service
+```
+
+Check it: reboot and wait for 2-3 minutes for service to start.
+You should see the images on the website.
+
 ---
 ### <a name="grant" />Allow user to execute root commands
 
