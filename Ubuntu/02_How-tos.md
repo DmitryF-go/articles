@@ -437,7 +437,8 @@ of the command, like so:
 python3 /home/pi/myscript.py &
 ```
 
-**Otherwise, the script will not end and the system will not boot.**
+:exclamation: **Otherwise, the script will not end
+and the system will not boot.** :exclamation:
 
 The ampersand allows the command to run in a separate process and continue
 booting with the process running.
