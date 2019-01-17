@@ -114,6 +114,8 @@ For `true ; echo $?` the output is `0`, for `false ; echo $?` the output is `1`.
 
 `emacs` powerful Linux editor.
 
+`env` list all environment variables or run a program in a modified environment.
+
 ---
 ### <a name="f" />[F&ensp;:arrow_heading_up:](#up)
 
@@ -285,6 +287,8 @@ as well as package manager.
 While `pip` can install Python packages, `pipenv` is recommended as
 it’s a higher-level tool that simplifies dependency management for
 common use cases.
+
+`printenv` print all or part of environment.
 
 `ps` list of user processes (programs) that are running,
 along with their process ID (PID).

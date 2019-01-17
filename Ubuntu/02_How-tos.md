@@ -1,12 +1,13 @@
 How-to:
+   - [Allow user to execute root commands](#exec)
    - [Calculator](#calculator)
    - [Clear out Git history](#clear-git)
    - [Create user](#user)
    - [Change password](#passwd)
    - [Delete package](#delete)
-   - [Allow user to execute root commands](#exec)
    - [Find file by name](#find)
    - [Kill the tty](#tty-kill)
+   - [List all environment variables](#printenv)
    - [Lock Screen](#lock)
    - [Mount USB](#mount)
    - [Open console](#console)
@@ -17,6 +18,122 @@ How-to:
    - [View computer resources](#resources)
    - [View screen resolution](#resolution)
    - [Who is logged in](#who)
+
+---
+### <a name="exec" />Allow user to execute root commands
+
+:exclamation: **For trusted users only.** :exclamation:
+
+Relative articles:
+   * [Ubuntu Docs - Sudoers](https://help.ubuntu.com/community/Sudoers)
+   * [How To Edit the Sudoers File on Ubuntu and CentOS](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
+   * [Take Control of your Linux | sudoers file: How to with Examples](https://www.garron.me/en/linux/visudo-command-sudoers-file-sudo-default-editor.html)
+   * [FilePermissionsACLs](https://help.ubuntu.com/community/FilePermissionsACLs)
+   * [My answer on AskUbuntu.com](https://askubuntu.com/a/1098707/672237)
+
+*Allow to execute certain commands
+without granting root permissions*
+
+Create and edit file with `visudo` editor
+in the directory `/etc/sudoers.d/`.
+
+```shell
+# Create and edit file for 'website' group
+sudo visudo -f /etc/sudoers.d/website
+
+# Write into the file /etc/sudoers.d/website
+
+# Create alias for WEBMASTERS group
+User_Alias WEBMASTERS = username, vozman, romanroskach
+# Create commands alias to restart some services and view BIOS
+Cmnd_Alias RESTART = /bin/systemctl restart nginx, /bin/systemctl start slide_analysis_api, /usr/sbin/dmidecode -t bios
+# Allow members of WEBMASTERS to restart some services and view BIOS
+WEBMASTERS ALL = RESTART
+
+# To edit broken configuration file
+pkexec visudo -f /etc/sudoers.d/website
+
+# Check if it works -- view BIOS as 'username' (for root)
+sudo -u username sudo dmidecode -t bios    # should work
+sudo -u username sudo dmidecode -t memory  # should NOT work
+# Check for username account
+sudo dmidecode -t bios    # should work
+sudo dmidecode -t memory  # should NOT work
+```
+
+*Allow to write in the system folder*
+
+Give write permission to `/etc/nginx/` folder.
+
+```shell
+# Check 'webmasters' group doen't exist
+cat /etc/group | grep webmasters
+# Create 'webmasters' group
+sudo addgroup webmasters
+# Add users to 'webmasters' group
+sudo usermod -a -G webmasters username
+sudo usermod -a -G webmasters vozman
+sudo usermod -a -G webmasters romanroskach
+
+# Group assignment changes won't take effect
+# until the users log out and back in.
+
+# Create directory
+sudo mkdir /etc/nginx/
+# Check directory permissions
+ls -al /etc | grep nginx
+drwxr-xr-x   2 root root     4096 Dec  5 18:30 nginx
+
+# Change group owner of the directory
+sudo chgrp -R webmasters /etc/nginx/
+# Check that the group owner is changed
+ls -al /etc | grep nginx
+drwxr-xr-x   2 root webmasters   4096 Dec  5 18:30 nginx
+
+# Give write permission to the group
+sudo chmod -R g+w /etc/nginx/
+# Check
+ls -al /etc | grep nginx
+drwxrwxr-x   2 root webmasters   4096 Dec  5 18:30 nginx
+
+# Try to create file
+sudo -u username touch /etc/nginx/test.txt  # should work
+sudo -u username touch /etc/test.txt  # Permission denied
+```
+
+Give write permission to `/etc/systemd/system/` folder.
+
+```shell
+# List ACLs
+getfacl /etc/systemd/system
+
+getfacl: Removing leading '/' from absolute path names
+# file: etc/systemd/system
+# owner: root
+# group: root
+user::rwx
+group::r-x
+other::r-x
+
+# Add 'webmasters' group to an ACL
+sudo setfacl -m g:webmasters:rwx /etc/systemd/system
+
+# Check
+getfacl /etc/systemd/system
+
+getfacl: Removing leading '/' from absolute path names
+# file: etc/systemd/system
+# owner: root
+# group: root
+user::rwx
+group::r-x
+group:webmasters:rwx
+mask::rwx
+other::r-x
+
+sudo -u username touch /etc/systemd/system/test.txt  # should work
+sudo -u username touch /etc/systemd/test.txt  # Permission denied
+```
 
 ---
 ### <a name="calculator" />Calculator
@@ -163,122 +280,6 @@ sudo apt purge --auto-remove packagename
 ```
 
 ---
-### <a name="exec" />Allow user to execute root commands
-
-:exclamation: **For trusted users only.** :exclamation:
-
-Relative articles:
-   * [Ubuntu Docs - Sudoers](https://help.ubuntu.com/community/Sudoers)
-   * [How To Edit the Sudoers File on Ubuntu and CentOS](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
-   * [Take Control of your Linux | sudoers file: How to with Examples](https://www.garron.me/en/linux/visudo-command-sudoers-file-sudo-default-editor.html)
-   * [FilePermissionsACLs](https://help.ubuntu.com/community/FilePermissionsACLs)
-   * [My answer on AskUbuntu.com](https://askubuntu.com/a/1098707/672237)
-
-*Allow to execute certain commands
-without granting root permissions*
-
-Create and edit file with `visudo` editor
-in the directory `/etc/sudoers.d/`.
-
-```shell
-# Create and edit file for 'website' group
-sudo visudo -f /etc/sudoers.d/website
-
-# Write into the file /etc/sudoers.d/website
-
-# Create alias for WEBMASTERS group
-User_Alias WEBMASTERS = username, vozman, romanroskach
-# Create commands alias to restart some services and view BIOS
-Cmnd_Alias RESTART = /bin/systemctl restart nginx, /bin/systemctl start slide_analysis_api, /usr/sbin/dmidecode -t bios
-# Allow members of WEBMASTERS to restart some services and view BIOS
-WEBMASTERS ALL = RESTART
-
-# To edit broken configuration file
-pkexec visudo -f /etc/sudoers.d/website
-
-# Check if it works -- view BIOS as 'username' (for root)
-sudo -u username sudo dmidecode -t bios    # should work
-sudo -u username sudo dmidecode -t memory  # should NOT work
-# Check for username account
-sudo dmidecode -t bios    # should work
-sudo dmidecode -t memory  # should NOT work
-```
-
-*Allow to write in the system folder*
-
-Give write permission to `/etc/nginx/` folder.
-
-```shell
-# Check 'webmasters' group doen't exist
-cat /etc/group | grep webmasters
-# Create 'webmasters' group
-sudo addgroup webmasters
-# Add users to 'webmasters' group
-sudo usermod -a -G webmasters username
-sudo usermod -a -G webmasters vozman
-sudo usermod -a -G webmasters romanroskach
-
-# Group assignment changes won't take effect
-# until the users log out and back in.
-
-# Create directory
-sudo mkdir /etc/nginx/
-# Check directory permissions
-ls -al /etc | grep nginx
-drwxr-xr-x   2 root root     4096 Dec  5 18:30 nginx
-
-# Change group owner of the directory
-sudo chgrp -R webmasters /etc/nginx/
-# Check that the group owner is changed
-ls -al /etc | grep nginx
-drwxr-xr-x   2 root webmasters   4096 Dec  5 18:30 nginx
-
-# Give write permission to the group
-sudo chmod -R g+w /etc/nginx/
-# Check
-ls -al /etc | grep nginx
-drwxrwxr-x   2 root webmasters   4096 Dec  5 18:30 nginx
-
-# Try to create file
-sudo -u username touch /etc/nginx/test.txt  # should work
-sudo -u username touch /etc/test.txt  # Permission denied
-```
-
-Give write permission to `/etc/systemd/system/` folder.
-
-```shell
-# List ACLs
-getfacl /etc/systemd/system
-
-getfacl: Removing leading '/' from absolute path names
-# file: etc/systemd/system
-# owner: root
-# group: root
-user::rwx
-group::r-x
-other::r-x
-
-# Add 'webmasters' group to an ACL
-sudo setfacl -m g:webmasters:rwx /etc/systemd/system
-
-# Check
-getfacl /etc/systemd/system
-
-getfacl: Removing leading '/' from absolute path names
-# file: etc/systemd/system
-# owner: root
-# group: root
-user::rwx
-group::r-x
-group:webmasters:rwx
-mask::rwx
-other::r-x
-
-sudo -u username touch /etc/systemd/system/test.txt  # should work
-sudo -u username touch /etc/systemd/test.txt  # Permission denied
-```
-
----
 ### <a name="find" />Find file by name
 
 ```shell
@@ -314,6 +315,20 @@ kill -9 26859 26878
 # or
 kill -SIGKILL 26859 26878
 ```
+
+---
+### <a name="printenv" />List all environment variables
+
+```shell
+printenv  # list all or part of environment
+env  # list all or run a program in a modified environment
+# or
+printenv | less
+# or
+printenv | more
+```
+
+[A list of the commonly used variables in Linux](https://www.cyberciti.biz/faq/linux-list-all-environment-variables-env-command)
 
 ---
 ### <a name="lock" />Lock Screen
