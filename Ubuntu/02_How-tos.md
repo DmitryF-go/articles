@@ -357,8 +357,8 @@ There are several ways to run scripts on start up:
    2. SysV (```man update-rc.d```). System V init (also known as classic init).
    3. Add script to ```/etc/rc.local``` file.
    4. cron (```man cron```)
-   5. ```~/.autorun``` and ```~/.config/systemd``` for user sessions
-      only after account login.
+   5. Use ```~/.config/systemd/``` or ```/.config/autostart/``` directories
+      for user sessions. Only after user login.
 
 For Ubuntu 14.04 **and older** one can use [Upstart](http://upstart.ubuntu.com/getting-started.html).
 
