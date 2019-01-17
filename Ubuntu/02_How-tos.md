@@ -204,6 +204,9 @@ sudo deluser username
 # Delete directory
 #sudo rm -r /home/username  # use with caution!
 
+# To delete user from a group
+sudo deluser username group
+
 # Change user name
 usermod -l new_username old_username
 
