@@ -112,8 +112,6 @@ sudo nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest
 ---
 ### <a name="autostart" />Start DIGITS automatically
 
-**Warning: It is not tested yet!**
-
 Create ```/etc/systemd/system/mydigits.service``` containing:
 
 ```shell
@@ -123,21 +121,27 @@ Requires=docker.service
 After=docker.service
 
 [Service]
-User=foobar167
-WorkingDirectory=/usr/bin/
-ExecStart=/usr/bin/nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest &
+User=pavlenko
+Group=docker
+Type=simple
+ExecStart=/bin/sh -c "/usr/bin/nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest &"
 
 [Install]
 WantedBy=multi-user.target
+
 ```
 
 And then run:
 
 ```shell
+# Start the service and enable autostart after reboot
 sudo systemctl daemon-reload
 sudo systemctl enable mydigits.service
 sudo systemctl start mydigits
 systemctl is-active mydigits
+
+# To debug use
+#sudo systemctl status mydigits.service
 ```
 
 ---
