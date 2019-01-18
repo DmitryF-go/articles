@@ -123,7 +123,7 @@ After=docker.service
 [Service]
 User=pavlenko
 Group=docker
-Type=simple
+RemainAfterExit=true
 ExecStart=/bin/sh -c "/usr/bin/nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest &"
 
 [Install]
