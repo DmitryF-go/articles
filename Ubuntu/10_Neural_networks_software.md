@@ -327,3 +327,7 @@ http://localhost:5000
 ```
 
 ![NVIDIA DIGITS main page](data/2018.12.22-nvidia-digits-main-page.png)
+
+There is an error after run:
+```libdc1394 error: Failed to initialize libdc1394```.
+People on the forums write that you should ignore it.

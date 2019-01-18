@@ -643,6 +643,12 @@ So I have to reinstall NumPy through `pip` for Python 2.7.
 # Uninstall python-numpy (NumPy 1.13 for Python 2.7)
 sudo apt purge --auto-remove python-numpy
 
+# There is an error when "import tensorflow as tf" for Python 2.7
+# Error: Couldn't import dot_parser, loading of dot files will not be possible.
+# To fix it, uninstall pydot2 and install pydot instead
+# But first uninstall pydot through APT
+sudo apt purge --auto-remove python-pydot
+
 # Reinstall all necessary packages through pip
 sudo su
 cd ~
@@ -671,6 +677,10 @@ sudo pip install -U statsmodels
 ##sudo pip install -U pyopencl
 # Python Webtrends connector -- No matching version
 ##sudo pip install -U pywt
+
+# Fix error with import of dot_parser
+sudo pip uninstall pydot2
+sudo pip install pydot
 
 exit  # exit from root
 

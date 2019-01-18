@@ -383,7 +383,8 @@ For Ubuntu 14.04 **and older** one can use [Upstart](http://upstart.ubuntu.com/g
 1\. Create ```systemd``` unit files. Links:
   - [How to run scripts on start up](https://askubuntu.com/a/719157/672237)
   - [Writing unit files](https://wiki.archlinux.org/index.php/systemd#Writing_unit_files)
-  - [systemd.service - Service unit configuration](http://manpages.ubuntu.com/manpages/xenial/en/man5/systemd.service.5.html) 
+  - [systemd.service - Service unit configuration](http://manpages.ubuntu.com/manpages/xenial/en/man5/systemd.service.5.html)
+  - [systemd.service - Service unit configuration. Copy](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
 
 Create ```/etc/systemd/system/foo.service``` containing:
 

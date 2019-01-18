@@ -137,6 +137,14 @@ sudo apt install git  # git
 # Mocking and testing library
 sudo apt install python-mock
 sudo apt install python3-mock
+
+# pydot is a Python interface to Graphviz's dot
+# pydot is needed for TensorFlow
+sudo apt install graphviz
+sudo apt install python-pydot
+sudo apt install python3-pydot
+sudo apt install python-pyparsing
+sudo apt install python3-pyparsing
 ```
 
 ```shell
