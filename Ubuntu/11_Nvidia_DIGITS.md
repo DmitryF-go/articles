@@ -112,7 +112,7 @@ sudo nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest
 ---
 ### <a name="autostart" />Start DIGITS automatically
 
-Warning: It is not tested yet!
+**Warning: It is not tested yet!**
 
 Create ```/etc/systemd/system/mydigits.service``` containing:
 
@@ -125,7 +125,7 @@ After=docker.service
 [Service]
 User=foobar167
 WorkingDirectory=/usr/bin/
-ExecStart=/usr/bin/nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest
+ExecStart=/usr/bin/nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest &
 
 [Install]
 WantedBy=multi-user.target
@@ -134,9 +134,10 @@ WantedBy=multi-user.target
 And then run:
 
 ```shell
-# Add slide_analysis_api to autorun
 sudo systemctl daemon-reload
 sudo systemctl enable mydigits.service
+sudo systemctl start mydigits
+systemctl is-active mydigits
 ```
 
 ---
