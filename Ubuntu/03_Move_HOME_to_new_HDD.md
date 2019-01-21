@@ -71,6 +71,8 @@ sudo umount /dev/sdc1
 sudo chmod go+rx /hdd_purple
 # Change owner to root
 sudo chown root:root /hdd_purple
+# Add write permission for everyone
+sudo chmod o+w /hdd_purple
 # Check it
 ls -hal /
 ```
