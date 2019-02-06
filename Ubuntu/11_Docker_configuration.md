@@ -5,6 +5,7 @@
    - [Manage Docker as a non-root user](#non-root)
    - [Start containers automatically](#start-container)
    - [Stop all docker containers](#stop-all)
+   - [Manage Docker Compose tool](#docker-compose)
 
 ---
 ### <a name="task" />Task
@@ -65,7 +66,9 @@ create a Unix group called ```docker``` and add users to it.
 to control your Docker daemon.** :exclamation:
 
 ```shell
-# Create the docker group.
+# Show docker group
+cat /etc/group | grep "docker"
+# Create the docker group if it doesn't exist
 sudo groupadd docker
 # Add trusted users to the docker group.
 # I don't know, is it possible to add existing group to docker group?
@@ -97,4 +100,19 @@ docker run -dit --restart no nvidia/digits:latest
 
 ```shell
 sudo docker kill $(sudo docker ps -q)
+```
+
+---
+### <a name="docker-compose" />Manage Docker Compose tool
+
+[Docker Compose](https://docs.docker.com/compose) is a tool
+for defining and running multi-container Docker applications.
+
+```shell
+# Install Docker Compose tool. WARNING: current version could be different.
+curl -L https://github.com/docker/compose/releases/download/1.24.0-rc1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Test the installation
+docker-compose --version
 ```

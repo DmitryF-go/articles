@@ -412,6 +412,9 @@ Likewise, any new directories will, by default,
 be created with the permissions 755 (777 - 022).
 `umask` is inverse of `chmod`.
 
+`uname` print certain system information like kernel name, hostname,
+operating system, etc.
+
 `usermod` modify a user account.
 Modify or change any attributes of a already created user account
 via command line.
