@@ -3,30 +3,20 @@
    - [Close port 5000](#close-port)
    - [Manage Docker](#manage)
    - [Manage Docker as a non-root user](#non-root)
-   - [Install DIGITS](#install)
-   - [Start DIGITS](#start)
-   - [Start DIGITS automatically](#autostart)
    - [Start containers automatically](#start-container)
    - [Stop all docker containers](#stop-all)
 
 ---
 ### <a name="task" />Task
    - Docker configuration and administration.
-   - Nvidia DIGITS configuration and administration.
 
 ---
-### <a name="useful" />Useful links
+### <a name="useful" />Useful Docker links
 
-Docker links:
    - [How To Install and Use Docker on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
    - [Post-installation steps for Linux](https://docs.docker.com/install/linux/linux-postinstall)
    - [Get Started, Part 1: Orientation and setup](https://docs.docker.com/get-started)
    - [Start containers automatically](https://docs.docker.com/config/containers/start-containers-automatically)
-
-Nvidia DIGITS links:
-   - [Getting Started With The DIGITS Container](https://docs.nvidia.com/deeplearning/digits/digits-container-getting-started/index.html)
-   - [GitHub getting started](https://github.com/NVIDIA/DIGITS/blob/master/docs/GettingStarted.md)
-   - []()
 
 ---
 ### <a name="close-port" />Close port 5000
@@ -90,64 +80,9 @@ sudo deluser username docker
 ```
 
 ---
-### <a name="install" />Install DIGITS
-
-Before running the application, use the ```docker pull``` command
-to ensure an up-to-date image is installed.
-
-```shell
-sudo docker pull nvidia/digits:latest
-# or
-sudo docker pull nvcr.io/nvidia/digits:18.04
-```
-
----
-### <a name="start" />Start DIGITS
-
-```shell
-# Run DIGITS with Nvidia Docker
-sudo nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest
-```
-
----
-### <a name="autostart" />Start DIGITS automatically
-
-Create ```/etc/systemd/system/mydigits.service``` containing:
-
-```shell
-[Unit]
-Description=Autostart NVIDIA DIGITS
-Requires=docker.service
-After=docker.service
-
-[Service]
-User=pavlenko
-Group=docker
-RemainAfterExit=true
-ExecStart=/bin/sh -c "/usr/bin/nvidia-docker run -v /hdd_purple:/data/ -p 5000:5000 nvidia/digits:latest &"
-
-[Install]
-WantedBy=multi-user.target
-
-```
-
-And then run:
-
-```shell
-# Start the service and enable autostart after reboot
-sudo systemctl daemon-reload
-sudo systemctl enable mydigits.service
-sudo systemctl start mydigits
-systemctl is-active mydigits
-
-# To debug use
-#sudo systemctl status mydigits.service
-```
-
----
 ### <a name="start-container" />Start containers automatically
 
-It starts container, but not DIGITS itself.
+It starts container, but not [Nvidia DIGITS](12_Nvidia_DIGITS.md) itself.
 
 ```shell
 # Autostart

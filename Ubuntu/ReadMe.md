@@ -15,6 +15,7 @@ and more.
    08. [Nvidia driver and CUDA install](08_Nvidia_driver_and_CUDA_install.md)
    09. [TensorFlow installation](09_TensorFlow_installation.md)
    10. [Neural networks software](10_Neural_networks_software.md)
-   11. [Docker and DIGITS configuration and use](11_Nvidia_DIGITS.md)
+   11. [Docker configuration and use](11_Docker_configuration.md)
+   12. [DIGITS configuration and use](12_Nvidia_DIGITS.md)
 
 Updated periodically.
