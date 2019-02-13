@@ -45,6 +45,8 @@ Articles:
    4. The rebellion of the ant slaves: http://scienceblogs.com/notrocketscience/2009/04/01/the-rebellion-of-the-ant-slaves
 
 Videos:
-   5. Slave-making ant inspecting a potential host colony: http://youtu.be/5zOIriWKMZ8
-   6. Slave raid of Protomognathus americanus a social parasitic ant: http://youtu.be/YdzEpd657RU
-   7. Slave-Maker Ant Raid: http://youtu.be/p2cGHlueZzU
+<ol start="5">
+   <li>Slave-making ant inspecting a potential host colony: http://youtu.be/5zOIriWKMZ8</li>
+   <li>Slave raid of Protomognathus americanus a social parasitic ant: http://youtu.be/YdzEpd657RU</li>
+   <li>Slave-Maker Ant Raid: http://youtu.be/p2cGHlueZzU</li>
+</ol>
