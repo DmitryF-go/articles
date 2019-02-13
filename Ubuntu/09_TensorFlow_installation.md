@@ -360,6 +360,7 @@ cd       ~/Documents/Install/TensorFlow
 git clone https://github.com/tensorflow/tensorflow.git
 cd tensorflow
 # Switch to stable version of TensorFlow, current is r1.12
+# TensorFlow API Versions: https://www.tensorflow.org/versions
 git checkout r1.12
 
 ./configure
@@ -392,7 +393,7 @@ This looks like a system path.
 Assuming NCCL header path is /usr/include
 Please specify a list of comma-separated Cuda compute capabilities you want to build with.
 You can find the compute capability of your device at: https://developer.nvidia.com/cuda-gpus.
-Please note that each additional compute capability significantly increases your build time and binary size. [Default is: 6.1]: 6.1
+Please note that each additional compute capability significantly increases your build time and binary size. [Default is: 6.1]: 5.2,6.1
 
 Do you want to use clang as CUDA compiler? [y/N]: N
 Please specify which gcc should be used by nvcc as the host compiler. [Default is /usr/bin/x86_64-linux-gnu-gcc-6]: /usr/bin/gcc
@@ -407,7 +408,7 @@ Would you like to interactively configure ./WORKSPACE for Android builds? [y/N]:
   <summary>Full input and output text</summary>
 
 ```text
-./configure 
+./configure
 WARNING: An illegal reflective access operation has occurred
 WARNING: Illegal reflective access by com.google.protobuf.UnsafeUtil (file:/home/lab225/.cache/bazel/_bazel_lab225/install/792a28b07894763eaa2bd870f8776b23/_embedded_binaries/A-server.jar) to field java.lang.String.value
 WARNING: Please consider reporting this to the maintainers of com.google.protobuf.UnsafeUtil
@@ -465,7 +466,7 @@ This looks like a system path.
 Assuming NCCL header path is /usr/include
 Please specify a list of comma-separated Cuda compute capabilities you want to build with.
 You can find the compute capability of your device at: https://developer.nvidia.com/cuda-gpus.
-Please note that each additional compute capability significantly increases your build time and binary size. [Default is: 6.1]: 6.1
+Please note that each additional compute capability significantly increases your build time and binary size. [Default is: 3.5,7.0]: 5.2,6.1
 
 
 Do you want to use clang as CUDA compiler? [y/N]: N
@@ -504,7 +505,8 @@ It is `/usr/lib/x86_64-linux-gnu` by default.
    * Show where NCCL library is installed: `find / -name '*libnccl*' 2>/dev/null`
 (/usr/lib/x86_64-linux-gnu).
 
-   * Compute capability of ```Nvidia GeForce GTX 1080 Ti``` is `6.1`
+   * Compute capability for `Nvidia GeForce GTX TITAN X` is `5.2`.
+   * Compute capability for `Nvidia GeForce GTX 1080 Ti` is `6.1`
 (see https://developer.nvidia.com/cuda-gpus).
 
    * I have not used MPI support myself.
@@ -538,12 +540,12 @@ either use bazel 0.18.0, or
 add the contents of file `~/Documents/Install/TensorFlow/tensorflow/tools/bazel.rc`
 on top of (hidden) file  `~/Documents/Install/TensorFlow/tensorflow/.tf_configure.bazelrc`.
 
-I used Bazel version 0.17.2. It's old, but it works for now (date 2018.12.20).
+I used Bazel version 0.17.2. It's old, but it works for now (date 2019.02.13).
 
 ```shell
 # Create backup
 cd ~/Documents/Install/TensorFlow/tensorflow
-cp .bazelrc .bazelrc.2018.12.20.backup
+cp .bazelrc .bazelrc.2019.02.13.backup
 
 # Import path to bazel.rc file on top of hidden .bazelrc
 echo import ~/Documents/Install/TensorFlow/tensorflow/tools/bazel.rc > temp_file.txt

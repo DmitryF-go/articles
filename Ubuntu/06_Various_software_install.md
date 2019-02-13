@@ -77,6 +77,47 @@ sudo apt install python3-tmuxp
 sudo apt install tmate
 ```
 
+[Using Tmux](https://hackernoon.com/a-gentle-introduction-to-tmux-8d784c404340)
+![Tmux multiple panes](data/2019.02.13-tmux-multiple-panes.png)
+
+```shell
+# Start a session
+tmux new -s nvidia-digits
+# Attach a session
+tmux attach-session -t [name of session]
+# Check active sessions
+tmux ls
+
+# To split a pane horizontally press <ctrl>+<b> and then press <">:
+ctrl+b "
+# To split pane vertically:
+ctrl+b %
+# To move from pane to pane press <ctrl>+<b> and then press arrow key:
+ctrl+b [arrow key]
+# Cycle through panes:
+ctrl+b o
+# Resize pane:
+ctrl+b :
+resize-pane -D 2
+# Kill current pane:
+ctrl+b x
+
+# Detach from session:
+ctrl+b d
+# Kill named session:
+tmux kill-session -t [name of session]
+# Kill tmux server, along with all sessions:
+tmux kill-server
+```
+
+Starting any process in background mode:
+```shell
+tmux a -t nvidia-digits  # attach an existing session
+# Start any process in background mode
+ctrl+b d  # detach from session
+# Exit from SSH or log out from the system, but process will run.
+```
+
 ---
 ### <a name="snap" />Snap commands
 
