@@ -38,12 +38,13 @@ There are many other amazing facts illustrating arms races. For example, aggress
 
 I must admit that arms race between animals is much more fascinating than between humans!
 
-Articles
-[1] Increased host aggression as an induced defense against slave-making ants: http://beheco.oxfordjournals.org/content/22/2/255.full.pdf
-[2] Slave-making ants target the strong not the weak: http://news.bbc.co.uk/earth/hi/earth_news/newsid_9160000/9160744.stm
-[3] How slave-making Polyergus queens establish new colonies: http://www.animalbehaviorcourse.com/biology-of-slave-making.html
-[4] The rebellion of the ant slaves: http://scienceblogs.com/notrocketscience/2009/04/01/the-rebellion-of-the-ant-slaves
-Videos
-[5] Slave-making ant inspecting a potential host colony: http://youtu.be/5zOIriWKMZ8
-[6] Slave raid of Protomognathus americanus a social parasitic ant: http://youtu.be/YdzEpd657RU
-[7] Slave-Maker Ant Raid: http://youtu.be/p2cGHlueZzU
+Articles:
+   1. Increased host aggression as an induced defense against slave-making ants: http://beheco.oxfordjournals.org/content/22/2/255.full.pdf
+   2. Slave-making ants target the strong not the weak: http://news.bbc.co.uk/earth/hi/earth_news/newsid_9160000/9160744.stm
+   3. How slave-making Polyergus queens establish new colonies: http://www.animalbehaviorcourse.com/biology-of-slave-making.html
+   4. The rebellion of the ant slaves: http://scienceblogs.com/notrocketscience/2009/04/01/the-rebellion-of-the-ant-slaves
+
+Videos:
+   5. Slave-making ant inspecting a potential host colony: http://youtu.be/5zOIriWKMZ8
+   6. Slave raid of Protomognathus americanus a social parasitic ant: http://youtu.be/YdzEpd657RU
+   7. Slave-Maker Ant Raid: http://youtu.be/p2cGHlueZzU
