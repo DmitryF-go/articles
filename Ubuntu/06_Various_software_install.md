@@ -1,5 +1,6 @@
    - [Task](#task)
    - [Installations](#install)
+   - [Starting any process in background mode](#background-mode)
    - [Snap commands](#snap)
 
 ---
@@ -78,6 +79,7 @@ sudo apt install tmate
 ```
 
 [Using Tmux](https://hackernoon.com/a-gentle-introduction-to-tmux-8d784c404340)
+
 ![Tmux multiple panes](data/2019.02.13-tmux-multiple-panes.png)
 
 ```shell
@@ -110,7 +112,17 @@ tmux kill-session -t [name of session]
 tmux kill-server
 ```
 
-Starting any process in background mode:
+**uTorrent**
+
+```shell
+snap find torrent
+snap install utorrent
+utorrent
+```
+
+---
+### <a name="background-mode" />Starting any process in background mode
+
 ```shell
 tmux a -t nvidia-digits  # attach an existing session
 # Start any process in background mode
