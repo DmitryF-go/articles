@@ -149,7 +149,7 @@ verify this file:
 openssl verify -verbose -CAfile BYGCA.pem <Surname>_usercert.pem
 
 WARNING: can't open config file: /usr/local/ssl/openssl.cnf
-Paulenka_usercert.pem: OK
+<Surname>_usercert.pem: OK
 ```
 where file [BYGCA.pem](https://github.com/dCache/dcache-docker/blob/master/dcache/dcache/etc/grid-security/certificates/BYGCA.pem)
 is a certificate authority (CA) file to verify your certificates.
