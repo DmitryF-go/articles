@@ -6,9 +6,12 @@
 ---
 ### <a name="task" />Task
    - Create request for personal Grid certificate.
+
      Institution Name: United Institute of Informatics Problems (UIIP NASB).
+
+     Web site http://ca.grid.by doesn't function for now (2019.02.15).
+
      Tested on Windows 10.
-     For now (2019.02.15) web site http://ca.grid.by doesn't function.
 ---
 ### <a name="links" />Useful links
    - [Configuration file](http://uiip.bas-net.by/ca/misc)
@@ -25,7 +28,7 @@ SEE-GRID Certification Authority: Nikos Nikoloutsakos <nikoloutsa at admin dot g
 
 As you can see, the authority member for Belarus is BYGCA, Alexander Shahk (shag at uiip dot bas-net dot by)
 
-For now (2019.02.15) person who make certificates is Ermak Dmitriy (dmierk at hep dot by), http://inp.bsu.by
+Now (2019.02.15) person who makes certificates: Ermak Dmitriy (dmierk at hep dot by), http://inp.bsu.by
 
 ---
 ### <a name="request" />Create request for certificate
@@ -68,7 +71,7 @@ Name (e.g., Francysk Skaryna) []:Foo Bar
 
  4. Two files are created: `usercert_request.pem` (request for certificate) and
 `userkey.pem` (encrypted private key, hide it).
-Verify created request:
+Verify created request PEM file:
 ```shell
 # Verify request
 openssl req -in usercert_request.pem -noout -text
