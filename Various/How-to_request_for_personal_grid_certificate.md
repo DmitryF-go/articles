@@ -7,11 +7,12 @@
 ### <a name="task" />Task
    - Create request for personal Grid certificate.
 
-     Institution Name: United Institute of Informatics Problems (UIIP NASB).
+Institution Name: United Institute of Informatics Problems (UIIP NASB).
 
-     Web site http://ca.grid.by doesn't function for now (2019.02.15).
+Web site http://ca.grid.by doesn't function for now (2019.02.15).
 
-     Tested on Windows 10.
+Tested on Windows 10.
+
 ---
 ### <a name="links" />Useful links
    - [Configuration file](http://uiip.bas-net.by/ca/misc)
