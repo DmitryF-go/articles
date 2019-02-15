@@ -30,16 +30,16 @@ For now (2019.02.15) person who make certificates is Ermak Dmitriy (dmierk at he
 ---
 ### <a name="request" />Create request for certificate
 
-1. Install OpenSSL utility.
+ 1. Install OpenSSL utility.
    - for Windows: [openssl-0.9.8h-1-setup.exe](https://sourceforge.net/projects/gnuwin32/)
      via http://gnuwin32.sourceforge.net/packages/openssl.htm
    - for Linux: openssl package included into your version of operating system
 
-2. Download configuration file `globus-user-ssl.conf` from
+ 2. Download configuration file `globus-user-ssl.conf` from
 [certification center UIIP NASB](http://uiip.bas-net.by/ca/misc).
 Edit config file and change default_bits from 1024 to 2048.
 
-3. Generate a request for Grid certificate:
+ 3. Generate a request for Grid certificate:
 ```shell
 # Generate file: usercert_request.pem
 openssl req -new -config globus-user-ssl.conf -out usercert_request.pem -sha256
@@ -66,7 +66,7 @@ Domain of your organization (e.g. uiip.bas-net.by) []:uiip.bas-net.by
 Name (e.g., Francysk Skaryna) []:Foo Bar
 ```
 
-4. Two files are created: `usercert_request.pem` (request for certificate) and
+ 4. Two files are created: `usercert_request.pem` (request for certificate) and
 `userkey.pem` (encrypted private key, hide it).
 Verify created request:
 ```shell
@@ -124,7 +124,7 @@ Certificate Request:
 
 Field "Subject" should be like this: `DC=by, DC=grid, O=uiip.bas-net.by, CN=Foo Bar`.
 
-5. Send request for certificate (file `usercert_request.pem`)
+ 5. Send request for certificate (file `usercert_request.pem`)
 to the local request authority
 with the following information:
 ```text
@@ -146,6 +146,7 @@ Do not send file `userkey.pem`. This is your private, secret key.
 After receiving your certificate via e-mail (file `<Surname>_usercert.pem`),
 verify this file:
 ```shell
+# Have to be OK. Any other output means verification is wrong.
 openssl verify -verbose -CAfile BYGCA.pem <Surname>_usercert.pem
 
 WARNING: can't open config file: /usr/local/ssl/openssl.cnf
