@@ -13,6 +13,8 @@
 ### <a name="links" />Useful links
    - [Configuration file](http://uiip.bas-net.by/ca/misc)
    - [Certification center UIIP NASB](http://uiip.bas-net.by/ca)
+   - [BYGCA.pem](https://github.com/dCache/dcache-docker/blob/master/dcache/dcache/etc/grid-security/certificates/BYGCA.pem)
+   - [Contents of current OSG CACert Distribution (version 1.78IGTFNEW)](https://repo.opensciencegrid.org/cadist)
    - [Операционный центр национальной грид-сети Республики Беларусь](http://noc.grid.basnet.by/index.php?n=Main.Ca)
    - [EUGridPMA Membership](https://www.eugridpma.org/members/membership)
    - [SEE-GRID Certification Authority](https://see-grid-ca.hellasgrid.gr/about)
@@ -141,18 +143,13 @@ Do not send file `userkey.pem`. This is your private, secret key.
 ---
 ### <a name="check" />Check certificate
 
-Well... **this check does not work** :-), because file `bynocgca-cacert.pem`
-is for the local issue certificate.
-
 After receiving your certificate via e-mail (file `<Surname>_usercert.pem`),
 verify this file:
 ```shell
-# Unfortunately, this doesn't work!
-openssl verify -CAfile bynocgca-cacert.pem <Surname>_usercert.pem
+openssl verify -verbose -CAfile BYGCA.pem <Surname>_usercert.pem
 
 WARNING: can't open config file: /usr/local/ssl/openssl.cnf
-FooBar_usercert.pem: DC = by, DC = grid, O = uiip.bas-net.by, CN = Foo Bar
-error 20 at 0 depth lookup:unable to get local issuer certificate
+Paulenka_usercert.pem: OK
 ```
-where file [bynocgca-cacert.pem](http://noc.grid.basnet.by/bynocgca-cacert.pem)
-is a certificate permission.
+where file [BYGCA.pem](https://github.com/dCache/dcache-docker/blob/master/dcache/dcache/etc/grid-security/certificates/BYGCA.pem)
+is a certificate authority (CA) file to verify your certificates.
