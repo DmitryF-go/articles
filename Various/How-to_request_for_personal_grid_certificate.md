@@ -141,7 +141,7 @@ Do not send file `userkey.pem`. This is your private, secret key.
 ---
 ### <a name="check" />Check certificate
 
-Well... this does not work :-), because file `bynocgca-cacert.pem`
+Well... **this check does not work** :-), because file `bynocgca-cacert.pem`
 is for the local issue certificate.
 
 After receiving your certificate via e-mail (file `<Surname>_usercert.pem`),
