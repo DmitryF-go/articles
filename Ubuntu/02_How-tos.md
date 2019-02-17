@@ -6,6 +6,7 @@ How-to:
    - [Change password](#passwd)
    - [Delete package](#delete)
    - [Find file by name](#find)
+   - [Install deb file](#deb)
    - [Kill the tty](#tty-kill)
    - [List all environment variables](#printenv)
    - [Lock Screen](#lock)
@@ -280,6 +281,13 @@ sudo apt clean
 
 # Or do this
 sudo apt purge --auto-remove packagename
+```
+
+---
+### <a name="deb" />Install deb file
+
+```shell
+sudo dpkg -i my.deb
 ```
 
 ---

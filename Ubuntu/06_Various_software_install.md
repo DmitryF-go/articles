@@ -1,5 +1,6 @@
    - [Task](#task)
    - [Installations](#install)
+   - [Anaconda](#anaconda)
    - [Starting any process in background mode](#background-mode)
    - [Snap commands](#snap)
 
@@ -118,6 +119,68 @@ tmux kill-server
 snap find torrent
 snap install utorrent
 utorrent
+```
+
+---
+### <a name="anaconda" />Anaconda
+
+Links:
+   - [How To Install Anaconda on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
+   - [Anaconda distribution](https://www.anaconda.com/distribution)
+   - [Anaconda repository](https://repo.anaconda.com/archive)
+
+```shell
+# Download latest Anaconda distribution
+mkdir -p ~/Documents/Install/Anaconda/
+cd ~/Documents/Install/Anaconda
+curl -O https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
+
+# Run installation script
+bash Anaconda3-2018.12-Linux-x86_64.sh
+
+# Next, you will be prompted to download Visual Studio Code,
+# which you can learn more about from the official VSCode website.
+# Type 'no' to decline, if you're not sudo user.
+
+# Activate Installation
+source ~/.bashrc
+# Test installation
+conda list
+
+# Set up Anaconda virtual environment
+conda create --name myenv python=3
+# Activate the new environment
+source activate myenv
+
+# After activation of virtual environment,
+# install TensorFlow using Anaconda
+conda install tensorflow-gpu
+# Check it
+python -c "import tensorflow as tf;  \
+    tf.enable_eager_execution();      \
+    print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
+
+# Activate and deactivate virtual environment
+source deactivate
+source activate myenv
+
+# Install necessary modules into virtual environment
+conda install opencv
+conda install joblib
+conda install scikit-image
+conda install scikit-learn
+conda install pandas
+conda install caffe
+conda install tqdm
+conda install torchvision
+conda install keras
+
+# Downgrade TensorFlow to version 1.8.0
+conda install tensorflow-gpu==1.8.0
+
+# Start the test script
+cd /hdd_purple/paulenka_XRSeg_temp/
+python xrseg.py test_imgs/test0.png
 ```
 
 ---
