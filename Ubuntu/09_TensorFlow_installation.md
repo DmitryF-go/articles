@@ -111,15 +111,6 @@ sudo dpkg -i libcudnn7-doc_7.4.1.5-1+cuda10.0_amd64.deb
 #### Check installation of cuDNN
 
 ```shell
-# Copy the cuDNN sample to a writable path
-cp -r /usr/src/cudnn_samples_v7/ $HOME/Documents
-# Go to your writable samples
-cd  $HOME/Documents/cudnn_samples_v7/mnistCUDNN
-# Compile the mnistCUDNN sample
-make clean && make
-# Run the mnistCUDNN sample
-./mnistCUDNN
-
 # Indicates that CuDNN version 7.4.1 is installed.
 cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
 #define CUDNN_MAJOR      7
@@ -129,6 +120,16 @@ cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
 #define CUDNN_VERSION    (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)
 
 #include "driver_types.h"
+
+
+# Copy the cuDNN sample to a writable path
+cp -r /usr/src/cudnn_samples_v7/ $HOME/Documents
+# Go to your writable samples
+cd  $HOME/Documents/cudnn_samples_v7/mnistCUDNN
+# Compile the mnistCUDNN sample
+make clean && make
+# Run the mnistCUDNN sample
+./mnistCUDNN
 ```
 
 If cuDNN is properly installed and running on your Linux system,
