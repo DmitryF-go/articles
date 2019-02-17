@@ -119,6 +119,16 @@ cd  $HOME/Documents/cudnn_samples_v7/mnistCUDNN
 make clean && make
 # Run the mnistCUDNN sample
 ./mnistCUDNN
+
+# Indicates that CuDNN version 7.4.1 is installed.
+cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
+#define CUDNN_MAJOR      7
+#define CUDNN_MINOR      4
+#define CUDNN_PATCHLEVEL 1
+--
+#define CUDNN_VERSION    (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)
+
+#include "driver_types.h"
 ```
 
 If cuDNN is properly installed and running on your Linux system,
