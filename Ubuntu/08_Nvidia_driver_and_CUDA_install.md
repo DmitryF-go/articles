@@ -95,6 +95,30 @@ lsmod | grep nvidia   # should be non-zero output
 
 # Another check. {tab} means you should press <Tab> button on your keyboard.
 cat /proc/driver/nvidia/gpus/{tab}/information
+
+cat /proc/driver/nvidia/gpus/0000\:17\:00.0/information
+Model:           GeForce GTX 1080 Ti
+IRQ:             63
+GPU UUID:        GPU-e953c3c5-dba7-029e-ce44-7b51417131df
+Video BIOS:      86.02.40.00.48
+Bus Type:        PCIe
+DMA Size:        47 bits
+DMA Mask:        0x7fffffffffff
+Bus Location:    0000:17:00.0
+Device Minor:    0
+Blacklisted:     No
+
+cat /proc/driver/nvidia/gpus/0000\:65\:00.0/information
+Model:           GeForce GTX TITAN X
+IRQ:             64
+GPU UUID:        GPU-4ce175fe-a313-4c4a-d620-560e96e8ef2e
+Video BIOS:      84.00.45.00.03
+Bus Type:        PCIe
+DMA Size:        40 bits
+DMA Mask:        0xffffffffff
+Bus Location:    0000:65:00.0
+Device Minor:    1
+Blacklisted:     No
 ```
 
 You should see correct model of your GPU:
@@ -134,9 +158,46 @@ Select: `Linux` → `x86_64` → `Ubuntu` → `18.04` → `runfile (local)`.
 Download 2.0 GB file: `cuda_10.0.130_410.48_linux.run`
 
 ```shell
+sudo service lightdm stop  # Stop graphical interface
+
 # Change permissions and run it
 sudo chmod +x cuda_10.0.130_410.48_linux.run
 sudo ./cuda_10.0.130_410.48_linux.run
+
+Do you accept the previously read EULA?
+accept/decline/quit: accept
+
+Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48?
+(y)es/(n)o/(q)uit: yes
+
+Do you want to install the OpenGL libraries?
+(y)es/(n)o/(q)uit [ default is yes ]: yes
+
+Do you want to run nvidia-xconfig?
+This will update the system X configuration file so that the NVIDIA X driver
+is used. The pre-existing X configuration file will be backed up.
+This option should not be used on systems that require a custom
+X configuration, such as systems with multiple GPU vendors.
+(y)es/(n)o/(q)uit [ default is no ]: no
+
+Note: I think there should be "no" and I donot know why :-)
+
+Install the CUDA 10.0 Toolkit?
+(y)es/(n)o/(q)uit: yes
+
+Enter Toolkit Location
+ [ default is /usr/local/cuda-10.0 ]: /usr/local/cuda-10.0
+
+Do you want to install a symbolic link at /usr/local/cuda?
+(y)es/(n)o/(q)uit: yes
+
+Install the CUDA 10.0 Samples?
+(y)es/(n)o/(q)uit: yes
+
+Enter CUDA Samples Location
+ [ default is /home/lab225 ]: /home/lab225/Documents/Samples/CUDA-10.0_Samples
+
+sudo service lightdm start  # Start graphical interface
 ```
 
 If installation is successful, your should see the following output:
@@ -147,12 +208,20 @@ If installation is successful, your should see the following output:
 = Summary =
 ===========
 
-Toolkit: Installed in /usr/local/cuda-10.0
-Samples: Not Selected
+Driver:   Installed
+Toolkit:  Installed in /usr/local/cuda-10.0
+Samples:  Installed in /home/lab225/Documents/Samples/CUDA-10.0_Samples
 
 Please make sure that
- - PATH includes /usr/local/cuda-10.0/bin
- - LD_LIBRARY_PATH includes /usr/local/cuda-10.0/lib64, or, add /usr/local/cuda-10.0/lib64 to /etc/ld.so.conf and run ldconfig as root
+ -   PATH includes /usr/local/cuda-10.0/bin
+ -   LD_LIBRARY_PATH includes /usr/local/cuda-10.0/lib64, or, add /usr/local/cuda-10.0/lib64 to /etc/ld.so.conf and run ldconfig as root
+
+To uninstall the CUDA Toolkit, run the uninstall script in /usr/local/cuda-10.0/bin
+To uninstall the NVIDIA Driver, run nvidia-uninstall
+
+Please see CUDA_Installation_Guide_Linux.pdf in /usr/local/cuda-10.0/doc/pdf for detailed information on setting up CUDA.
+
+Logfile is /tmp/cuda_install_8756.log
 ```
 
 To configure the CUDA environment for all users (and applications) on your

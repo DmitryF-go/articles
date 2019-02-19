@@ -125,7 +125,7 @@ cat /usr/include/x86_64-linux-gnu/cudnn_v*.h | grep CUDNN_MAJOR -A 2
 # Copy the cuDNN sample to a writable path
 cp -r /usr/src/cudnn_samples_v7/ $HOME/Documents
 # Go to your writable samples
-cd  $HOME/Documents/cudnn_samples_v7/mnistCUDNN
+cd  $HOME/Documents/Samples/cudnn_samples_v7/mnistCUDNN
 # Compile the mnistCUDNN sample
 make clean && make
 # Run the mnistCUDNN sample
@@ -136,6 +136,7 @@ If cuDNN is properly installed and running on your Linux system,
 you will see a message similar to the following:
 
 ```shell
+Result of classification: 1 3 5
 Test passed!
 ```
 
