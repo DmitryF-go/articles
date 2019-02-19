@@ -67,6 +67,10 @@ sudo rm -rf /usr/local/cuda*
 
 # Execute file and answer the questions during installation
 sudo ./NVIDIA-Linux-x86_64-410.93.run
+# Continue installation
+# Install NVIDIA's 32-bit compatibility libraries? -- Yes
+# Whould you like to run the nvidia-xconfig utility... -- Yes
+# OK
 
 # Start graphical interface
 sudo service lightdm start
