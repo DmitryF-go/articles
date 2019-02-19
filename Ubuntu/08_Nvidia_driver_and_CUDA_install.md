@@ -66,7 +66,7 @@ sudo apt autoclean
 sudo rm -rf /usr/local/cuda*
 
 # Execute file and answer the questions during installation
-sudo ./NVIDIA-Linux-x86_64-410.78.run
+sudo ./NVIDIA-Linux-x86_64-410.93.run
 
 # Start graphical interface
 sudo service lightdm start
