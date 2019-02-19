@@ -588,7 +588,7 @@ sudo cp -a tensorflow_pkg_python3/. /root/Install/tensorflow_pkg_python3
 sudo su
 cd ~
 umask 022
-cd Install/tensorflow_pkg_python3
+cd ~/Install/tensorflow_pkg_python3
 sudo pip3 install tensorflow*.whl
 exit
 
@@ -621,7 +621,7 @@ sudo cp -a tensorflow_pkg_python2/. /root/Install/tensorflow_pkg_python2
 sudo su
 cd ~
 umask 022
-cd Install/tensorflow_pkg_python2
+cd ~/Install/tensorflow_pkg_python2
 sudo pip install tensorflow*.whl
 exit
 ```
