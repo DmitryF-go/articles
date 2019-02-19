@@ -57,7 +57,7 @@ called *Nouveau*.
 sudo service lightdm stop
 
 # Remove Nouveau driver
-sudo apt –purge remove xserver-xorg-video-nouveau
+sudo apt purge remove xserver-xorg-video-nouveau
 
 # Remove previously installed NVIDIA driver
 sudo apt purge nvidia*
