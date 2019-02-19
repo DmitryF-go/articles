@@ -629,13 +629,13 @@ exit
 #### Make some tests to check installation of TensorFlow
 
 ```shell
-# Check for Python 3.x
-python3 -c "import tensorflow as tf;  \
+# Check for Python 3.6
+python3.6 -c "import tensorflow as tf;  \
     tf.enable_eager_execution();      \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 
 # Check for Python 2.7
-python -c "import tensorflow as tf;  \
+python2.7 -c "import tensorflow as tf;  \
     tf.enable_eager_execution();     \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 ```
@@ -699,7 +699,7 @@ sudo pip install pydot
 exit  # exit from root
 
 # Check installation of TensorFlow for Python 2.7 once again
-python -c "import tensorflow as tf;  \
+python2.7 -c "import tensorflow as tf;  \
     tf.enable_eager_execution();     \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 ```
