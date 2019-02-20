@@ -17,6 +17,7 @@ How-to:
    - [Switch language hotkey](#lang)
    - [Take screenshot](#screenshot)
    - [View computer resources](#resources)
+   - [View disk usage](#disk-usage)
    - [View screen resolution](#resolution)
    - [Who is logged in](#who)
 
@@ -615,6 +616,20 @@ vmstat -s
 sudo dmidecode
 # Show BIOS info
 sudo dmidecode -t bios
+```
+
+---
+### <a name="disk-usage" />View disk usage
+
+```shell
+gnome-disks&  # open disks utility in background mode
+
+# Disk Usage Analyzer - view only bootable disk
+sudo apt install baobab  # install it
+baobab&  # launch it
+
+df -h /home/
+sudo du -sh /home 2> /dev/null
 ```
 
 ---

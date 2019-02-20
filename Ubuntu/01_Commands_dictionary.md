@@ -93,6 +93,8 @@ Continue job `<Ctrl>+<Q>`.
 
 `deluser` delete user.
 
+`df` **d**isk **f**ilesystem. Report file system disk space usage.
+
 `dmidecode` DMI table decoder. Display hardware information.
 For example, `sudo dmidecode -t memory` displays memory installed.
 
@@ -105,6 +107,8 @@ well-defined channels. All containers are run by a single operating
 system kernel and are thus more lightweight than virtual machines.
 
 `dpkg -i` similar to `apt install` (install package), package manager for Debian
+
+`du` **d**isk **u**sage. Estimate file space usage.
 
 ---
 ### <a name="e" />[E&ensp;:arrow_heading_up:](#up)

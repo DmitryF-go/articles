@@ -22,7 +22,10 @@ My answer on AskUbuntu.com: https://askubuntu.com/a/1097160/672237
 ### <a name="format" />Format disks
 
 Plug in all necessary SATA and power cables to your HDDs. Load Ubuntu.
-Press `<Win>` keyboard and type "*Disks*".
+Press `<Win>` keyboard and type "*Disks*" or type in terminal:
+```shell
+gnome-disks  # open disks utility
+```
 
 *Disks* utility will be opened:
 
@@ -35,8 +38,8 @@ Otherwise to format disks use commands:
    3. `mkfs`, `man mkfs`
 
 ```shell
-sudo mkfs.ext4 -L purple /dev/sdb  # unsure about parameters, because used GUI "Disks"
-sudo mkfs.ext4 -L gold   /dev/sdc  # unsure about parameters, because used GUI "Disks"
+sudo mkfs.ext4 -L purple /dev/sdb  # unsure about parameters, because used GUI "gnome-disks" utility
+sudo mkfs.ext4 -L gold   /dev/sdc  # unsure about parameters, because used GUI "gnome-disks" utility
 ```
 
 :exclamation: **Formatting will delete everything on your hard disk.** :exclamation:
@@ -66,6 +69,9 @@ sudo mount /dev/sdc1 /hdd_gold
 # Unmount drives
 sudo umount /dev/sdb1
 sudo umount /dev/sdc1
+# If "umount: /hdd_purple: target is busy" then:
+sudo umount -lf /dev/sdb1
+sudo umount -lf /dev/sdc1
 
 # Change permissions for goups and other
 sudo chmod go+rx /hdd_purple
