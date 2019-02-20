@@ -538,8 +538,23 @@ sudo gnome-tweaks &
 ---
 ### <a name="screenshot" />Take screenshot
 
+[How to take a screenshot on Ubuntu 18.04](https://linuxconfig.org/how-to-take-a-screenshot-on-ubuntu-18-04-bionic-beaver-linux)
+
 Press `<Win>` key on the keyboard and enter `screenshot`.
+Or enter in console `gnome-screenshot&`, but this works only in Gnome.
 Screen shot application will appear.
+
+Flameshot GUI
+```shell
+sudo apt install flameshot  # install Frameshot
+frameshot gui  # start it
+```
+
+Kazam (Frameshot is better)
+```shell
+sudo apt install kazam  # install Kazam
+kazam&  # start it in background mode
+```
 
 ---
 ### <a name="resources" />View computer resources

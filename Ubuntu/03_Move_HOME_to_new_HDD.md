@@ -24,7 +24,7 @@ My answer on AskUbuntu.com: https://askubuntu.com/a/1097160/672237
 Plug in all necessary SATA and power cables to your HDDs. Load Ubuntu.
 Press `<Win>` keyboard and type "*Disks*" or type in terminal:
 ```shell
-gnome-disks  # open disks utility
+gnome-disks&  # open disks utility
 ```
 
 *Disks* utility will be opened:
