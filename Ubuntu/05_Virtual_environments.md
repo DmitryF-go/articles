@@ -57,10 +57,15 @@ pip install --user pipenv
 
 # Check version of virtual environment
 virtualenv --version
+
+# Create virtual environment
+virtualenv -p python3.6 venv3.6
+
+
 ```
 
 ---
 ### <a name="anaconda" />Anaconda virtual environment
 
 See how-to install Anaconda and use its virtual environment
-[here](06_Various_software_install.md/anaconda).
+[here](06_Various_software_install.md#anaconda).
