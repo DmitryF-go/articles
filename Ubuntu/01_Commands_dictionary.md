@@ -123,7 +123,7 @@ For `true ; echo $?` the output is `0`, for `false ; echo $?` the output is `1`.
 ---
 ### <a name="f" />[F&ensp;:arrow_heading_up:](#up)
 
-`find dirname -name file1` search directory *dirname* and
+`find dirname -iname file1` search directory *dirname* and
 subdirectories for file *file1*.
 
 `free` check memory usage, `-m` in MBs, `-g` in GBs.
@@ -228,6 +228,9 @@ Symbolic link mean *link to another link*, so if remove TARGET file
 the data it contained will no longer be accessible with LINKNAME.
 
 `link` creates *only* hard links, while `ln` can create symbolic link.
+
+`locate` reads through the `mlocate.db` database file which contains
+all file paths in your system.
 
 `ls` list files and directories.
 

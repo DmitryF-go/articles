@@ -294,8 +294,58 @@ sudo dpkg -i my.deb
 ---
 ### <a name="find" />Find file by name
 
+[How to search files from the terminal on Linux](https://www.howtoforge.com/tutorial/linux-search-files-from-the-terminal)
+
+`locate` command
+
+The reason for this unmatched speed is that the `locate` command isn't actually searching your local hard disks
+for the files or directories that you need to find, but more like reads through the `mlocate.db`
+database file which contains all file paths in your system.
+
 ```shell
-find / -name '*name*' 2>/dev/null
+sudo apt install locate  # install locate tool
+sudo updatedb  # update the mlocate.db database before first use
+locate $HOME/*.py  # search for Python files in the $HOME dir
+locate -c $HOME/*.py  # count Python files in the $HOME dir
+locate -ic $HOME/*.py  # count Python files and ignore case
+
+# Example
+sudo updatedb
+locate -ic Home
+1491350
+locate -c Home
+3
+locate Home
+/etc/gufw/Home.profile
+/usr/share/man/man3/FcConfigEnableHome.3.gz
+/usr/share/man/man3/FcConfigHome.3.gz
+```
+
+`find` command
+
+The “find” command is a much more powerful but also slower searching utility.
+Contrary to the `locate` command, `find` actually searching your disks for the files
+and directories that the user is after.
+`find` can search for files that belong to a certain user or group of users,
+files that were modified or accessed recently, files that of a specific size range,
+hidden files, executables, read-only files, and files with certain permissions.
+
+```shell
+find / -name "*name*" 2> /dev/null  # search in / root directory (everything)
+find / -iname "*name*" 2> /dev/null  # ignore case
+# Search in $HOME dir for Python files bigger than 1MB of size.
+find ~/ -size +1M -iname "*.py" 2> /dev/null
+# Search for Python files bigger than 700 kB of size.
+find / -iname "*.py" -and -size +700k 2> /dev/null
+
+# This does not work and I donot why: find / -iname "*.py" -and -size +700k -and -size -1M 2> /dev/null
+# BUT this works for Ubuntu 18.04 :-) Note: 1M vs 1000k
+find / -iname '*.py' -and -size +700k -and -size -1000k 2> /dev/null
+
+find ~/ -cmin  -3 2> /dev/null  # changed  less than 3 minutes ago
+find ~/ -ctime -3 2> /dev/null  # changed  less than 3 days ago
+find ~/ -amin  -3 2> /dev/null  # accessed less than 3 minutes ago
+find ~/ -atime -3 2> /dev/null  # accessed less than 3 days ago
 ```
 
 ---
