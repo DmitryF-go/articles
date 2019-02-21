@@ -1,6 +1,7 @@
    - [Task](#task)
    - [Installation](#installation)
-   - [How-to use it](#howto)
+   - [Use virtual environment](#venv)
+   - [Anaconda virtual environment](#anaconda)
 
 ---
 ### <a name="task" />Task
@@ -44,7 +45,7 @@ sudo apt install python3-venv
 ```
 
 ---
-### <a name="howto" />How-to use it
+### <a name="venv" />Use virtual environment
 
 [Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs)
 
