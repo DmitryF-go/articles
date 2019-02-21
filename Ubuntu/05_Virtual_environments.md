@@ -58,3 +58,9 @@ pip install --user pipenv
 # Check version of virtual environment
 virtualenv --version
 ```
+
+---
+### <a name="anaconda" />Anaconda virtual environment
+
+See how-to install Anaconda and use its virtual environment
+[here](06_Various_software_install.md/anaconda).
