@@ -347,6 +347,8 @@ find ~/ -cmin  -3 2> /dev/null  # changed  less than 3 minutes ago
 find ~/ -ctime -3 -iname "*.png" 2> /dev/null  # changed less than 3 days ago
 find ~/ -amin  -3 2> /dev/null  # accessed less than 3 minutes ago
 find ~/ -atime -3 -iname "*.png" 2> /dev/null  # accessed less than 3 days ago
+
+find . -iname "*.jpg" | wc -l    2>/dev/null  # count JPG files in the local dir
 ```
 
 ---
