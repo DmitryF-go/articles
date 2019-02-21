@@ -61,7 +61,15 @@ virtualenv --version
 # Create virtual environment
 virtualenv -p python3.6 venv3.6
 
+# Activate virtual environment
+source venv3.6/bin/activate
 
+# Install "requests" package into venv3.6
+pip install requests
+pip list  # check it
+
+# Deactivate venv3.6
+deactivate
 ```
 
 ---
