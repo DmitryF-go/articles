@@ -161,7 +161,8 @@ python -c "import tensorflow as tf;  \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 
 # Activate and deactivate virtual environment
-conda deactivate
+conda deactivate  # exit to the "base" environment
+conda deactivate  # exit from Anaconda base env
 conda activate myenv
 
 # Install necessary modules into virtual environment
