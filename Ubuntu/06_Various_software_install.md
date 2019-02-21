@@ -150,7 +150,7 @@ conda list
 # Set up Anaconda virtual environment
 conda create --name myenv python=3
 # Activate the new environment
-source activate myenv
+conda activate myenv
 
 # After activation of virtual environment,
 # install TensorFlow using Anaconda
@@ -161,8 +161,8 @@ python -c "import tensorflow as tf;  \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 
 # Activate and deactivate virtual environment
-source deactivate
-source activate myenv
+conda deactivate
+conda activate myenv
 
 # Install necessary modules into virtual environment
 conda install opencv
