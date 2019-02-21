@@ -295,6 +295,7 @@ sudo dpkg -i my.deb
 ### <a name="find" />Find file by name
 
 [How to search files from the terminal on Linux](https://www.howtoforge.com/tutorial/linux-search-files-from-the-terminal)
+[14 Practical Examples of Linux Find Command for Beginners](https://www.howtoforge.com/tutorial/linux-find-command)
 
 `locate` command
 
@@ -343,9 +344,9 @@ find / -iname "*.py" -and -size +700k 2> /dev/null
 find / -iname '*.py' -and -size +700k -and -size -1000k 2> /dev/null
 
 find ~/ -cmin  -3 2> /dev/null  # changed  less than 3 minutes ago
-find ~/ -ctime -3 2> /dev/null  # changed  less than 3 days ago
+find ~/ -ctime -3 -iname "*.png" 2> /dev/null  # changed less than 3 days ago
 find ~/ -amin  -3 2> /dev/null  # accessed less than 3 minutes ago
-find ~/ -atime -3 2> /dev/null  # accessed less than 3 days ago
+find ~/ -atime -3 -iname "*.png" 2> /dev/null  # accessed less than 3 days ago
 ```
 
 ---
