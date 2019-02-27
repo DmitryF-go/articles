@@ -5,7 +5,6 @@ How-to:
    - [Create user](#user)
    - [Change password](#passwd)
    - [Delete package](#delete)
-   - [Enable WebGL in Firefox](#webgl)
    - [Find file by name](#find)
    - [Install deb file](#deb)
    - [Kill the tty](#tty-kill)
@@ -286,33 +285,6 @@ sudo apt purge --auto-remove packagename
 ```
 
 ---
-### <a name="deb" />Install deb file
-
-```shell
-sudo dpkg -i my.deb
-```
-
----
-### <a name="webgl" />Enable WebGL in Firefox
-
-[Enable webgl in Firefox on Ubuntu](https://www.binarytides.com/enable-webgl-firefox-ubuntu)
-
-```shell
-# Install the Mesa off-screen rendering extension
-sudo apt install libosmesa6
-# Find out the location of the library installed by the package.
-find / -name "*libOSMesa.so*" 2> /dev/null
-# It should be: /usr/lib/x86_64-linux-gnu/libOSMesa.so.8.0.0
-
-# Open Firefox and do the following:
-#   1. Go to about:config
-#   2. Search for webgl.osmesalib
-#   3. Type in the path of the mesa library in the value of this preference.
-#   4. Restart firefox
-
-```
-
----
 ### <a name="find" />Find file by name
 
 [How to search files from the terminal on Linux](https://www.howtoforge.com/tutorial/linux-search-files-from-the-terminal)
@@ -370,6 +342,13 @@ find ~/ -amin  -3 2> /dev/null  # accessed less than 3 minutes ago
 find ~/ -atime -3 -iname "*.png" 2> /dev/null  # accessed less than 3 days ago
 
 find . -iname "*.jpg" | wc -l    2>/dev/null  # count JPG files in the local dir
+```
+
+---
+### <a name="deb" />Install deb file
+
+```shell
+sudo dpkg -i my.deb
 ```
 
 ---
