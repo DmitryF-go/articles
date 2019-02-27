@@ -95,21 +95,18 @@ conda activate myenv
 
 # Install necessary modules into virtual environment
 conda install opencv
-conda install joblib
-conda install scikit-image
+conda install -c anaconda pillow
 conda install scikit-learn
+conda install scipy
+conda install matplotlib
 conda install pandas
-conda install caffe
-conda install tqdm
-conda install torchvision
 conda install keras
+conda install ipython
+conda install jupyter
 
-# Downgrade TensorFlow to version 1.8.0
-conda install tensorflow-gpu==1.8.0
-
-# Start the test script
-cd /hdd_purple/paulenka_XRSeg_temp/
-python xrseg.py test_imgs/test0.png
+# Delete vitrual environment
+conda remove --name myenv --all
+conda info --envs
 ```
 
 ---
