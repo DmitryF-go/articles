@@ -1,7 +1,7 @@
    - [Task](#task)
    - [Installation](#installation)
-   - [Use virtual environment](#venv)
    - [Anaconda virtual environment](#anaconda)
+   - [Common virtual environment](#venv)
 
 ---
 ### <a name="task" />Task
@@ -45,7 +45,73 @@ sudo apt install python3-venv
 ```
 
 ---
-### <a name="venv" />Use virtual environment
+### <a name="anaconda" />Anaconda virtual environment
+
+I recommend Anaconda virtual environment, but you could use common virtual env
+described in the next chapter.
+
+Links:
+   - [How To Install Anaconda on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
+   - [Anaconda distribution](https://www.anaconda.com/distribution)
+   - [Anaconda repository](https://repo.anaconda.com/archive)
+
+```shell
+# Download latest Anaconda distribution
+mkdir -p ~/Documents/Install/Anaconda/
+cd ~/Documents/Install/Anaconda
+curl -O https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
+
+# Run installation script
+bash Anaconda3-2018.12-Linux-x86_64.sh
+
+# Next, you will be prompted to download Visual Studio Code,
+# which you can learn more about from the official VSCode website.
+# Type 'no' to decline, if you're not sudo user.
+
+# Activate Installation
+source ~/.bashrc
+# Test installation
+conda list
+
+# Set up Anaconda virtual environment
+conda create --name myenv python=3
+# Activate the new environment
+conda activate myenv
+
+# After activation of virtual environment,
+# install TensorFlow using Anaconda
+conda install tensorflow-gpu
+# Check it
+python -c "import tensorflow as tf;  \
+    tf.enable_eager_execution();      \
+    print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
+
+# Activate and deactivate virtual environment
+conda deactivate  # exit to the "base" environment
+conda deactivate  # exit from Anaconda base env
+conda activate myenv
+
+# Install necessary modules into virtual environment
+conda install opencv
+conda install joblib
+conda install scikit-image
+conda install scikit-learn
+conda install pandas
+conda install caffe
+conda install tqdm
+conda install torchvision
+conda install keras
+
+# Downgrade TensorFlow to version 1.8.0
+conda install tensorflow-gpu==1.8.0
+
+# Start the test script
+cd /hdd_purple/paulenka_XRSeg_temp/
+python xrseg.py test_imgs/test0.png
+```
+
+---
+### <a name="venv" />Common virtual environment
 
 [Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs)
 
@@ -72,9 +138,3 @@ pip list  # check it
 # Deactivate venv3.6
 deactivate
 ```
-
----
-### <a name="anaconda" />Anaconda virtual environment
-
-See how-to install Anaconda and use its virtual environment
-[here](06_Various_software_install.md#anaconda).
