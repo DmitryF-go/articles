@@ -75,6 +75,8 @@ conda list
 
 # Set up Anaconda virtual environment
 conda create --name myenv python=3
+# Show virtual envs
+conda info --envs
 # Activate the new environment
 conda activate myenv
 
