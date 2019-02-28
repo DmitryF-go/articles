@@ -40,6 +40,23 @@ elastix --version
 sudo apt install emacs25
 ```
 
+**Geeqie**
+
+[Geeqie](https://www.linuxhelp.com/how-to-install-geeqie-in-ubuntu)
+is an open source image viewer and organizer that allows the users to view graphics files.
+
+It is useful to process images with it.
+
+```shell
+sudo add-apt-repository ppa:anton+/photo-video-apps
+sudo apt update
+sudo apt install geeqie
+geeqie&  # run Geeqie
+
+# Uninstall Geeqie if you like
+sudo apt remove geeqie
+```
+
 **JebBrains IntelliJ**
 
 ```shell
