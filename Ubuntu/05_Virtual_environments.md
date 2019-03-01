@@ -103,6 +103,7 @@ conda install pandas
 conda install keras
 conda install ipython
 conda install jupyter
+conda install ipyparallel  # needed for jupyter
 
 # Delete vitrual environment
 conda remove --name myenv --all
