@@ -613,12 +613,12 @@ Screen shot application will appear.
 
    * Flameshot GUI
 ```shell
-sudo apt install flameshot  # install Frameshot
+sudo apt install flameshot  # install Flameshot
 flameshot gui  # start it
 ```
 There is an icon on the panel menu after `flameshot gui` is started.
 
-   * Kazam (Frameshot is better)
+   * Kazam (Flameshot tool is better)
 ```shell
 sudo apt install kazam  # install Kazam
 kazam&  # start it in background mode
