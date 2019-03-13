@@ -10,6 +10,7 @@ How-to:
    - [Kill the tty](#tty-kill)
    - [List all environment variables](#printenv)
    - [Lock Screen](#lock)
+   - [Manage software updates](#software-updates)
    - [Mount USB](#mount)
    - [Open console](#console)
    - [Run scripts on start up](#autorun)
@@ -419,6 +420,19 @@ Alternatively, just start typing your password and the lock
 curtain will be automatically raised as you type.
 
 ---
+### <a name="#software-updates" />Manage software updates
+
+- [How can PPAs be removed?](https://askubuntu.com/questions/307/how-can-ppas-be-removed)
+- [How can I fix a 404 Error when using a PPA or updating my package lists?](https://askubuntu.com/questions/65911/how-can-i-fix-a-404-error-when-using-a-ppa-or-updating-my-package-lists)
+
+Launch Menu --> Preferences --> Software & Updates
+
+![Software & Updates](data/2019.03.13_software_updates.png)
+
+Use sheet "Other Software" to manage repositories for updates.
+Use sheet "Updates" to manage updates check.
+
+---
 ### <a name="mount" />Mount USB
 
 By default, storage devices that are plugged into the system
@@ -600,8 +614,9 @@ Screen shot application will appear.
 Flameshot GUI
 ```shell
 sudo apt install flameshot  # install Frameshot
-frameshot gui  # start it
+flameshot gui  # start it
 ```
+There is and icon on the panel menu after 'flameshot gui' is started.
 
 Kazam (Frameshot is better)
 ```shell
