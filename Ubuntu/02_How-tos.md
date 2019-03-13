@@ -611,14 +611,14 @@ Press `<Win>` key on the keyboard and enter `screenshot`.
 Or enter in console `gnome-screenshot&`, but this works only in Gnome.
 Screen shot application will appear.
 
-Flameshot GUI
+   * Flameshot GUI
 ```shell
 sudo apt install flameshot  # install Frameshot
 flameshot gui  # start it
 ```
-There is and icon on the panel menu after 'flameshot gui' is started.
+There is an icon on the panel menu after `flameshot gui` is started.
 
-Kazam (Frameshot is better)
+   * Kazam (Frameshot is better)
 ```shell
 sudo apt install kazam  # install Kazam
 kazam&  # start it in background mode
