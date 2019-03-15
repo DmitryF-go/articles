@@ -97,6 +97,7 @@ conda activate myenv
 conda install opencv
 conda install -c anaconda pillow
 conda install scikit-learn
+conda install scikit-image
 conda install scipy
 conda install matplotlib
 conda install pandas
