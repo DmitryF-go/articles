@@ -104,7 +104,9 @@ conda install pandas
 conda install keras
 conda install ipython
 conda install jupyter
-conda install ipyparallel  # needed for jupyter
+
+# ipyparallel is needed for jupyter
+conda install ipyparallel
 
 # Or install the whole bunch of packages
 conda install scipy matplotlib pandas scikit-learn scikit-image opencv pandas ipython jupyter ipyparallel keras -n myenv
