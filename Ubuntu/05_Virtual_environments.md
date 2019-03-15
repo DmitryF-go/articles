@@ -93,7 +93,8 @@ conda deactivate  # exit to the "base" environment
 conda deactivate  # exit from Anaconda base env
 conda activate myenv
 
-# Install necessary modules into virtual environment
+# Install necessary packages into virtual environment
+# Package Keras is a part of TensorFlow package.
 conda install opencv
 conda install -c anaconda pillow
 conda install scikit-learn
@@ -101,7 +102,6 @@ conda install scikit-image
 conda install scipy
 conda install matplotlib
 conda install pandas
-conda install keras
 conda install ipython
 conda install jupyter
 
@@ -109,8 +109,7 @@ conda install jupyter
 conda install ipyparallel
 
 # Or install the whole bunch of packages
-conda install scipy matplotlib pandas scikit-learn scikit-image opencv pandas ipython jupyter ipyparallel keras -n myenv
-conda install -c anaconda pillow
+conda install tensorflow-gpu opencv scikit-learn scikit-image pandas ipython ipyparallel jupyter pillow -n myenv
 
 # Delete vitrual environment
 conda remove --name myenv --all
