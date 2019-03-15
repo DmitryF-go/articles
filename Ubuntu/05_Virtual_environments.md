@@ -104,12 +104,11 @@ conda install matplotlib
 conda install pandas
 conda install ipython
 conda install jupyter
-
 # ipyparallel is needed for jupyter
 conda install ipyparallel
 
 # Or install the whole bunch of packages
-conda install tensorflow-gpu opencv scikit-learn scikit-image pandas ipython ipyparallel jupyter pillow -n myenv
+conda install tensorflow-gpu opencv pillow scikit-learn scikit-image pandas ipython ipyparallel jupyter -n myenv
 
 # Delete vitrual environment
 conda remove --name myenv --all
