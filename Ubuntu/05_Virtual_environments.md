@@ -106,6 +106,10 @@ conda install ipython
 conda install jupyter
 conda install ipyparallel  # needed for jupyter
 
+# Or install the whole bunch of packages
+conda install scipy matplotlib pandas scikit-learn scikit-image opencv pandas ipython jupyter ipyparallel keras -n myenv
+conda install -c anaconda pillow
+
 # Delete vitrual environment
 conda remove --name myenv --all
 conda info --envs
