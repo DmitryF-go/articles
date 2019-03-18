@@ -632,6 +632,8 @@ kazam&  # start it in background mode
 ```shell
 # View NVIDIA resources
 nvidia-smi
+# or in non-stop mode (exit with Ctrl+C)
+watch -n 0.5 nvidia-smi
 ```
 
    * CPU
