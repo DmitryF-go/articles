@@ -17,5 +17,6 @@ and more.
    10. [Neural networks software](10_Neural_networks_software.md)
    11. [Docker configuration and use](11_Docker_configuration.md)
    12. [DIGITS configuration and use](12_Nvidia_DIGITS.md)
+   13. [Keras and TensorFlow How-to and use](13_Keras_and_TensorFlow_how-tos.md)
 
 Updated periodically.

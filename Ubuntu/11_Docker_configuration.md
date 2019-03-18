@@ -19,6 +19,10 @@
    - [Get Started, Part 1: Orientation and setup](https://docs.docker.com/get-started)
    - [Start containers automatically](https://docs.docker.com/config/containers/start-containers-automatically)
 
+Docker Compose links:
+   - [Docker compose tutorial for beginners by example [all you need to know]](https://youtu.be/4EqysCR3mjo)
+   - [What is Docker Compose | How to create docker compose file](https://youtu.be/HUpIoF_conA)
+
 ---
 ### <a name="close-port" />Close port 5000
 
