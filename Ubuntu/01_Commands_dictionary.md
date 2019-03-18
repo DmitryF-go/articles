@@ -388,6 +388,8 @@ and *Service Manager*. Show status of the system `systemctl status`.
 `tail -f filename` show the last few lines and keep updating
 as the file grows.
 
+`tar xvzf file.tar.gz` un-gzip and un-tar `*.tar.gz` file.
+
 `tee` read from standard input and write to standard output and files.
 
 `top` show the *top* few processes sorted according to CPU usage.
@@ -421,6 +423,8 @@ be created with the permissions 755 (777 - 022).
 
 `uname` print certain system information like kernel name, hostname,
 operating system, etc.
+
+`unzip file.zip -d destination_folder` un-zip `*.zip` file.
 
 `usermod` modify a user account.
 Modify or change any attributes of a already created user account
