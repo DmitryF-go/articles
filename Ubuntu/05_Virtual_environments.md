@@ -87,7 +87,9 @@ conda info --envs
 ---
 ### <a name="venv" />Common virtual environment
 
-[Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs)
+Links:
+   - [Python Virtual Environment](https://www.geeksforgeeks.org/python-virtual-environment)
+   - [Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs)
 
 Install packages for virtual environment:
 
@@ -139,17 +141,44 @@ Set up and configure virtual environment:
 ```shell
 # Check version of virtual environment
 virtualenv --version
+# We'll use virtualenvwrapper -- is a set of extensions to Ian Bicking's virtualenv tool.
+virtualenvwrapper
 
-# Create virtual environment
-virtualenv -p python3.6 venv3.6
+# Create virtual environment for Python 3.x
+mkvirtualenv -p /usr/bin/python3 myenv
+
+# Directory called "myenv" is created
+ls -hal ~/.virtualenvs/myenv/
+# Browse inside of "myenv" dir to view its structure.
+
+# List all virtual environments
+lsvirtualenv -b  # breaf mode
+# or
+lsvirtualenv -l  # long mode
 
 # Activate virtual environment
-source venv3.6/bin/activate
+workon myenv
 
-# Install "requests" package into venv3.6
-pip install requests
-pip list  # check it
+# You should see "(myenv)" before command prompt
+# (myenv) username@hostname:~/path/to/dir$
+# Make sure you "workon myenv" and install packages into myenv
 
-# Deactivate venv3.6
+# Install TensorFlow 2.0 alpha0 -- make sure you need this version of TF.
+pip install -U --pre tensorflow-gpu
+# or
+pip install tensorflow-gpu==2.0.0-alpha0 
+
+# Check it
+python -c "import tensorflow as tf;     \
+    print('Version:', tf.__version__);  \
+    print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
+
+# Install all other packages into myenv
+pip install opencv-contrib-python Pillow scikit-learn scikit-image pandas ipython ipyparallel jupyter
+
+# Deactivate myenv
 deactivate
+
+# Delete virtual environment if you don't need it any more.
+rmvirtualenv myenv
 ```
