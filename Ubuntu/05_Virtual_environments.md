@@ -1,48 +1,11 @@
    - [Task](#task)
-   - [Installation](#installation)
    - [Anaconda virtual environment](#anaconda)
    - [Common virtual environment](#venv)
 
 ---
 ### <a name="task" />Task
 
-Install software for virtual environments.
-
----
-### <a name="installation" />Installation
-
-```shell
-# Python virtual environment creator
-sudo apt install virtualenv
-sudo apt install python-virtualenv
-sudo apt install python3-virtualenv
-
-# Library for generating Python executable zip files
-sudo apt install pex
-sudo apt install python-pex
-sudo apt install python3-pex
-
-# Node.js virtual environment builder
-sudo apt install nodeenv
-
-# System for automatically handling virtual environments
-sudo apt install fades
-
-# Wrap and build python packages using virtualenv
-sudo apt install dh-virtualenv
-
-# Script for cloning a non-relocatable virtualenv
-sudo apt install virtualenv-clone
-
-# Extension to virtualenv for managing multiple virtual Python environments
-sudo apt install virtualenvwrapper
-
-# apt virtual environment
-sudo apt install apt-venv
-
-# pyvenv-3 binary for python 3.x
-sudo apt install python3-venv
-```
+Install software for virtual environments. Set up and configure virtual env.
 
 ---
 ### <a name="anaconda" />Anaconda virtual environment
@@ -126,7 +89,42 @@ conda info --envs
 
 [Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs)
 
-Install virtual environment:
+Install packages for virtual environment:
+
+```shell
+# Python virtual environment creator
+sudo apt install virtualenv
+sudo apt install python-virtualenv
+sudo apt install python3-virtualenv
+
+# Library for generating Python executable zip files
+sudo apt install pex
+sudo apt install python-pex
+sudo apt install python3-pex
+
+# Node.js virtual environment builder
+sudo apt install nodeenv
+
+# System for automatically handling virtual environments
+sudo apt install fades
+
+# Wrap and build python packages using virtualenv
+sudo apt install dh-virtualenv
+
+# Script for cloning a non-relocatable virtualenv
+sudo apt install virtualenv-clone
+
+# Extension to virtualenv for managing multiple virtual Python environments
+sudo apt install virtualenvwrapper
+
+# apt virtual environment
+sudo apt install apt-venv
+
+# pyvenv-3 binary for python 3.x
+sudo apt install python3-venv
+```
+
+User can install packages locally, but it is better to use virtual environment.
 
 ```shell
 # user installation
@@ -134,14 +132,14 @@ Install virtual environment:
 
 # Install Pipenv
 pip install --user pipenv
-
-# Check version of virtual environment
-virtualenv --version
 ```
 
 Set up and configure virtual environment:
 
 ```shell
+# Check version of virtual environment
+virtualenv --version
+
 # Create virtual environment
 virtualenv -p python3.6 venv3.6
 
