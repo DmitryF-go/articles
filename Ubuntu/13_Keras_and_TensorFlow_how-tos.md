@@ -50,12 +50,6 @@ Additional useful tools everybody should know about:
    easy explanation of the ResUNet in Keras
    with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
 
-   - []() --
-   
-   - []() --
-   
-   - []() --
-
 ---
 ### <a name="limit" />Limit TensorFlow to one GPU
 
