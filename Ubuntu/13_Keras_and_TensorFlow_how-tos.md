@@ -19,7 +19,6 @@ Additional useful tools everybody should know about:
    - [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
    page with many tutorials. Everyone should make at least 5 exercises for beginners
    and then continue with more advanced tutorials.
-
    - [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU) --
    intro into neural networks
    with the [source code](https://github.com/stephencwelch/Neural-Networks-Demystified).
