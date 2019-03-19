@@ -9,10 +9,11 @@ How-to:
 Additional useful tools everybody should know about:
 
    - [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) --
-fast and easy download of many images from Google Images.
-Menu _"Ask where to save each file before downloading"_
-must be turned off before downloading images.
-   - []()
+   fast and easy download of many images from Google Images.
+   Menu _"Ask where to save each file before downloading"_
+   must be turned off before downloading images.
+   
+   - []() --
 
 ---
 ### <a name="exercises" />Exercises and tutorials
@@ -50,6 +51,12 @@ must be turned off before downloading images.
    - [Deep Residual Unet Segmentation in Keras](https://youtu.be/BOoBWRTpaKk) --
    easy explanation of the ResUNet in Keras
    with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
+
+   - []() --
+   
+   - []() --
+   
+   - []() --
 
 ---
 ### <a name="limit" />Limit TensorFlow to one GPU
