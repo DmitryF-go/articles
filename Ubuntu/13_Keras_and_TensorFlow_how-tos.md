@@ -12,9 +12,10 @@ Additional useful tools everybody should know about:
    fast and easy download of many images from Google Images.
    Menu _"Ask where to save each file before downloading"_
    must be turned off before downloading images.
-   - []() --
+   - [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
+   demo of TensorBoard
+   with the [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
    
-
 ---
 ### <a name="exercises" />Exercises and tutorials
 
@@ -54,12 +55,11 @@ import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # so the IDs match nvidia-smi
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"  # "0,1" for multiple GPU or "-1" for CPU
 
-# For Jupyter Notebook one has to restart the kerner
-# after change of environment variables.
+# For Jupyter Notebook one has to restart the kernel
+# after changing of environment variables.
 
-# To monitor GPU permanently
+# Monitor GPU permanently. To exit, press <Ctrl>+<C> keys.
 watch -n 0.5 nvidia-smi
-# To monitor CPU permanently
+# Monitor CPU permanently. To exit, press <Q> key.
 htop
 ```
-
