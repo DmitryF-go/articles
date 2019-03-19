@@ -13,7 +13,7 @@ Additional useful tools everybody should know about:
    Menu _"Ask where to save each file before downloading"_
    must be turned off before downloading images.
    - [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
-   demo of TensorBoard
+   demonstration of TensorBoard
    with the [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
    
 ---
