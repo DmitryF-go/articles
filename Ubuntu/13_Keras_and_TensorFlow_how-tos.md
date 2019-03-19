@@ -12,6 +12,8 @@ Additional useful tools everybody should know about:
    fast and easy download of many images from Google Images.
    Menu _"Ask where to save each file before downloading"_
    must be turned off before downloading images.
+   - []() --
+   
 
 ---
 ### <a name="exercises" />Exercises and tutorials
@@ -55,9 +57,9 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"  # "0,1" for multiple GPU or "-1" for
 # For Jupyter Notebook one has to restart the kerner
 # after change of environment variables.
 
-# To monitor GPU use
+# To monitor GPU permanently
 watch -n 0.5 nvidia-smi
-# To monitor CPU use
+# To monitor CPU permanently
 htop
 ```
 
