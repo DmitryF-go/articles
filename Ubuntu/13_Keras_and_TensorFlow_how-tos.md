@@ -18,7 +18,7 @@ must be turned off before downloading images.
 ### <a name="exercises" />Exercises and tutorials
 
 Links on exercises and tutorials which helped me to understand Neural Networks and TensorFlow:
-[Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
+   - [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
 page with many tutorials. Everyone should make at least 5 exercises for beginners
 and then continue with more advanced tutorials.
 
