@@ -55,6 +55,8 @@ Links:
    - [Anaconda distribution](https://www.anaconda.com/distribution)
    - [Anaconda repository](https://repo.anaconda.com/archive)
 
+Install Anaconda:
+
 ```shell
 # Download latest Anaconda distribution
 mkdir -p ~/Documents/Install/Anaconda/
@@ -72,7 +74,11 @@ bash Anaconda3-2018.12-Linux-x86_64.sh
 source ~/.bashrc
 # Test installation
 conda list
+```
 
+Set up and configure Anaconda virtual environment:
+
+```shell
 # Set up Anaconda virtual environment
 conda create --name myenv python=3
 # Show virtual envs
@@ -94,7 +100,7 @@ conda deactivate  # exit from Anaconda base env
 conda activate myenv
 
 # Install necessary packages into virtual environment
-# Package Keras is a part of TensorFlow package.
+# Now Keras is a part of TensorFlow package.
 conda install opencv
 conda install -c anaconda pillow
 conda install scikit-learn
@@ -120,6 +126,8 @@ conda info --envs
 
 [Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs)
 
+Install virtual environment:
+
 ```shell
 # user installation
 # pip install --user packagename
@@ -129,7 +137,11 @@ pip install --user pipenv
 
 # Check version of virtual environment
 virtualenv --version
+```
 
+Set up and configure virtual environment:
+
+```shell
 # Create virtual environment
 virtualenv -p python3.6 venv3.6
 
