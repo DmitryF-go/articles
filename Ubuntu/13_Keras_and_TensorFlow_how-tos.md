@@ -7,6 +7,7 @@ How-to:
 ### <a name="tools" />Additional useful tools
 
 Additional useful tools everybody should know about:
+
    - [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) --
 fast and easy download of many images from Google Images.
 Menu _"Ask where to save each file before downloading"_
@@ -15,6 +16,8 @@ must be turned off before downloading images.
 
 ---
 ### <a name="exercises" />Exercises and tutorials
+
+Links on exercises and tutorials which helped me to understand Neural Networks and TensorFlow:
 
    - [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
 many tutorials. Everyone should make at least 5 exercises for beginners
