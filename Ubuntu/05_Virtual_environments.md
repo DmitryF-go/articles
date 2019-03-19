@@ -80,6 +80,7 @@ conda install ipyparallel
 conda install tensorflow-gpu opencv pillow scikit-learn scikit-image pandas ipython ipyparallel jupyter -n myenv
 
 # Delete vitrual environment
+conda deactivate
 conda remove --name myenv --all
 conda info --envs
 ```
