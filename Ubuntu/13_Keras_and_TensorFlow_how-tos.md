@@ -36,13 +36,9 @@ Additional useful tools everybody should know about:
    using signal processing and K-means clustering to extract and sort neural events in Python plus
    [source code](https://github.com/llSourcell/spike_sorting)
    and [dataset](http://www.vis.caltech.edu/~rodri/Wave_clus/UCLA_data.zip).
-
-
    - [Unet Segmentation in Keras](https://youtu.be/M3EZS__Z_XE) --
    easy explanation of the U-net in Keras
    with the [source code](https://github.com/nikhilroxtomar/UNet-Segmentation-in-Keras-TensorFlow/blob/master/unet-segmentation.ipynb).
-
-
    - [Deep Residual Unet Segmentation in Keras](https://youtu.be/BOoBWRTpaKk) --
    easy explanation of the ResUNet in Keras
    with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
