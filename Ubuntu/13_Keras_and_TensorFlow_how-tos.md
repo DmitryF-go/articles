@@ -53,7 +53,7 @@ Additional useful tools everybody should know about:
 # Calculate on the 2nd GPU
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # so the IDs match nvidia-smi
-os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"  # "0,1" for multiple GPU or "-1" for CPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # "0,1" for multiple GPU or "-1" for CPU
 
 # For Jupyter Notebook one has to restart the kernel
 # after changing of environment variables.
