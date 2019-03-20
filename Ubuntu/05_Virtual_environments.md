@@ -130,8 +130,8 @@ sudo apt install python3-venv
 How-to install `virtualenvwrapper` [for Windows 10](https://pypi.org/project/virtualenvwrapper-win):
 
 ```shell
-rem You have to install Python 3.7.2 (64-bit)
-rem in order to execute "pip install tensorflow==2.0.0-alpha0"
+rem For TensorFlow you have to install:
+rem Python 3.7.2 (64-bit); CUDA >= 10.0; cuDNN >= 7.5
 :
 set PATH=c:\path-to-your\Python37\Scripts\;c:\path-to-your\Python37\;%PATH%
 : In my case: set PATH=c:\Programs\Python37\Scripts\;c:\Programs\Python37\;%PATH%
