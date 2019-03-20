@@ -13,8 +13,19 @@ Additional useful tools everybody should know about:
    Menu _"Ask where to save each file before downloading"_
    must be turned off before downloading images.
    - [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
-   demonstration of TensorBoard
+   demonstration of TensorBoard tool
    with the [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
+   - [Deep Learning add-on for Adaptive Vision Studio Lite](https://www.adaptive-vision.com/en/software/deep-learning) --
+   if you need out-of-the-box solutions, you could try Adaptive Vision tool with Deep Learning add-on.
+   [Lite version](https://www.adaptive-vision.com/en/software/editions)
+   is a limited-functionality freeware available for trial and non-commercial use.
+   Recommended especially for students who want to learn how to develop
+   complex algorithms with images loaded from files.
+   - [K3D Jupyter](https://github.com/K3D-tools/K3D-jupyter) --
+   Jupyter notebook extension for *3D visualization*
+   with [examples](https://github.com/K3D-tools/K3D-jupyter/tree/master/examples).
+   Just start the examples and you'll like it :-)
+   
    
 ---
 ### <a name="exercises" />Exercises and tutorials

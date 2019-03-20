@@ -127,6 +127,19 @@ sudo apt install apt-venv
 sudo apt install python3-venv
 ```
 
+How-to install `virtualenvwrapper` [for Windows 10](https://pypi.org/project/virtualenvwrapper-win):
+
+```shell
+rem You have to install Python 3.7.2 (64-bit)
+rem in order to execute "pip install tensorflow==2.0.0-alpha0"
+:
+set PATH=c:\path-to-your\Python37\Scripts\;c:\path-to-your\Python37\;%PATH%
+: In my case: set PATH=c:\Programs\Python37\Scripts\;c:\Programs\Python37\;%PATH%
+echo %PATH%
+pip3 --version
+pip3 install virtualenvwrapper-win
+```
+
 User can install packages locally, but it is better to use virtual environment.
 
 ```shell
@@ -137,7 +150,7 @@ User can install packages locally, but it is better to use virtual environment.
 pip install --user pipenv
 ```
 
-Set up and configure virtual environment:
+Set up and configure virtual environment using `virtualenvwrapper`:
 
 ```shell
 # Check version of virtual environment
