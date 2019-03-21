@@ -50,7 +50,7 @@ iframe = '<iframe frameborder="0" class="juxtapose" width="100%" height="600" sr
 IPython.display.HTML(iframe)
 ```
 
-And there should be images comparison [like this](https://github.com/foobar167/articles)
+And there should be images comparison [like this](https://foobar167.github.io/articles)
 
 <figure class="video_container">
 <iframe src="https://docs.google.com/spreadsheets/d/1jAnvYpRmNu8BISIrkYGTLolOTmlCoKLbuHVWzCXJSY4/pubhtml?widget=true&amp;headers=false"></iframe>
