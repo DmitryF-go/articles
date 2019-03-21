@@ -44,6 +44,8 @@ IPython.display.HTML(iframe)
 ---
 ### <a name="exercises" />Exercises and tutorials
 
+Useful for me and I hope useful for you:
+
    - [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
    Webpage with many tutorials. Everyone should make at least 5 exercises for beginners
    and then continue with more advanced tutorials.
