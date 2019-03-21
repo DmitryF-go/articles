@@ -28,7 +28,8 @@ Additional useful tools everybody should know about:
    - [Juxtapose](https://juxtapose.knightlab.com/) --
    Easy-to-make frame comparisons. Make a Juxtapose. Generate an embedable code snippet
    that you can use on any website or Jupyter notebook.
-   There must be an internet connection to obtain an URL. In your Jupyter notebook copy-paste:
+   There must be an internet connection to obtain URL.
+   Copy-paste this code in your Jupyter notebook and replace the URL:
 
 ```python
 # Display the associated webpage in a new window
