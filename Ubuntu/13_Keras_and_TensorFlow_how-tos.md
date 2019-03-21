@@ -13,13 +13,13 @@ Additional useful tools everybody should know about:
    Menu _"Ask where to save each file before downloading"_
    must be turned off before downloading images.
 
-.
+
 
    - [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
    demonstration of TensorBoard tool
    with the [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
 
-.
+
 
    - [Deep Learning add-on for Adaptive Vision Studio Lite](https://www.adaptive-vision.com/en/software/deep-learning) --
    if you need out-of-the-box solutions, you could try Adaptive Vision tool with Deep Learning add-on.
@@ -28,14 +28,14 @@ Additional useful tools everybody should know about:
    Recommended especially for students who want to learn how to develop
    complex algorithms with images loaded from files.
 
-.
+
 
    - [K3D Jupyter](https://github.com/K3D-tools/K3D-jupyter) --
    Jupyter notebook extension for *3D visualization*
    with [examples](https://github.com/K3D-tools/K3D-jupyter/tree/master/examples).
    Just start the examples and you'll like it :-)
 
-.
+
 
    - [Juxtapose](https://juxtapose.knightlab.com/) --
    Easy-to-make frame comparisons. Make a Juxtapose. Generate an embedable code snippet
@@ -51,7 +51,7 @@ IPython.display.HTML(iframe)
 ```
 
 And there should be images comparison like this:
-<iframe frameborder="0" class="juxtapose" width="100%" height="600" src="https://cdn.knightlab.com/libs/juxtapose/latest/embed/index.html?uid=7e8015a0-4be7-11e9-8106-0edaf8f81e27"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dHHmUF9gs70" frameborder="0" allowfullscreen></iframe>
 
 
 ---
