@@ -26,10 +26,10 @@ Additional useful tools everybody should know about:
    with [examples](https://github.com/K3D-tools/K3D-jupyter/tree/master/examples).
    Just start the examples and you'll like it :-)
    - [Juxtapose](https://juxtapose.knightlab.com/) --
-   Easy-to-make frame comparisons. Make a Juxtapose. Generate an embedable code snippet
-   that you can use on any website or Jupyter notebook.
-   There must be an internet connection to obtain URL.
-   Copy-paste this code in your Jupyter notebook and replace the URL:
+   Easy-to-make frame comparisons. Useful for presentations.
+   Generate an embedable code snippet that you can use on any website or Jupyter notebook.
+   There must be an Internet connection to obtain URL.
+   Copy-paste code below into your Jupyter notebook and replace the `url`:
 
 ```python
 # Display the associated webpage in a new window
