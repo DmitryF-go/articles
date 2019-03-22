@@ -64,7 +64,7 @@ conda activate myenv
 
 # Install necessary packages into virtual environment
 # Now Keras is a part of TensorFlow package.
-conda install opencv
+conda install -c michael_wild opencv-contrib
 conda install -c anaconda pillow
 conda install scikit-learn
 conda install scikit-image
@@ -77,7 +77,10 @@ conda install jupyter
 conda install ipyparallel
 
 # Or install the whole bunch of packages in one line
-conda install tensorflow-gpu opencv pillow scikit-learn scikit-image pandas ipython ipyparallel jupyter -n myenv
+conda install tensorflow-gpu -c michael_wild    \
+              opencv-contrib -c anaconda pillow \
+              scikit-learn scikit-image pandas  \
+              ipython ipyparallel jupyter -n myenv
 
 # Delete vitrual environment
 conda deactivate
@@ -188,7 +191,8 @@ python -c "import tensorflow as tf;     \
     print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 
 # Install all other packages into myenv
-pip install opencv-contrib-python Pillow scikit-learn scikit-image pandas ipython ipyparallel jupyter
+pip install opencv-contrib-python Pillow scikit-learn \
+            scikit-image pandas ipython ipyparallel jupyter
 
 # Deactivate myenv
 deactivate
