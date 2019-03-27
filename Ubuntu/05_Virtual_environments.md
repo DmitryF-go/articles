@@ -77,7 +77,7 @@ conda install jupyter
 conda install ipyparallel
 
 # Or install the whole bunch of packages in one line
-conda install tensorflow-gpu \
+conda install tensorflow-gpu matplotlib \
               -c michael_wild opencv-contrib \
               -c anaconda pillow scikit-learn scikit-image \
               pandas ipython ipyparallel jupyter -n myenv
@@ -191,7 +191,7 @@ python -c "import tensorflow as tf;     \
     print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 
 # Install all other packages into myenv
-pip install opencv-contrib-python Pillow scikit-learn \
+pip install opencv-contrib-python Pillow matplotlib scikit-learn \
             scikit-image pandas ipython ipyparallel jupyter
 
 # Deactivate myenv
