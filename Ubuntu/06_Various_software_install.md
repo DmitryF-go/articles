@@ -1,5 +1,12 @@
    - [Task](#task)
    - [Installations](#install)
+      - [Chromium](#Chromium)
+      - [Elastix](#Elastix)
+      - [Emacs](#Emacs)
+      - [Geeqie](#Geeqie)
+      - [JebBrains IntelliJ](#JebBrains IntelliJ)
+      - [Tmux](#Tmux)
+      - [uTorrent](#uTorrent)
    - [Starting any process in background mode](#background-mode)
    - [Snap commands](#snap)
 
@@ -11,7 +18,8 @@ Install different software on Ubuntu 18.04.
 ---
 ### <a name="install" />Installations
 
-**Chromium**
+----
+#### <a name="Chromium" />Chromium
 
 ```shell
 # Install Chromium web browser
@@ -22,7 +30,8 @@ chromium-browser &
 chromium-browser &> /dev/null
 ```
 
-**Elastix**
+----
+#### <a name="Elastix" />Elastix
 
 ```shell
 # Toolbox for rigid and nonrigid registration of images
@@ -33,14 +42,16 @@ sudo apt install elastix-doc
 elastix --version
 ```
 
-**Emacs**
+----
+#### <a name="Emacs" />Emacs
 
 ```shell
 # Emacs editor
 sudo apt install emacs25
 ```
 
-**Geeqie**
+----
+#### <a name="Geeqie" />Geeqie
 
 [Geeqie](https://www.linuxhelp.com/how-to-install-geeqie-in-ubuntu)
 is an open source image viewer and organizer that allows the users to view graphics files.
@@ -57,7 +68,8 @@ geeqie&  # run Geeqie
 sudo apt remove geeqie
 ```
 
-**JebBrains IntelliJ**
+----
+#### <a name="JebBrains IntelliJ" />JebBrains IntelliJ
 
 ```shell
 # Install JetBrains IntelliJ IDEA Community edition
@@ -68,7 +80,8 @@ sudo snap install intellij-idea-community --classic --edge
 intellij-idea-community &
 ```
 
-**Tmux**
+----
+#### <a name="Tmux" />Tmux
 
 ```shell
 # Tmux terminal multiplexer
@@ -129,7 +142,8 @@ tmux kill-session -t [name of session]
 tmux kill-server
 ```
 
-**uTorrent**
+----
+#### <a name="uTorrent" />uTorrent
 
 ```shell
 snap find torrent
