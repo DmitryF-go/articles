@@ -152,10 +152,13 @@ sudo apt install python3-ipykernel
 ```
 
 Install it ALL with one command :-)
-However try to use [virtual environments](05_Virtual_environments.md) instead.
+
+However try to use [virtual environments](05_Virtual_environments.md) instead
+to escape possible problems.
 
 ```shell
 # Install it ALL with one command :-)
+# However try to use virtual environments to escape possible problems.
 sudo apt install python-pip         python2.7           \
                  python3-pip        python3             \
                  python-numpy       python3-numpy       \
