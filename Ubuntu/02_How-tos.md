@@ -1,4 +1,5 @@
 How-to:
+   - [Add directory to the $PATH](#add_to_path)
    - [Allow user to execute root commands](#exec)
    - [Calculator](#calculator)
    - [Clear out Git history](#clear-git)
@@ -15,12 +16,35 @@ How-to:
    - [Open console](#console)
    - [Run scripts on start up](#autorun)
    - [Set environment variable](#envvar)
+   - [Show the model of the computer](#show_the_model)
    - [Switch language hotkey](#lang)
    - [Take screenshot](#screenshot)
    - [View computer resources](#resources)
    - [View disk usage](#disk-usage)
    - [View screen resolution](#resolution)
    - [Who is logged in](#who)
+
+---
+### <a name="add_to_path" />Add directory to the $PATH
+
+```shell
+# Temporary addition
+export PATH=$PATH:/usr/bin
+
+# Permanent for ALL users on the operating system
+sudo nano /etc/environment
+# Edit the file. Make sure that the path is something like this:
+# PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+# Run environment file to effect changes.
+. /etc/environment
+
+# For the local current user
+sudo nano ~/.bashrc
+# Add the following line to the bashrc file:
+# export PATH="/path/to/dir:$PATH"
+# Run bashrc file to effect changes.
+source ~/.bashrc
+```
 
 ---
 ### <a name="exec" />Allow user to execute root commands
@@ -432,6 +456,9 @@ Launch Menu --> Preferences --> Software & Updates
 Use sheet "Other Software" to manage repositories for updates.
 Use sheet "Updates" to manage updates check.
 
+Also check file `/etc/apt/sources.list` and directory `/etc/apt/sources.list.d`
+which containes list of sources to update Ubuntu 18.04.
+
 ---
 ### <a name="mount" />Mount USB
 
@@ -577,6 +604,24 @@ of the ```.gnomerc``` script, except you don't need to know ```sh``` syntax
 ```shell
 PYTHONPATH=/usr/lib/python3/dist-packages/caffe
 export PYTHONPATH
+```
+
+---
+### <a name="#show_the_model" />Show the model of the computer
+
+```shell
+# The first line will be product name.
+sudo lshw | grep product
+# or
+sudo dmidecode -t system
+
+sudo dmidecode -s bios-release-date       # show release date
+sudo dmidecode -s baseboard-product-name  # show product name
+sudo dmidecode -s baseboard-manufacturer  # show manufacturer
+
+# Install GUI application
+sudo apt install sysinfo
+sysinfo&
 ```
 
 ---

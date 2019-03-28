@@ -5,6 +5,7 @@
       - [Emacs](#Emacs)
       - [Geeqie](#Geeqie)
       - [JebBrains IntelliJ](#IntelliJ)
+      - [PyCharm Community](#PyCharm)
       - [Tmux](#Tmux)
       - [uTorrent](#uTorrent)
    - [Starting any process in background mode](#background-mode)
@@ -78,6 +79,16 @@ sudo snap install intellij-idea-community --classic --edge
 
 # Run JetBrains IntelliJ IDEA Community edition
 intellij-idea-community &
+```
+
+----
+#### <a name="PyCharm" />PyCharm Community
+
+[How-to install needed version](https://snapcraft.io/pycharm-community)
+
+```shell
+# Install PyCharm Community 2018.3 stable release
+sudo snap install pycharm-community --channel=2018.3/stable --classic
 ```
 
 ----
@@ -171,13 +182,25 @@ degradable, and removable irrespective of its underlying system.
 
 [Video turorials](https://utappia.org/2016/04/22/how-to-search-install-remove-snap-packages-in-ubuntu)
 
+To craft needed snap visit the [SnapCraft web-site](https://snapcraft.io/pycharm-community).
+
+[How to Install and Use Snap on Ubuntu 18.04](https://codeburst.io/how-to-install-and-use-snap-on-ubuntu-18-04-9fcb6e3b34f9)
+
 ```shell
-sudo snap find                    # to list the available packages
-sudo snap install <package name>  # to install a package
-sudo snap list                    # to view all the installed snap packages
-sudo snap changes                 # to view a list of logged actions
-sudo snap refresh <package name>  # to upgrade a package to its latest available version
-sudo snap remove <package name>   # to uninstall a package
+# Install Snap tool
+sudo apt install snapd
+snap --version
+snap search pycharm  # search for PyCharm packages
+
+# Use Snap tool
+sudo snap find               # to list the available packages
+sudo snap install <package>  # to install a package
+sudo snap list               # to view all the installed snap packages
+sudo snap changes            # to view a list of logged actions
+sudo snap refresh <package>  # to upgrade a package to its latest available version
+sudo snap refresh --list     # to see which packages have updates to be installed
+sudo snap revert <package>   # to revert it to the previously installed version
+sudo snap remove <package>   # to uninstall a package
 
 # To update all snap packages
 sudo snap refresh
@@ -190,4 +213,13 @@ snap changes
 sudo snap abort 11
 # or
 sudo snap remove intellij-idea-community
+
+# Temporary enable-disable package.
+sudo snap disable <package>
+sudo snap enable <package>
+
+# Add /snap/bin/ directory to the $PATH
+sudo nano /etc/environment
+# Run environment file to effect changes.
+. /etc/environment
 ```
