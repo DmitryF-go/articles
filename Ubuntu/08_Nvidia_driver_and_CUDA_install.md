@@ -1,6 +1,7 @@
    - [Task](#task)
    - [Related links](#links)
    - [NVIDIA driver installation](#driver)
+      - [nvidia-smi error](#nvidia-smi-error)
    - [Install CUDA library for all users](#cuda)
 
 ---
@@ -124,6 +125,17 @@ Blacklisted:     No
 You should see correct model of your GPU:
 
 ![NVIDIA GPU information](data/2018.11.29_info_about_driver.png)
+
+---
+### <a name="nvidia-smi-error" />nvidia-smi error
+
+Error when executing command `nvidia-smi`:
+`NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver.
+Make sure that the latest NVIDIA driver is installed and running.`
+
+The reason is that PPA drivers previously installed are not Ok.
+So turn off sorftware updates. Especially PPA repositories.
+See instruction [Manage software updates](02_How-tos.md) 
 
 ---
 ### <a name="cuda" />Install CUDA library for all users

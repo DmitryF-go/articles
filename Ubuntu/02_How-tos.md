@@ -444,7 +444,7 @@ Alternatively, just start typing your password and the lock
 curtain will be automatically raised as you type.
 
 ---
-### <a name="#software-updates" />Manage software updates
+### <a name="software-updates" />Manage software updates
 
 - [How can PPAs be removed?](https://askubuntu.com/questions/307/how-can-ppas-be-removed)
 - [How can I fix a 404 Error when using a PPA or updating my package lists?](https://askubuntu.com/questions/65911/how-can-i-fix-a-404-error-when-using-a-ppa-or-updating-my-package-lists)
