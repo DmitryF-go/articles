@@ -66,12 +66,20 @@ sudo mkdir /hdd_gold  # temporary directory
 sudo mount /dev/sdb1 /hdd_purple
 sudo mount /dev/sdc1 /hdd_gold
 
+# Check they are mounted.
+df -h /hdd_purple
+df -h /hdd_gold
+
 # Unmount drives
 sudo umount /dev/sdb1
 sudo umount /dev/sdc1
 # If "umount: /hdd_purple: target is busy" then:
 sudo umount -lf /dev/sdb1
 sudo umount -lf /dev/sdc1
+
+# Check they are unmounted.
+df -h /hdd_purple
+df -h /hdd_gold
 
 # Change permissions for goups and other
 sudo chmod go+rx /hdd_purple
@@ -134,6 +142,7 @@ at boot.
 ```shell
 # Simulate the mount process
 sudo mount -a
+df -h
 # Reboot
 sudo reboot
 ```

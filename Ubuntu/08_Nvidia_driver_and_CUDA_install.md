@@ -151,8 +151,9 @@ sudo apt install gcc make
 # Stop graphical interface
 sudo service lightdm stop
 
-# Remove Nouveau driver
-sudo apt purge remove xserver-xorg-video-nouveau
+# Remove Nouveau drivers
+apt search nouveau  # check if all nouveau drivers are uninstalled
+sudo apt purge xserver-xorg-video-nouveau
 
 # Remove previously installed NVIDIA driver, but don't remove CUDA.
 sudo apt purge nvidia*
