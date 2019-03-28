@@ -135,7 +135,7 @@ Make sure that the latest NVIDIA driver is installed and running.`
 
 The reason is that PPA drivers previously installed are not Ok.
 So turn off sorftware updates. Especially PPA repositories.
-See instruction [Manage software updates](02_How-tos.md) 
+See instruction [Manage software updates](02_How-tos.md/#software-updates) 
 
 ---
 ### <a name="cuda" />Install CUDA library for all users
