@@ -5,8 +5,10 @@
       - [Emacs](#Emacs)
       - [Geeqie](#Geeqie)
       - [JebBrains IntelliJ](#IntelliJ)
+      - [Notepad++](#notepad-plus-plus)
       - [PyCharm Community](#PyCharm)
       - [Tmux](#Tmux)
+      - [Ubuntu Software Center](#Ubuntu-Software-Center)
       - [uTorrent](#uTorrent)
    - [Starting any process in background mode](#background-mode)
    - [Snap commands](#snap)
@@ -75,10 +77,29 @@ sudo apt remove geeqie
 ```shell
 # Install JetBrains IntelliJ IDEA Community edition
 # https://blog.jetbrains.com/idea/2017/11/install-intellij-idea-with-snaps
-sudo snap install intellij-idea-community --classic --edge
+sudo snap install intellij-idea-community --classic
 
 # Run JetBrains IntelliJ IDEA Community edition
 intellij-idea-community &
+```
+
+----
+#### <a name="notepad-plus-plus" />Notepad++
+
+[Notepad++](https://www.tecrobust.com/install-notepad-plus-plus-linux-ubuntu)
+is a Best Programming Text Editor and as well as a Source Code Editor which was developed
+for Windows Platform and is more famous among the Windows users.
+It provides a simplified speed typing interface with a lot of features such as Syntax Highlighting,
+Brace Matching, AutoComplete, Color Codes, and a lot more features.
+Source Code Editor also makes it very easy to run Compliers, debuggers, and more.
+Though Notepad++ is not available for Linux, there is a way to use Notepadd++
+on Linux Ubuntu Distributions.
+
+```shell
+sudo apt install snapd               # install Snap tool
+sudo apt install wine-stable         # install Wine tool
+sudo snap install notepad-plus-plus  # install Notepad++
+notepad-plus-plus &                  # run Notepad++
 ```
 
 ----
@@ -89,6 +110,8 @@ intellij-idea-community &
 ```shell
 # Install PyCharm Community 2018.3 stable release
 sudo snap install pycharm-community --channel=2018.3/stable --classic
+
+pycharm-community &  # run it in background mode
 ```
 
 ----
@@ -154,12 +177,23 @@ tmux kill-server
 ```
 
 ----
+#### <a name="Ubuntu-Software-Center" />Ubuntu Software Center
+
+[Ubuntu Software Center](https://www.ubuntupit.com/how-to-install-software-in-ubuntu-linux-a-complete-guide-for-newbie/)
+is a GUI to install software for newbie.
+
+```shell
+sudo apt install ubuntu-software  # install Ubuntu Software Center
+ubuntu-software &
+```
+
+----
 #### <a name="uTorrent" />uTorrent
 
 ```shell
 snap find torrent
 snap install utorrent
-utorrent
+utorrent &
 ```
 
 ---
