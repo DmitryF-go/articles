@@ -4,7 +4,7 @@
       - [Elastix](#Elastix)
       - [Emacs](#Emacs)
       - [Geeqie](#Geeqie)
-      - [JebBrains IntelliJ](#JebBrains IntelliJ)
+      - [JebBrains IntelliJ](#IntelliJ)
       - [Tmux](#Tmux)
       - [uTorrent](#uTorrent)
    - [Starting any process in background mode](#background-mode)
@@ -69,7 +69,7 @@ sudo apt remove geeqie
 ```
 
 ----
-#### <a name="JebBrains IntelliJ" />JebBrains IntelliJ
+#### <a name="IntelliJ" />JebBrains IntelliJ
 
 ```shell
 # Install JetBrains IntelliJ IDEA Community edition
