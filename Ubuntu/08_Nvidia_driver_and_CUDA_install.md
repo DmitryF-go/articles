@@ -40,7 +40,7 @@ Download it. In my case the filename is: `NVIDIA-Linux-x86_64-410.78.run`
 
 ```shell
 # Change permission to run and execute it
-sudo chmod +x NVIDIA-Linux-x86_64-410.78.run
+chmod +x NVIDIA-Linux-x86_64-410.78.run
 
 # Before installation install gcc and make packages:
 sudo apt install gcc
@@ -136,6 +136,41 @@ Make sure that the latest NVIDIA driver is installed and running.`
 The reason is that PPA drivers previously installed are not Ok.
 So turn off sorftware updates. Especially PPA repositories.
 See instruction [Manage software updates](02_How-tos.md/#software-updates) 
+
+After deletion of PPA graphical drivers repositories make
+`sudo apt update` and `sudo apt upgrade`.
+
+```shell
+# Download graphical driver from nVidia web site and make it executable.
+chmod +x NVIDIA-Linux-x86_64-418.56.run
+
+# Install necessary packages
+sudo apt install gcc make
+
+# Press <Ctrl>+<Alt>+<F3> and login to console.
+# Stop graphical interface
+sudo service lightdm stop
+
+# Remove Nouveau driver
+sudo apt purge remove xserver-xorg-video-nouveau
+
+# Remove previously installed NVIDIA driver, but don't remove CUDA.
+sudo apt purge nvidia*
+sudo apt autoremove
+sudo apt autoclean
+
+# Execute file and answer the questions during installation
+sudo ./NVIDIA-Linux-x86_64-410.93.run
+
+# Start graphical interface
+sudo service lightdm start
+
+# Reboot Ubuntu
+sudo reboot
+
+# After reboot check if installation is successful
+nvidia-smi
+```
 
 ---
 ### <a name="cuda" />Install CUDA library for all users
