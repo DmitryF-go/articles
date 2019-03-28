@@ -120,7 +120,7 @@ sudo apt install python3-pandas
 sudo apt install python-pil  # pillow
 sudo apt install python3-pil
 sudo apt install python-pil.imagetk  # if the imageTk import doesn't work
-sudo apt install python3-pil.imagetk  # if the imageTk import doesn't work
+sudo apt install python3-pil.imagetk
 sudo apt install python-psutil  # psutil
 sudo apt install python3-psutil
 sudo apt install python-spur  # spur
@@ -145,12 +145,39 @@ sudo apt install python-pydot
 sudo apt install python3-pydot
 sudo apt install python-pyparsing
 sudo apt install python3-pyparsing
-```
 
-```shell
 # To have both python 2.x and 3.x available on jupyter
 sudo apt install python-ipykernel
 sudo apt install python3-ipykernel
+```
+
+Install it ALL with one command :-)
+
+```shell
+# Install it ALL with one command :-)
+sudo apt install python-pip         python2.7           \
+                 python3-pip        python3             \
+                 python-numpy       python3-numpy       \
+                 python-scipy       python3-scipy       \
+                 python-matplotlib  python3-matplotlib  \
+                 python-sklearn     python3-sklearn     \
+                 python-skimage     python3-skimage     \
+                 python-opencv      python3-opencv      \
+                 python-pandas      python3-pandas      \
+                 python-pil         python3-pil         \
+                 python-pil.imagetk python3-pil.imagetk \
+                 python-psutil      python3-psutil      \
+                 python-spur        python3-spur        \
+                 cython             cython3             \
+                 python-ipython     python3-ipython     \
+                 ipython            ipython3            \
+                 jupyter            git                 \
+                 python-mock        python3-mock        \
+                 graphviz                               \
+                 python-pydot       python3-pydot       \
+                 python-pyparsing   python3-pyparsing   \
+                 python-ipykernel   python3-ipykernel   \
+                 python-dev         python3-dev
 ```
 
 ---
@@ -164,9 +191,9 @@ sudo apt install python3-dev
 
 ```shell
 # To check python 2.x and 3.x run
-python
+python   # or python2, etc.
 # and
-python3
+python3  # or python3.6, etc.
 
 # Then type in python 2.x or 3.x console
 import numpy       # check NumPy
