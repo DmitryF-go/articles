@@ -166,7 +166,7 @@ ls -hal /hdd_gold
 
 # Delete everything in the /home directory
 # Be careful with this command, make sure you have a backup.
-rm -rf /home/*
+sudo rm -rf /home/*
 
 # Make $HOME permanent -- edit /etc/fstab configuration file
 sudo nano /etc/fstab
