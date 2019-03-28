@@ -152,6 +152,7 @@ sudo apt install python3-ipykernel
 ```
 
 Install it ALL with one command :-)
+However try to use [virtual environments](05_Virtual_environments.md) instead.
 
 ```shell
 # Install it ALL with one command :-)
