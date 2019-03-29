@@ -4,7 +4,6 @@
    - [Install additional packages](#packages)
    - [Check installations](#check)
    - [Search and remove packages](#additional)
-   - [Install PyCharm](#pycharm)
 
 ---
 ### <a name="task" />Task
@@ -190,9 +189,14 @@ sudo apt install python-pip         python2.7           \
                  python-dev         python3-dev
 ```
 
-Install TensorFlow for all users on the operating system:
+Install TensorFlow for all users on the operating system,
+but you should have [CUDA and cuDNN installed](08_Nvidia_driver_and_CUDA_install.md)
+beforehand:
 
 ```shell
+# Install CUDA beforehand
+# Install cuDNN beforehand
+
 # Change to root user
 sudo su
 # Change directory to HOME
@@ -206,11 +210,11 @@ pip install tensorflow-gpu
 pip3 install tensorflow-gpu
 
 # Check it
-python2 -c "import tensorflow as tf;  \
+python -c "import tensorflow as tf;  \
     tf.enable_eager_execution();     \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 python3 -c "import tensorflow as tf;  \
-    tf.enable_eager_execution();     \
+    tf.enable_eager_execution();      \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 ```
 
