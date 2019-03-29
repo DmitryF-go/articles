@@ -56,15 +56,18 @@ sudo apt install python3
 :exclamation: **Don't delete current python3,
 otherwise Ubuntu OS will _BROKE_.** :exclamation:
 
-Better don't install the newest versions 3.7, 3.8, 4.0, etc. globally
-(on the whole OS). This command works:
+<details close>
+  <summary>Better don't install the newest versions 3.7, 3.8, 4.0, etc.
+  globally (on the whole OS).</summary>
+
+This command works:
 
 ```shell
 # Bad idea to install 3.7 while 3.6 is the current vertion.
 sudo apt install python3.7  # bad idea
 ```
 
-It's a bad idea to use several versions globally, because in this case
+But it's a bad idea to use several versions globally, because in this case
 import of NumPy (`import numpy`) and other modules will fail for python 3.7.
 
 Currently installed NumPy is for 3.6 (global) python version for Ubuntu,
@@ -93,6 +96,9 @@ for python 3.x installation. If you need 3.7 or newer, use
 local virtual environment. It's a bad idea to have several versions of
 python 3.x globally at the same time. Use only currently supported
 by Ubuntu python 3.x version globally. At this moment it is 3.6.
+
+</details>
+<br/>
 
 ---
 ### <a name="packages" />Install additional packages
@@ -182,6 +188,30 @@ sudo apt install python-pip         python2.7           \
                  python-pyparsing   python3-pyparsing   \
                  python-ipykernel   python3-ipykernel   \
                  python-dev         python3-dev
+```
+
+Install TensorFlow for all users on the operating system:
+
+```shell
+# Change to root user
+sudo su
+# Change directory to HOME
+cd ~
+# Set permissions 644 for files and 755 for directories
+umask 022
+# Install TensorFlow current release with GPU support
+# in the global path for Python 2.7
+pip install tensorflow-gpu 
+# For Python 3.x
+pip3 install tensorflow-gpu
+
+# Check it
+python2 -c "import tensorflow as tf;  \
+    tf.enable_eager_execution();     \
+    print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
+python3 -c "import tensorflow as tf;  \
+    tf.enable_eager_execution();     \
+    print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 ```
 
 ---
