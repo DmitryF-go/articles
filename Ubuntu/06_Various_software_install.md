@@ -105,13 +105,22 @@ notepad-plus-plus &                  # run Notepad++
 ----
 #### <a name="PyCharm" />PyCharm Community
 
+Install free of charge PyCharm Community edition.
+
 [How-to install needed version](https://snapcraft.io/pycharm-community)
 
 ```shell
 # Install PyCharm Community 2018.3 stable release
 sudo snap install pycharm-community --channel=2018.3/stable --classic
+# or the last stable version
+sudo snap install pycharm-community --classic
 
 pycharm-community &  # run it in background mode
+
+# Remove possible error with Canberra Gtk.
+# canberra-gtk-module translates GTK+ widgets signals to event sounds
+# This module is needed for PyCharm successful start
+sudo apt install libcanberra-gtk-module
 ```
 
 ----

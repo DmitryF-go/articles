@@ -194,10 +194,12 @@ sudo apt install python3-dev
 ```
 
 ```shell
+# Temporary set environment variable
+export PATH=/usr/bin:$PATH
 # To check python 2.x and 3.x run
-python   # or python2, etc.
+python
 # and
-python3  # or python3.6, etc.
+python3
 
 # Then type in python 2.x or 3.x console
 import numpy       # check NumPy
@@ -242,21 +244,4 @@ git --version
 sudo apt remove packagename
 # To search for the packagename
 apt search packagename
-```
-
----
-### <a name="pycharm" />Install PyCharm
-
-Install free of charge PyCharm Community edition.
-
-```shell
-# Install PyCharm Community edition
-sudo snap install pycharm-community --classic
-# To check PyCharm installation run it in background mode
-pycharm-community &
-
-# Remove possible error with Canberra Gtk.
-# canberra-gtk-module translates GTK+ widgets signals to event sounds
-# This module is needed for PyCharm successful start
-sudo apt install libcanberra-gtk-module
 ```
