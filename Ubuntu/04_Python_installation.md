@@ -210,11 +210,13 @@ pip install tensorflow-gpu
 pip3 install tensorflow-gpu
 
 # Check it
-python -c "import tensorflow as tf;  \
-    tf.enable_eager_execution();     \
+python -c "import tensorflow as tf;     \
+    print('Vertion:', tf.__version__);  \
+    tf.enable_eager_execution();        \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
-python3 -c "import tensorflow as tf;  \
-    tf.enable_eager_execution();      \
+python3 -c "import tensorflow as tf;    \
+    print('Vertion:', tf.__version__);  \
+    tf.enable_eager_execution();        \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
 ```
 
