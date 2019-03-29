@@ -57,6 +57,12 @@ called *Nouveau*.
 # Stop graphical interface
 sudo service lightdm stop
 
+# If /tmp directory is too small
+df -h /tmp
+# Increase /tmp size to 10GB.
+sudo umount /tmp
+sudo mount -t tmpfs -o size=10485760000,mode=1777 overflow /tmp
+
 # Remove Nouveau driver
 sudo apt purge remove xserver-xorg-video-nouveau
 
