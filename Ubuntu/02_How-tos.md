@@ -252,6 +252,12 @@ sudo addgroup groupname
 sudo usermod -a -G groupname username
 ```
 
+Enable or disable the user account:
+```shell
+sudo usermod -L tempuser  # disable user account
+sudo usermod -U tempuser  # enable user account
+```
+
 ---
 ### <a name="passwd" />Change password
 
