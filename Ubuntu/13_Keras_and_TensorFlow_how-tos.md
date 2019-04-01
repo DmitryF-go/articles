@@ -40,6 +40,10 @@ IPython.display.HTML(iframe)
    is a limited-functionality freeware available for trial and non-commercial use.
    Recommended especially for students who want to learn how to develop
    complex algorithms with images loaded from files.
+   - [Google Colab](https://colab.research.google.com) --
+   Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
+   in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
+   and access powerful computing resources, all for free from your browser.
 
 ---
 ### <a name="exercises" />Exercises and tutorials
@@ -72,7 +76,8 @@ Helpful for me and I hope helpful for you:
    - [Deep Residual Unet Segmentation in Keras](https://youtu.be/BOoBWRTpaKk) --
    Easy explanation of the ResUNet in Keras
    with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
-   - []() --
+   - Course [Introduction to TensorFlow for AI, ML, and DL](https://www.coursera.org/learn/introduction-tensorflow/home/welcome) --
+   Good introduction course into TensorFlow.
 
 ---
 ### <a name="limit" />Limit TensorFlow to one GPU
