@@ -18,5 +18,6 @@ and more.
    11. [Docker configuration and use](11_Docker_configuration.md)
    12. [DIGITS configuration and use](12_Nvidia_DIGITS.md)
    13. [Keras and TensorFlow How-to and use](13_Keras_and_TensorFlow_how-tos.md)
+   14. [Install GSI openssh client (Ubuntu and Debian)](14_Install_GSI_openssh_client.md)
 
 Updated periodically.
