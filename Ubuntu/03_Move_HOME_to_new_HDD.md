@@ -80,15 +80,6 @@ sudo umount -lf /dev/sdc1
 # Check they are unmounted.
 df -h /hdd_purple
 df -h /hdd_gold
-
-# Change permissions for goups and other
-sudo chmod go+rx /hdd_purple
-# Change owner to root
-sudo chown root:root /hdd_purple
-# Add write permission for everyone
-sudo chmod o+w /hdd_purple
-# Check it
-ls -hal /
 ```
 
 Configuration file `/etc/fstab` has list of all partitions
@@ -179,4 +170,13 @@ UUID=1d049c7c-4565-480b-a181-2459e8ff8c1b  /home      ext4  defaults  0  2
 
 # After a reboot, your /home resides on the new drive having plenty of space.
 sudo reboot
+
+# Change permissions for goups and other for this HDD
+sudo chmod go+rx /hdd_purple
+# Change owner to root
+sudo chown root:root /hdd_purple
+# Add write permission for everyone
+sudo chmod o+w /hdd_purple
+# Check it
+ls -hal /
 ```
