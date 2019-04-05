@@ -31,10 +31,13 @@ Installation of GSI SSH client:
 
    * Tested on Windows 10, but should work on Linux too.
    * Country: Belarus
-   * Institution Name: United Institute of Informatics Problems (UIIP NASB).
-   * Local authority for Belarus. Web site http://ca.grid.by doesn't function for now (2019.04.05).
-   * The authority member for Belarus is BYGCA, Alexander Shahk (shag at uiip dot bas-net dot by).
-   * SEE-GRID Certification Authority: Nikos Nikoloutsakos <nikoloutsa at admin dot grnet dot gr> (Greece, GRNET)
+   * Institution Name: United Institute of Informatics Problems ([UIIP NASB](http://uiip.bas-net.by/eng)).
+   * Local authority for Belarus. Website http://ca.grid.by doesn't function for now (2019.04.05).
+   * The authority member for Belarus is BYGCA, Alexander Shahk
+   ([Шах Александр Геннадьевич](http://uiip.bas-net.by/struct/orti.php?sphrase_id=238098),
+   e-mail: shag at uiip dot bas-net dot by).
+   * SEE-GRID Certification Authority: [Nikos Nikoloutsakos](https://see-grid-ca.hellasgrid.gr/about/)
+   (e-mail: nikoloutsa at admin dot grnet dot gr, Greece, GRNET)
 
 ---
 &zwnj;1. Install OpenSSL utility.
