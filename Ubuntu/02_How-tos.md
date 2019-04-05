@@ -1,6 +1,9 @@
 How-to:
    - [Add directory to the $PATH](#add_to_path)
-   - [Allow user to execute root commands](#exec)
+   - [Allow user permissions](#permissions)
+      - [Relative articles](#relative-articles)
+      - [Allow to execute commands](#allow-execute)
+      - [Allow to write in the system folder](#allow-write)
    - [Calculator](#calculator)
    - [Clear out Git history](#clear-git)
    - [Create user](#user)
@@ -48,19 +51,20 @@ source ~/.bashrc
 ```
 
 ---
-### <a name="exec" />Allow user to execute root commands
+### <a name="permissions" />Allow user permissions
 
 :exclamation: **For trusted users only.** :exclamation:
 
-Relative articles:
+####<a name="relative-articles" />Relative articles
    * [Ubuntu Docs - Sudoers](https://help.ubuntu.com/community/Sudoers)
    * [How To Edit the Sudoers File on Ubuntu and CentOS](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
    * [Take Control of your Linux | sudoers file: How to with Examples](https://www.garron.me/en/linux/visudo-command-sudoers-file-sudo-default-editor.html)
    * [FilePermissionsACLs](https://help.ubuntu.com/community/FilePermissionsACLs)
    * [My answer on AskUbuntu.com](https://askubuntu.com/a/1098707/672237)
 
-*Allow to execute certain commands
-without granting root permissions*
+####<a name="allow-execute" />Allow to execute commands
+
+Allow to execute `sudo` commands without granting root permissions.
 
 Create and edit file with `visudo` editor
 in the directory `/etc/sudoers.d/`.
@@ -107,7 +111,7 @@ sudo /bin/systemctl restart nginx
 sudo /usr/sbin/service slide_analysis_api start
 ```
 
-*Allow to write in the system folder*
+####<a name="allow-write" />Allow to write in the system folder
 
 Give write permission to `/etc/nginx/` folder.
 
