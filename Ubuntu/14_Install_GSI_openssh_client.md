@@ -123,28 +123,15 @@ gsissh int1-bb.cartesius.surfsara.nl -p 2222
                            Cartesius System
 
    Welcome to SURFsara,
-   This is a private computer facility. Access for any reason must be
-   specifically authorized by the owner. Unless you are so authorized,
-   your continued access and any other use may expose you to criminal
-   and/or civil proceedings.
-
-   Before using our services, you must have accepted the current of
-   version of the SURFsara Usage Agreement.  Please, read and accept
-   the usage agreement at https://portal.surfsara.nl.
+   Some text here... doesn't matter.
    
    Consult https://userinfo.surfsara.nl/systems/cartesius
    for information on system usage.
 Last login: Thu Apr  4 20:06:42 2019 from 80.94.171.57
 ********************************************************************************
-* From 7 March 2019 the procedure for accepting the \u201cUsage Agreement\u201d          *
-* will change. We will switch from a paper form to a digital acceptance        *
-* procedure, which will be coupled to the authorization to access SURFsara     *
-* systems. This will lead to a saving in paperwork,  a faster and more         *
-* automated way to create usernames, and a simpler way to broadcast            *
-* changes in the Usage Agreement to all users.                                 *
+* Some text here... doesn't matter.                                            *
 ********************************************************************************
 * Questions? Please e-mail to helpdesk@surfsara.nl, or call 020-8001400        *
 ******************************************* last modified:  02-04-2019 10:30 ***
 -bash-4.2$ 
 ```
-
