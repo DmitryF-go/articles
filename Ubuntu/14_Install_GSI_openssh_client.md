@@ -1,14 +1,14 @@
    - [Task](#task)
-   - [links to read](#links)
+   - [Links to read](#links)
    - [Install GSI openssh client](#install)
    - [Login via GSI SSH client](#configure)
 
 ---
 ### <a name="task" />Task
-   - Install and configure GSI SSH client on **Ubuntu 18.04**.
+   - Install and configure GSI SSH client for **Ubuntu 18.04**.
 
 ---
-### <a name="links" />links to read
+### <a name="links" />Links to read
    * [Install GSI openssh client (Ubuntu and Debian)](https://www.lsc-group.phys.uwm.edu/lscdatagrid/doc/installgsiopensshclient.html)
 
 ---
@@ -61,8 +61,8 @@ sudo dpkg -i osg-ca-certs_1.31NEW-0_all.deb
 Notes:
    * You should add repository for **old** version of Globus Toolkit 5.2.
    * You should add repository for old version of Ubuntu 14.04 `trusty`.
-   * Distributions from Globus Toolkit 6.0 Download web-page
-   http://toolkit.globus.org/toolkit/downloads/6.0 not work.
+   * Distributions from new Globus Toolkit 6.0 Download web-page
+   http://toolkit.globus.org/toolkit/downloads/6.0 do not work.
    There is no `gsissh` file in these files:
    `globus_toolkit-latest-x86_64-unknown-linux-gnu.tar.gz` and
    `globus-toolkit-repo_latest_all.deb`.
@@ -100,7 +100,7 @@ ls -hal
 # to your ~/.globus/certificates/ directory
 cp /etc/grid-security/certificates/* ~/.globus/certificates/
 
-# Create proxy connection for 24 hours.
+# Create proxy connection for 24 hours. Must enter GRID pass phrase.
 grid-proxy-init -debug -verify
 
     User Cert File: /home/username/.globus/usercert.pem
