@@ -73,10 +73,18 @@ sudo visudo -f /etc/sudoers.d/website
 
 # Create alias for WEBMASTERS group
 User_Alias WEBMASTERS = username, vozman, romanroskach
-# Create commands alias to restart some services and view BIOS
-Cmnd_Alias RESTART = /bin/systemctl restart nginx, /bin/systemctl start slide_analysis_api, /usr/sbin/dmidecode -t bios
+
+# Create commands alias to start, stop and restart some services and view BIOS
+Cmnd_Alias START1   = /bin/systemctl start nginx,    /bin/systemctl start slide_analysis_api
+Cmnd_Alias STOP1    = /bin/systemctl stop nginx,     /bin/systemctl stop slide_analysis_api
+Cmnd_Alias RESTART1 = /bin/systemctl restart nginx,  /bin/systemctl restart slide_analysis_api,    /usr/sbin/dmidecode -t bios
+
+Cmnd_Alias START2   = /usr/sbin/service nginx start,   /usr/sbin/service slide_analysis_api start
+Cmnd_Alias STOP2    = /usr/sbin/service nginx stop,    /usr/sbin/service slide_analysis_api stop
+Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service slide_analysis_api restart
+
 # Allow members of WEBMASTERS to restart some services and view BIOS
-WEBMASTERS ALL = RESTART
+WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2
 
 # To edit broken configuration file
 pkexec visudo -f /etc/sudoers.d/website
@@ -84,9 +92,14 @@ pkexec visudo -f /etc/sudoers.d/website
 # Check if it works -- view BIOS as 'username' (for root)
 sudo -u username sudo dmidecode -t bios    # should work
 sudo -u username sudo dmidecode -t memory  # should NOT work
-# Check for username account
+
+# Check for "username" account
 sudo dmidecode -t bios    # should work
 sudo dmidecode -t memory  # should NOT work
+
+# Check nginx for "username"
+sudo /usr/sbin/service nginx restart
+sudo /bin/systemctl restart nginx
 ```
 
 *Allow to write in the system folder*
