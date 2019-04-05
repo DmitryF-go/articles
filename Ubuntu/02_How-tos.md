@@ -85,7 +85,10 @@ Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service slide_a
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
 WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2
+```
 
+Check it or edit broken configuration file:
+```shell
 # To edit broken configuration file
 pkexec visudo -f /etc/sudoers.d/website
 
