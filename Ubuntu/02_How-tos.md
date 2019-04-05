@@ -145,8 +145,8 @@ getfacl /etc/systemd/system
     other::r-x
 
 # Add 'webmasters' group to an ACL
-sudo setfacl -m g:webmasters:rwx /etc/nginx/
-sudo setfacl -m g:webmasters:rwx /etc/systemd/system
+sudo setfacl -R -m g:webmasters:rwx /etc/nginx/
+sudo setfacl -R -m g:webmasters:rwx /etc/systemd/system
 
 # Check
 getfacl /etc/nginx/
