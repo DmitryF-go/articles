@@ -48,12 +48,14 @@ Installation of GSI SSH client:
 ---
 &zwnj;1.2. Download configuration file `globus-user-ssl.conf` from
 [certification center UIIP NASB](http://uiip.bas-net.by/ca/misc).
-Edit config file and change default_bits from 1024 to 2048.
+Edit config file and change `default_bits` from 1024 to 2048.
 
 ---
 &zwnj;1.3. Generate a request for Grid certificate:
 ```shell
-# Generate file: usercert_request.pem
+# Run OpenSSL utility and generate file: usercert_request.pem
+# Enter and remember your pass phrase for the file: userkey.pem
+
 openssl req -new -config globus-user-ssl.conf -out usercert_request.pem -sha256
 
 WARNING: can't open config file: /usr/local/ssl/openssl.cnf
@@ -149,18 +151,17 @@ Foo Bar personal info:
 4. Subdivision: Laboratory of Informatics
 5. Position/Role: Software Engineer
 6. E-mail: foobar167@gmail.com
-7. Phone number: Office +375-17-225-96-19, Mobile: +375-29-225-12-46
+7. Phone number: Office +375-17-225-12-34, Mobile: +375-29-225-12-34
 8. Certificate request file "userkey.pem" is attached to the letter.
 ```
 Do not send file `userkey.pem`. This is your private, secret key.
 
-You should receive `usercert.pem` file with personal certificate.
+From the local request authority you should receive `usercert.pem` file with personal certificate.
 
 ---
-&zwnj;1.6. Check certificate
+&zwnj;1.6. Check the certificate
 
-After receiving your certificate via e-mail (file `Surname_usercert.pem`),
-verify this file:
+After receiving your certificate via e-mail (filename `Surname_usercert.pem`) verify it:
 ```shell
 # Have to be OK. Any other output means verification is wrong.
 openssl verify -verbose -CAfile BYGCA.pem Surname_usercert.pem
@@ -170,6 +171,10 @@ Surname_usercert.pem: OK
 ```
 where file [BYGCA.pem](https://github.com/dCache/dcache-docker/blob/master/dcache/dcache/etc/grid-security/certificates/BYGCA.pem)
 is a certificate authority (CA) file to verify your certificates for Belarus.
+
+You can download other certificates for other countries and institutions from
+[this repository](https://github.com/dCache/dcache-docker/tree/master/dcache/dcache/etc/grid-security/certificates).
+Path: `dcache-docker/dcache/dcache/etc/grid-security/certificates/`.
 
 ---
 ### <a name="install" />2. Install GSI openssh client
