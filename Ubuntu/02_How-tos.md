@@ -77,14 +77,17 @@ User_Alias WEBMASTERS = username, vozman, romanroskach
 # Create commands alias to start, stop and restart some services and view BIOS
 Cmnd_Alias START1   = /bin/systemctl start nginx,    /bin/systemctl start slide_analysis_api
 Cmnd_Alias STOP1    = /bin/systemctl stop nginx,     /bin/systemctl stop slide_analysis_api
-Cmnd_Alias RESTART1 = /bin/systemctl restart nginx,  /bin/systemctl restart slide_analysis_api,    /usr/sbin/dmidecode -t bios
+Cmnd_Alias RESTART1 = /bin/systemctl restart nginx,  /bin/systemctl restart slide_analysis_api
 
 Cmnd_Alias START2   = /usr/sbin/service nginx start,   /usr/sbin/service slide_analysis_api start
 Cmnd_Alias STOP2    = /usr/sbin/service nginx stop,    /usr/sbin/service slide_analysis_api stop
 Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service slide_analysis_api restart
 
+Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
+
 # Allow members of WEBMASTERS to restart some services and view BIOS
-WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2
+WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS
+
 ```
 
 Check it or edit broken configuration file:
