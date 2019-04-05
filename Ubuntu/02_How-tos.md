@@ -55,14 +55,14 @@ source ~/.bashrc
 
 :exclamation: **For trusted users only.** :exclamation:
 
-####<a name="relative-articles" />Relative articles
+#### <a name="relative-articles" />Relative articles
    * [Ubuntu Docs - Sudoers](https://help.ubuntu.com/community/Sudoers)
    * [How To Edit the Sudoers File on Ubuntu and CentOS](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
    * [Take Control of your Linux | sudoers file: How to with Examples](https://www.garron.me/en/linux/visudo-command-sudoers-file-sudo-default-editor.html)
    * [FilePermissionsACLs](https://help.ubuntu.com/community/FilePermissionsACLs)
    * [My answer on AskUbuntu.com](https://askubuntu.com/a/1098707/672237)
 
-####<a name="allow-execute" />Allow to execute commands
+#### <a name="allow-execute" />Allow to execute commands
 
 Allow to execute `sudo` commands without granting root permissions.
 
@@ -111,7 +111,7 @@ sudo /bin/systemctl restart nginx
 sudo /usr/sbin/service slide_analysis_api start
 ```
 
-####<a name="allow-write" />Allow to write in the system folder
+#### <a name="allow-write" />Allow to write in the system folder
 
 Give write permission to `/etc/nginx/` folder.
 
