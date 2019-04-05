@@ -100,7 +100,7 @@ ls -hal
 # to your ~/.globus/certificates/ directory
 cp /etc/grid-security/certificates/* ~/.globus/certificates/
 
-# Create proxy connection for 24 hours. Must enter GRID pass phrase.
+# Create proxy connection for 12 hours. Must enter GRID pass phrase.
 grid-proxy-init -debug -verify
 
     User Cert File: /home/username/.globus/usercert.pem
