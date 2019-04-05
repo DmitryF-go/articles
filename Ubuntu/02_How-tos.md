@@ -93,13 +93,12 @@ pkexec visudo -f /etc/sudoers.d/website
 sudo -u username sudo dmidecode -t bios    # should work
 sudo -u username sudo dmidecode -t memory  # should NOT work
 
-# Check for "username" account
+# Check under "username" account
 sudo dmidecode -t bios    # should work
 sudo dmidecode -t memory  # should NOT work
-
-# Check nginx for "username"
 sudo /usr/sbin/service nginx restart
 sudo /bin/systemctl restart nginx
+sudo /usr/sbin/service slide_analysis_api start
 ```
 
 *Allow to write in the system folder*
