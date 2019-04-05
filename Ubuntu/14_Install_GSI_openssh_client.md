@@ -40,18 +40,18 @@ Installation of GSI SSH client:
    (e-mail: nikoloutsa at admin dot grnet dot gr, Greece, GRNET)
 
 ---
-&zwnj;1. Install OpenSSL utility.
+&zwnj;1.1. Install OpenSSL utility.
    - for Windows: [openssl-0.9.8h-1-setup.exe](https://sourceforge.net/projects/gnuwin32/)
      via http://gnuwin32.sourceforge.net/packages/openssl.htm
    - for Linux: openssl package included into your version of operating system
 
 ---
-&zwnj;2. Download configuration file `globus-user-ssl.conf` from
+&zwnj;1.2. Download configuration file `globus-user-ssl.conf` from
 [certification center UIIP NASB](http://uiip.bas-net.by/ca/misc).
 Edit config file and change default_bits from 1024 to 2048.
 
 ---
-&zwnj;3. Generate a request for Grid certificate:
+&zwnj;1.3. Generate a request for Grid certificate:
 ```shell
 # Generate file: usercert_request.pem
 openssl req -new -config globus-user-ssl.conf -out usercert_request.pem -sha256
@@ -79,7 +79,7 @@ Name (e.g., Francysk Skaryna) []:Foo Bar
 ```
 
 ---
-&zwnj;4. Two files are created: `usercert_request.pem` (a request for certificate) and
+&zwnj;1.4. Two files are created: `usercert_request.pem` (a request for certificate) and
 `userkey.pem` (an encrypted private key, hide it).
 
 Verify created request PEM file:
@@ -139,7 +139,7 @@ Certificate Request:
 Field "Subject" should be like this: `DC=by, DC=grid, O=uiip.bas-net.by, CN=Foo Bar`
 
 ---
-&zwnj;5. Send request for certificate (file `usercert_request.pem`)
+&zwnj;1.5. Send request for certificate (file `usercert_request.pem`)
 to the local request authority with the following information:
 ```text
 Foo Bar personal info:
@@ -157,7 +157,7 @@ Do not send file `userkey.pem`. This is your private, secret key.
 You should receive `usercert.pem` file with personal certificate.
 
 ---
-&zwnj;6. Check certificate
+&zwnj;1.6. Check certificate
 
 After receiving your certificate via e-mail (file `Surname_usercert.pem`),
 verify this file:
