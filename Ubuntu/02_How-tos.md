@@ -233,7 +233,7 @@ sudo deluser username
 #sudo rm -r /home/username  # use with caution!
 
 # To delete user from a group
-sudo deluser username group
+sudo deluser username groupname
 
 # Change user name
 usermod -l new_username old_username
@@ -255,8 +255,16 @@ sudo usermod -a -G groupname username
 
 Enable or disable the user account:
 ```shell
-sudo usermod -L tempuser  # disable user account
-sudo usermod -U tempuser  # enable user account
+sudo adduser tempuser       # create temporal user
+sudo usermod -L tempuser    # disable user account
+sudo usermod -U tempuser    # enable user account
+sudo deluser tempuser       # delete user
+sudo rm -r /home/tempuser   # use with caution!
+cat /etc/group | grep temp  # check
+ls /home | grep temp        # check
+# If error: "userdel: user tempuser is currently used by process 1864"
+sudo kill -9 1864           # kill the process
+sudo deluser -f tempuser    # try again
 ```
 
 ---
