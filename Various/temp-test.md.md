@@ -3,3 +3,8 @@
 https://youtu.be/1yj64ot1MTE
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/1yj64ot1MTE/0.jpg)](https://youtu.be/1yj64ot1MTE)
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=1yj64ot1MTE
+" target="_blank"><img src="http://img.youtube.com/vi/1yj64ot1MTE/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+
