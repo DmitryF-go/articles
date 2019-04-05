@@ -171,6 +171,8 @@ on his computer *manually*.
 
 `history 15` list last 15 commands and number them.
 
+`hostnamectl` query (show) and change the system hostname and related settings.
+
 `htop` lightweight text-mode interactive process viewer.
 
 ---
@@ -236,6 +238,8 @@ all file paths in your system.
 
 `lsb_release -cs` returns the name of your Ubuntu distribution,
 such as `bionic`.
+`lsb_release -a` gives LSB (Linux Standard Base) and
+distribution-specific information on the CLI.
 
 `lsmod` show which loadable kernel modules are currently loaded.
 

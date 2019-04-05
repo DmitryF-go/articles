@@ -24,10 +24,10 @@ Install Anaconda:
 # Download latest Anaconda distribution
 mkdir -p ~/Documents/Install/Anaconda/
 cd ~/Documents/Install/Anaconda
-curl -O https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
+curl -O https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
 
 # Run installation script
-bash Anaconda3-2018.12-Linux-x86_64.sh
+bash Anaconda3-2019.03-Linux-x86_64.sh
 
 # Next, you will be prompted to download Visual Studio Code,
 # which you can learn more about from the official VSCode website.

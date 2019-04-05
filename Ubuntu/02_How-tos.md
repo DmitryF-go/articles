@@ -5,6 +5,7 @@ How-to:
    - [Clear out Git history](#clear-git)
    - [Create user](#user)
    - [Change password](#passwd)
+   - [Check Linux version](#check-linux)
    - [Delete package](#delete)
    - [Find file by name](#find)
    - [Install deb file](#deb)
@@ -295,6 +296,27 @@ lab225@deeplab3:~$
 
 # To change other users password
 sudo passwd username
+```
+
+---
+### <a name="check-linux" />Check Linux version
+
+[How to check os version in Linux command line](https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line)
+
+```shell
+# Find OS name and version
+cat /etc/os-release
+lsb_release -a
+hostnamectl
+
+# Find kernel version
+uname -r
+# Find Linux distribution
+lsb_release -cs
+
+# Even more options
+cat /proc/version
+cat /etc/issue
 ```
 
 ---
