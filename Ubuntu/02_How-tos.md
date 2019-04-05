@@ -113,7 +113,7 @@ sudo /usr/sbin/service slide_analysis_api start
 
 #### <a name="allow-write" />Allow to write in the system folder
 
-Give write permission to `/etc/nginx/` folder.
+Prepare `webmasters` group:
 
 ```shell
 # Check 'webmasters' group doen't exist
@@ -127,59 +127,40 @@ sudo usermod -a -G webmasters romanroskach
 
 # Group assignment changes won't take effect
 # until the users log out and back in.
-
-# Create directory
-sudo mkdir /etc/nginx/
-# Check directory permissions
-ls -al /etc | grep nginx
-drwxr-xr-x   2 root root     4096 Dec  5 18:30 nginx
-
-# Change group owner of the directory
-sudo chgrp -R webmasters /etc/nginx/
-# Check that the group owner is changed
-ls -al /etc | grep nginx
-drwxr-xr-x   2 root webmasters   4096 Dec  5 18:30 nginx
-
-# Give write permission to the group
-sudo chmod -R g+w /etc/nginx/
-# Check
-ls -al /etc | grep nginx
-drwxrwxr-x   2 root webmasters   4096 Dec  5 18:30 nginx
-
-# Try to create file
-sudo -u username touch /etc/nginx/test.txt  # should work
-sudo -u username touch /etc/test.txt  # Permission denied
 ```
 
-Give write permission to `/etc/systemd/system/` folder.
+Give write permission to directories `/etc/nginx/` and `/etc/systemd/system/`.
 
 ```shell
 # List ACLs
+getfacl /etc/nginx/
 getfacl /etc/systemd/system
 
-getfacl: Removing leading '/' from absolute path names
-# file: etc/systemd/system
-# owner: root
-# group: root
-user::rwx
-group::r-x
-other::r-x
+    getfacl: Removing leading '/' from absolute path names
+    # file: etc/systemd/system
+    # owner: root
+    # group: root
+    user::rwx
+    group::r-x
+    other::r-x
 
 # Add 'webmasters' group to an ACL
+sudo setfacl -m g:webmasters:rwx /etc/nginx/
 sudo setfacl -m g:webmasters:rwx /etc/systemd/system
 
 # Check
+getfacl /etc/nginx/
 getfacl /etc/systemd/system
 
-getfacl: Removing leading '/' from absolute path names
-# file: etc/systemd/system
-# owner: root
-# group: root
-user::rwx
-group::r-x
-group:webmasters:rwx
-mask::rwx
-other::r-x
+    getfacl: Removing leading '/' from absolute path names
+    # file: etc/systemd/system
+    # owner: root
+    # group: root
+    user::rwx
+    group::r-x
+    group:webmasters:rwx
+    mask::rwx
+    other::r-x
 
 sudo -u username touch /etc/systemd/system/test.txt  # should work
 sudo -u username touch /etc/systemd/test.txt  # Permission denied
