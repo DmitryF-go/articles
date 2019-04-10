@@ -1,6 +1,10 @@
    - [Task](#task)
    - [Anaconda virtual environment](#anaconda)
+      - [Install Anaconda](#install-anaconda)
+      - [Set up and configure Anaconda virtual environment](#configure-anaconda)
    - [Common virtual environment](#venv)
+      - [Install packages for virtual environment](#install-packages)
+      - [Set up and configure virtual environment using `virtualenvwrapper`](#configure-venv)
 
 ---
 ### <a name="task" />Task
@@ -18,7 +22,7 @@ Links:
    - [Anaconda distribution](https://www.anaconda.com/distribution)
    - [Anaconda repository](https://repo.anaconda.com/archive)
 
-Install Anaconda:
+#### <a name="install-anaconda" />Install Anaconda
 
 ```shell
 # Download latest Anaconda distribution
@@ -39,7 +43,7 @@ source ~/.bashrc
 conda list
 ```
 
-Set up and configure Anaconda virtual environment:
+#### <a name="configure-anaconda" />Set up and configure Anaconda virtual environment
 
 ```shell
 # Set up Anaconda virtual environment
@@ -96,7 +100,7 @@ Links:
    - [Python Virtual Environment](https://www.geeksforgeeks.org/python-virtual-environment)
    - [Pipenv & Virtual Environments](https://docs.python-guide.org/dev/virtualenvs)
 
-Install packages for virtual environment:
+#### <a name="install-packages" />Install packages for virtual environment
 
 ```shell
 # Python virtual environment creator
@@ -154,7 +158,7 @@ User can install packages locally, but it is better to use virtual environment.
 pip install --user pipenv
 ```
 
-Set up and configure virtual environment using `virtualenvwrapper`:
+#### <a name="configure-venv" />Set up and configure virtual environment using `virtualenvwrapper`
 
 ```shell
 # Check version of virtual environment
