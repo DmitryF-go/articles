@@ -211,7 +211,7 @@ rmvirtualenv myenv
 ### <a name="easy-build" />EasyBuild environment on Surfsara server
    - [Surfsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage) --
    You can try to use the search functionality of userinfo as not everything is referenced, but is findable.
-   - [Use `accinfo` or portal.surfsara.nl to track hours remained](https://portal.surfsara.nl)
+   - [Use `accinfo` or `portal.surfsara.nl` to track hours remained](https://portal.surfsara.nl)
    - If you have problems interacting with the batch environment please send a message at
    `helpdesk <at> surfsara <dot> nl`.
    - If you have any ML framework/application setup, cluster behavior, etc. you can email me directly
