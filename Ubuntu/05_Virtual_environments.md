@@ -5,6 +5,7 @@
    - [Common virtual environment](#venv)
       - [Install packages for virtual environment](#install-packages)
       - [Set up and configure virtual environment using `virtualenvwrapper`](#configure-venv)
+   - [EasyBuild environment on Surfsara server](#easy-build)
 
 ---
 ### <a name="task" />Task
@@ -204,4 +205,45 @@ deactivate
 
 # Delete virtual environment if you don't need it any more.
 rmvirtualenv myenv
+```
+
+---
+### <a name="easy-build" />EasyBuild environment on Surfsara server
+   - [Surfsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage) --
+   You can try to use the search functionality of userinfo as not everything is referenced, but is findable.
+   - [Use `accinfo` or portal.surfsara.nl to track hours remained](https://portal.surfsara.nl)
+   - If you have problems interacting with the batch environment please send a message at
+   `helpdesk <at> surfsara <dot> nl`.
+   - If you have any ML framework/application setup, cluster behavior, etc. you can email me directly
+   `"Damian Podareanu" <damian <dot> podareanu <at> surfsara <dot> nl>` and just CC
+   `helpdesk <at> surfsara <dot> nl`.
+
+You can install local software modules in EasyBuild environment.
+
+```shell
+# Load EasyBuild environment
+module load eb
+# List Anaconda packages
+eb -S Anaconda
+# List Miniconda packages
+eb -S MiniConda
+# Install package
+eblocalinstall Anaconda3-5.3.0.eb --robot
+
+# There are several Python versions installed already
+module av Python
+# Load module
+module load Python/3.6.3-foss-2017b
+# Create 'test' virtual environment
+virtualenv test
+# Activate 'test' virtual environment
+source test/bin/activate
+# Check which Python is used
+which python
+# Start Python in the local environment
+python3
+
+# Track hours on the system
+# or https://portal.surfsara.nl
+accinfo
 ```
