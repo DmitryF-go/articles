@@ -1,5 +1,6 @@
    - [Task](#task)
    - [Installations](#install)
+      - [All other different software](#other-software)
       - [Chromium](#Chromium)
       - [Elastix](#Elastix)
       - [Emacs](#Emacs)
@@ -20,6 +21,15 @@ Install different software on Ubuntu 18.04.
 
 ---
 ### <a name="install" />Installations
+
+----
+#### <a name="other-software" />All other different software
+```shell
+sudo apt install git       # Git
+sudo apt install mc        # Midnight Commander
+sudo apt install autoconf  # automatic configure script builder
+sudo apt install make      # utility for directing compilation
+```
 
 ----
 #### <a name="Chromium" />Chromium
@@ -62,10 +72,9 @@ is an open source image viewer and organizer that allows the users to view graph
 It is useful to process images with it.
 
 ```shell
-sudo add-apt-repository ppa:anton+/photo-video-apps
-sudo apt update
-sudo apt install geeqie
-geeqie&  # run Geeqie
+# Install image viewer using GTK+ and data files for Geeqie.
+sudo apt install geeqie geeqie-common
+geeqie &  # run Geeqie
 
 # Uninstall Geeqie if you like
 sudo apt remove geeqie
