@@ -30,6 +30,11 @@ sudo apt install git       # Git
 sudo apt install mc        # Midnight Commander
 sudo apt install autoconf  # automatic configure script builder
 sudo apt install make      # utility for directing compilation
+sudo apt install curl      # tool for transferring data with URL syntax
+sudo apt install gcc gcc-6 g++ g++-6  # GCC and C++ compilers
+
+# Or in one command
+sudo apt install htop git mc autoconf make curl gcc gcc-6 g++ g++-6
 ```
 
 ----

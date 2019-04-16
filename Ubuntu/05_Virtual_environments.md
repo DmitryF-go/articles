@@ -83,10 +83,14 @@ conda install jupyter
 conda install ipyparallel
 
 # Or install the whole bunch of packages in one line
-conda install tensorflow-gpu matplotlib \
+conda install tensorflow-gpu matplotlib scipy \
               -c michael_wild opencv-contrib \
               -c anaconda pillow scikit-learn scikit-image \
               pandas ipython ipyparallel jupyter -n myenv
+
+# Or for Ubuntu 18.04
+conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
+              scikit-image pandas ipython ipyparallel jupyter -n myenv
 
 # Delete vitrual environment
 conda deactivate
