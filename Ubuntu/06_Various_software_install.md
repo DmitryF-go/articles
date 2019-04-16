@@ -25,6 +25,7 @@ Install different software on Ubuntu 18.04.
 ----
 #### <a name="other-software" />All other different software
 ```shell
+sudo apt install htop      # CPU monitoring
 sudo apt install git       # Git
 sudo apt install mc        # Midnight Commander
 sudo apt install autoconf  # automatic configure script builder
