@@ -243,7 +243,7 @@ Notes:
 You must have certificate `usercert.pem` and
 encrypted private key `userkey.pem` to configure your GSI SSH client:
 ```shell
-# Login to the computer with whitelisted IP-address.
+# Login to the computer with whitelisted IP-address, i.e. DeepLab3.
 
 # Create .globus/certificates directory in your $HOME
 mkdir -p ~/.globus/certificates
