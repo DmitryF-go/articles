@@ -186,7 +186,13 @@ GSI SSH client installation:
 # Add repository to the /etc/apt/sources.list file
 sudo nano /etc/apt/sources.list
 # Copy-paste this line
-deb http://www.globus.org/ftppub/gt5/5.2/stable/packages/deb/ubuntu/14.04 trusty contrib
+deb [trusted=yes] http://www.globus.org/ftppub/gt5/5.2/stable/packages/deb/ubuntu/14.04 trusty contrib
+
+# To fix the GPG error 'NO_PUBKEY'
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 44AE7EC2FAF24365
+sudo gpg --keyring /etc/apt/trusted.gpg --edit-key 44AE7EC2FAF24365 trust
+# and selected full trust ("4")
+
 # Update the repository definitions
 sudo apt update
 # Install the gsi-openssh-clients package
