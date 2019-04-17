@@ -343,3 +343,18 @@ Last login: Thu Apr  4 20:06:42 2019 from 80.94.171.57
 ---
 ### <a name="manage" />4. Server resource management
 
+Links to read:
+   * [Tutorial: Easybuild and Environment Modules](https://varrette.gforge.uni.lu/blog/2017/06/01/tutorial-easybuild/)
+   * [EasyBuild documentation](https://easybuild.readthedocs.io/en/latest)
+
+Notes:
+   * You can login to SURFsara only from DeepLab3, because its IP address is in the whitelist.
+   * `nvidia-smi` command doesn't work.
+   * Operating system - Red Hat Enterprise Linux Server 7.6 (Maipo), `hostnamectl` command.
+   * 17 TB free space in $HOME dir, `df -h ~/` command.
+   * 16 CPU cores and 126 GB RAM, `htop` command.
+
+You can install Anaconda virtual environment [from here](05_Virtual_environments.md/#anaconda)
+or use EasyBuild framework that allows you to manage (scientific) software
+on High Performance Computing (HPC) systems in an efficient way.
+

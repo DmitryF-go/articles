@@ -312,7 +312,7 @@ sudo passwd username
 ---
 ### <a name="check-linux" />Check Linux version
 
-[How to check os version in Linux command line](https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line)
+[How to check operating system version in Linux command line](https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line)
 
 ```shell
 # Find OS name and version
