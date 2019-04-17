@@ -181,10 +181,8 @@ Path: `dcache-docker/dcache/dcache/etc/grid-security/certificates/`.
 ---
 ### <a name="install" />2. Install GSI openssh client
 
-<details close>
-  <summary><b>SYCL / CUDA / ROCm are mututally exclusive</b></summary>
-
-Old GSI SSH client installation:
+<details><summary>Old GSI SSH client installation:</summary>
+<p>
 
 ```shell
 # Add repository to the /etc/apt/sources.list file
@@ -245,11 +243,11 @@ Notes:
    `globus-toolkit-repo_latest_all.deb`.
    So use GT 5.2 for Ubuntu 14.04 `trusty`.
    * IP-address should be whitelisted for the gsi-ssh on the server.
-   Login only from whitelisted IP-address.   
+   Login only from whitelisted IP-address.
 
 ---
+</p>
 </details>
-<br/>
 
 GSI SSH client installation
 ```shell
