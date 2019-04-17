@@ -181,7 +181,9 @@ Path: `dcache-docker/dcache/dcache/etc/grid-security/certificates/`.
 ---
 ### <a name="install" />2. Install GSI openssh client
 
-GSI SSH client installation:
+<details close>
+  <summary>Old GSI SSH client installation:</summary>
+
 ```shell
 # Add repository to the /etc/apt/sources.list file
 sudo nano /etc/apt/sources.list
@@ -242,6 +244,21 @@ Notes:
    So use GT 5.2 for Ubuntu 14.04 `trusty`.
    * IP-address should be whitelisted for the gsi-ssh on the server.
    Login only from whitelisted IP-address.   
+
+</details>
+<br/>
+
+GSI SSH client installation
+```shell
+mkdir -p ~/Documents/Install/Globus_Toolkit
+cd ~/Documents/Install/Globus_Toolkit
+
+wget http://toolkit.globus.org/ftppub/gt6/installers/repo/globus-toolkit-repo_latest_all.deb
+sudo dpkg -i globus-toolkit-repo_latest_all.deb
+
+# This should install gsissh, gsiscp and gsisftp.
+sudo apt install gsi-openssh-clients
+```
 
 ---
 ### <a name="login" />3. Login via GSI SSH client
