@@ -3,12 +3,14 @@
    1. [Request for Grid certificate](#request)
    2. [Install GSI openssh client](#install)
    3. [Login via GSI SSH client](#login)
+   4. [Server resource management](#manage)
 
 ---
 ### <a name="task" />Task
    1. Create request for personal Grid certificate.
    2. Install GSI SSH client for **Ubuntu 18.04**.
    3. Connect via GSI SSH to the server.
+   4. SURFsara server resource management.
 
 ---
 ### <a name="links" />Links to read
@@ -300,3 +302,7 @@ Last login: Thu Apr  4 20:06:42 2019 from 80.94.171.57
 ******************************************* last modified:  02-04-2019 10:30 ***
 -bash-4.2$ 
 ```
+
+---
+### <a name="manage" />4. Server resource management
+
