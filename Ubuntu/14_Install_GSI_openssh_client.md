@@ -181,7 +181,10 @@ Path: `dcache-docker/dcache/dcache/etc/grid-security/certificates/`.
 ---
 ### <a name="install" />2. Install GSI openssh client
 
-<details close><summary>Old GSI SSH client installation</summary>
+<details close>
+  <summary><b>SYCL / CUDA / ROCm are mututally exclusive</b></summary>
+
+Old GSI SSH client installation:
 
 ```shell
 # Add repository to the /etc/apt/sources.list file
