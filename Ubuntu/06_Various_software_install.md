@@ -32,9 +32,12 @@ sudo apt install autoconf  # automatic configure script builder
 sudo apt install make      # utility for directing compilation
 sudo apt install curl      # tool for transferring data with URL syntax
 sudo apt install gcc gcc-6 g++ g++-6  # GCC and C++ compilers
+sudo apt install net-tools   # ifconfig command
+sudo apt install traceroute  # traceroute command 
 
 # Or in one command
-sudo apt install htop git mc autoconf make curl gcc gcc-6 g++ g++-6
+sudo apt install htop git mc autoconf make curl gcc gcc-6 g++ g++-6 \
+                 net-tools traceroute
 ```
 
 ----
