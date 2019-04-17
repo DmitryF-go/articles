@@ -181,8 +181,8 @@ Path: `dcache-docker/dcache/dcache/etc/grid-security/certificates/`.
 ---
 ### <a name="install" />2. Install GSI openssh client
 
-<details><summary>Old GSI SSH client installation:</summary>
-<p>
+<details close>
+  <summary>Old GSI SSH client installation:</summary>
 
 ```shell
 # Add repository to the /etc/apt/sources.list file
@@ -246,10 +246,11 @@ Notes:
    Login only from whitelisted IP-address.
 
 ---
-</p>
 </details>
+<br/>
 
-GSI SSH client installation
+GSI SSH client installation:
+
 ```shell
 mkdir -p ~/Documents/Install/Globus_Toolkit
 cd ~/Documents/Install/Globus_Toolkit
@@ -259,6 +260,18 @@ sudo dpkg -i globus-toolkit-repo_latest_all.deb
 
 # This should install gsissh, gsiscp and gsisftp.
 sudo apt install gsi-openssh-clients
+
+# Install globus-proxy-utils
+apt search globus-proxy-utils
+sudo apt install globus-proxy-utils
+
+# Download and install the OSG X509 trusted certificates bundle,
+# which is required to access the LSC clusters.
+wget http://software.ligo.org/gridtools/debian/pool/main/o/osg-ca-certs/osg-ca-certs-1.79NEW-0.deb
+
+# This will add the certificates to a
+# /etc/grid-security/certificates directory
+sudo dpkg -i osg-ca-certs-1.79NEW-0.deb
 ```
 
 ---
