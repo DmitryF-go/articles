@@ -1,8 +1,8 @@
 How-to:
    - [Additional useful tools](#tools)
    - [Exercises and tutorials](#exercises)
-   - [Limit TensorFlow to one GPU](#limit-gpu)
    - [TensorFlow CPUs and GPUs Configuration](#cpu-gpu-configuration)
+      - [Limit TensorFlow to one GPU](#limit-gpu)
       - [Limit TensorFlow to lower memory](#limit-memory)
          - [1. Reserve dynamically](#reserve-dynamically)
          - [2. Reserve fixed fraction](#reserve-fraction)
