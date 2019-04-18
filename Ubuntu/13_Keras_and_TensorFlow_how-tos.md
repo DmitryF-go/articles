@@ -109,6 +109,8 @@ Also you should exit Python (ipython, jupyter) console to free GPU resources.
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # so the IDs match nvidia-smi
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"        # "0,1" for multiple GPU or "-1" for CPU
+
+# Note: it seems option "0,1" does not work for different GPU models.
 ```
 
 ```shell
@@ -209,20 +211,5 @@ sudo kill -9 14282
 sudo kill -9 14295
 
 sudo fuser -v /dev/nvidia*
-
-                     USER         PID ACCESS COMMAND
-/dev/nvidia0:        root        4051 F...m Xorg
-                     username1   8138 F...m python
-                     username2  11791 F.... python3
-/dev/nvidia1:        root        4051 F...m Xorg
-                     username1   8138 F...m python
-                     username2  11791 F...m python3
-/dev/nvidiactl:      root        4051 F...m Xorg
-                     username1   8138 F...m python
-                     username2  11791 F...m python3
-/dev/nvidia-modeset: root        4051 F.... Xorg
-/dev/nvidia-uvm:     username1   8138 F...m python
-                     username2  11791 F.... python3
-
 nvidia-smi
 ```
