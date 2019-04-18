@@ -47,6 +47,9 @@ conda list
 #### <a name="configure-anaconda" />Set up and configure Anaconda virtual environment
 
 ```shell
+# To activate installed Anaconda use command:
+source ~/.bashrc
+
 # Set up Anaconda virtual environment
 conda create --name myenv python=3
 # Show virtual envs
@@ -68,10 +71,13 @@ conda deactivate  # exit to the "base" environment
 conda deactivate  # exit from Anaconda base env
 conda activate myenv
 
-# Install necessary packages into virtual environment
-# Now Keras is a part of TensorFlow package.
-conda install -c michael_wild opencv-contrib
-conda install -c anaconda pillow
+# Install necessary packages for Ubuntu 18.04 in one line:
+conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
+              scikit-image pandas ipython ipyparallel jupyter -n myenv
+
+# Or in many lines. Note: now Keras is a part of TensorFlow package.
+conda install -c michael_wild opencv-contrib  # use 'opencv' for Ubuntu
+conda install -c anaconda pillow  # use 'pillow' for Ubuntu
 conda install scikit-learn
 conda install scikit-image
 conda install scipy
@@ -79,18 +85,7 @@ conda install matplotlib
 conda install pandas
 conda install ipython
 conda install jupyter
-# ipyparallel is needed for jupyter
-conda install ipyparallel
-
-# Or install the whole bunch of packages in one line
-conda install tensorflow-gpu matplotlib scipy \
-              -c michael_wild opencv-contrib \
-              -c anaconda pillow scikit-learn scikit-image \
-              pandas ipython ipyparallel jupyter -n myenv
-
-# Or for Ubuntu 18.04
-conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
-              scikit-image pandas ipython ipyparallel jupyter -n myenv
+conda install ipyparallel  # ipyparallel is needed for jupyter
 
 # Delete vitrual environment
 conda deactivate
@@ -235,7 +230,6 @@ Notes:
 
 You can install local software modules in EasyBuild environment
 or use [Anaconda virtual environment](#anaconda) from previous chapter.
-To activate installed Anaconda use `source ~/.bashrc` command.
 
 ```shell
 # Load EasyBuild environment
