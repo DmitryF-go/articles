@@ -113,6 +113,9 @@ system kernel and are thus more lightweight than virtual machines.
 ---
 ### <a name="e" />[E&ensp;:arrow_heading_up:](#up)
 
+`eb` - EasyBuild framework manages software
+on High Performance Computing (HPC) systems in an efficient way.
+
 `echo` display a line of text.
 For `true ; echo $?` the output is `0`, for `false ; echo $?` the output is `1`.
 
@@ -257,6 +260,8 @@ If unsure which *man*ual item to read, use a keyword search
 `mc` call Midnight Commander file manager.
 
 `mkdir dirname` make new directory.
+
+`module` - command interface to the Modules package.
 
 `more` view (but not modify) the contents of a text file one screen at a time.
 `less` is a similar command with the extended capability of allowing both

@@ -281,6 +281,7 @@ sudo dpkg -i osg-ca-certs-1.79NEW-0.deb
 
 You must have certificate `usercert.pem` and
 encrypted private key `userkey.pem` to configure your GSI SSH client:
+
 ```shell
 # Login to the computer with whitelisted IP-address, i.e. DeepLab3.
 
@@ -305,7 +306,12 @@ ls -hal
 # Copy all trusted certificates bundle from /etc/grid-security/certificates
 # to your ~/.globus/certificates/ directory
 cp /etc/grid-security/certificates/* ~/.globus/certificates/
+```
 
+Configuration of GSI SSH client is finished. Then to connect to the server
+you should create proxy and use `gsissh` command.
+
+```shell
 # Create proxy connection for 12 hours. Must enter GRID pass phrase.
 grid-proxy-init -debug -verify
 
@@ -348,3 +354,17 @@ Last login: Thu Apr  4 20:06:42 2019 from 80.94.171.57
 You can [install Anaconda virtual environment](05_Virtual_environments.md/#anaconda)
 or [use EasyBuild framework](05_Virtual_environments.md/#easy-build) that allows you to
 manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
+
+Tasks todo:
+1. How to transfer files via `gsiscp` and `gsisftp`?
+2. Read [SURFsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
+3. View [https://portal.surfsara.nl](https://portal.surfsara.nl).
+
+How to transfer files via `gsiscp` and `gsisftp`:
+
+```shell
+# From DeepLab3 to SURFsara
+
+# From SURFsara to DeepLab3
+
+```

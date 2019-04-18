@@ -196,8 +196,8 @@ python -c "import tensorflow as tf;     \
     print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 
 # Install all other packages into myenv
-pip install opencv-contrib-python Pillow matplotlib scikit-learn \
-            scikit-image pandas ipython ipyparallel jupyter
+pip install tensorflow-gpu matplotlib scipy opencv-contrib-python Pillow \
+            scikit-learn scikit-image pandas ipython ipyparallel jupyter
 
 # Deactivate myenv
 deactivate
@@ -215,9 +215,9 @@ Links to read:
 
 Notes:
    - You can login to SURFsara only from DeepLab3, because its IP address is in the whitelist.
-   - [Surfsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage) --
+   - [SURFsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage) --
    You can try to use the search functionality of userinfo as not everything is referenced, but is findable.
-   - Use `accinfo` command or [`portal.surfsara.nl`]((https://portal.surfsara.nl)) to track hours remained.
+   - Use `accinfo` command or [`portal.surfsara.nl`](https://portal.surfsara.nl) to track hours remained.
    - If you have problems interacting with the batch environment please send a message at
    `helpdesk <at> surfsara <dot> nl`.
    - If you have any ML framework/application setup, cluster behavior, etc. you can email me directly
@@ -232,18 +232,57 @@ You can install local software modules in EasyBuild environment
 or use [Anaconda virtual environment](#anaconda) from previous chapter.
 
 ```shell
-# Load EasyBuild environment
-module load eb
-# List Anaconda packages
-eb -S Anaconda
-# List Miniconda packages
-eb -S MiniConda
-# Install package
-eblocalinstall Anaconda3-5.3.0.eb --robot
+module --help    # Get help about Modules package
+man module       # Get manual about Modules package
+module avail     # List all the modules which are available to be loaded.
+module list      # List loaded modules
 
+module avail | grep -i conda  # search for 'conda' packages
+module av | grep -i python    # search for 'python' packages
+module av python              # search for 'python' - case sensitive
+module available Python       # search for 'Python' - case sensitive
+
+module load eb   # Load EasyBuild framework
+eb -S Anaconda   # List Anaconda packages
+eb -S MiniConda  # List Miniconda packages
+```
+
+Install and configure Anaconda:
+
+```shell
+# Install Anaconda package. Wait for 5 minutes.
+eblocalinstall Anaconda3-5.3.0.eb --robot
+# Load Anaconda module
+module load Anaconda3/5.3.0
+# Check which Anaconda is used
+which anaconda
+conda --version
+# Set up 'test' Anaconda virtual environment
+conda create --name test python=3
+# Show virtual environments
+conda info --envs
+# Activate 'test' environment
+source activate test
+
+# Install necessary packages with one line in activated 'test' environment
+conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
+              scikit-image pandas ipython ipyparallel jupyter -n test
+
+# Deactivate 'test' environment
+source deactivate
+
+# Delete vitrual environment if necessary
+source deactivate
+conda remove --name test --all
+conda info --envs
+```
+
+Install and configure Python:
+
+```shell
 # There are several Python versions installed already
 module av Python
-# Load module
+# Load Python module
 module load Python/3.6.3-foss-2017b
 # Create 'test' virtual environment
 virtualenv test
@@ -251,10 +290,28 @@ virtualenv test
 source test/bin/activate
 # Check which Python is used
 which python
+python --version
 # Start Python in the local environment
 python3
 
-# Track hours on the system
-# or https://portal.surfsara.nl
-accinfo
+# Install necessary packages with one line in activated 'test' environment
+pip install tensorflow-gpu matplotlib scipy opencv-contrib-python Pillow \
+            scikit-learn scikit-image pandas ipython ipyparallel jupyter
+
+# Deactivate 'test' environment
+deactivate
+
+# Delete 'test' virtual environment if you don't need it any more.
+rmvirtualenv test
 ```
+
+Track resources:
+
+```shell
+# Hours are trackable on the system like this:
+accinfo
+# And on https://portal.surfsara.nl
+```
+
+To transfer files via `gsiscp` and `gsisftp` read
+[this instruction](14_Install_GSI_openssh_client.md/#manage).
