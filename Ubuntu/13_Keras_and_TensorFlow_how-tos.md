@@ -90,7 +90,7 @@ By default TensorFlow occupies all GPUs on the platform.
 Also you should exit Python (ipython, jupyter) console to free GPU resources. 
 
 ```shell
-# Calculate on the 2nd GPU
+# Calculate on the 2nd GPU or CPU
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # so the IDs match nvidia-smi
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # "0,1" for multiple GPU or "-1" for CPU
