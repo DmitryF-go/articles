@@ -150,6 +150,7 @@ already installed on your system.
 <details close>
     <summary><b>There are errors when building DIGITS
         and its dependencies from source</b></summary>
+      <blockquote>
 
 :exclamation: **Cannot build it from source. For your review only** :exclamation:
 
@@ -210,6 +211,7 @@ It's seems NVIDIA DIGITS works for Python 2.7,
 but Caffe `apt` installation is for Python 3.x only. Ridiculous.
 
 ---
+  </blockquote>
 </details>
 <br/>
 

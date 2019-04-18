@@ -58,6 +58,7 @@ otherwise Ubuntu OS will _BROKE_.** :exclamation:
 <details close>
   <summary>Better don't install the newest versions 3.7, 3.8, 4.0, etc.
   globally (on the whole OS).</summary>
+    <blockquote>
 
 This command works:
 
@@ -96,6 +97,8 @@ local virtual environment. It's a bad idea to have several versions of
 python 3.x globally at the same time. Use only currently supported
 by Ubuntu python 3.x version globally. At this moment it is 3.6.
 
+---
+  </blockquote>
 </details>
 <br/>
 

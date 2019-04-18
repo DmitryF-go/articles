@@ -275,6 +275,7 @@ sudo ldconfig
 
 <details close>
   <summary><b>SYCL / CUDA / ROCm are mututally exclusive</b></summary>
+    <blockquote>
 
 :exclamation: **SYCL / CUDA / ROCm are mututally exclusive.
 At most 1 GPU platform can be configured. Don't install them** :exclamation:
@@ -320,6 +321,7 @@ sudo cp -a ./lib/. /usr/local/lib/
 computecpp_info
 ```
 ---
+  </blockquote>
 </details>
 <br/>
 
@@ -418,6 +420,7 @@ Would you like to interactively configure ./WORKSPACE for Android builds? [y/N]:
 
 <details close>
   <summary>Full input and output text</summary>
+    <blockquote>
 
 ```text
 ./configure
@@ -505,6 +508,7 @@ Preconfigured Bazel build configs. You can use any of the below by adding "--con
 Configuration finished
 ```
 ---
+  </blockquote>
 </details>
 <br/>
 
