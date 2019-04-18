@@ -181,7 +181,7 @@ Path: `dcache-docker/dcache/dcache/etc/grid-security/certificates/`.
 ---
 ### <a name="install" />2. Install GSI openssh client
 
-<details close>
+<details closed>
   <summary>Old GSI SSH client installation:</summary>
 
 ```shell

@@ -1,7 +1,8 @@
 How-to:
    - [Additional useful tools](#tools)
    - [Exercises and tutorials](#exercises)
-   - [Limit TensorFlow to one GPU](#limit)
+   - [Limit TensorFlow to one GPU](#limit-gpu)
+   - [Limit TensorFlow to lower memory](#limit-memory)
 
 ---
 ### <a name="tools" />Additional useful tools
@@ -84,17 +85,19 @@ Helpful for me and I hope helpful for you:
    How to best use our open source machine learning platform.
 
 ---
-### <a name="limit" />Limit TensorFlow to one GPU
+### <a name="limit-gpu" />Limit TensorFlow to one GPU
 
 By default TensorFlow occupies all GPUs on the platform.
 Also you should exit Python (ipython, jupyter) console to free GPU resources. 
 
-```shell
+```python
 # Calculate on the 2nd GPU or CPU
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # so the IDs match nvidia-smi
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # "0,1" for multiple GPU or "-1" for CPU
+```
 
+```shell
 # For Jupyter Notebook one has to restart the kernel
 # after changing of environment variables.
 
@@ -102,4 +105,13 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # "0,1" for multiple GPU or "-1" for C
 watch -n 0.5 nvidia-smi
 # Monitor CPU permanently. To exit, press <Q> key.
 htop
+```
+
+---
+### <a name="limit-memory" />Limit TensorFlow to lower memory
+
+By default TensorFlow occupies all memory on GPU.
+
+```shell
+
 ```
