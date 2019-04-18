@@ -229,12 +229,13 @@ Notes:
    `"Damian Podareanu" <damian <dot> podareanu <at> surfsara <dot> nl>` and just CC
    `helpdesk <at> surfsara <dot> nl`.
    - `nvidia-smi` command doesn't work.
-   - Operating system: Red Hat Enterprise Linux Server 7.6 (Maipo). Command to check: `hostnamectl`.
-   - 17 TB of free space in $HOME directory. Command to check: `df -h ~/`.
-   - 16 CPU cores and 126 GB RAM. Command to check: `htop`.
+   - Operating system: Red Hat Enterprise Linux Server 7.6 (Maipo). Command to check: `hostnamectl`
+   - 17 TB of free space in $HOME directory. Command to check: `df -h ~/`
+   - 16 CPU cores and 126 GB RAM. Command to check: `htop`
 
 You can install local software modules in EasyBuild environment
-or use [Anaconda virtual environment](#anaconda).
+or use [Anaconda virtual environment](#anaconda) from previous chapter.
+To activate installed Anaconda use `source ~/.bashrc` command.
 
 ```shell
 # Load EasyBuild environment

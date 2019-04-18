@@ -337,7 +337,7 @@ Last login: Thu Apr  4 20:06:42 2019 from 80.94.171.57
 ********************************************************************************
 * Some text here... doesn't matter.                                            *
 ********************************************************************************
-* Questions? Please e-mail to helpdesk@surfsara.nl, or call 020-8001400        *
+* Questions? Please e-mail to helpdesk <at> surfsara <dot> nl                  *
 ******************************************* last modified:  02-04-2019 10:30 ***
 -bash-4.2$ 
 ```
