@@ -284,6 +284,8 @@ Install and configure Python:
 module av Python
 # Load Python module
 module load Python/3.6.3-foss-2017b
+# Load cuDNN module, so TensorFlow can be imported
+module load cuDNN/7.3.1-CUDA-10.0.130
 # Create 'test' virtual environment
 virtualenv test
 # Activate 'test' virtual environment
