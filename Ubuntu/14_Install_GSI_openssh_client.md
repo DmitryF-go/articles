@@ -181,7 +181,8 @@ Path: `dcache-docker/dcache/dcache/etc/grid-security/certificates/`.
 ---
 ### <a name="install" />2. Install GSI openssh client
 
-<details close><summary><b>Old GSI SSH client installation:</b></summary>
+<Old GSI SSH client installation: close>
+  <summary>Old GSI SSH client installation:</summary>
 
 ```shell
 # Add repository to the /etc/apt/sources.list file
@@ -245,7 +246,7 @@ Notes:
    Login only from whitelisted IP-address.
 
 ---
-</details>
+</Old GSI SSH client installation:>
 <br/>
 
 GSI SSH client installation:
