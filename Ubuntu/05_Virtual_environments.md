@@ -5,7 +5,7 @@
    - [Common virtual environment](#venv)
       - [Install packages for virtual environment](#install-packages)
       - [Set up and configure virtual environment using `virtualenvwrapper`](#configure-venv)
-   - [EasyBuild environment on Surfsara server](#easy-build)
+   - [EasyBuild environment on SURFsara server](#easy-build)
 
 ---
 ### <a name="task" />Task
@@ -212,17 +212,29 @@ rmvirtualenv myenv
 ```
 
 ---
-### <a name="easy-build" />EasyBuild environment on Surfsara server
+### <a name="easy-build" />EasyBuild environment on SURFsara server
+
+Links to read:
+   * [Tutorial: Easybuild and Environment Modules](https://varrette.gforge.uni.lu/blog/2017/06/01/tutorial-easybuild/)
+   * [EasyBuild documentation](https://easybuild.readthedocs.io/en/latest)
+
+Notes:
+   - You can login to SURFsara only from DeepLab3, because its IP address is in the whitelist.
    - [Surfsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage) --
    You can try to use the search functionality of userinfo as not everything is referenced, but is findable.
-   - [Use `accinfo` or `portal.surfsara.nl` to track hours remained](https://portal.surfsara.nl)
+   - Use `accinfo` command or [`portal.surfsara.nl`]((https://portal.surfsara.nl)) to track hours remained.
    - If you have problems interacting with the batch environment please send a message at
    `helpdesk <at> surfsara <dot> nl`.
    - If you have any ML framework/application setup, cluster behavior, etc. you can email me directly
    `"Damian Podareanu" <damian <dot> podareanu <at> surfsara <dot> nl>` and just CC
    `helpdesk <at> surfsara <dot> nl`.
+   - `nvidia-smi` command doesn't work.
+   - Operating system: Red Hat Enterprise Linux Server 7.6 (Maipo). Command to check: `hostnamectl`.
+   - 17 TB of free space in $HOME directory. Command to check: `df -h ~/`.
+   - 16 CPU cores and 126 GB RAM. Command to check: `htop`.
 
-You can install local software modules in EasyBuild environment.
+You can install local software modules in EasyBuild environment
+or use [Anaconda virtual environment](#anaconda).
 
 ```shell
 # Load EasyBuild environment
