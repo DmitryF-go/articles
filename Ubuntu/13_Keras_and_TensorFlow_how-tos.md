@@ -78,9 +78,16 @@ Helpful for me and I hope helpful for you:
    with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
    - Course [Introduction to TensorFlow for AI, ML, and DL](https://www.coursera.org/learn/introduction-tensorflow/home/welcome) --
    Good introduction course into TensorFlow.
+   - Course [Coding TensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx) --
+   You will look at various parts of TensorFlow from a coding perspective.
+   - Tips [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) --
+   How to best use our open source machine learning platform.
 
 ---
 ### <a name="limit" />Limit TensorFlow to one GPU
+
+By default TensorFlow occupies all GPUs on the platform.
+Also you should exit Python (ipython, jupyter) console to free GPU resources. 
 
 ```shell
 # Calculate on the 2nd GPU
