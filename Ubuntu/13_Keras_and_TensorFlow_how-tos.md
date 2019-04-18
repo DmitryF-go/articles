@@ -2,7 +2,12 @@ How-to:
    - [Additional useful tools](#tools)
    - [Exercises and tutorials](#exercises)
    - [Limit TensorFlow to one GPU](#limit-gpu)
-   - [Limit TensorFlow to lower memory](#limit-memory)
+   - [TensorFlow CPUs and GPUs Configuration](#cpu-gpu-configuration)
+      - [Limit TensorFlow to lower memory](#limit-memory)
+         - [1. Reserve dynamically](#reserve-dynamically)
+         - [2. Reserve fixed fraction](#reserve-fraction)
+      - [Clean up resources and exit](#clean-up)
+         - [Forcibly clean up resources](#force-clean)
 
 ---
 ### <a name="tools" />Additional useful tools
@@ -85,16 +90,25 @@ Helpful for me and I hope helpful for you:
    How to best use our open source machine learning platform.
 
 ---
-### <a name="limit-gpu" />Limit TensorFlow to one GPU
+### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
+
+Links to read:
+   * [TensorFlow CPUs and GPUs Configuration](https://medium.com/@lisulimowicz/tensorflow-cpus-and-gpus-configuration-9c223436d4ef)
+   * [Using GPUs](https://www.tensorflow.org/guide/using_gpu)
+   * [How to prevent tensorflow from allocating the totality of a GPU memory](https://stackoverflow.com/questions/34199233/how-to-prevent-tensorflow-from-allocating-the-totality-of-a-gpu-memory)
+   * [How can I flush GPU memory using CUDA (physical reset is unavailable)](https://stackoverflow.com/questions/15197286/how-can-i-flush-gpu-memory-using-cuda-physical-reset-is-unavailable)
+
+---
+#### <a name="limit-gpu" />Limit TensorFlow to one GPU
 
 By default TensorFlow occupies all GPUs on the platform.
 Also you should exit Python (ipython, jupyter) console to free GPU resources. 
 
 ```python
-# Calculate on the 2nd GPU or CPU
+# Calculate on the 2nd GPU
 import os
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"  # so the IDs match nvidia-smi
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # "0,1" for multiple GPU or "-1" for CPU
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"        # "0,1" for multiple GPU or "-1" for CPU
 ```
 
 ```shell
@@ -108,10 +122,107 @@ htop
 ```
 
 ---
-### <a name="limit-memory" />Limit TensorFlow to lower memory
+#### <a name="limit-memory" />Limit TensorFlow to lower memory
 
 By default TensorFlow occupies all memory on GPU.
 
-```shell
+##### <a name="reserve-dynamically" />1. Reserve dynamically
 
+You can dynamically reserve only necessary, but not all available memory:
+
+```python
+# Reserve necessary GPU memory
+import tensorflow as tf
+
+config = tf.ConfigProto()
+config.gpu_options.allow_growth=True  # dynamically grow the memory used on the GPU  
+sess = tf.Session(config=config)
+
+# For TensorFlow 2.0 Alpha and beyond
+tf.config.gpu.set_per_process_memory_growth(True)
+```
+
+##### <a name="reserve-fraction" />2. Reserve fixed fraction
+
+You can set the fraction of GPU memory to be allocated when you construct a `tf.Session`
+by passing a `tf.GPUOptions` as part of the optional config argument:
+
+```python
+# Reserve GPU memory fraction
+import tensorflow as tf
+
+# Assume that you have 12GB of GPU memory and want to allocate ~4GB:
+gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
+sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+
+# or (the same)
+config = tf.ConfigProto()
+config.gpu_options.per_process_gpu_memory_fraction = 0.333  # set fixed fraction of memory
+session = tf.Session(config=config)
+
+# For TensorFlow 2.0 Alpha and beyond
+tf.config.gpu.set_per_process_memory_fraction(0.333)
+```
+The `per_process_gpu_memory_fraction` acts as a hard upper bound on the amount of GPU memory
+that will be used by the process on each GPU on the same machine.
+Currently, this fraction is applied uniformly to all of the GPUs on the same machine
+
+---
+#### <a name="clean-up" />Clean up resources and exit
+
+After calculations **everyone should clean up resources** and exit from Python, iPython and Jupyter.
+Place this code at the end of your program:
+```python
+# Clean up resources. Place this code at the end of the program.
+import os, signal
+os.kill(os.getpid(), signal.SIGKILL)
+```
+
+##### <a name="force-clean" />Forcibly clean up resources
+
+Root can forcibly clean up resources:
+```shell
+sudo fuser -v /dev/nvidia*
+
+                     USER         PID ACCESS COMMAND
+/dev/nvidia0:        root        4051 F...m Xorg
+                     username1   8138 F...m python
+                     username2  11791 F.... python3
+                     username3  14282 F...m python3
+                     username3  14295 F...m python3
+/dev/nvidia1:        root        4051 F...m Xorg
+                     username1   8138 F...m python
+                     username2  11791 F...m python3
+/dev/nvidiactl:      root        4051 F...m Xorg
+                     username1   8138 F...m python
+                     username2  11791 F...m python3
+                     username3  14282 F...m python3
+                     username3  14295 F...m python3
+/dev/nvidia-modeset: root        4051 F.... Xorg
+/dev/nvidia-uvm:     username1   8138 F...m python
+                     username2  11791 F.... python3
+                     username3  14282 F...m python3
+                     username3  14295 F...m python3
+
+# Finish 2 processes for nvidia0
+sudo kill -9 14282
+sudo kill -9 14295
+
+sudo fuser -v /dev/nvidia*
+
+                     USER         PID ACCESS COMMAND
+/dev/nvidia0:        root        4051 F...m Xorg
+                     username1   8138 F...m python
+                     username2  11791 F.... python3
+/dev/nvidia1:        root        4051 F...m Xorg
+                     username1   8138 F...m python
+                     username2  11791 F...m python3
+/dev/nvidiactl:      root        4051 F...m Xorg
+                     username1   8138 F...m python
+                     username2  11791 F...m python3
+/dev/nvidia-modeset: root        4051 F.... Xorg
+/dev/nvidia-uvm:     username1   8138 F...m python
+                     username2  11791 F.... python3
+
+nvidia-smi
 ```
