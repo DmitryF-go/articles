@@ -8,6 +8,8 @@ How-to:
          - [2. Reserve fixed fraction](#reserve-fraction)
       - [Clean up resources and exit](#clean-up)
          - [Forcibly clean up resources](#force-clean)
+   - [Keras tips](#keras-tips)
+      - [EarlyStopping callback to prevent overfitting](#EarlyStopping)
 
 ---
 ### <a name="tools" />Additional useful tools
@@ -213,3 +215,21 @@ sudo kill -9 14295
 sudo fuser -v /dev/nvidia*
 nvidia-smi
 ```
+
+---
+### <a name="keras-tips" />Keras tips
+
+#### <a name="EarlyStopping" />EarlyStopping callback to prevent overfitting
+
+Use EarlyStopping callback to stop training before overfitting:
+```python
+# Train with EarlyStopping callback.
+model = build_model()
+
+# The patience parameter is the amount of epochs to check for improvement
+early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=10)
+
+history = model.fit(normed_train_data, train_labels, epochs=EPOCHS,
+                    validation_split = 0.2, verbose = 0, callbacks = [early_stop, PrintDot()])
+```
+
