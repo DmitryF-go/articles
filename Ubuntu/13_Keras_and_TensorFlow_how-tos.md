@@ -179,7 +179,7 @@ Place this code at the end of your program:
 ```python
 # Clean up resources. Place this code at the end of the program.
 import os, signal
-os.kill(os.getpid(), signal.SIGKILL)
+os.kill(os.getpid(), signal.SIGTERM)  # you can use signal.SIGKILL for Linux, but not for Windows
 ```
 
 ##### <a name="force-clean" />Forcibly clean up resources

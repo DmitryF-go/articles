@@ -4,6 +4,7 @@
    2. [Install GSI openssh client](#install)
    3. [Login via GSI SSH client](#login)
    4. [Server resource management](#manage)
+      - [How to transfer files via `gsiscp` and `gsisftp`](#transfer-files)
 
 ---
 ### <a name="task" />Task
@@ -355,18 +356,68 @@ You can [install Anaconda virtual environment](05_Virtual_environments.md/#anaco
 or [use EasyBuild framework](05_Virtual_environments.md/#easy-build) that allows you to
 manage (scientific) software on High Performance Computing (HPC) systems in an efficient way.
 
-Tasks todo:
-1. How to transfer files via `gsiscp` and `gsisftp`?
-2. Read [SURFsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
-3. View [https://portal.surfsara.nl](https://portal.surfsara.nl).
+#### <a name="transfer-files" />How to transfer files via `gsiscp` and `gsisftp`
 
-How to transfer files via `gsiscp` and `gsisftp`:
+Links to read:
+   * [SSH/TransferFiles](https://help.ubuntu.com/community/SSH/TransferFiles)
+   * [10 SCP Commands to Transfer Files/Folders in Linux](https://www.tecmint.com/scp-commands-examples)
+   * [12 scp command examples to transfer files on Linux](https://www.binarytides.com/linux-scp-command)
+   * [How to Use Linux SFTP Command to Transfer Files](https://linuxize.com/post/how-to-use-linux-sftp-command-to-transfer-files)
 
 ```shell
-# Download from the Internet
+# Download from the URL
+export DIR=Downloads/mydata  # set directory environment variable
+mkdir -p ~/"$DIR"  # make directory
+cd ~/"$DIR"        # goto this directory
+wget https://storage.googleapis.com/laurencemoroney-blog.appspot.com/validation-horse-or-human.zip
+unzip validation-horse-or-human.zip -d validation-horse-or-human
 
-# Upload from DeepLab3 to SURFsara
+# Upload from DeepLab3 to SURFsara.
+grid-proxy-init -debug -verify  # initialize proxy for 12 hours
+# Make directory on remote host
+gsissh int1-bb.cartesius.surfsara.nl -p 2222 "mkdir -p ~/"$DIR
 
-# Upload from SURFsara to DeepLab3
+# -C parameter to compress files on the go
+# -r parameter for recursion, to upload directory recursively
+# -v parameter for verbosity
+# Port: -P 2222
+# File to upload: validation-horse-or-human.zip
+# Remote host: int1-bb.cartesius.surfsara.nl
+# Destination directory: ~/Downloads/mydata
+# If you upload file twice, it will rewrite the old file without warning.
+gsiscp -Cr -P 2222 validation-horse-or-human.zip int1-bb.cartesius.surfsara.nl:~/$DIR
 
+# Upload from SURFsara to DeepLab3. You must enter your 'username' and password.
+export DIR=Downloads/mydata/data1  # set directory environment variable
+ssh username@80.94.171.57 -p 2222 "mkdir -p ~/"$DIR  # make directory remotely
+scp -Cr -P 2222 validation-horse-or-human.zip username@80.94.171.57:~/$DIR
+
+# SFTP connection from DeepLab3 to SURFsara.
+grid-proxy-init -debug -verify  # initialize proxy for 12 hours
+gsisftp -P 2222 int1-bb.cartesius.surfsara.nl
+# Type 'help' for available commands
+help
+lls -hal
+lcd ~/Downloads/mydata/data1  # change local directory
+lpwd
+ls -hal
+cd Downloads/mydata  # change remote directory
+pwd
+mkdir data2  # make remote directory
+cd data2
+put -r validation-horse-or-human.zip  # upload file from DeepLab3 to SURFsara
+bye  # or exit
+
+# SFTP connection from SURFsara to DeepLab3. You must enter your 'username' and password.
+sftp -P 2222 username@80.94.171.57
+lcd ~/Downloads/mydata
+cd Downloads/mydata
+mkdir data3
+ls -hal
+cd data3
+put -r validation-horse-or-human.zip  # upload file from SURFsara to DeepLab3
+exit
 ```
+
+2. Read [SURFsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
+3. View [https://portal.surfsara.nl](https://portal.surfsara.nl).

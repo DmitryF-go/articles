@@ -155,6 +155,8 @@ search plain-text data sets for lines that match a regular expression.
 Same as `ed` command doing a global search with the regular expression
 and printing all matching lines.
 
+`gsiscp` the same as `scp`, but for GSI protocol.
+
 `gufw` is a GUI for `ufw`, **u**ncomplicated **f**ire**w**all.
 
 `gunzip file.txt.gz` uncompress file *file.txt.gz*.
@@ -259,7 +261,7 @@ If unsure which *man*ual item to read, use a keyword search
 
 `mc` call Midnight Commander file manager.
 
-`mkdir dirname` make new directory.
+`mkdir -p dirname1/dirname2` make new directory.
 
 `module` - command interface to the Modules package.
 
@@ -335,6 +337,9 @@ for new 3.x version.
 
 `rmdir dirname` remove directory.
 Option `-r` recursively removes directory and subdirectories. 
+
+`rsync` is a fast, versatile, remote (and local) file-copying tool.
+Its basic command syntax is similar to `scp`.
 
 ---
 ### <a name="s" />[S&ensp;:arrow_heading_up:](#up)
