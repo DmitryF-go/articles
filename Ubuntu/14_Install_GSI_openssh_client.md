@@ -363,6 +363,7 @@ Links to read:
    * [10 SCP Commands to Transfer Files/Folders in Linux](https://www.tecmint.com/scp-commands-examples)
    * [12 scp command examples to transfer files on Linux](https://www.binarytides.com/linux-scp-command)
    * [How to Use Linux SFTP Command to Transfer Files](https://linuxize.com/post/how-to-use-linux-sftp-command-to-transfer-files)
+   * [Linux sftp command](https://www.computerhope.com/unix/sftp.htm)
 
 ```shell
 # Download from the URL
@@ -394,9 +395,11 @@ scp -Cr -P 2222 validation-horse-or-human.zip username@80.94.171.57:~/$DIR
 
 # SFTP connection from DeepLab3 to SURFsara.
 grid-proxy-init -debug -verify  # initialize proxy for 12 hours
-gsisftp -P 2222 int1-bb.cartesius.surfsara.nl
-# Type 'help' for available commands
-help
+gsisftp -C -P 2222 int1-bb.cartesius.surfsara.nl
+
+# 'sftp>' command line prompt should appear.
+sftp>
+help  # type 'help' for available commands
 lls -hal
 lcd ~/Downloads/mydata/data1  # change local directory
 lpwd
@@ -405,19 +408,24 @@ cd Downloads/mydata  # change remote directory
 pwd
 mkdir data2  # make remote directory
 cd data2
-put -r validation-horse-or-human.zip  # upload file from DeepLab3 to SURFsara
+put -r validation-horse-or-human.zip  # upload files recursively from DeepLab3 to SURFsara
 bye  # or exit
 
 # SFTP connection from SURFsara to DeepLab3. You must enter your 'username' and password.
-sftp -P 2222 username@80.94.171.57
+sftp -C -P 2222 username@80.94.171.57
 lcd ~/Downloads/mydata
 cd Downloads/mydata
 mkdir data3
 ls -hal
 cd data3
-put -r validation-horse-or-human.zip  # upload file from SURFsara to DeepLab3
+put -r validation-horse-or-human.zip  # upload files recursively from SURFsara to DeepLab3
 exit
 ```
 
-2. Read [SURFsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
-3. View [https://portal.surfsara.nl](https://portal.surfsara.nl).
+#### <a name="batch-how-to" />Batch How-to
+
+Links to read:
+   * Read [SURFsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
+   * View resources at [https://portal.surfsara.nl](https://portal.surfsara.nl).
+
+I'll finish it soon.
