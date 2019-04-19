@@ -363,8 +363,10 @@ Tasks todo:
 How to transfer files via `gsiscp` and `gsisftp`:
 
 ```shell
-# From DeepLab3 to SURFsara
+# Download from the Internet
 
-# From SURFsara to DeepLab3
+# Upload from DeepLab3 to SURFsara
+
+# Upload from SURFsara to DeepLab3
 
 ```
