@@ -3,8 +3,9 @@
    1. [Request for Grid certificate](#request)
    2. [Install GSI openssh client](#install)
    3. [Login via GSI SSH client](#login)
-   4. [Server resource management](#manage)
+   4. [Server management](#manage)
       - [How to transfer files via `gsiscp` and `gsisftp`](#transfer-files)
+      - [Batch How-to](#batch-how-to)
 
 ---
 ### <a name="task" />Task
@@ -350,7 +351,7 @@ Last login: Thu Apr  4 20:06:42 2019 from 80.94.171.57
 ```
 
 ---
-### <a name="manage" />4. Server resource management
+### <a name="manage" />4. Server management
 
 You can [install Anaconda virtual environment](05_Virtual_environments.md/#anaconda)
 or [use EasyBuild framework](05_Virtual_environments.md/#easy-build) that allows you to
