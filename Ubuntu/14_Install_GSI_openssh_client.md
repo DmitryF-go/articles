@@ -5,7 +5,7 @@
    3. [Login via GSI SSH client](#login)
    4. [Server management](#manage)
       - [How to transfer files via `gsiscp` and `gsisftp`](#transfer-files)
-      - [Batch How-to](#batch-how-to)
+      - [How-to manage resources](#resource-management)
 
 ---
 ### <a name="task" />Task
@@ -423,10 +423,22 @@ put -r validation-horse-or-human.zip  # upload files recursively from SURFsara t
 exit
 ```
 
-#### <a name="batch-how-to" />Batch How-to
+#### <a name="resource-management" />How-to manage resources
 
 Links to read:
-   * Read [SURFsara documentation page](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
-   * View resources at [https://portal.surfsara.nl](https://portal.surfsara.nl).
+   * [Getting started with Cartesius](https://userinfo.surfsara.nl/systems/cartesius/getting-started)
+   * Read [SURFsara Cartesius batch usage](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
+   * View resources at [https://portal.surfsara.nl](https://portal.surfsara.nl) --
+   I have no idea how to login there.
+
+Track resources and [budget (core hours)](https://userinfo.surfsara.nl/systems/cartesius/getting-started#budget)
+
+```shell
+# Hours are trackable on the system like this:
+accinfo
+accuse
+budget-overview
+# And on https://portal.surfsara.nl
+```
 
 I'll finish it soon.

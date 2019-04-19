@@ -307,13 +307,5 @@ deactivate
 rmvirtualenv test
 ```
 
-Track resources:
-
-```shell
-# Hours are trackable on the system like this:
-accinfo
-# And on https://portal.surfsara.nl
-```
-
 To transfer files via `gsiscp` and `gsisftp` read
 [this instruction](14_Install_GSI_openssh_client.md/#manage).
