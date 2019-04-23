@@ -289,7 +289,7 @@ module load cuDNN/7.3.1-CUDA-10.0.130
 # Create 'test' virtual environment
 virtualenv test
 # Activate 'test' virtual environment
-source test/bin/activate
+source ~/test/bin/activate
 # Check which Python is used
 which python
 python --version

@@ -441,4 +441,29 @@ budget-overview
 # And on https://portal.surfsara.nl
 ```
 
-I'll finish it soon.
+Activate conda virtual environment:
+```shell
+conda activate myenv
+```
+
+Create simple Slurm batch file `example.slurm`:
+```shell
+#!/bin/bash
+#SBATCH -p gpu_short
+#SBATCH -N 5
+#SBATCH -t 30:00
+
+echo "Start of job at `date`"
+python3 -c 'import tensorflow as tf; print(tf.__version__)'
+echo "End of job at `date`"
+
+```
+
+Run simple Slurm batch file `example.slurm`:
+```shell
+(myenv) bash-4.2$ srun --account=pr1d1005 example.slurm
+srun: error: Unable to allocate resources: Invalid account or account/partition combination specified
+
+(myenv) bash-4.2$ sbatch --account=pr1d1005 example.slurm
+sbatch: error: Batch job submission failed: Invalid account or account/partition combination specified
+```

@@ -344,6 +344,8 @@ Its basic command syntax is similar to `scp`.
 ---
 ### <a name="s" />[S&ensp;:arrow_heading_up:](#up)
 
+`sbatch` - Submit a batch script to Slurm.
+
 `setfacl` set file **a**ccess **c**ontrol **l**ists (ACL).
 Sets (replaces), modifies, or removes the access control list (ACL).
 It also updates and deletes ACL entries for each file and directory
@@ -356,6 +358,10 @@ of *user* on *machine*. Note the colon!
 (**f**ile **t**ransfer **p**rotocol) with *machine*.
 
 `sh` standard command language interpreter.
+
+`srun` - Run a parallel job on cluster managed by Slurm.
+If necessary, srun will first create a resource allocation
+in which to run the parallel job.
 
 `ssh` connection via SSH protocol.
 `ssh user@machine -p 22` login securely as *user* into *machine*
