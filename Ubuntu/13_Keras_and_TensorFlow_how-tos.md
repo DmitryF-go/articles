@@ -143,7 +143,7 @@ config.gpu_options.allow_growth=True  # dynamically grow the memory used on the 
 sess = tf.Session(config=config)
 
 # For TensorFlow 2.0 Alpha and beyond
-tf.config.gpu.set_per_process_memory_growth(True)
+tf.config.gpu.set_per_process_memory_growth()
 ```
 
 ##### <a name="reserve-fraction" />2. Reserve fixed fraction
