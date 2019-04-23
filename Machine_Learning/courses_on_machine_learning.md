@@ -4,7 +4,7 @@ Courses (before the dash are first to learn):
    * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (3 недели из 8)
    * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (3 weeks from 12)
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 193)
-   * TF. Coding TensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx (3 videos from 24)
+   * TF. Coding TensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx (7 videos from 24)
    * TF. TensorFlow Tip of the Week: https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB (1 tips from 9)
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
 ---
@@ -32,6 +32,7 @@ Courses (before the dash are first to learn):
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Build an AI Startup: https://youtu.be/NzmoPqte4V4
    * Task. An Introduction to Deep Learning with TensorFlow: https://youtu.be/vRF7ENlwD50
+   * Task. Introducing TensorFlow.js: Machine Learning in Javascript: https://medium.com/tensorflow/introducing-tensorflow-js-machine-learning-in-javascript-bf3eab376db
    * Mask R-CNN Deep Learning: https://youtu.be/uUYR6IEm5VM
    * Mask R-CNN explanation: https://youtu.be/4tkgOzQ9yyo
    * Mask R-CNN: https://youtu.be/g7z4mkfRjI4
