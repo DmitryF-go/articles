@@ -449,9 +449,9 @@ conda activate myenv
 Create simple Slurm batch file `example.slurm`:
 ```shell
 #!/bin/bash
-#SBATCH -p gpu_short
-#SBATCH -N 5
 #SBATCH -t 30:00
+#SBATCH -N 5
+#SBATCH -p gpu_short
 
 echo "Start of job at `date`"
 python3 -c 'import tensorflow as tf; print(tf.__version__)'
