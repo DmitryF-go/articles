@@ -2,4 +2,5 @@
 
 Articles about Machine Learning (ML) in English and Russian (now in Russian only, sorry).
    1. [Введение в машинное обучение и искусственные нейронные сети](Vvedeniye_v_mashinnoye_obucheniye_i_iskusstvennyye_neyronnyye_seti.pdf)
-   2. [Брошюра «Введение в машинное обучение» в HTML формате](Brochure/)
+   2. [Брошюра «Введение в машинное обучение» в HTML формате](https://foobar167.github.io/page/vvedeniye-v-mashinnoye-obucheniye-i-iskusstvennyye-neyronnyye-seti.html)
+   3. [Various interesting courses on Machine Learning]()
