@@ -459,7 +459,8 @@ echo "End of job at `date`"
 
 ```
 
-Run simple Slurm batch file `example.slurm`:
+Run simple Slurm batch file `example.slurm`.
+Unfortunately, it runs with error, so resources can not be allocated:
 ```shell
 (myenv) bash-4.2$ srun --account=pr1d1005 example.slurm
 srun: error: Unable to allocate resources: Invalid account or account/partition combination specified
