@@ -28,6 +28,9 @@ Courses (before the dash are first to learn):
    * Siraj Raval. Move 37 course: https://www.theschool.ai/courses/move-37-course (not started)
    * Siraj Raval. Decentralized Applications course: https://www.theschool.ai/courses/decentralized-application (not started)
 ---
+   * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
+   * Task. Train a model in tf.keras with Colab, and run it in the browser with TensorFlow.js: https://medium.com/tensorflow/train-on-google-colab-and-run-on-the-browser-a-case-study-8a45f9b1474e
+   * Task. TensorFlow Guide (High Level APIs): https://www.tensorflow.org/guide/#high_level_apis
    * Task. Word2vec in TensorFlow Explained: https://youtu.be/-3XedqEZpR4
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Build an AI Startup: https://youtu.be/NzmoPqte4V4
