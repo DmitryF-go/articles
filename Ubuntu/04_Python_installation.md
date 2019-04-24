@@ -141,6 +141,7 @@ sudo apt install ipython
 sudo apt install ipython3
 sudo apt install jupyter  # jupyter
 sudo apt install git  # git
+sudo apt install python-yaml python3-yaml  # YAML parser and emitter for Python
 
 # Mocking and testing library
 sudo apt install python-mock
@@ -189,7 +190,8 @@ sudo apt install python-pip         python2.7           \
                  python-pydot       python3-pydot       \
                  python-pyparsing   python3-pyparsing   \
                  python-ipykernel   python3-ipykernel   \
-                 python-dev         python3-dev
+                 python-dev         python3-dev         \
+                 python-yaml        python3-yaml
 ```
 
 Install TensorFlow for all users on the operating system,

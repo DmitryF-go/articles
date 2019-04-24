@@ -73,7 +73,7 @@ conda activate myenv
 
 # Install necessary packages for Ubuntu 18.04 in one line:
 conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
-              scikit-image pandas ipython ipyparallel jupyter -n myenv
+              scikit-image pandas ipython ipyparallel jupyter pyyaml -n myenv
 
 # Or in many lines. Note: now Keras is a part of TensorFlow package.
 conda install -c michael_wild opencv-contrib  # use 'opencv' for Ubuntu
@@ -86,6 +86,7 @@ conda install pandas
 conda install ipython
 conda install jupyter
 conda install ipyparallel  # ipyparallel is needed for jupyter
+conda install pyyaml  # required to save models in YAML format
 
 # Delete vitrual environment
 conda deactivate
@@ -197,7 +198,7 @@ python -c "import tensorflow as tf;     \
 
 # Install all other packages into myenv
 pip install tensorflow-gpu matplotlib scipy opencv-contrib-python Pillow \
-            scikit-learn scikit-image pandas ipython ipyparallel jupyter
+            scikit-learn scikit-image pandas ipython ipyparallel jupyter pyyaml
 
 # Deactivate myenv
 deactivate
@@ -266,7 +267,7 @@ source activate test
 
 # Install necessary packages with one line in activated 'test' environment
 conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
-              scikit-image pandas ipython ipyparallel jupyter -n test
+              scikit-image pandas ipython ipyparallel jupyter pyyaml -n test
 
 # Deactivate 'test' environment
 source deactivate
@@ -298,7 +299,7 @@ python3
 
 # Install necessary packages with one line in activated 'test' environment
 pip install tensorflow-gpu matplotlib scipy opencv-contrib-python Pillow \
-            scikit-learn scikit-image pandas ipython ipyparallel jupyter
+            scikit-learn scikit-image pandas ipython ipyparallel jupyter pyyaml
 
 # Deactivate 'test' environment
 deactivate
