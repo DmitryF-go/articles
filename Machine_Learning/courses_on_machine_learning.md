@@ -44,6 +44,7 @@ Courses (before the dash are first to learn):
    * Mask R-CNN – How it Works: https://youtu.be/0vt05rQqk_I
    * Mask RCNN course: https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg
 
+---
 Completed courses:
    * Video course. #AskTensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL (6 videos from 6)
    * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/ (completed)
