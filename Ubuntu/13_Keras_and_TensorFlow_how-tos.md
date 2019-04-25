@@ -16,6 +16,8 @@ How-to:
 
 Helpful for me and I hope helpful for you:
 
+   - [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
+   Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
    - [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
    Webpage with many tutorials. Everyone should make at least 5 exercises for beginners
    and then continue with more advanced tutorials.
@@ -44,8 +46,6 @@ Helpful for me and I hope helpful for you:
    with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
    - Course [Introduction to TensorFlow for AI, ML, and DL](https://www.coursera.org/learn/introduction-tensorflow/home/welcome) --
    Good introduction course into TensorFlow.
-   - [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
-   Answers on frequently asked questions about TensorFlow.
    - Course [Coding TensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx) --
    You will look at various parts of TensorFlow from a coding perspective.
    - Tips [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) --
@@ -62,6 +62,10 @@ Video courses and tutorials about Machine Learning I'm working on
 
 Additional useful tools everybody should know about:
 
+   - [Google Colab](https://colab.research.google.com) --
+   Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
+   in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
+   and access powerful computing resources, all for free from your browser.
    - [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) --
    Fast and easy download of many images from Google Images.
    Menu _"Ask where to save each file before downloading"_
@@ -94,10 +98,6 @@ IPython.display.HTML(iframe)
    is a limited-functionality freeware available for trial and non-commercial use.
    Recommended especially for students who want to learn how to develop
    complex algorithms with images loaded from files.
-   - [Google Colab](https://colab.research.google.com) --
-   Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
-   in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
-   and access powerful computing resources, all for free from your browser.
 
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
