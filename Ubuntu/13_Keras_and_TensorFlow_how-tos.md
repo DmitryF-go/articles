@@ -1,15 +1,15 @@
-How-to:
    - [Exercises and tutorials](#exercises)
    - [Video courses and tutorials](#video-courses)
+   - [Code examples](#code-examples)
    - [Additional useful tools](#tools)
    - [TensorFlow CPUs and GPUs Configuration](#cpu-gpu-configuration)
       - [Limit TensorFlow to one GPU](#limit-gpu)
       - [Limit TensorFlow to lower memory](#limit-memory)
          - [1. Reserve dynamically](#reserve-dynamically)
          - [2. Reserve fixed fraction](#reserve-fraction)
+      - [Turn off debug messages](#debug-messages)
       - [Clean up resources and exit](#clean-up)
          - [Forcibly clean up resources](#force-clean)
-   - [Code examples](#code-examples)
 
 ---
 ### <a name="exercises" />Exercises and tutorials
@@ -56,6 +56,11 @@ Helpful for me and I hope helpful for you:
 
 Video courses and tutorials about Machine Learning I'm working on
 [are placed here](../Machine_Learning/courses_on_machine_learning.md).
+
+---
+### <a name="code-examples" />Code examples
+
+All code examples are placed [here](../Machine_Learning/code_examples).
 
 ---
 ### <a name="tools" />Additional useful tools
@@ -180,6 +185,20 @@ that will be used by the process on each GPU on the same machine.
 Currently, this fraction is applied uniformly to all of the GPUs on the same machine
 
 ---
+#### <a name="debug-messages" />Turn off debug messages
+
+```python
+import os
+import tensorflow as tf
+
+# 0 - all messages are logged (default behavior)
+# 1 - INFO messages are not printed
+# 2 - INFO and WARNING messages are not printed
+# 3 - INFO, WARNING, and ERROR messages are not printed
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # show errors
+```
+
+---
 #### <a name="clean-up" />Clean up resources and exit
 
 After calculations **everyone should clean up resources** and exit from Python, iPython and Jupyter.
@@ -223,9 +242,3 @@ sudo kill -9 14295
 sudo fuser -v /dev/nvidia*
 nvidia-smi
 ```
-
----
-### <a name="code-examples" />Code examples
-
-All code examples are placed [here](../Machine_Learning/code_examples).
-
