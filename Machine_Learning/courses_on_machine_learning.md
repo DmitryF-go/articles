@@ -4,7 +4,7 @@ Courses (before the dash are first to learn):
    * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (3 недели из 8)
    * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (3 weeks from 12)
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 193)
-   * TF. Coding TensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx (7 videos from 24)
+   * TF. Coding TensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx (11 videos from 24)
    * TF. TensorFlow Tip of the Week: https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB (1 tips from 9)
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
 ---
