@@ -290,17 +290,13 @@ encrypted private key `userkey.pem` to configure your GSI SSH client:
 # Create .globus/certificates directory in your $HOME
 mkdir -p ~/.globus/certificates
 
-# Move certificate and encrypted private key
+# Move certificate and encrypted private key. Rename them.
 # to the ~/.globus directory
-mv Surname_usercert.pem ~/.globus/
-mv Surname_userkey.pem ~/.globus/
-
-# Rename them
-cd ~/.globus/
-mv Surname_usercert.pem usercert.pem
-mv Surname_userkey.pem userkey.pem
+mv Surname_usercert.pem ~/.globus/usercert.pem
+mv Surname_userkey.pem ~/.globus/userkey.pem
 
 # Change permissions to read only
+cd ~/.globus/
 chmod ugo-rwx usercert.pem userkey.pem
 chmod u+r usercert.pem userkey.pem
 ls -hal
