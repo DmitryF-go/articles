@@ -1,5 +1,4 @@
 Courses (before the dash are first to learn):
-   * TF. TensorFlow free course: https://classroom.udacity.com/courses/ud187 (4 lessons from 4, will be continued on April 16)
    * Video course. Visual group theory: https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv (3 lectures from 7)
    * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (3 недели из 8)
    * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (3 weeks from 12)
@@ -46,6 +45,7 @@ Courses (before the dash are first to learn):
    * Mask RCNN course: https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg
 
 Completed courses:
+   * TF. TensorFlow free course: https://classroom.udacity.com/courses/ud187 (4 lessons from 4, will be continued on April 16)
    * TF. Intro to TensorFlow for AI, ML and DL: https://www.coursera.org/learn/introduction-tensorflow (4 weeks from 4)
    * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/
    * 

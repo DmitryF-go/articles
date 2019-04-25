@@ -9,8 +9,7 @@ How-to:
          - [2. Reserve fixed fraction](#reserve-fraction)
       - [Clean up resources and exit](#clean-up)
          - [Forcibly clean up resources](#force-clean)
-   - [Keras tips](#keras-tips)
-      - [EarlyStopping callback to prevent overfitting](#EarlyStopping)
+   - [Code examples](#code-examples)
 
 ---
 ### <a name="exercises" />Exercises and tutorials
@@ -226,19 +225,7 @@ nvidia-smi
 ```
 
 ---
-### <a name="keras-tips" />Keras tips
+### <a name="code-examples" />Code examples
 
-#### <a name="EarlyStopping" />EarlyStopping callback to prevent overfitting
-
-Use EarlyStopping callback to stop training before overfitting:
-```python
-# Train with EarlyStopping callback.
-model = build_model()
-
-# The patience parameter is the amount of epochs to check for improvement
-early_stop = keras.callbacks.EarlyStopping(monitor='val_loss', patience=10)
-
-history = model.fit(normed_train_data, train_labels, epochs=EPOCHS,
-                    validation_split = 0.2, verbose = 0, callbacks = [early_stop, PrintDot()])
-```
+All code examples are placed [here](../Machine_Learning/code_examples).
 
