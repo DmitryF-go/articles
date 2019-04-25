@@ -44,12 +44,12 @@ Helpful for me and I hope helpful for you:
    with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
    - Course [Introduction to TensorFlow for AI, ML, and DL](https://www.coursera.org/learn/introduction-tensorflow/home/welcome) --
    Good introduction course into TensorFlow.
+   - [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
+   Answers on frequently asked questions about TensorFlow.
    - Course [Coding TensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx) --
    You will look at various parts of TensorFlow from a coding perspective.
    - Tips [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) --
    How to best use our open source machine learning platform.
-   - [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
-   Answers on frequently asked questions about TensorFlow.
 
 ---
 ### <a name="video-courses" />Video courses and tutorials
