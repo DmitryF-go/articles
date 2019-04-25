@@ -47,4 +47,5 @@ Courses (before the dash are first to learn):
 
 Completed courses:
    * TF. Intro to TensorFlow for AI, ML and DL: https://www.coursera.org/learn/introduction-tensorflow (4 weeks from 4)
+   * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/
    * 
