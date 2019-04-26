@@ -73,7 +73,7 @@ Additional useful tools everybody should know about:
    and access powerful computing resources, all for free from your browser.
    - [Kaggle Kernels](https://www.kaggle.com/kernels) --
    Free Jupyter notebook environment. If you tired to [read documentation](https://www.kaggle.com/docs/kernels),
-   just try to find and [see](https://youtu.be/AXcTm4gFerE) some [videos](https://youtu.be/sLAthlX816c).
+   just try to find and see some [videos](https://youtu.be/sLAthlX816c).
    - [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) --
    Fast and easy download of many images from Google Images.
    Menu _"Ask where to save each file before downloading"_
