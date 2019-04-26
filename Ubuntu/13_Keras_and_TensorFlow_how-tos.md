@@ -106,6 +106,9 @@ IPython.display.HTML(iframe)
    is a limited-functionality freeware available for trial and non-commercial use.
    Recommended especially for students who want to learn how to develop
    complex algorithms with images loaded from files.
+   - [nbviewer](https://nbviewer.jupyter.org/) -- A simple way to share Jupyter Notebooks.
+   It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
+   Enter the location of a Jupyter Notebook to have it rendered.
 
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
