@@ -26,6 +26,7 @@ Courses (before the dash are first to learn):
    * Siraj Raval. Data Lit course: https://www.theschool.ai/courses/data-lit (not started)
    * Siraj Raval. Move 37 course: https://www.theschool.ai/courses/move-37-course (not started)
    * Siraj Raval. Decentralized Applications course: https://www.theschool.ai/courses/decentralized-application (not started)
+   * QuantumCasts (what is the quantum computing): https://www.youtube.com/playlist?list=PLQY2H8rRoyvwcpm6Nf-fL4sIYQUXtq3HR (0 videos from 5)
 ---
    * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
    * Task. Medical-MNIST-Classification: https://github.com/apolanco3225/Medical-MNIST-Classification
