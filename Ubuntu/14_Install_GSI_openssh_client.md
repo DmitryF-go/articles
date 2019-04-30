@@ -392,7 +392,7 @@ scp -Cr -P 2222 validation-horse-or-human.zip username@80.94.171.57:~/$DIR
 
 # SFTP connection from DeepLab3 to SURFsara.
 grid-proxy-init -debug -verify  # initialize proxy for 12 hours
-gsisftp -C -P 2222 int1-bb.cartesius.surfsara.nl
+gsisftp -C -P 2222 int1-bb.cartesius.surfsara.nl  # login
 
 # 'sftp>' command line prompt should appear.
 sftp>
@@ -423,30 +423,55 @@ exit
 
 Links to read:
    * [Getting started with Cartesius](https://userinfo.surfsara.nl/systems/cartesius/getting-started)
-   * Read [SURFsara Cartesius batch usage](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
-   * View resources at [https://portal.surfsara.nl](https://portal.surfsara.nl) --
-   I have no idea how to login there.
+   * Resource management [SURFsara Cartesius batch usage](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
+   * Unfortunately GSI users **can not** view resources at [https://portal.surfsara.nl](https://portal.surfsara.nl)
+   * [SLURM official website](https://slurm.schedmd.com)
+   * Track resources and [budget (core hours)](https://userinfo.surfsara.nl/systems/cartesius/getting-started#budget).
 
-Track resources and [budget (core hours)](https://userinfo.surfsara.nl/systems/cartesius/getting-started#budget)
+```text
+We have 150 000 System Billing Units (SBUs)
+1 SBU == 1 core for 1 hour on a fat and thin nodes
+1 SBU == 1 core for 20 minutes on a GPU node
+3 SBU == 1 core for 60 minutes on a GPU node
+1 GPU node == 16 CPU cores or 2 NVIDIA Tesla K40m GPUs
+
+Calculating on 1 GPU node for 1 hour is equal to
+16 cores * 3 SBU = 48 SBU/hour
+
+150 000 SBU == 130 days of calculations on 1 GPU node
+```
+
+Please note that for GPU nodes (that is, 16 CPU cores & 2 K40m GPUs)
+in Cartesius is charged 48 SBU / hour. So use resources carefully.
 
 ```shell
 # Hours are trackable on the system like this:
-accinfo
-accuse
-budget-overview
-# And on https://portal.surfsara.nl
+budget-overview  # get a more dynamic and accurate overview of the current state of your account's budget
+accinfo          # view the budget, user list, and other details
+accuse           # view the daily/monthly usage per user/account
 ```
 
-Activate conda virtual environment:
+Note that the information given by `accuse` and `accinfo` is only up-to-date
+for the situation at the end of the previous day.
+I.e.: the day before the commands are issued.
+
+[You have 200 GiB](https://userinfo.surfsara.nl/systems/cartesius/getting-started#filesystems)
+on the `$HOME` directory and 8 TiB on the `Scratch` file system, but only for 14 days.
+Keep in mind that any file on `scratch` folder than 14 days will be **automatically removed**.
+If necessary we can request for additional space in the `Projects` file system
+or `/projects/0/<project_name>` directory. 
+
+Activate conda `DL3` virtual environment:
 ```shell
 conda activate myenv
 ```
 
-Create simple Slurm batch file `example.slurm`:
+SLURM is the scheduling system used on Cartesius.
+Create simple SLURM batch file `example.slurm`:
 ```shell
 #!/bin/bash
 #SBATCH -t 30:00
-#SBATCH -N 5
+#SBATCH -N 1
 #SBATCH -p gpu_short
 
 echo "Start of job at `date`"
@@ -455,12 +480,29 @@ echo "End of job at `date`"
 
 ```
 
-Run simple Slurm batch file `example.slurm`.
-Unfortunately, it runs with error, so resources can not be allocated:
-```shell
-(myenv) bash-4.2$ srun --account=pr1d1005 example.slurm
-srun: error: Unable to allocate resources: Invalid account or account/partition combination specified
+where:
+   * `-t` is the maximum wall clock time. If the job runs longer, it will **get terminated**.
+   * `-N` is the number of nodes used for your calculations. `-N 1` is equal 48 SBUs per hour.
+   * `-p` is the partition. Use `gpu_short` for testing and `gpu` for production calculations
+   on GPU nodes. Show available partitions list with the command `scontrol show partition`.
 
-(myenv) bash-4.2$ sbatch --account=pr1d1005 example.slurm
-sbatch: error: Batch job submission failed: Invalid account or account/partition combination specified
+Run simple Slurm batch file `example.slurm`.
+```shell
+(DL3) bash-4.2$ srun --account=pr1d1005 example.slurm
+
+(DL3) bash-4.2$ sbatch --account=pr1d1005 example.slurm
+
+```
+
+By default, SLURM willl redirect all output to a file called `<jobid>.out`,
+which will be placed in the directory from where you submitted your job.
+This file contains both the standard output and error streams, combined.
+If you want to send these two streams to different files, you can achieve this
+by setting certain `sbatch` parameters.
+
+Control your jobs:
+
+```shell
+squeue -u $USER     # check the current state of the queue
+scancel -j <jobid>  # remove one of your jobs from the queue
 ```
