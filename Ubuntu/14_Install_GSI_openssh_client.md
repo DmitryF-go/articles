@@ -444,8 +444,7 @@ Calculating on 1 GPU node for 1 hour is equal to
 150 000 SBU == 130 days of calculations on 1 GPU node
 ```
 
-Please note that for GPU nodes (that is, 16 CPU cores & 2 K40m GPUs)
-in Cartesius is charged 48 SBU / hour. So use resources carefully.
+Use resources carefully.
 
 ```shell
 # Hours are trackable on the system like this:
@@ -483,7 +482,8 @@ cp validation-horse-or-human.zip /scratch-local/paulenka/
 
 Activate conda `DL3` virtual environment:
 ```shell
-conda activate myenv
+module load Anaconda3/5.3.0  # load installed Anaconda
+source activate DL3          # activate DL3 virtual environment
 ```
 
 Create simple SLURM batch file `~/Downloads/example.slurm`:
