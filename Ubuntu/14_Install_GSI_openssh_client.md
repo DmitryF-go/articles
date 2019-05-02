@@ -524,7 +524,7 @@ where:
 Run simple Slurm batch file `example.slurm`.
 
 ```shell
-srun ~/Downloads/example.slurm  # run job in foreground mode
+srun -N 1 -t 30:00 -p gpu ~/Downloads/example.slurm  # run job in foreground mode
     Start of job at Thu May  2 12:35:54 CEST 2019
     1.13.1
     End of job at Thu May  2 12:35:57 CEST 2019
