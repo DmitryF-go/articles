@@ -519,7 +519,8 @@ where:
    * `-t` is the maximum wall clock time. If the job runs longer, it will **get terminated**.
    * `-N` is the number of nodes used for your calculations. `-N 1` is equal 48 SBUs per hour.
    * `-p` is the partition. Use `gpu_short` for for test and debug runs and `gpu` for production
-   runs on GPU nodes. Show available partitions list with the command `scontrol show partition`.
+   runs on GPU nodes. Show available partitions list with the command
+   `sinfo` or `scontrol show partition`.
 
 Run simple Slurm batch file `example.slurm`.
 
