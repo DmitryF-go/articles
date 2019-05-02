@@ -255,9 +255,8 @@ Install and configure Anaconda:
 module load eb   # Load EasyBuild framework
 eblocalinstall Anaconda3-5.3.0.eb --robot
 
-# Load Anaconda module.
-# To load Anaconda 5.3.0 you must exit and login again.
-# Otherwise you can load Anaconda 5.0.1 older version.
+# Load Anaconda module. To load Anaconda 5.3.0 you must exit and login again.
+# Otherwise you can load only older version Anaconda 5.0.1.
 exit  # exit from SURFsara and login again to activate Anaconda3 5.3.0
 module load Anaconda3/5.3.0
 #module load Anaconda3/5.0.1
@@ -278,6 +277,8 @@ conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
 
 # Update Anaconda if necessary
 conda update -n base -c defaults conda
+# If you have inconsistency problem, run
+conda install anaconda
 
 # Deactivate 'test' environment
 source deactivate

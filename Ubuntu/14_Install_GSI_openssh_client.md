@@ -424,16 +424,19 @@ exit
 Links to read:
    * [Getting started with Cartesius](https://userinfo.surfsara.nl/systems/cartesius/getting-started)
    * Resource management [SURFsara Cartesius batch usage](https://userinfo.surfsara.nl/systems/cartesius/usage/batch-usage).
-   * Unfortunately GSI users **can not** view resources at [https://portal.surfsara.nl](https://portal.surfsara.nl)
-   * [SLURM official website](https://slurm.schedmd.com)
+   * [Cartesius file systems](https://userinfo.surfsara.nl/systems/cartesius/filesystems).
+   * Unfortunately GSI users **can not** login at [portal](https://portal.surfsara.nl)
+   * [SLURM official website](https://slurm.schedmd.com). SLURM is the scheduling system used on Cartesius.
    * Track resources and [budget (core hours)](https://userinfo.surfsara.nl/systems/cartesius/getting-started#budget).
+   * One has to have a basic knowledge of [shell programming](http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html).
 
 ```text
 We have 150 000 System Billing Units (SBUs)
 1 SBU == 1 core for 1 hour on a fat and thin nodes
 1 SBU == 1 core for 20 minutes on a GPU node
 3 SBU == 1 core for 60 minutes on a GPU node
-1 GPU node == 16 CPU cores or 2 NVIDIA Tesla K40m GPUs
+1 GPU node == 16 CPU cores and 2 NVIDIA Tesla K40m GPUs
+1 fat/thin node == 16 CPU cores without GPU
 
 Calculating on 1 GPU node for 1 hour is equal to
 16 cores * 3 SBU = 48 SBU/hour
@@ -449,6 +452,7 @@ in Cartesius is charged 48 SBU / hour. So use resources carefully.
 budget-overview  # get a more dynamic and accurate overview of the current state of your account's budget
 accinfo          # view the budget, user list, and other details
 accuse           # view the daily/monthly usage per user/account
+myquota          # check the disk quota
 ```
 
 Note that the information given by `accuse` and `accinfo` is only up-to-date
@@ -459,39 +463,79 @@ I.e.: the day before the commands are issued.
 on the `$HOME` directory and 8 TiB on the `Scratch` file system, but only for 14 days.
 Keep in mind that any file on `scratch` folder than 14 days will be **automatically removed**.
 If necessary we can request for additional space in the `Projects` file system
-or `/projects/0/<project_name>` directory. 
+or `/projects/0/<project_name>` directory.
+
+```shell
+myquota  # check the disk quota
+
+# 200 GiB on the $HOME directory
+# 8 TiB on the /scratch/shared directory for 14 days only
+df -h /scratch/shared/
+mkdir /scratch/shared/paulenka
+cp validation-horse-or-human.zip /scratch/shared/paulenka/
+ls -hal /scratch-shared/paulenka  # the same as /scratch/shared/
+
+echo $TMPDIR  # /scratch-local/pr1d1005
+# You can also use /scratch-local for 14 days
+mkdir /scratch-local/paulenka
+cp validation-horse-or-human.zip /scratch-local/paulenka/
+```
 
 Activate conda `DL3` virtual environment:
 ```shell
 conda activate myenv
 ```
 
-SLURM is the scheduling system used on Cartesius.
-Create simple SLURM batch file `example.slurm`:
+Create simple SLURM batch file `~/Downloads/example.slurm`:
+```shell
+mkdir -p ~/Downloads/
+touch ~/Downloads/example.slurm
+# Make file executable, otherwise it will not run with 'srun' command
+chmod u+x ~/Downloads/example.slurm
+# Open 'nano' editor
+nano ~/Downloads/example.slurm
+```
+
+Contents of `example.slurm` batch file:
+
 ```shell
 #!/bin/bash
 #SBATCH -t 30:00
 #SBATCH -N 1
-#SBATCH -p gpu_short
+#SBATCH -p gpu
+
+module load Anaconda3/5.3.0  # load installed Anaconda
+source activate DL3          # activate DL3 virtual environment
 
 echo "Start of job at `date`"
 python3 -c 'import tensorflow as tf; print(tf.__version__)'
 echo "End of job at `date`"
+
+conda deactivate  # deactivate DL3 virtual environment
 
 ```
 
 where:
    * `-t` is the maximum wall clock time. If the job runs longer, it will **get terminated**.
    * `-N` is the number of nodes used for your calculations. `-N 1` is equal 48 SBUs per hour.
-   * `-p` is the partition. Use `gpu_short` for testing and `gpu` for production calculations
-   on GPU nodes. Show available partitions list with the command `scontrol show partition`.
+   * `-p` is the partition. Use `gpu_short` for for test and debug runs and `gpu` for production
+   runs on GPU nodes. Show available partitions list with the command `scontrol show partition`.
 
 Run simple Slurm batch file `example.slurm`.
+
 ```shell
-(DL3) bash-4.2$ srun --account=pr1d1005 example.slurm
+srun ~/Downloads/example.slurm  # run job in foreground mode
+    Start of job at Thu May  2 12:35:54 CEST 2019
+    1.13.1
+    End of job at Thu May  2 12:35:57 CEST 2019
 
-(DL3) bash-4.2$ sbatch --account=pr1d1005 example.slurm
+sbatch ~/Downloads/example.slurm   # run job in background mode
+    Submitted batch job 6279513
 
+cat ~/Downloads/slurm-6279513.out  # view script output
+    Start of job at Thu May  2 12:33:37 CEST 2019
+    1.13.1
+    End of job at Thu May  2 12:33:41 CEST 2019
 ```
 
 By default, SLURM willl redirect all output to a file called `<jobid>.out`,
