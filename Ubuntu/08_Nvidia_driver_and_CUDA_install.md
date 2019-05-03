@@ -147,8 +147,11 @@ After deletion of PPA graphical drivers repositories make
 `sudo apt update` and `sudo apt upgrade`.
 
 ```shell
+# Go to directory with nVidia driver
+cd ~/Documents/Install/nVidia Geforce GTX 1080 Ti
+
 # Download graphical driver from nVidia web site and make it executable.
-chmod +x NVIDIA-Linux-x86_64-418.56.run
+chmod +x NVIDIA-Linux-x86_64-418.43.run
 
 # Install necessary packages
 sudo apt install gcc make

@@ -1,4 +1,5 @@
 How-to:
+   - [`nvidia-smi` error after system update](#nvidia-smi-error)
    - [Add directory to the $PATH](#add_to_path)
    - [Allow user permissions](#permissions)
       - [Relative articles](#relative-articles)
@@ -27,6 +28,14 @@ How-to:
    - [View disk usage](#disk-usage)
    - [View screen resolution](#resolution)
    - [Who is logged in](#who)
+
+---
+### <a name="nvidia-smi-error" />`nvidia-smi` error after system update
+
+Unfortunately, there is `nvidia-smi` error after system update for DeepLab3.
+I don't know how to turn off nVidia drivers from automatic updating yet.
+
+So after update I have to [reinstall nVidia drivers again](08_Nvidia_driver_and_CUDA_install.md/#nvidia-smi-error).
 
 ---
 ### <a name="add_to_path" />Add directory to the $PATH
