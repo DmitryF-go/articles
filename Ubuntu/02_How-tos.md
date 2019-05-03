@@ -36,6 +36,7 @@ Unfortunately, there is `nvidia-smi` error after system update for DeepLab3.
 I don't know how to turn off nVidia drivers from automatic updating yet.
 
 So after update I have to [reinstall nVidia drivers again](08_Nvidia_driver_and_CUDA_install.md/#nvidia-smi-error).
+It takes 5 minutes, but I would like to get rid of this problem in the future.
 
 ---
 ### <a name="add_to_path" />Add directory to the $PATH
