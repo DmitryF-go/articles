@@ -10,6 +10,7 @@ Courses (before the dash are first to learn):
    * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/
    * Task. Medical-MNIST-Classification: https://github.com/apolanco3225/Medical-MNIST-Classification
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
+   * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
 ---
    * Google AI. Education: https://ai.google/education/
    * Google Seedbank (especially Style Transfer seed): https://research.google.com/seedbank/
