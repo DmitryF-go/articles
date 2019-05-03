@@ -266,6 +266,8 @@ sudo docker run hello-world
 ---
 #### <a name="container" />Install NVIDIA Container Runtime for Docker
 
+Install [nVidia-Docker](https://github.com/NVIDIA/nvidia-docker).
+
 ![NVIDIA Container Runtime for Docker](data/2018.12.22-nvidia-container-runtime-for-docker.png)
 
 ```shell

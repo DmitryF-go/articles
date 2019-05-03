@@ -165,7 +165,11 @@ apt search nouveau  # check if all nouveau drivers are uninstalled
 sudo apt purge xserver-xorg-video-nouveau
 
 # Remove previously installed NVIDIA driver, but don't remove CUDA.
-sudo apt purge nvidia*
+# Try not to remove the following packages:
+#   nvidia-container-runtime/bionic,now 2.0.0+docker18.09.5-3 amd64 [installed,automatic]
+#   nvidia-container-runtime-hook/bionic,now 1.4.0-1 amd64 [installed,automatic]
+#   nvidia-docker2/bionic,now 2.0.3+docker18.09.5-3 all [installed]
+#sudo apt purge nvidia*  # there are nvidia-docker packages there
 sudo apt autoremove
 sudo apt autoclean
 
@@ -181,6 +185,8 @@ sudo reboot
 # After reboot check if installation is successful
 nvidia-smi
 ```
+
+Reinstall [`nvidia-docker`](10_Neural_networks_software.md/#container) if necessary.
 
 ---
 ### <a name="cuda" />Install CUDA library for all users

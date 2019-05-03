@@ -11,10 +11,12 @@ How-to:
    - [Change password](#passwd)
    - [Check Linux version](#check-linux)
    - [Delete package](#delete)
+   - [Exclude packages from `sudo apt upgrade`](#exclude-packages)
    - [Find file by name](#find)
    - [Install deb file](#deb)
    - [Kill the tty](#tty-kill)
    - [List all environment variables](#printenv)
+   - [List installed packages](#list-installed)
    - [Lock Screen](#lock)
    - [Manage software updates](#software-updates)
    - [Mount USB](#mount)
@@ -359,6 +361,26 @@ sudo apt purge --auto-remove packagename
 ```
 
 ---
+### <a name="exclude-packages" />Exclude packages from `sudo apt upgrade`
+
+Read [how to exclude packages from apt-get upgrade](https://tecadmin.net/exclude-packages-from-apt-upgrade)
+
+```shell
+# Using apt
+sudo apt-mark hold package_name
+sudo apt-mark unhold package_name
+# Using dpkg
+echo "package_name hold" | sudo dpkg --set-selections
+echo "package_name install" | sudo dpkg --set-selections
+# Using aptitude
+sudo aptitude hold package_name
+sudo aptitude unhold package_name
+
+# List packages on hold
+sudo dpkg --get-selections | grep "hold"
+```
+
+---
 ### <a name="find" />Find file by name
 
 [How to search files from the terminal on Linux](https://www.howtoforge.com/tutorial/linux-search-files-from-the-terminal)
@@ -468,6 +490,19 @@ printenv | more
 ```
 
 [A list of the commonly used variables in Linux](https://www.cyberciti.biz/faq/linux-list-all-environment-variables-env-command)
+
+---
+### <a name="list-installed" />List installed packages
+
+[List installed packages](https://www.rosehosting.com/blog/list-all-installed-packages-with-apt-on-ubuntu)
+
+```shell
+sudo apt list --installed
+sudo apt list --installed | less
+sudo apt list --installed | grep -i nvidia
+sudo dpkg -l
+sudo dpkg -l | grep -i nvidia
+```
 
 ---
 ### <a name="lock" />Lock Screen
@@ -608,7 +643,7 @@ of the command, like so:
 python3 /home/pi/myscript.py &
 ```
 
-:exclamation: **Otherwise, the script will not end
+:exclamation: **Add ampersand `&` otherwise, the script will not end
 and the system will not boot.** :exclamation:
 
 The ampersand allows the command to run in a separate process and continue
