@@ -8,7 +8,6 @@ Courses (before the dash are first to learn):
    * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/
-   * Task. Medical-MNIST-Classification: https://github.com/apolanco3225/Medical-MNIST-Classification
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
 ---
@@ -52,6 +51,7 @@ Courses (before the dash are first to learn):
 
 ---
 Completed courses:
+   * Task. Medical-MNIST-Classification: https://github.com/apolanco3225/Medical-MNIST-Classification (finished task)
    * TF. Coding TensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx (24 videos from 24)
    * TF. TensorFlow Tip of the Week: https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB (9 tips from 9)
    * TF. #AskTensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL (6 videos from 6)
