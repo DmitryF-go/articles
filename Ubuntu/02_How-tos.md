@@ -99,10 +99,12 @@ Cmnd_Alias START2   = /usr/sbin/service nginx start,   /usr/sbin/service slide_a
 Cmnd_Alias STOP2    = /usr/sbin/service nginx stop,    /usr/sbin/service slide_analysis_api stop
 Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service slide_analysis_api restart
 
+Cmnd_Alias FUSER    = /bin/fuser 3000/tcp,             /bin/fuser -k 3000/tcp
+
 Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
-WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS
+WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS, FUSER
 
 ```
 
@@ -121,6 +123,8 @@ sudo dmidecode -t memory  # should NOT work
 sudo /usr/sbin/service nginx restart
 sudo /bin/systemctl restart nginx
 sudo /usr/sbin/service slide_analysis_api start
+
+sudo fuser 3000/tcp  # view port 3000/tcp
 ```
 
 #### <a name="allow-write" />Allow to write in the system folder
