@@ -103,7 +103,7 @@ Cmnd_Alias FUSER1   = /bin/fuser 3000/tcp,             /bin/fuser -k 3000/tcp
 Cmnd_Alias FUSER2   = /bin/fuser 4000/tcp,             /bin/fuser -k 4000/tcp
 
 Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
-Cmnd_Alias STATUS   = /bin/systemctl status
+Cmnd_Alias STATUS   = /bin/systemctl status slide_analysis_api, /bin/systemctl status, /bin/systemctl status nginx
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
 WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS, FUSER1, FUSER2, STATUS

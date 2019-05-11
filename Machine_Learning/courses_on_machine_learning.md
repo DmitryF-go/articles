@@ -4,9 +4,7 @@ Courses (before the dash are first to learn):
    * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (4 weeks from 12)
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 193)
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
-   * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
-   * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
 ---
@@ -52,6 +50,9 @@ Courses (before the dash are first to learn):
 
 ---
 Completed courses:
+   * Task. Neural Style Transfer with tf.keras: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras
+   * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
+   * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/ (not finished, there is an error, and I don't know how to fix it)
    * Kaggle. Getting Started on Kaggle: https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW (0 videos from 9)
    * Task. Medical-MNIST-Classification: https://github.com/apolanco3225/Medical-MNIST-Classification (finished task)
    * TF. Coding TensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx (24 videos from 24)
