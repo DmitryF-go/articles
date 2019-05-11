@@ -47,6 +47,8 @@ Courses (before the dash are first to learn):
    * Mask RCNN course: https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg
    * Tutorial. TensorFlow workshops: https://github.com/tensorflow/workshops
    * Kaggle. Santander EDA and Prediction: https://www.kaggle.com/gpreda/santander-eda-and-prediction
+   * Kaggle. Data ScienceTutorial for Beginners: https://www.kaggle.com/kanncaa1/data-sciencetutorial-for-beginners
+   * Kaggle. Introduction to CNN Keras: https://www.kaggle.com/yassineghouzam/introduction-to-cnn-keras-0-997-top-6
 
 ---
 Completed courses:
