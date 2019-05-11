@@ -99,12 +99,14 @@ Cmnd_Alias START2   = /usr/sbin/service nginx start,   /usr/sbin/service slide_a
 Cmnd_Alias STOP2    = /usr/sbin/service nginx stop,    /usr/sbin/service slide_analysis_api stop
 Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service slide_analysis_api restart
 
-Cmnd_Alias FUSER    = /bin/fuser 3000/tcp,             /bin/fuser -k 3000/tcp
+Cmnd_Alias FUSER1   = /bin/fuser 3000/tcp,             /bin/fuser -k 3000/tcp
+Cmnd_Alias FUSER2   = /bin/fuser 4000/tcp,             /bin/fuser -k 4000/tcp
 
 Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
+Cmnd_Alias STATUS   = /bin/systemctl status
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
-WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS, FUSER
+WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS, FUSER1, FUSER2, STATUS
 
 ```
 
