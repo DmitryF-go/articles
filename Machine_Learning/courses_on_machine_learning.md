@@ -63,4 +63,4 @@
    * TF. TensorFlow Tip of the Week: https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB (9 tips from 9)
    * TF. #AskTensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL (6 videos from 6)
    * TF. Intro to TensorFlow for AI, ML and DL: https://www.coursera.org/learn/introduction-tensorflow (4 weeks from 4)
-   * TF. TensorFlow free course: https://classroom.udacity.com/courses/ud187 (4 lessons from 4, will be continued on April 16)
+   * TF. TensorFlow free course: https://classroom.udacity.com/courses/ud187 (6 lessons from 6, will be continued soon)
