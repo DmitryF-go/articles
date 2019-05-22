@@ -1,4 +1,4 @@
-Courses (before the dash are first to learn):
+### Courses (before the dash are first to learn):
    * Video course. Visual group theory: https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv (3 lectures from 7)
    * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (3 недели из 8)
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 193)
@@ -48,7 +48,7 @@ Courses (before the dash are first to learn):
    * Kaggle. Introduction to CNN Keras: https://www.kaggle.com/yassineghouzam/introduction-to-cnn-keras-0-997-top-6
 
 ---
-Completed courses:
+### Completed courses:
    * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (12 weeks from 12)
    * Task. Neural Style Transfer with tf.keras: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras
    * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
