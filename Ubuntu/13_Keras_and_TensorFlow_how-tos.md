@@ -14,7 +14,7 @@
 ---
 ### <a name="exercises" />Exercises and tutorials
 
-Helpful for me and I hope helpful for you:
+Helpful for me and I hope will be helpful for you:
 
    - [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
    Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
