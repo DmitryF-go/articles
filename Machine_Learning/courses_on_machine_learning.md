@@ -1,7 +1,6 @@
 Courses (before the dash are first to learn):
    * Video course. Visual group theory: https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv (3 lectures from 7)
    * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (3 недели из 8)
-   * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (4 weeks from 12)
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 193)
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
@@ -50,6 +49,7 @@ Courses (before the dash are first to learn):
 
 ---
 Completed courses:
+   * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (12 weeks from 12)
    * Task. Neural Style Transfer with tf.keras: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras
    * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
    * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/ (not finished, there is an error, and I don't know how to fix it)
