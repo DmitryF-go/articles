@@ -18,6 +18,8 @@ Helpful for me and I hope will be helpful for you:
 
    - [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
    Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
+   - [TensorFlow free course](https://classroom.udacity.com/courses/ud187) --
+   <b>Highly recommend</b> this course to ML newcomers, beginners, novices, rookies, etc.
    - [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
    Webpage with many tutorials. Everyone should make at least 5 exercises for beginners
    and then continue with more advanced tutorials.
