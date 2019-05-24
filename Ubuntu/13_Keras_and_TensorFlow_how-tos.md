@@ -51,7 +51,7 @@ Helpful for me and I hope will be helpful for you:
    - Course [Coding TensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx) --
    You will look at various parts of TensorFlow from a coding perspective.
    - Tips [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) --
-   How to best use our open source machine learning platform.
+   How to best use TensorFlow open source machine learning platform.
 
 ---
 ### <a name="video-courses" />Video courses and tutorials
