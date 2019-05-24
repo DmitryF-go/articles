@@ -1,5 +1,5 @@
    - [Exercises and tutorials](#exercises)
-   - [Video courses and tutorials](#video-courses)
+   - [All video courses and tutorials](#video-courses)
    - [Code examples](#code-examples)
    - [Additional useful tools](#tools)
    - [TensorFlow CPUs and GPUs Configuration](#cpu-gpu-configuration)
@@ -54,9 +54,9 @@ Helpful for me and I hope will be helpful for you:
    How to best use TensorFlow open source machine learning platform.
 
 ---
-### <a name="video-courses" />Video courses and tutorials
+### <a name="video-courses" />All video courses and tutorials
 
-Video courses and tutorials about Machine Learning I'm working on
+All video courses and tutorials about Machine Learning I'm working on
 [are placed here](../Machine_Learning/courses_on_machine_learning.md).
 
 ---
