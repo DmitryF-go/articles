@@ -54,10 +54,10 @@
 ---
 ### <a name="completed-courses" />Completed courses
    * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (12 weeks from 12)
-   * Task. Neural Style Transfer with tf.keras: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras
-   * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398
-   * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/ (not finished, there is an error, and I don't know how to fix it)
-   * Kaggle. Getting Started on Kaggle: https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW (0 videos from 9)
+   * Task. Neural Style Transfer with tf.keras: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras (finished task)
+   * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398 (finished task)
+   * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/ (<b>not finished</b>, there is an error, and I don't know how to fix it)
+   * Kaggle. Getting Started on Kaggle: https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW (9 videos from 9)
    * Task. Medical-MNIST-Classification: https://github.com/apolanco3225/Medical-MNIST-Classification (finished task)
    * TF. Coding TensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx (24 videos from 24)
    * TF. TensorFlow Tip of the Week: https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB (9 tips from 9)
