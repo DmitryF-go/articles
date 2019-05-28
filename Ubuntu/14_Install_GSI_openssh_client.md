@@ -54,6 +54,27 @@ Installation of GSI SSH client:
 [certification center UIIP NASB](http://uiip.bas-net.by/ca/misc).
 Edit config file and change `default_bits` from 1024 to 2048.
 
+```shell
+#
+# Belarusian Grid Certification Authority
+# Configuration for user certificate requests
+#
+
+[ req ]
+default_bits		= 2048
+default_keyfile 	= userkey.pem
+distinguished_name	= req_distinguished_name
+
+[ req_distinguished_name ]
+0.domainComponent		= DomainComponent (by)
+0.domainComponent_default	= by
+1.domainComponent		= DomainComponent (grid)
+1.domainComponent_default	= grid
+organizationName		= Domain of your organization (e.g. uiip.bas-net.by)
+commonName                       = Name (e.g., Francysk Skaryna)
+commonName_max                   = 64
+```
+
 ---
 &zwnj;1.3. Generate a request for Grid certificate:
 ```shell
@@ -157,7 +178,15 @@ Foo Bar personal info:
 6. E-mail: foobar167@gmail.com
 7. Phone number: Office +375-17-225-12-34, Mobile: +375-29-225-12-34
 8. Certificate request file "userkey.pem" is attached to the letter.
+
+Send additional information for LDAP entries:
+FooBar_usercert.pem, DN: CN=Foo Bar,O=uiip.bas-net.by,DC=grid,DC=by; Mr. Foo Bar, foobar167@gmail.com, +375-29-123-34-67, BY
+
+For SURFsara Cartesius server system administrators
+send IP-address from which you're going to login to the SURFsara Cartesius server.
+They'll add this IP-address to their whitelist.
 ```
+
 Do not send file `userkey.pem`. This is your private, secret key.
 
 From the local request authority you should receive `usercert.pem` file with personal certificate.
