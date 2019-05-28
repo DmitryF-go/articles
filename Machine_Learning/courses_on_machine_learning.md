@@ -1,11 +1,11 @@
-## Various interesting courses on Machine Learning
+## Various interesting courses on Machine Learning and some other disciplines
    - [Courses to finish](#courses-to-finish)
    - [Completed courses](#completed-courses)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
    * Video course. Visual group theory: https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv (3 lectures from 7)
-   * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (3 недели из 8)
-   * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 193)
+   * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (4 недели из 8)
+   * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 220)
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
