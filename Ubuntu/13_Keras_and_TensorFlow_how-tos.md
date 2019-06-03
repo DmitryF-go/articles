@@ -16,6 +16,9 @@
 
 Helpful for me and I hope will be helpful for you:
 
+   - How to write a scientific (survey) paper: [part1](https://youtu.be/FupqqW3hZWQ) & [part2](https://youtu.be/aeea2Xw237U) --
+   Before learning Machine Learning, you must know how to write survey (scientific) paper
+   and how to work with survey papers.   
    - [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
    Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
    - [TensorFlow free course](https://classroom.udacity.com/courses/ud187) --

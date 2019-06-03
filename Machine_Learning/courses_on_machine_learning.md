@@ -53,6 +53,7 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Task. How to write a scientific (survey) paper: https://youtu.be/FupqqW3hZWQ , https://youtu.be/aeea2Xw237U (2 lectures from 2)
    * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (12 weeks from 12)
    * Task. Neural Style Transfer with tf.keras: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras (finished task)
    * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398 (finished task)
