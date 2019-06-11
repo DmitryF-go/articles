@@ -88,7 +88,7 @@ sudo visudo -f /etc/sudoers.d/website
 # Write into the file /etc/sudoers.d/website
 
 # Create alias for WEBMASTERS group
-User_Alias WEBMASTERS = username, vozman, romanroskach
+User_Alias WEBMASTERS = username, vozman, romanroskach, malyshevvalery
 
 # Create commands alias to start, stop and restart some services and view BIOS
 Cmnd_Alias START1   = /bin/systemctl start nginx,      /bin/systemctl start slide_analysis_api
@@ -101,12 +101,14 @@ Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service slide_a
 
 Cmnd_Alias FUSER1   = /bin/fuser 3000/tcp,             /bin/fuser -k 3000/tcp
 Cmnd_Alias FUSER2   = /bin/fuser 4000/tcp,             /bin/fuser -k 4000/tcp
+Cmnd_Alias FUSER3   = /bin/fuser 8080/tcp,             /bin/fuser -k 8080/tcp
+Cmnd_Alias FUSER4   = /bin/fuser 8081/tcp,             /bin/fuser -k 8081/tcp
 
 Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
 Cmnd_Alias STATUS   = /bin/systemctl status slide_analysis_api, /bin/systemctl status, /bin/systemctl status nginx
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
-WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS, FUSER1, FUSER2, STATUS
+WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS, FUSER1, FUSER2, FUSER3, FUSER4, STATUS
 
 ```
 
