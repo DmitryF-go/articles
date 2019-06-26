@@ -3,26 +3,19 @@
    - [Completed courses](#completed-courses)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
-   * Video course. Visual group theory: https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv (3 lectures from 7)
-   * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (4 недели из 8)
-   * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 220)
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
+   * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 332)
 ---
    * Google AI. Education: https://ai.google/education/
    * Google Seedbank (especially Style Transfer seed): https://research.google.com/seedbank/
-   * WebGL tutorial. https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial (finish «video-cube»)
-   * WebGL Fundamentals: https://webglfundamentals.org (not started)
-   * JS. TensorFlow.js? (not started)
+   * Google Colab tutorial: https://colab.research.google.com
    * ML. Machine Learning Fun and Easy: https://www.youtube.com/playlist?list=PL_Nji0JOuXg2udXfS6nhK3CkIYLDtHNLp (not started)
    * TF. Get Started with TensorFlow: https://www.tensorflow.org/tutorials (5 exercises passed)
    * TF Guide: https://www.tensorflow.org/guide/keras + https://www.tensorflow.org/guide
    * TF. Introduction to TensorFlow: https://www.youtube.com/playlist?list=PLHYn9gDxQOpisJoIMv-L2awUGBf7oH1qF (not started)
-   * Keras getting started: https://keras.io/getting-started/sequential-model-guide (part: getting started)
-   * Kaggle. Faster Data Science Education: https://www.kaggle.com/learn/overview (micro courses, not started)
-   * Google Colab tutorial: https://colab.research.google.com
    * DL. Deep Learning with MNIST: https://www.youtube.com/playlist?list=PLHYn9gDxQOpgQc9gRmeUPChX536wVO3ns (not started)
    * DL. Deep Learning: https://classroom.udacity.com/courses/ud730 (started, but dried up)
    * DL. Tutorials for coders: https://course.fast.ai (get acquainted maybe interesting)
@@ -31,6 +24,10 @@
    * Siraj Raval. Move 37 course: https://www.theschool.ai/courses/move-37-course (not started)
    * Siraj Raval. Decentralized Applications course: https://www.theschool.ai/courses/decentralized-application (not started)
    * QuantumCasts (what is the quantum computing): https://www.youtube.com/playlist?list=PLQY2H8rRoyvwcpm6Nf-fL4sIYQUXtq3HR (0 videos from 5)
+   * WebGL tutorial. https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial (finish «video-cube»)
+   * WebGL Fundamentals: https://webglfundamentals.org (not started)
+   * JS. TensorFlow.js? (not started)
+   * Keras getting started: https://keras.io/getting-started/sequential-model-guide (part: getting started)
 ---
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * Task. TensorFlow JS Demos: https://www.tensorflow.org/js/demos
@@ -50,9 +47,12 @@
    * Kaggle. Santander EDA and Prediction: https://www.kaggle.com/gpreda/santander-eda-and-prediction
    * Kaggle. Data ScienceTutorial for Beginners: https://www.kaggle.com/kanncaa1/data-sciencetutorial-for-beginners
    * Kaggle. Introduction to CNN Keras: https://www.kaggle.com/yassineghouzam/introduction-to-cnn-keras-0-997-top-6
+   * Kaggle. Faster Data Science Education: https://www.kaggle.com/learn/overview (micro courses, not started)
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Video course. Visual group theory: https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv (7 lectures from 7)
+   * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (8 недель из 8)
    * Task. How to write a scientific (survey) paper: https://youtu.be/FupqqW3hZWQ , https://youtu.be/aeea2Xw237U (2 lectures from 2)
    * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (12 weeks from 12)
    * Task. Neural Style Transfer with tf.keras: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras (finished task)
