@@ -4,6 +4,7 @@
       - [Chromium](#Chromium)
       - [Elastix](#Elastix)
       - [Emacs](#Emacs)
+      - [FileZilla](#filezilla)
       - [Geeqie](#Geeqie)
       - [JebBrains IntelliJ](#IntelliJ)
       - [Notepad++](#notepad-plus-plus)
@@ -70,6 +71,14 @@ elastix --version
 ```shell
 # Emacs editor
 sudo apt install emacs25
+```
+
+----
+#### <a name="filezilla" />FileZilla
+
+```shell
+sudo apt-get install filezilla
+filezilla&
 ```
 
 ----
