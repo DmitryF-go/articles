@@ -15,7 +15,19 @@
    4. SURFsara server resource management.
 
 ---
-### <a name="links" />Links to read
+### <a name="request" />1. Request for Grid certificate
+
+   * Tested on Windows 10, but should work on Linux too.
+   * Country: Belarus
+   * Institution Name: United Institute of Informatics Problems ([UIIP NASB](http://uiip.bas-net.by/eng)).
+   * Local authority for Belarus. Website http://ca.grid.by doesn't function for now (2019.04.05).
+   * The authority member for Belarus is BYGCA, Alexander Shahk
+   ([Шах Александр Геннадьевич](http://uiip.bas-net.by/struct/orti.php?sphrase_id=238098),
+   e-mail: shag at uiip dot bas-net dot by).
+   * SEE-GRID Certification Authority: [Nikos Nikoloutsakos](https://see-grid-ca.hellasgrid.gr/about/)
+   (e-mail: nikoloutsa at admin dot grnet dot gr, Greece, GRNET)
+
+#### <a name="links" />Links to read
 Request creation:
    - [Configuration file](http://uiip.bas-net.by/ca/misc)
    - [Certification center UIIP NASB](http://uiip.bas-net.by/ca)
@@ -29,19 +41,6 @@ Request creation:
 
 Installation of GSI SSH client:
    * [Install GSI openssh client (Ubuntu and Debian)](https://www.lsc-group.phys.uwm.edu/lscdatagrid/doc/installgsiopensshclient.html)
-
----
-### <a name="request" />1. Request for Grid certificate
-
-   * Tested on Windows 10, but should work on Linux too.
-   * Country: Belarus
-   * Institution Name: United Institute of Informatics Problems ([UIIP NASB](http://uiip.bas-net.by/eng)).
-   * Local authority for Belarus. Website http://ca.grid.by doesn't function for now (2019.04.05).
-   * The authority member for Belarus is BYGCA, Alexander Shahk
-   ([Шах Александр Геннадьевич](http://uiip.bas-net.by/struct/orti.php?sphrase_id=238098),
-   e-mail: shag at uiip dot bas-net dot by).
-   * SEE-GRID Certification Authority: [Nikos Nikoloutsakos](https://see-grid-ca.hellasgrid.gr/about/)
-   (e-mail: nikoloutsa at admin dot grnet dot gr, Greece, GRNET)
 
 ---
 &zwnj;1.1. Install OpenSSL utility.
