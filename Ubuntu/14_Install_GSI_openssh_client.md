@@ -1,6 +1,12 @@
    - [Task](#task)
-   - [Links to read](#links)
    1. [Request for Grid certificate](#request)
+      - [Links to read](#links)
+      - 1.1. Install OpenSSL utility
+      - 1.2. Download configuration file `globus-user-ssl.conf`
+      - 1.3. Generate a request for Grid certificate
+      - 1.4. Obtain and verify `usercert_request.pem` and `userkey.pem`
+      - 1.5. Send request for certificate to the local request authority
+      - 1.6. Check the certificate
    2. [Install GSI openssh client](#install)
    3. [Login via GSI SSH client](#login)
    4. [Server management](#manage)
@@ -27,6 +33,7 @@
    * SEE-GRID Certification Authority: [Nikos Nikoloutsakos](https://see-grid-ca.hellasgrid.gr/about/)
    (e-mail: nikoloutsa at admin dot grnet dot gr, Greece, GRNET)
 
+----
 #### <a name="links" />Links to read
 Request creation:
    - [Configuration file](http://uiip.bas-net.by/ca/misc)
