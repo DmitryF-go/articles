@@ -91,18 +91,18 @@ sudo visudo -f /etc/sudoers.d/website
 User_Alias WEBMASTERS = username, vozman, romanroskach, malyshevvalery
 
 # Create commands alias to start, stop and restart some services and view BIOS
-Cmnd_Alias START1   = /bin/systemctl start nginx,      /bin/systemctl start slide_analysis_api
-Cmnd_Alias STOP1    = /bin/systemctl stop nginx,       /bin/systemctl stop slide_analysis_api
-Cmnd_Alias RESTART1 = /bin/systemctl restart nginx,    /bin/systemctl restart slide_analysis_api
-Cmnd_Alias STATUS1  = /bin/systemctl status nginx,     /bin/systemctl status slide_analysis_api
-
 Cmnd_Alias STATUS   = /bin/systemctl status
 Cmnd_Alias DAEMON   = /bin/systemctl daemon-reload
 
-Cmnd_Alias START2   = /usr/sbin/service nginx start,   /usr/sbin/service slide_analysis_api start
-Cmnd_Alias STOP2    = /usr/sbin/service nginx stop,    /usr/sbin/service slide_analysis_api stop
-Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service slide_analysis_api restart
-Cmnd_Alias STATUS2  = /usr/sbin/service nginx status,  /usr/sbin/service slide_analysis_api status
+Cmnd_Alias START1   = /bin/systemctl start nginx,      /bin/systemctl start generator,      /bin/systemctl start slide_analysis_api
+Cmnd_Alias STOP1    = /bin/systemctl stop nginx,       /bin/systemctl stop generator,       /bin/systemctl stop slide_analysis_api
+Cmnd_Alias RESTART1 = /bin/systemctl restart nginx,    /bin/systemctl restart generator,    /bin/systemctl restart slide_analysis_api
+Cmnd_Alias STATUS1  = /bin/systemctl status nginx,     /bin/systemctl status generator,     /bin/systemctl status slide_analysis_api
+
+Cmnd_Alias START2   = /usr/sbin/service nginx start,   /usr/sbin/service generator start,   /usr/sbin/service slide_analysis_api start
+Cmnd_Alias STOP2    = /usr/sbin/service nginx stop,    /usr/sbin/service generator stop,    /usr/sbin/service slide_analysis_api stop
+Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service generator restart, /usr/sbin/service slide_analysis_api restart
+Cmnd_Alias STATUS2  = /usr/sbin/service nginx status,  /usr/sbin/service generator status,  /usr/sbin/service slide_analysis_api status
 
 Cmnd_Alias FUSER1   = /bin/fuser 3000/tcp,             /bin/fuser -k 3000/tcp
 Cmnd_Alias FUSER2   = /bin/fuser 4000/tcp,             /bin/fuser -k 4000/tcp
