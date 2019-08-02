@@ -145,9 +145,10 @@ sudo -u username sudo dmidecode -t memory  # should NOT work
 # Check under "username" account
 sudo dmidecode -t bios    # should work
 sudo dmidecode -t memory  # should NOT work
-sudo /usr/sbin/service nginx restart
-sudo /bin/systemctl restart nginx
-sudo /usr/sbin/service slide_analysis_api start
+
+sudo service nginx restart
+sudo systemctl restart nginx
+sudo service slide_analysis_api start
 
 sudo fuser 3000/tcp  # view port 3000/tcp
 ```
