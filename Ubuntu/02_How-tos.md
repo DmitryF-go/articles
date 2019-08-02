@@ -94,21 +94,27 @@ User_Alias WEBMASTERS = username, vozman, romanroskach, malyshevvalery
 Cmnd_Alias START1   = /bin/systemctl start nginx,      /bin/systemctl start slide_analysis_api
 Cmnd_Alias STOP1    = /bin/systemctl stop nginx,       /bin/systemctl stop slide_analysis_api
 Cmnd_Alias RESTART1 = /bin/systemctl restart nginx,    /bin/systemctl restart slide_analysis_api
+Cmnd_Alias STATUS1  = /bin/systemctl status nginx,     /bin/systemctl status slide_analysis_api
+
+Cmnd_Alias STATUS   = /bin/systemctl status
+Cmnd_Alias DAEMON   = /bin/systemctl daemon-reload
 
 Cmnd_Alias START2   = /usr/sbin/service nginx start,   /usr/sbin/service slide_analysis_api start
 Cmnd_Alias STOP2    = /usr/sbin/service nginx stop,    /usr/sbin/service slide_analysis_api stop
 Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart, /usr/sbin/service slide_analysis_api restart
+Cmnd_Alias STATUS2  = /usr/sbin/service nginx status,  /usr/sbin/service slide_analysis_api status
 
 Cmnd_Alias FUSER1   = /bin/fuser 3000/tcp,             /bin/fuser -k 3000/tcp
 Cmnd_Alias FUSER2   = /bin/fuser 4000/tcp,             /bin/fuser -k 4000/tcp
 Cmnd_Alias FUSER3   = /bin/fuser 8080/tcp,             /bin/fuser -k 8080/tcp
 Cmnd_Alias FUSER4   = /bin/fuser 8081/tcp,             /bin/fuser -k 8081/tcp
+Cmnd_Alias FUSER5   = /bin/fuser 8083/tcp,             /bin/fuser -k 8083/tcp
 
 Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
-Cmnd_Alias STATUS   = /bin/systemctl status slide_analysis_api, /bin/systemctl status, /bin/systemctl status nginx
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
-WEBMASTERS ALL = START1, STOP1, RESTART1, START2, STOP2, RESTART2, BIOS, FUSER1, FUSER2, FUSER3, FUSER4, STATUS
+WEBMASTERS ALL = START1, START2, STOP1, STOP2, RESTART1, RESTART2, STATUS1, STATUS2, \
+                 STATUS, DAEMON, BIOS, FUSER1, FUSER2, FUSER3, FUSER4, FUSER5
 
 ```
 
@@ -581,7 +587,7 @@ For Ubuntu 14.04 **and older** one can use [Upstart](http://upstart.ubuntu.com/g
   - [systemd.service - Service unit configuration](http://manpages.ubuntu.com/manpages/xenial/en/man5/systemd.service.5.html)
   - [systemd.service - Service unit configuration. Copy](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
 
-Create ```/etc/systemd/system/foo.service``` containing:
+Create ```/etc/systemd/system/slide_analysis_api.service``` containing:
 
 ```shell
 [Unit]
