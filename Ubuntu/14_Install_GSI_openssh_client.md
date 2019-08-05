@@ -227,6 +227,7 @@ GSI SSH client installation:
 mkdir -p ~/Documents/Install/Globus_Toolkit
 cd ~/Documents/Install/Globus_Toolkit
 
+# Download Globus Tollkit package and add it to repository.
 wget http://toolkit.globus.org/ftppub/gt6/installers/repo/globus-toolkit-repo_latest_all.deb
 sudo dpkg -i globus-toolkit-repo_latest_all.deb
 
