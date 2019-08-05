@@ -218,75 +218,8 @@ Path: `dcache-docker/dcache/dcache/etc/grid-security/certificates/`.
 ---
 ### <a name="install" />2. Install GSI openssh client
 
-<details close>
-  <summary>Old GSI SSH client installation:</summary>
-    <blockquote>
-
-```shell
-# Add repository to the /etc/apt/sources.list file
-sudo nano /etc/apt/sources.list
-# Copy-paste this line
-deb [trusted=yes] http://www.globus.org/ftppub/gt5/5.2/stable/packages/deb/ubuntu/14.04 trusty contrib
-
-# To fix the GPG error 'NO_PUBKEY'
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 44AE7EC2FAF24365
-sudo gpg --keyring /etc/apt/trusted.gpg --edit-key 44AE7EC2FAF24365 trust
-# and selected full trust ("4")
-
-# Update the repository definitions
-sudo apt update
-# Install the gsi-openssh-clients package
-sudo apt install gsi-openssh-clients
-
-# This should install gsissh, gsiscp and gsisftp.
-gsissh
-    usage: ssh [-1246AaCfGgKkMNnqsTtVvXxYy] [-b bind_address] [-c cipher_spec]
-               [-D [bind_address:]port] [-E log_file] [-e escape_char]
-               [-F configfile] [-I pkcs11] [-i identity_file]
-               [-J [user@]host[:port]] [-L address] [-l login_name] [-m mac_spec]
-               [-O ctl_cmd] [-o option] [-p port] [-Q query_option] [-R address]
-               [-S ctl_path] [-W host:port] [-w local_tun[:remote_tun]]
-               [user@]hostname [command]
-gsiscp
-    usage: gsiscp [-12346BCpqrv] [-c cipher] [-F ssh_config] [-i identity_file]
-               [-l limit] [-o ssh_option] [-P port] [-S program]
-               [[user@]host1:]file1 ... [[user@]host2:]file2
-gsisftp
-    usage: gsisftp [-1246aCfpqrv] [-B buffer_size] [-b batchfile] [-c cipher]
-              [-D sftp_server_path] [-F ssh_config] [-i identity_file] [-l limit]
-              [-o ssh_option] [-P port] [-R num_requests] [-S program]
-              [-s subsystem | sftp_server] host
-           gsisftp [user@]host[:file ...]
-           gsisftp [user@]host[:dir[/]]
-           gsisftp -b batchfile [user@]host
-
-# Install globus-proxy-utils
-apt search globus-proxy-utils
-sudo apt install globus-proxy-utils
-
-# Install the OSG trusted certificates bundle,
-# which is required to access the LSC clusters.
-# This will add the certificates to a
-# /etc/grid-security/certificates directory
-sudo dpkg -i osg-ca-certs_1.31NEW-0_all.deb
-```
-
-Notes:
-   * You should add repository for **old** version of Globus Toolkit 5.2.
-   * You should add repository for old version of Ubuntu 14.04 `trusty`.
-   * Distributions from new Globus Toolkit 6.0 Download web-page
-   http://toolkit.globus.org/toolkit/downloads/6.0 do not work.
-   There is no `gsissh` file in these files:
-   `globus_toolkit-latest-x86_64-unknown-linux-gnu.tar.gz` and
-   `globus-toolkit-repo_latest_all.deb`.
-   So use GT 5.2 for Ubuntu 14.04 `trusty`.
-   * IP-address should be whitelisted for the gsi-ssh on the server.
-   Login only from whitelisted IP-address.
-
----
-  </blockquote>
-</details>
-<br/>
+<b>Note:</b> Your IP-address should be whitelisted for the gsi-ssh on the SURFsara server.
+Login only from whitelisted IP-address.
 
 GSI SSH client installation:
 
