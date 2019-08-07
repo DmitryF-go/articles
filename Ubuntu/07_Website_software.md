@@ -3,10 +3,11 @@
       - [Relative articles](#relative-articles)
       - [Allow to execute `sudo` commands](#allow-execute)
       - [Allow to write in the system folder](#allow-write)
-   - [Packages for the website](#website)
-   - [Work with Nginx server and its API](#work)
    - [Configure `nginx`](#configure)
    - [Correctly delete `nginx`](#nginx)
+   - [Install Certbot for `nginx`](#certbot)
+   - [Packages for the website](#website)
+   - [Work with Nginx server and its API](#work)
 
 ---
 ### <a name="task" />Task
@@ -145,7 +146,7 @@ getfacl /etc/letsencrypt
 # Add 'webmasters' group to an ACL
 sudo setfacl -R -m g:webmasters:rwx /etc/nginx
 sudo setfacl -R -m g:webmasters:rwx /etc/systemd/system
-sudo setfacl -R -m g:webmasters:rwx /etc/letsencrypt
+sudo setfacl -R -m g:webmasters:rx /etc/letsencrypt
 
 # Check
 getfacl /etc/nginx
@@ -187,6 +188,103 @@ sudo usermod -a -G adm username
 sudo usermod -a -G adm malyshevvalery
 cat /etc/group | grep adm
 ```
+
+---
+### <a name="configure" />Configure `nginx`
+
+Add configuration files to directories
+`/etc/nginx/sites-enabled` and `/etc/nginx/sites-available`.
+
+Open ports 80 for HTTP and 3000 for API
+
+```shell
+# Open ports. Allow incoming TCP and UDP packets.
+sudo ufw allow 80
+sudo ufw allow 3000
+sudo ufw allow 8080
+sudo ufw allow 8081
+sudo ufw allow 8083
+
+# Delete existing rule.
+# Simply prefix the original rule with "delete".
+## sudo ufw delete allow 80
+
+# Check if it works
+
+# Check the status of ufw
+sudo ufw status
+```
+
+Ports: 80, 3000, 4000 are reserved for the website.
+Website API works via 4000 port for localhost (not via IP).
+With the help of `nginx` 3000 port redirected to 4000.
+
+To check website works locally, enter in your browser's URL
+field `http://localhost` or `http://127.0.0.1`.
+
+To check website works globally, enter in your browser's URL
+field `http://your-ip-address`. Website main page should open.
+
+---
+### <a name="nginx" />Correctly delete `nginx`
+
+[Original answer here](https://askubuntu.com/questions/235347/what-is-the-best-way-to-uninstall-nginx)
+
+```shell
+# Removes all but config files
+sudo apt remove nginx nginx-common
+# Removes everything
+sudo apt purge nginx nginx-common
+# After using any of the above commands, use this
+# in order to remove dependencies used by nginx
+# which are no longer required
+sudo apt autoremove
+## rm -rf /etc/nginx  # to remove the conf files too
+```
+
+---
+### <a name="certbot" />Install Certbot for `nginx`
+
+[Link to Certbot installation instruction](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
+
+```shell
+# Add Certbot PPA
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt update
+
+# Install Certbot
+sudo apt install certbot python-certbot-nginx
+
+# Choose how you'd like to run Certbot
+sudo certbot --nginx
+
+# Enter the following information:
+    Enter email address (used for urgent renewal and security notices): malyshevalery at gmail.com
+    
+    Which names would you like to activate HTTPS for?
+    1: myo.fr.to
+    2: apibioimage.hopto.org
+    Select the appropriate numbers separated by commas and/or spaces, or leave input
+    blank to select all options shown (Enter 'c' to cancel): 2
+    
+    Please choose whether or not to redirect HTTP traffic to HTTPS, removing HTTP access.
+    1: No redirect - Make no further changes to the webserver configuration.
+    2: Redirect - Make all requests redirect to secure HTTPS access. Choose this for
+    new sites, or if you're confident your site works on HTTPS. You can undo this
+    change by editing your web server's configuration.
+    Select the appropriate number [1-2] then [enter] (press 'c' to cancel): 2
+
+# Test automatic renewal
+sudo certbot renew --dry-run
+```
+
+To confirm that your site is set up properly, visit https://image.org.by via HTTPS.
+
+You should add read permission to `webmasters` group and
+make a secure backup of `/etc/letsencrypt` folder.
 
 ---
 ### <a name="website" />Packages for the website
@@ -269,56 +367,3 @@ sudo systemctl enable slide_analysis_api.service
 
 Check it: reboot and wait for 2-3 minutes for service to start.
 You should see the images on the website.
-
----
-### <a name="configure" />Configure `nginx`
-
-Add configuration files to directories
-`/etc/nginx/sites-enabled` and `/etc/nginx/sites-available`.
-
-Open ports 80 for HTTP and 3000 for API
-
-```shell
-# Open ports. Allow incoming TCP and UDP packets.
-sudo ufw allow 80
-sudo ufw allow 3000
-sudo ufw allow 8080
-sudo ufw allow 8081
-sudo ufw allow 8083
-
-# Delete existing rule.
-# Simply prefix the original rule with "delete".
-## sudo ufw delete allow 80
-
-# Check if it works
-
-# Check the status of ufw
-sudo ufw status
-```
-
-Ports: 80, 3000, 4000 are reserved for the website.
-Website API works via 4000 port for localhost (not via IP).
-With the help of `nginx` 3000 port redirected to 4000.
-
-To check website works locally, enter in your browser's URL
-field `http://localhost` or `http://127.0.0.1`.
-
-To check website works globally, enter in your browser's URL
-field `http://your-ip-address`. Website main page should open.
-
----
-### <a name="nginx" />Correctly delete `nginx`
-
-[Original answer here](https://askubuntu.com/questions/235347/what-is-the-best-way-to-uninstall-nginx)
-
-```shell
-# Removes all but config files
-sudo apt remove nginx nginx-common
-# Removes everything
-sudo apt purge nginx nginx-common
-# After using any of the above commands, use this
-# in order to remove dependencies used by nginx
-# which are no longer required
-sudo apt autoremove
-## rm -rf /etc/nginx  # to remove the conf files too
-```
