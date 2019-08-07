@@ -60,7 +60,7 @@ source ~/.bashrc
 ```
 
 ---
-### <a name="#permissions" />Allow sudo commands and write permissions
+### <a name="permissions" />Allow sudo commands and write permissions
 
 [How-to allow `sudo` commands and write permission into system directories](07_Website_software.md/#permissions)
 
