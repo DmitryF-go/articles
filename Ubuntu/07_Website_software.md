@@ -125,9 +125,9 @@ sudo usermod -a -G webmasters malyshevvalery
 For `webmasters` group give write permission to directories:
 
 ```shell
-/etc/systemd/system -- to start services automatically
-/etc/nginx -- for Nginx
-/etc/letsencrypt -- for Certbot
+# /etc/systemd/system -- to start services automatically
+# /etc/nginx -- for Nginx
+# /etc/letsencrypt -- for Certbot
 
 # List ACLs
 getfacl /etc/nginx/
