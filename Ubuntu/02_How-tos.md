@@ -208,6 +208,28 @@ sudo -u username touch /etc/systemd/system/test.txt  # should work
 sudo -u username touch /etc/systemd/test.txt  # Permission denied
 ```
 
+Give read permission to files in the directory `/var/log/nginx`.
+
+```shell
+# There is read permission to the directory `/var/log/nginx` itself.
+# But the owner of files in this directory is `www-data` and the group is `adm`.
+ls -hal /var/log/nginx
+    total 560K
+    drwxr-xr-x  2 root     adm    4.0K Aug  7 00:12 .
+    drwxrwxr-x 14 root     syslog 4.0K Aug  7 00:12 ..
+    -rw-r-----  1 www-data adm    122K Aug  7 10:15 access.log
+    -rw-r-----  1 www-data adm     26K Aug  5 23:58 access.log.2.gz
+    -rw-r-----  1 www-data adm     12K Aug  7 10:09 error.log
+    -rw-r-----  1 www-data adm     808 Aug  5 10:32 error.log.2.gz
+
+# So add user to the `adm` group to read files in the directory `/var/log/nginx`.
+# Add users to `adm` group.
+cat /etc/group | grep adm
+sudo usermod -a -G adm username
+sudo usermod -a -G adm malyshevvalery
+cat /etc/group | grep adm
+```
+
 ---
 ### <a name="calculator" />Calculator
 
