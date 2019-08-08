@@ -256,7 +256,7 @@ To check website works locally, enter in your browser's URL
 field `http://localhost` or `http://127.0.0.1`.
 
 To check website works globally, enter in your browser's URL
-field http://image.org.by. Or via HTTPS https://image.org.by
+field http://image.org.by or via HTTPS https://image.org.by
 Website main page should open.
 
 ---
