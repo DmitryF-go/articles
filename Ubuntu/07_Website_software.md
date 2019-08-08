@@ -3,6 +3,7 @@
       - [Relative articles](#relative-articles)
       - [Allow to execute `sudo` commands](#allow-execute)
       - [Allow to write in the system folder](#allow-write)
+   - [Backup and delete deprecated user accounts](#accounts)
    - [Configure `nginx`](#configure)
    - [Correctly delete `nginx`](#nginx)
    - [Install Certbot for `nginx`](#certbot)
@@ -11,7 +12,7 @@
 
 ---
 ### <a name="task" />Task
-   - Install software for the website http://image.org.by
+   - Install software for the website https://image.org.by
 
 ---
 ### <a name="permissions" />Allow user permissions
@@ -73,6 +74,7 @@ Cmnd_Alias FUSER2   = /bin/fuser 4000/tcp, /bin/fuser -k 4000/tcp
 Cmnd_Alias FUSER3   = /bin/fuser 8080/tcp, /bin/fuser -k 8080/tcp
 Cmnd_Alias FUSER4   = /bin/fuser 8081/tcp, /bin/fuser -k 8081/tcp
 Cmnd_Alias FUSER5   = /bin/fuser 8083/tcp, /bin/fuser -k 8083/tcp
+Cmnd_Alias FUSER6   = /bin/fuser 443/tcp,  /bin/fuser -k 443/tcp
 
 Cmnd_Alias STATUS   = /bin/systemctl status
 Cmnd_Alias DAEMON   = /bin/systemctl daemon-reload
@@ -80,7 +82,7 @@ Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
 WEBMASTERS ALL = START1, START2, STOP1, STOP2, RESTART1, RESTART2, STATUS1, STATUS2, \
-                 FUSER1, FUSER2, FUSER3, FUSER4, FUSER5, STATUS, DAEMON, BIOS
+                 FUSER1, FUSER2, FUSER3, FUSER4, FUSER5, FUSER6, STATUS, DAEMON, BIOS
 
 ```
 
@@ -190,6 +192,36 @@ cat /etc/group | grep adm
 ```
 
 ---
+### <a name="accounts" />Backup and delete deprecated user accounts
+
+Remember to backup and delete obsolede and unnecessary user accounts.
+
+```shell
+# Disable user accounts
+sudo usermod -L vozman
+sudo usermod -L romanroskach
+#sudo usermod -U tempuser  # enable user account
+
+# Delete users from `webmasters` group
+sudo deluser vozman webmasters
+sudo deluser romanroskach webmasters
+
+# Delete users
+sudo deluser vozman
+sudo deluser romanroskach
+
+# Backup the whole directory and delete it from $HOME
+sudo tar -zcvf /hdd_barracuda1/pavlenko_user_accounts_backups/vozman_2019.08.08_backup.tar.gz /home/vozman
+sudo tar -zcvf /hdd_barracuda1/pavlenko_user_accounts_backups/romanroskach_2019.08.08_backup.tar.gz /home/romanroskach
+sudo rm -r /home/vozman  # use with caution!
+sudo rm -r /home/romanroskach  # use with caution!
+
+# Check
+cat /etc/group | grep 'vozman\|romanroskach'
+ls /home | grep 'vozman\|romanroskach'
+```
+
+---
 ### <a name="configure" />Configure `nginx`
 
 Add configuration files to directories
@@ -199,15 +231,17 @@ Open ports 80 for HTTP and 3000 for API
 
 ```shell
 # Open ports. Allow incoming TCP and UDP packets.
-sudo ufw allow 80
-sudo ufw allow 3000
-sudo ufw allow 8080
-sudo ufw allow 8081
-sudo ufw allow 8083
+sudo ufw allow 80    # HTTP
+sudo ufw allow 443   # HTTPS
+sudo ufw allow 2222  # SSH
+sudo ufw allow 3000  # API slide_analysis_api
+sudo ufw allow 8080  # HTTP
+sudo ufw allow 8081  # API slide_analysis_api
+sudo ufw allow 8083  # API slide_analysis_api
 
 # Delete existing rule.
 # Simply prefix the original rule with "delete".
-## sudo ufw delete allow 80
+## sudo ufw delete allow 8083
 
 # Check if it works
 
@@ -215,7 +249,6 @@ sudo ufw allow 8083
 sudo ufw status
 ```
 
-Ports: 80, 3000, 4000 are reserved for the website.
 Website API works via 4000 port for localhost (not via IP).
 With the help of `nginx` 3000 port redirected to 4000.
 
@@ -223,7 +256,8 @@ To check website works locally, enter in your browser's URL
 field `http://localhost` or `http://127.0.0.1`.
 
 To check website works globally, enter in your browser's URL
-field `http://your-ip-address`. Website main page should open.
+field http://image.org.by. Or via HTTPS https://image.org.by
+Website main page should open.
 
 ---
 ### <a name="nginx" />Correctly delete `nginx`
@@ -289,7 +323,7 @@ make a secure backup of `/etc/letsencrypt` folder.
 ---
 ### <a name="website" />Packages for the website
 
-Install packages for http://image.org.by
+Install packages for https://image.org.by
 
 Github repository with installation instructions https://github.com/Vozf/slide_analysis_api
 
