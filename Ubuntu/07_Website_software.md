@@ -40,7 +40,7 @@ sudo visudo -f /etc/sudoers.d/website
 # Write into the file /etc/sudoers.d/website
 
 # Create alias for WEBMASTERS group
-User_Alias WEBMASTERS = username, vozman, romanroskach, malyshevvalery
+User_Alias WEBMASTERS = username, malyshevvalery
 
 # Create commands alias to start, stop and restart some services and view BIOS
 Cmnd_Alias START1   = /bin/systemctl start nginx,          \
@@ -117,8 +117,6 @@ cat /etc/group | grep webmasters
 sudo addgroup webmasters
 # Add users to 'webmasters' group
 sudo usermod -a -G webmasters username
-sudo usermod -a -G webmasters vozman
-sudo usermod -a -G webmasters romanroskach
 sudo usermod -a -G webmasters malyshevvalery
 
 # Group assignment changes won't take effect
@@ -399,5 +397,5 @@ sudo systemctl daemon-reload
 sudo systemctl enable slide_analysis_api.service
 ```
 
-Check it: reboot and wait for 2-3 minutes for service to start.
+Check it: reboot and wait for 3-5 minutes for service to start.
 You should see the images on the website.
