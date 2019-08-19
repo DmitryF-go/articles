@@ -467,11 +467,11 @@ Description=uWSGI instance to serve slide_analysis_api
 After=network.target
 
 [Service]
-User=vozman
+User=malyshevvalery
 Group=www-data
-WorkingDirectory=/home/vozman/slide_analysis/slide_analysis_api
-Environment="PATH=/home/vozman/slide_analysis/slide_analysis_api"
-ExecStart=/home/vozman/slide_analysis/slide_analysis_api/venv/bin/uwsgi --ini /home/vozman/slide_analysis/slide_analysis_api/slide_analysis_api.ini
+WorkingDirectory=/home/malyshevvalery/Slide_Analysis
+Environment="PATH=/home/malyshevvalery/Slide_Analysis"
+ExecStart=/home/malyshevvalery/Slide_Analysis/venv/bin/uwsgi --ini /home/malyshevvalery/Slide_Analysis/slide_analysis_api.ini
 
 [Install]
 WantedBy=multi-user.target

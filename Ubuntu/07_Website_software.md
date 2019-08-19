@@ -1,8 +1,10 @@
    - [Task](#task)
+   - [Links](#links)
    - [Allow user permissions](#permissions)
       - [Relative articles](#relative-articles)
       - [Allow to execute `sudo` commands](#allow-execute)
       - [Allow to write in the system folder](#allow-write)
+   - [Autorun service](#autorun)
    - [Backup and delete deprecated user accounts](#accounts)
    - [Configure `nginx`](#configure)
    - [Correctly delete `nginx`](#nginx)
@@ -13,6 +15,11 @@
 ---
 ### <a name="task" />Task
    - Install software for the website https://image.org.by
+
+---
+### <a name="links" />Links
+   - [Valery Malyshev project link](https://github.com/MalyshevValery/Generator_Back)
+   - [Alexander Yaroshevich project link](https://github.com/Vozf/slide_analysis_api)
 
 ---
 ### <a name="permissions" />Allow user permissions
@@ -55,6 +62,12 @@ Cmnd_Alias RESTART1 = /bin/systemctl restart nginx,        \
 Cmnd_Alias STATUS1  = /bin/systemctl status nginx,         \
                       /bin/systemctl status generator,     \
                       /bin/systemctl status slide_analysis_api
+Cmnd_Alias ENABLE1  = /bin/systemctl enable nginx,         \
+                      /bin/systemctl enable generator,     \
+                      /bin/systemctl enable slide_analysis_api
+Cmnd_Alias DISABLE1 = /bin/systemctl disable nginx,         \
+                      /bin/systemctl disable generator,     \
+                      /bin/systemctl disable slide_analysis_api
 
 Cmnd_Alias START2   = /usr/sbin/service nginx start,       \
                       /usr/sbin/service generator start,   \
@@ -68,6 +81,12 @@ Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart,     \
 Cmnd_Alias STATUS2  = /usr/sbin/service nginx status,      \
                       /usr/sbin/service generator status,  \
                       /usr/sbin/service slide_analysis_api status
+Cmnd_Alias ENABLE2  = /usr/sbin/service nginx enable,      \
+                      /usr/sbin/service generator enable,  \
+                      /usr/sbin/service slide_analysis_api enable
+Cmnd_Alias DISABLE2 = /usr/sbin/service nginx disable,      \
+                      /usr/sbin/service generator disable,  \
+                      /usr/sbin/service slide_analysis_api disable
 
 Cmnd_Alias FUSER1   = /bin/fuser 3000/tcp, /bin/fuser -k 3000/tcp
 Cmnd_Alias FUSER2   = /bin/fuser 4000/tcp, /bin/fuser -k 4000/tcp
@@ -81,8 +100,10 @@ Cmnd_Alias DAEMON   = /bin/systemctl daemon-reload
 Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
-WEBMASTERS ALL = START1, START2, STOP1, STOP2, RESTART1, RESTART2, STATUS1, STATUS2, \
-                 FUSER1, FUSER2, FUSER3, FUSER4, FUSER5, FUSER6, STATUS, DAEMON, BIOS
+WEBMASTERS ALL = START1, STOP1, RESTART1, STATUS1, ENABLE1, DISABLE1, \
+                 START2, STOP2, RESTART2, STATUS2, ENABLE2, DISABLE1, \
+                 FUSER1, FUSER2, FUSER3, FUSER4, FUSER5, FUSER6,      \
+                 STATUS, DAEMON, BIOS
 
 ```
 
@@ -187,6 +208,52 @@ cat /etc/group | grep adm
 sudo usermod -a -G adm username
 sudo usermod -a -G adm malyshevvalery
 cat /etc/group | grep adm
+```
+
+---
+### <a name="autorun" />Autorun service
+
+See [how-to run scripts on startup](02_How-tos.md/#autorun).
+
+There are two services for autorun: `slide_analysis_api` and `generator`.
+
+Config file `cat /etc/systemd/system/slide_analysis_api.service`
+[link on GitHub](https://github.com/Vozf/slide_analysis_api):
+
+```shell
+[Unit]
+Description=uWSGI instance to serve slide_analysis_api
+After=network.target
+
+[Service]
+User=malyshevvalery
+Group=www-data
+WorkingDirectory=/home/malyshevvalery/Slide_Analysis
+Environment="PATH=/home/malyshevvalery/Slide_Analysis"
+ExecStart=/home/malyshevvalery/Slide_Analysis/venv/bin/uwsgi --ini /home/malyshevvalery/Slide_Analysis/slide_analysis_api.ini
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Config file `cat /etc/systemd/system/generator.service`
+[link on GitHub](https://github.com/MalyshevValery/Generator_Back/blob/master/generator.service):
+
+```shell
+[Unit]
+Description=uWSGI instance to serve image factory
+After=network.target
+
+[Service]
+User=malyshevvalery
+Group=webmasters
+
+WorkingDirectory=/home/malyshevvalery/Generator_Back
+Environment="PATH=/home/malyshevvalery/Generator_Back/venv/bin"
+ExecStart=/home/malyshevvalery/Generator_Back/venv/bin/uwsgi --ini uwsgi.ini
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ---
