@@ -2,6 +2,7 @@
    - [`apt` versus `pip` installer](#versus)
    - [Python 2.x and 3.x installation](#python)
    - [Install additional packages](#packages)
+   - [Install and upgrade via `pip`](#pip)
    - [Check installations](#check)
    - [Search and remove packages](#additional)
 
@@ -223,6 +224,58 @@ python3 -c "import tensorflow as tf;    \
     print('Vertion:', tf.__version__);  \
     tf.enable_eager_execution();        \
     print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
+```
+
+---
+### <a name="pip" />Install and upgrade via `pip`
+
+See also [set up and configure Anaconda virtual environment](05_Virtual_environments.md/#configure-anaconda)
+
+Install and upgrade packages via `pip` under Windows OS.
+
+```shell
+# Upgrade pip
+python -m pip install --upgrade pip
+# Install packages
+pip install numpy scipy matplotlib scikit-learn scikit-image opencv-contrib-python pandas pillow psutil spur cython ipython jupyterlab python-git ipyparallel pyyaml virtualenvwrapper-win pipenv tensorflow-gpu
+
+# Check TensorFlow
+python -c "import tensorflow as tf; print('Vertion:', tf.__version__); tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
+
+# Update all pip packages
+pip freeze > requirements.txt && pip install --upgrade -r requirements.txt && rm requirements.txt
+
+# Install packages for Anaconda
+# Add write permission to C:\ProgramData\Anaconda3
+conda install numpy scipy matplotlib scikit-learn scikit-image pandas pillow psutil cython ipython jupyterlab ipyparallel pyyaml tensorflow-gpu
+
+# For OpenCV try different repositories
+conda install -c michael_wild opencv-contrib
+conda install -c conda-forge opencv
+# or
+conda activate
+pip install opencv-contrib-python
+conda deactivate
+# or install OpenCV in Anaconda virtual environment
+https://github.com/foobar167/articles/blob/master/Ubuntu/05_Virtual_environments.md/#configure-anaconda
+```
+
+Upgrade packages for Anaconda under Windows OS.
+
+```shell
+conda update --prefix C:\ProgramData\Anaconda3 anaconda
+```
+
+Upgrade packages for Anaconda under Ubuntu OS.
+
+```shell
+# Update conda and then anaconda
+conda update
+anaconda update
+# Update all packages to the last version (this can lead to an unstable environment)
+conda update --all
+# Update all packages for myenv virtual environment
+conda update -n myenv --all
 ```
 
 ---
