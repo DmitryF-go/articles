@@ -137,6 +137,10 @@ or [Samsung Galaxy Tab](https://www.getdroidtips.com/enable-options-usb-debuggin
 Google it to set developer and debugging on other phone models.
    * Take USB cable (to connect Android device to your computer).
 
+After finishing previous example run [Object Detection Android Demo](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android).
+
+
+
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
 
