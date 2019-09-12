@@ -119,7 +119,20 @@ IPython.display.HTML(iframe)
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
 
+[TensorFlow Lite guide](https://www.tensorflow.org/lite/guide) - this is your starting point.
 
+TensorFlow Lite **vs** TensorFlow Mobile ([link](https://towardsdatascience.com/the-essential-guide-to-learn-tensorflow-mobile-and-tensorflow-lite-a70591687800)):
+   * Lite is the next version of Mobile. Generally, applications developed on Lite
+   will have better performance and less binary file size than Mobile.
+   * Lite is still in early stages so not all the cases cover which is not the case for Mobile.
+   * Lite supports selective sets of operators, therefore not all the models will work on Lite by default.
+   Whereas, Mobile has fully covered functionality.
+
+I'm not familiar with Android development. So start with [Android quickstart](https://www.tensorflow.org/lite/guide/android)
+and Android image classification [example](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/android):
+   * Download and install [Android Studio](https://developer.android.com/studio)
+   * Set device in [developer mode](https://developer.android.com/studio/debug/dev-options) with USB debugging enabled
+   * Take USB cable (to connect Android device to your computer)
 
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
