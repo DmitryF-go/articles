@@ -130,9 +130,12 @@ TensorFlow Lite **vs** TensorFlow Mobile ([link](https://towardsdatascience.com/
 
 I'm not familiar with Android development. So start with [Android quickstart](https://www.tensorflow.org/lite/guide/android)
 and Android image classification [example](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/android):
-   * Download and install [Android Studio](https://developer.android.com/studio)
-   * Set device in [developer mode](https://developer.android.com/studio/debug/dev-options) with USB debugging enabled
-   * Take USB cable (to connect Android device to your computer)
+   * Download and install [Android Studio](https://developer.android.com/studio).
+   * Set device in [developer mode](https://developer.android.com/studio/debug/dev-options) with USB debugging enabled.
+Enable developer mode and USB debugging on [Xiaomi Redmi](https://www.syncios.com/android/how-to-debug-xiaomi-redmi-phone.html)
+or [Samsung Galaxy Tab](https://www.getdroidtips.com/enable-options-usb-debugging-galaxy-tab-s3-9-7).
+Google it to set developer and debugging on other phone models.
+   * Take USB cable (to connect Android device to your computer).
 
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
