@@ -2,6 +2,7 @@
    - [All video courses and tutorials](#video-courses)
    - [Code examples](#code-examples)
    - [Additional useful tools](#tools)
+   - [TensorFlow for Android](#tensorflow-for-android)
    - [TensorFlow CPUs and GPUs Configuration](#cpu-gpu-configuration)
       - [Limit TensorFlow to one GPU](#limit-gpu)
       - [Limit TensorFlow to lower memory](#limit-memory)
@@ -114,6 +115,11 @@ IPython.display.HTML(iframe)
    - [nbviewer](https://nbviewer.jupyter.org/) -- A simple way to share Jupyter Notebooks.
    It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
    Enter the location of a Jupyter Notebook to have it rendered.
+
+---
+### <a name="tensorflow-for-android" />TensorFlow for Android
+
+
 
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
