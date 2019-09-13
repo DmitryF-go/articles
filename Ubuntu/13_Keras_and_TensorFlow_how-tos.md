@@ -141,11 +141,14 @@ After finishing previous example run object detection Android [demo](https://git
 using a quantized [MobileNet SSD](https://github.com/tensorflow/models/tree/master/research/object_detection)
 model trained on the [COCO dataset](http://cocodataset.org/#explore).
 
-Result for image classification demo is good. I don't know which dataset they used,
+Result for image classification demo is good (2019.09.13). I don't know which dataset they used,
 but the quality of classification is decent.
 
-![TF image classification](data/2019.09.13_tf_image_classification.png =200x)
+![TF image classification](data/2019.09.13_tf_image_classification.png)
 
+Result for object detection is poor (2019.09.13, COCO dataset). It is not for production.
+
+![TF object detection](data/2019.09.13_tf_object_detection.png)
 
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
