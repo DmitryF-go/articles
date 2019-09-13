@@ -137,9 +137,9 @@ or [Samsung Galaxy Tab](https://www.getdroidtips.com/enable-options-usb-debuggin
 Google it to set developer and debugging on other phone models.
    * Take USB cable (to connect Android device to your computer).
 
-After finishing previous example run object detection Android [demo](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android).
-
-
+After finishing previous example run object detection Android [demo](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android)
+using a quantized [MobileNet SSD](https://github.com/tensorflow/models/tree/master/research/object_detection)
+model trained on the [COCO dataset](http://cocodataset.org/#explore).
 
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
