@@ -7,10 +7,10 @@
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
-   * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 332)
+   * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 480)
 ---
    * Google AI. Education: https://ai.google/education/
-   * Google Seedbank (especially Style Transfer seed): https://research.google.com/seedbank/
+   * Google Seedbank (especially Style Transfer seed): https://research.google.com/seedbank
    * Google Colab tutorial: https://colab.research.google.com
    * ML. Machine Learning Fun and Easy: https://www.youtube.com/playlist?list=PL_Nji0JOuXg2udXfS6nhK3CkIYLDtHNLp (not started)
    * TF. Get Started with TensorFlow: https://www.tensorflow.org/tutorials (5 exercises passed)
@@ -20,6 +20,7 @@
    * DL. Deep Learning: https://classroom.udacity.com/courses/ud730 (started, but dried up)
    * DL. Tutorials for coders: https://course.fast.ai (get acquainted maybe interesting)
    * DL. Convolutional Neural Networks (Course 4 of the Deep Learning Specialization): https://www.youtube.com/playlist?list=PLkDaE6sCZn6Gl29AoE31iwdVwSG-KnDzF
+   * DL. Andrew Ng. Convolutional Neural Networks: https://www.coursera.org/learn/convolutional-neural-networks
    * Siraj Raval. Data Lit course: https://www.theschool.ai/courses/data-lit (not started)
    * Siraj Raval. Move 37 course: https://www.theschool.ai/courses/move-37-course (not started)
    * Siraj Raval. Decentralized Applications course: https://www.theschool.ai/courses/decentralized-application (not started)
