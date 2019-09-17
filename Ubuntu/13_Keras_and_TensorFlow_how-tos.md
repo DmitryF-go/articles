@@ -129,7 +129,7 @@ TensorFlow Lite **vs** TensorFlow Mobile ([link](https://towardsdatascience.com/
    Whereas, Mobile has fully covered functionality.
 
 I'm not familiar with Android development. So start with [Android quickstart](https://www.tensorflow.org/lite/guide/android)
-and Android image classification [example](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/android):
+and Android **image classification** [example](https://github.com/tensorflow/examples/tree/master/lite/examples/image_classification/android):
    * Download and install [Android Studio](https://developer.android.com/studio).
    * Set device in [developer mode](https://developer.android.com/studio/debug/dev-options) with USB debugging enabled.
 Enable developer mode and USB debugging on [Xiaomi Redmi](https://www.syncios.com/android/how-to-debug-xiaomi-redmi-phone.html)
@@ -137,7 +137,7 @@ or [Samsung Galaxy Tab](https://www.getdroidtips.com/enable-options-usb-debuggin
 Google it to set developer and debugging on other phone models.
    * Take USB cable (to connect Android device to your computer).
 
-After finishing previous example run object detection Android [demo](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android)
+After finishing previous example run **object detection** [example](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android)
 using a quantized [MobileNet SSD](https://github.com/tensorflow/models/tree/master/research/object_detection)
 model trained on the [COCO dataset](http://cocodataset.org/#explore).
 
@@ -149,6 +149,9 @@ but the quality of classification is decent.
 Result for object detection is **poor** (2019.09.13, COCO dataset). It is not for production.
 
 ![TF object detection](data/2019.09.13_tf_object_detection.png)
+
+For further Android development examples and TensorFlow Lite,
+visit [this repository](https://github.com/foobar167/android).
 
 ---
 ### <a name="cpu-gpu-configuration" />TensorFlow CPUs and GPUs Configuration
