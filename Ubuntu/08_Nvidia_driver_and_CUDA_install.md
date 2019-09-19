@@ -38,7 +38,7 @@ supporting your GPU model in "SUPPORTED PRODUCTS" tab.
 
 Download it. In my case the filename is: `NVIDIA-Linux-x86_64-410.78.run`
 
-```shell
+```shell script
 # Change permission to run and execute it
 chmod +x NVIDIA-Linux-x86_64-410.78.run
 
@@ -53,7 +53,7 @@ For the text mode press 3 keys `<Ctrl>+<Alt>+<F3>` and login to console.
 Most likely you'll have problems with previously installed graphics driver
 called *Nouveau*.
 
-```shell
+```shell script
 # Stop graphical interface
 sudo service lightdm stop
 
@@ -95,7 +95,7 @@ You should see terminal output of Nvidia Drivers:
 
 More checks
 
-```shell
+```shell script
 # Check again
 lsmod | grep nouveau  # should be zero output
 lsmod | grep nvidia   # should be non-zero output
@@ -139,14 +139,23 @@ Error when executing command `nvidia-smi`:
 `NVIDIA-SMI has failed because it couldn't communicate with the NVIDIA driver.
 Make sure that the latest NVIDIA driver is installed and running.`
 
-The reason is that PPA drivers previously installed are not Ok.
-So turn off sorftware updates. Especially PPA repositories.
-See instruction [Manage software updates](02_How-tos.md/#software-updates) 
+_Try to not mix runfile and package manager install methods._
 
-After deletion of PPA graphical drivers repositories make
-`sudo apt update` and `sudo apt upgrade`.
+Package manager method ([link](http://maxprog.net.pl/artifficial-intelligence-in-practice/solved-deep-learning-on-gpu-and-error-nvidia-smi-has-failed-because-it-couldnt-communicate-with-the-nvidia-driver)):
+```shell script
+# Check what driver is valid
+sudo ubuntu-drivers devices
+```
+![sudo ubuntu-drivers devices](data/2019.09.19_ubuntu-drivers_devices.png)
+```shell script
+# Pick the right driver and run it
+sudo apt install nvidia-driver-430
+# Install CUDA toolkit
+sudo apt install nvidia-cuda-toolkit
+```
 
-```shell
+Runfile method:
+```shell script
 # Go to directory with nVidia driver
 cd ~/Documents/Install/nVidia Geforce GTX 1080 Ti
 
@@ -160,16 +169,6 @@ sudo apt install gcc make
 # Stop graphical interface
 sudo service lightdm stop
 
-# Remove Nouveau drivers
-apt search nouveau  # check if all nouveau drivers are uninstalled
-sudo apt purge xserver-xorg-video-nouveau
-
-# Remove previously installed NVIDIA driver, but don't remove CUDA.
-# Try not to remove the following packages:
-#   nvidia-container-runtime/bionic,now 2.0.0+docker18.09.5-3 amd64 [installed,automatic]
-#   nvidia-container-runtime-hook/bionic,now 1.4.0-1 amd64 [installed,automatic]
-#   nvidia-docker2/bionic,now 2.0.3+docker18.09.5-3 all [installed]
-#sudo apt purge nvidia*  # there are nvidia-docker packages there
 sudo apt autoremove
 sudo apt autoclean
 
@@ -188,10 +187,20 @@ nvidia-smi
 
 Reinstall [`nvidia-docker`](10_Neural_networks_software.md/#container) if necessary.
 
+Troubleshooting:
+```shell script
+# Remove Nouveau drivers
+apt search nouveau  # check if all nouveau drivers are uninstalled
+sudo apt purge xserver-xorg-video-nouveau
+
+# You can remove previously installed NVIDIA driver
+# sudo apt purge nvidia*  # there are nvidia-docker packages there
+```
+
 ---
 ### <a name="cuda" />Install CUDA library for all users
 
-```shell
+```shell script
 # Update and upgrade your system
 sudo apt update
 sudo apt upgrade
@@ -220,7 +229,7 @@ Select: `Linux` → `x86_64` → `Ubuntu` → `18.04` → `runfile (local)`.
 
 Download 2.0 GB file: `cuda_10.0.130_410.48_linux.run`
 
-```shell
+```shell script
 sudo service lightdm stop  # Stop graphical interface
 
 # Change permissions and run it
@@ -265,7 +274,7 @@ sudo service lightdm start  # Start graphical interface
 
 If installation is successful, your should see the following output:
 
-```shell
+```shell script
 
 ===========
 = Summary =
@@ -290,7 +299,7 @@ Logfile is /tmp/cuda_install_8756.log
 To configure the CUDA environment for all users (and applications) on your
 system create two files (use `sudo` and a text editor of your choice)
 
-```shell
+```shell script
 # Create file cuda.sh
 sudo touch /etc/profile.d/cuda.sh
 # Open cuda.sh file
