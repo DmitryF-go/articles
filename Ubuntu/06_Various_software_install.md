@@ -25,7 +25,7 @@ Install different software on Ubuntu 18.04.
 
 ----
 #### <a name="other-software" />All other different software
-```shell
+```shell script
 sudo apt install htop      # CPU monitoring
 sudo apt install git       # Git
 sudo apt install mc        # Midnight Commander
@@ -44,7 +44,7 @@ sudo apt install htop git mc autoconf make curl gcc gcc-6 g++ g++-6 \
 ----
 #### <a name="Chromium" />Chromium
 
-```shell
+```shell script
 # Install Chromium web browser
 sudo apt install chromium-browser
 # Start Chromium in terminal background
@@ -56,7 +56,7 @@ chromium-browser &> /dev/null
 ----
 #### <a name="Elastix" />Elastix
 
-```shell
+```shell script
 # Toolbox for rigid and nonrigid registration of images
 sudo apt install elastix
 # Documents for Elastix toolbox
@@ -68,7 +68,7 @@ elastix --version
 ----
 #### <a name="Emacs" />Emacs
 
-```shell
+```shell script
 # Emacs editor
 sudo apt install emacs25
 ```
@@ -76,7 +76,7 @@ sudo apt install emacs25
 ----
 #### <a name="filezilla" />FileZilla
 
-```shell
+```shell script
 sudo apt-get install filezilla
 filezilla&
 ```
@@ -89,7 +89,7 @@ is an open source image viewer and organizer that allows the users to view graph
 
 It is useful to process images with it.
 
-```shell
+```shell script
 # Install image viewer using GTK+ and data files for Geeqie.
 sudo apt install geeqie geeqie-common
 geeqie &  # run Geeqie
@@ -101,7 +101,7 @@ sudo apt remove geeqie
 ----
 #### <a name="IntelliJ" />JebBrains IntelliJ
 
-```shell
+```shell script
 # Install JetBrains IntelliJ IDEA Community edition
 # https://blog.jetbrains.com/idea/2017/11/install-intellij-idea-with-snaps
 sudo snap install intellij-idea-community --classic
@@ -122,7 +122,7 @@ Source Code Editor also makes it very easy to run Compliers, debuggers, and more
 Though Notepad++ is not available for Linux, there is a way to use Notepadd++
 on Linux Ubuntu Distributions.
 
-```shell
+```shell script
 sudo apt install snapd               # install Snap tool
 sudo apt install wine-stable         # install Wine tool
 sudo snap install notepad-plus-plus  # install Notepad++
@@ -136,7 +136,7 @@ Install free of charge PyCharm Community edition.
 
 [How-to install needed version](https://snapcraft.io/pycharm-community)
 
-```shell
+```shell script
 # Install PyCharm Community 2018.3 stable release
 sudo snap install pycharm-community --channel=2018.3/stable --classic
 # or the last stable version
@@ -158,7 +158,7 @@ to be accessed simultaneously in a single window. It is useful for running
 more than one command-line program at the same time. It can also be used
 to detach processes from their controlling terminals,
 allowing SSH sessions to remain active without being visible.
-```shell
+```shell script
 # Tmux terminal multiplexer
 sudo apt install tmux
 
@@ -183,11 +183,11 @@ sudo apt install python3-tmuxp
 sudo apt install tmate
 ```
 
-[Using Tmux](https://hackernoon.com/a-gentle-introduction-to-tmux-8d784c404340)
+[Getting started with Tmux](https://linuxize.com/post/getting-started-with-tmux)
 
 ![Tmux multiple panes](data/2019.02.13-tmux-multiple-panes.png)
 
-```shell
+```shell script
 # Start a session
 tmux new -s nvidia-digits
 # Attach a session
@@ -223,7 +223,7 @@ tmux kill-server
 [Ubuntu Software Center](https://www.ubuntupit.com/how-to-install-software-in-ubuntu-linux-a-complete-guide-for-newbie/)
 is a GUI to install software for newbie.
 
-```shell
+```shell script
 sudo apt install ubuntu-software  # install Ubuntu Software Center
 ubuntu-software &
 ```
@@ -231,7 +231,7 @@ ubuntu-software &
 ----
 #### <a name="uTorrent" />uTorrent
 
-```shell
+```shell script
 snap find torrent
 snap install utorrent
 utorrent &
@@ -240,7 +240,7 @@ utorrent &
 ---
 ### <a name="background-mode" />Starting any process in background mode
 
-```shell
+```shell script
 tmux a -t nvidia-digits  # attach an existing session
 # Start any process in background mode
 ctrl+b d  # detach from session
@@ -261,7 +261,7 @@ To craft needed snap visit the [SnapCraft web-site](https://snapcraft.io/pycharm
 
 [How to Install and Use Snap on Ubuntu 18.04](https://codeburst.io/how-to-install-and-use-snap-on-ubuntu-18-04-9fcb6e3b34f9)
 
-```shell
+```shell script
 # Install Snap tool
 sudo apt install snapd
 snap --version
