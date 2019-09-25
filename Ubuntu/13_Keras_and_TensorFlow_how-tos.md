@@ -74,28 +74,33 @@ All code examples are placed [here](../Machine_Learning/code_examples).
 Additional useful tools everybody should know about:
 
    - [Google Colab](https://colab.research.google.com) --
-   Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
-   in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
-   and access powerful computing resources, all for free from your browser.
+     Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
+     in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
+     and access powerful computing resources, all for free from your browser.
    - [Kaggle Kernels](https://www.kaggle.com/kernels) --
-   Free Jupyter notebook environment. If you tired to [read documentation](https://www.kaggle.com/docs/kernels),
-   just try to find and see some [videos](https://youtu.be/sLAthlX816c).
+     Free Jupyter notebook environment. If you tired to [read documentation](https://www.kaggle.com/docs/kernels),
+     just try to find and see some [videos](https://youtu.be/sLAthlX816c).
    - [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) --
-   Fast and easy download of many images from Google Images.
-   Menu _"Ask where to save each file before downloading"_
-   must be turned off before downloading images.
+     Fast and easy download of many images from Google Images. Menu
+     _"Ask where to save each file before downloading"_ must be turned off before downloading images.
+   - [google_images_download](https://pypi.org/project/google_images_download) is a Python
+     [Script](https://github.com/hardikvasa/google-images-download)
+     for "searching" and "downloading" hundreds of Google images to the local hard disk.
+   - [Google Dataset Search](https://toolbox.google.com/datasetsearch) is a search engine for datasets.
+   - [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+     list of a topic-centric public data sources.
    - [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
-   Demonstration of TensorBoard tool
-   with the [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
+     Demonstration of TensorBoard tool with the
+     [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
    - [K3D Jupyter](https://github.com/K3D-tools/K3D-jupyter) --
-   Jupyter notebook extension for *3D visualization*
-   with [examples](https://github.com/K3D-tools/K3D-jupyter/tree/master/examples).
-   Just start to view the examples and you'll like it :-)
+     Jupyter notebook extension for *3D visualization*
+     with [examples](https://github.com/K3D-tools/K3D-jupyter/tree/master/examples).
+     Just start to view the examples and you'll like it :-)
    - [Juxtapose](https://juxtapose.knightlab.com/) --
-   Easy-to-make frame comparisons. Useful for presentations.
-   Generate an embedable code snippet that you can use on any website or Jupyter notebook.
-   There must be an Internet connection to obtain URL.
-   Copy-paste code below into your Jupyter notebook and replace the `url`:
+     Easy-to-make frame comparisons. Useful for presentations.
+     Generate an embedable code snippet that you can use on any website or Jupyter notebook.
+     There must be an Internet connection to obtain URL.
+     Copy-paste code below into your Jupyter notebook and replace the `url`:
 
 ```python
 # Display the associated webpage in a new window
@@ -106,15 +111,15 @@ IPython.display.HTML(iframe)
 ```
 
    - [Deep Learning add-on for Adaptive Vision Studio Lite](https://www.adaptive-vision.com/en/software/deep-learning) --
-   If you need out-of-the-box solutions, you could try Adaptive Vision tool with Deep Learning add-on.
-   Unfortunately, Deep Learning add-on has only trial version for 30 days for educational purposes.
-   [Lite version](https://www.adaptive-vision.com/en/software/editions)
-   is a limited-functionality freeware available for trial and non-commercial use.
-   Recommended especially for students who want to learn how to develop
-   complex algorithms with images loaded from files.
+     If you need out-of-the-box solutions, you could try Adaptive Vision tool with Deep Learning add-on.
+     Unfortunately, Deep Learning add-on has only trial version for 30 days for educational purposes.
+     [Lite version](https://www.adaptive-vision.com/en/software/editions)
+     is a limited-functionality freeware available for trial and non-commercial use.
+     Recommended especially for students who want to learn how to develop
+     complex algorithms with images loaded from files.
    - [nbviewer](https://nbviewer.jupyter.org/) -- A simple way to share Jupyter Notebooks.
-   It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
-   Enter the location of a Jupyter Notebook to have it rendered.
+     It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
+     Enter the location of a Jupyter Notebook to have it rendered.
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android

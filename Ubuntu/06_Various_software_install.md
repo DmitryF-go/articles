@@ -153,6 +153,11 @@ sudo apt install libcanberra-gtk-module
 ----
 #### <a name="Tmux" />Tmux
 
+Tmux (the **T**erminal **MU**ltiple**X**er) allows multiple terminal sessions
+to be accessed simultaneously in a single window. It is useful for running
+more than one command-line program at the same time. It can also be used
+to detach processes from their controlling terminals,
+allowing SSH sessions to remain active without being visible.
 ```shell
 # Tmux terminal multiplexer
 sudo apt install tmux
