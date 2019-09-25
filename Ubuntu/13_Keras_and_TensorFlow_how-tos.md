@@ -17,45 +17,45 @@
 
 Helpful for me and I hope will be helpful for you:
 
-   - How to write a scientific (survey) paper: [part1](https://youtu.be/FupqqW3hZWQ) & [part2](https://youtu.be/aeea2Xw237U) --
-   Before learning Machine Learning, you must know how to write survey (scientific) paper
-   and how to work with survey papers.   
-   - [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
-   Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
-   - [TensorFlow free course](https://classroom.udacity.com/courses/ud187) --
-   <b>Highly recommend</b> this course to ML newcomers, beginners, novices, rookies, etc.
-   - [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
-   Webpage with many tutorials. Everyone should make at least 5 exercises for beginners
-   and then continue with more advanced tutorials.
-   - [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU) --
-   Intro into neural networks
-   with the [source code](https://github.com/stephencwelch/Neural-Networks-Demystified).
-   - [A Neural Network in 11 lines of Python (Part 1)](http://iamtrask.github.io/2015/07/12/basic-python-network) --
-   Simple neural network in 11 lines of Python code with detailed explanation
-   and [Russian translation is here](https://habr.com/ru/post/271563).
-   - [A Neural Network in 13 lines of Python (Part 2 - Gradient Descent)](https://iamtrask.github.io/2015/07/27/python-network-part2) --
-   Explanation of gradient descent with 13 lines of Python code.
-   - [Create A Neural Network That Classifies Diabetes Risk In 15 Lines of Python](https://youtu.be/T91fsaG2L0s) --
-   Neural network in 15 lines of Python code to diagnose diabetes.
-   Russian translation [here](file:///D:/Pavlenko/%23_%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Python/2019.02.25_ML_study/2019.02.27%20Diabetes/%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B5%D1%82%D1%8C%20%D0%BD%D0%B0%20Python%20%D0%B2%2015%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B8%20%D0%B4%D0%B8%D0%B0%D0%B1%D0%B5%D1%82%D0%B0.html).
-   Text explanations are [here](https://www.andreagrandi.it/2018/04/14/machine-learning-pima-indians-diabetes/).
-   CSV database file is [here](https://www.kaggle.com/uciml/pima-indians-diabetes-database).
-   - [Unsupervised Learning by Siraj Raval](https://youtu.be/8dqdDEyzkFA) --
-   Using signal processing and K-means clustering to extract and sort neural events in Python plus
-   [source code](https://github.com/llSourcell/spike_sorting)
-   and [dataset](http://www.vis.caltech.edu/~rodri/Wave_clus/UCLA_data.zip).
-   - [Unet Segmentation in Keras](https://youtu.be/M3EZS__Z_XE) --
-   Easy explanation of the U-net in Keras
-   with the [source code](https://github.com/nikhilroxtomar/UNet-Segmentation-in-Keras-TensorFlow/blob/master/unet-segmentation.ipynb).
-   - [Deep Residual Unet Segmentation in Keras](https://youtu.be/BOoBWRTpaKk) --
-   Easy explanation of the ResUNet in Keras
-   with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
-   - Course [Introduction to TensorFlow for AI, ML, and DL](https://www.coursera.org/learn/introduction-tensorflow/home/welcome) --
-   Good introduction course into TensorFlow.
-   - Course [Coding TensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx) --
-   You will look at various parts of TensorFlow from a coding perspective.
-   - Tips [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) --
-   How to best use TensorFlow open source machine learning platform.
+   * How to write a scientific (survey) paper: [part1](https://youtu.be/FupqqW3hZWQ) & [part2](https://youtu.be/aeea2Xw237U) --
+     Before learning Machine Learning, you must know how to write survey (scientific) paper
+     and how to work with survey papers.   
+   * [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
+     Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
+   * [TensorFlow free course](https://classroom.udacity.com/courses/ud187) --
+     <b>Highly recommend</b> this course to ML newcomers, beginners, novices, rookies, etc.
+   * [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
+     Webpage with many tutorials. Everyone should make at least 5 exercises for beginners
+     and then continue with more advanced tutorials.
+   * [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU) --
+     Intro into neural networks
+     with the [source code](https://github.com/stephencwelch/Neural-Networks-Demystified).
+   * [A Neural Network in 11 lines of Python (Part 1)](http://iamtrask.github.io/2015/07/12/basic-python-network) --
+     Simple neural network in 11 lines of Python code with detailed explanation
+     and [Russian translation is here](https://habr.com/ru/post/271563).
+   * [A Neural Network in 13 lines of Python (Part 2 - Gradient Descent)](https://iamtrask.github.io/2015/07/27/python-network-part2) --
+     Explanation of gradient descent with 13 lines of Python code.
+   * [Create A Neural Network That Classifies Diabetes Risk In 15 Lines of Python](https://youtu.be/T91fsaG2L0s) --
+     Neural network in 15 lines of Python code to diagnose diabetes.
+     Russian translation [here](file:///D:/Pavlenko/%23_%D0%9F%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B/Python/2019.02.25_ML_study/2019.02.27%20Diabetes/%D0%9D%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D1%81%D0%B5%D1%82%D1%8C%20%D0%BD%D0%B0%20Python%20%D0%B2%2015%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%20%D0%BA%D0%BE%D0%B4%D0%B0%20%D0%B4%D0%BB%D1%8F%20%D0%B4%D0%B8%D0%B0%D0%B3%D0%BD%D0%BE%D1%81%D1%82%D0%B8%D0%BA%D0%B8%20%D0%B4%D0%B8%D0%B0%D0%B1%D0%B5%D1%82%D0%B0.html).
+     Text explanations are [here](https://www.andreagrandi.it/2018/04/14/machine-learning-pima-indians-diabetes/).
+     CSV database file is [here](https://www.kaggle.com/uciml/pima-indians-diabetes-database).
+   * [Unsupervised Learning by Siraj Raval](https://youtu.be/8dqdDEyzkFA) --
+     Using signal processing and K-means clustering to extract and sort neural events in Python plus
+     [source code](https://github.com/llSourcell/spike_sorting)
+     and [dataset](http://www.vis.caltech.edu/~rodri/Wave_clus/UCLA_data.zip).
+   * [Unet Segmentation in Keras](https://youtu.be/M3EZS__Z_XE) --
+     Easy explanation of the U-net in Keras
+     with the [source code](https://github.com/nikhilroxtomar/UNet-Segmentation-in-Keras-TensorFlow/blob/master/unet-segmentation.ipynb).
+   * [Deep Residual Unet Segmentation in Keras](https://youtu.be/BOoBWRTpaKk) --
+     Easy explanation of the ResUNet in Keras
+     with the [source code](https://github.com/nikhilroxtomar/Deep-Residual-Unet/blob/master/Deep%20Residual%20UNet.ipynb).
+   * Course [Introduction to TensorFlow for AI, ML, and DL](https://www.coursera.org/learn/introduction-tensorflow/home/welcome) --
+     Good introduction course into TensorFlow.
+   * Course [Coding TensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx) --
+     You will look at various parts of TensorFlow from a coding perspective.
+   * Tips [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) --
+     How to best use TensorFlow open source machine learning platform.
 
 ---
 ### <a name="video-courses" />All video courses and tutorials
@@ -73,30 +73,30 @@ All code examples are placed [here](../Machine_Learning/code_examples).
 
 Additional useful tools everybody should know about:
 
-   - [Google Colab](https://colab.research.google.com) --
+   * [Google Colab](https://colab.research.google.com) --
      Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
      in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
      and access powerful computing resources, all for free from your browser.
-   - [Kaggle Kernels](https://www.kaggle.com/kernels) --
+   * [Kaggle Kernels](https://www.kaggle.com/kernels) --
      Free Jupyter notebook environment. If you tired to [read documentation](https://www.kaggle.com/docs/kernels),
      just try to find and see some [videos](https://youtu.be/sLAthlX816c).
-   - [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) --
+   * [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) --
      Fast and easy download of many images from Google Images. Menu
      _"Ask where to save each file before downloading"_ must be turned off before downloading images.
-   - [google_images_download](https://pypi.org/project/google_images_download) is a Python
+   * [google_images_download](https://pypi.org/project/google_images_download) is a Python
      [Script](https://github.com/hardikvasa/google-images-download)
      for "searching" and "downloading" hundreds of Google images to the local hard disk.
-   - [Google Dataset Search](https://toolbox.google.com/datasetsearch) is a search engine for datasets.
-   - [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+   * [Google Dataset Search](https://toolbox.google.com/datasetsearch) is a search engine for datasets.
+   * [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
      list of a topic-centric public data sources.
-   - [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
+   * [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
      Demonstration of TensorBoard tool with the
      [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
-   - [K3D Jupyter](https://github.com/K3D-tools/K3D-jupyter) --
+   * [K3D Jupyter](https://github.com/K3D-tools/K3D-jupyter) --
      Jupyter notebook extension for *3D visualization*
      with [examples](https://github.com/K3D-tools/K3D-jupyter/tree/master/examples).
      Just start to view the examples and you'll like it :-)
-   - [Juxtapose](https://juxtapose.knightlab.com/) --
+   * [Juxtapose](https://juxtapose.knightlab.com/) --
      Easy-to-make frame comparisons. Useful for presentations.
      Generate an embedable code snippet that you can use on any website or Jupyter notebook.
      There must be an Internet connection to obtain URL.
@@ -110,14 +110,14 @@ iframe = '<iframe frameborder="0" class="juxtapose" width="100%" height="600" sr
 IPython.display.HTML(iframe)
 ```
 
-   - [Deep Learning add-on for Adaptive Vision Studio Lite](https://www.adaptive-vision.com/en/software/deep-learning) --
+   * [Deep Learning add-on for Adaptive Vision Studio Lite](https://www.adaptive-vision.com/en/software/deep-learning) --
      If you need out-of-the-box solutions, you could try Adaptive Vision tool with Deep Learning add-on.
      Unfortunately, Deep Learning add-on has only trial version for 30 days for educational purposes.
      [Lite version](https://www.adaptive-vision.com/en/software/editions)
      is a limited-functionality freeware available for trial and non-commercial use.
      Recommended especially for students who want to learn how to develop
      complex algorithms with images loaded from files.
-   - [nbviewer](https://nbviewer.jupyter.org/) -- A simple way to share Jupyter Notebooks.
+   * [nbviewer](https://nbviewer.jupyter.org/) -- A simple way to share Jupyter Notebooks.
      It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
      Enter the location of a Jupyter Notebook to have it rendered.
 
