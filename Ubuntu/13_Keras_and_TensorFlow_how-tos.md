@@ -120,6 +120,15 @@ IPython.display.HTML(iframe)
    * [nbviewer](https://nbviewer.jupyter.org/) -- A simple way to share Jupyter Notebooks.
      It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
      Enter the location of a Jupyter Notebook to have it rendered.
+   * Annotation tool [labelImg](https://tzutalin.github.io/labelImg).
+     This annotation tool supports both Windows and Linux, it will generate `xml` files inside
+     image directories. Tip: use shortcuts (`w`: draw box, `d`: next file, `a`: previous file, etc.)
+     to accelerate the annotation.
+   * My own annotation tools: [Manual image annotation with polygons](https://github.com/foobar167/junkyard/tree/master/manual_image_annotation1)
+     and [Manual image annotation with rectangles](https://github.com/foobar167/junkyard/tree/master/manual_image_annotation2)
+     can annotate and cut rectangular images.
+   * Resize multiple images with [`resize_images.py`](https://github.com/foobar167/junkyard/blob/master/simple_scripts/resize_images.py)
+     script.
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
