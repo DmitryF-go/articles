@@ -135,6 +135,8 @@ IPython.display.HTML(iframe)
 
 [TensorFlow Lite guide](https://www.tensorflow.org/lite/guide) - this is your starting point.
 
+Video course [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190).
+
 TensorFlow Lite **vs** TensorFlow Mobile ([link](https://towardsdatascience.com/the-essential-guide-to-learn-tensorflow-mobile-and-tensorflow-lite-a70591687800)):
    * Lite is the next version of Mobile. Generally, applications developed on Lite
    will have better performance and less binary file size than Mobile.

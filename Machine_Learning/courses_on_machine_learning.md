@@ -52,6 +52,9 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Video course. [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190) (6 lectures from 6)
+   * Task. [How to train an object detection model easy for free](https://medium.com/swlh/how-to-train-an-object-detection-model-easy-for-free-f388ff3663e) and [deploy it on Android](https://github.com/foobar167/android/tree/master/object_detection_demo) (finished task and created demo)
+   * Task. [Image Classifier Example](https://youtu.be/CzPYgRaYWUA) and [my resulting vertion](https://github.com/foobar167/junkyard/tree/master/object_classifier) of it (finished task and created demo)
    * Video course. Visual group theory: https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv (7 lectures from 7)
    * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (8 недель из 8)
    * Task. How to write a scientific (survey) paper: https://youtu.be/FupqqW3hZWQ , https://youtu.be/aeea2Xw237U (2 lectures from 2)
