@@ -3,12 +3,15 @@
    - [Completed courses](#completed-courses)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
+   * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 480)
 ---
+   * Article. [Introducing TensorFlow Graphics: Computer Graphics Meets Deep Learning](https://medium.com/tensorflow/introducing-tensorflow-graphics-computer-graphics-meets-deep-learning-c8e3877b7668)
+   * Article. [Move Mirror: An AI Experiment with Pose Estimation in the Browser using TensorFlow.js](https://medium.com/tensorflow/move-mirror-an-ai-experiment-with-pose-estimation-in-the-browser-using-tensorflow-js-2f7b769f9b23)
    * Google AI. Education: https://ai.google/education/
    * Google Seedbank (especially Style Transfer seed): https://research.google.com/seedbank
    * Google Colab tutorial: https://colab.research.google.com
@@ -30,7 +33,6 @@
    * JS. TensorFlow.js? (not started)
    * Keras getting started: https://keras.io/getting-started/sequential-model-guide (part: getting started)
 ---
-   * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * Task. TensorFlow JS Demos: https://www.tensorflow.org/js/demos
    * Task. TensorFlow Lite example apps: https://www.tensorflow.org/lite/examples
    * Task. Train a model in tf.keras with Colab, and run it in the browser with TensorFlow.js: https://medium.com/tensorflow/train-on-google-colab-and-run-on-the-browser-a-case-study-8a45f9b1474e
