@@ -13,3 +13,5 @@
    * [Deep Residual U-Net (ResUNet)](deep_residual_unet_segmentation.ipynb)
      ([shareable link](https://colab.research.google.com/drive/1rhuHSynFqZbyZyRguv7g3TBILdvwG7pB))
      is based on residual neural network and U-Net.
+   * [TensorFlow Lite conversion examples](tf_lite_conversion_examples.ipynb) for video course
+     [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190).
