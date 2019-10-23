@@ -72,7 +72,14 @@ All code examples are placed [here](../Machine_Learning/code_examples).
 ### <a name="tools" />Additional useful tools
 
 Additional useful tools everybody should know about:
-
+   * [Six easy ways](https://www.dataschool.io/cloud-services-for-jupyter-notebook)
+     to run your Jupyter Notebook in the cloud:
+         [Binder](https://mybinder.org),
+         [Kaggle Kernels](https://www.kaggle.com),
+         [Google Colaboratory (Colab)](https://colab.research.google.com),
+         [Microsoft Azure Notebooks](https://notebooks.azure.com),
+         [CoCalc](https://cocalc.com),
+         [Datalore](https://datalore.io)
    * [Google Colab](https://colab.research.google.com) --
      Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
      in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
