@@ -54,8 +54,9 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
-   * Task. Three [Generative Modeling Applications](https://youtu.be/FZBFV7xfGaY) to review.
-   * Article. [Хабр. Как разобраться в Tensorflow и не умереть, а даже научить чему-то машину](https://habr.com/ru/post/427449/)
+   * Task. [Real-time face recognition](https://medium.com/@saidakbarp/real-time-face-recognition-tflite-3fb818ac039a): training and deploying on Android using Tensorflow lite and transfer learning — [made my version]() of the task.
+   * Task. Three [Generative Modeling Applications](https://youtu.be/FZBFV7xfGaY) — finished quick review.
+   * Article. [Хабр. Как разобраться в Tensorflow и не умереть, а даже научить чему-то машину](https://habr.com/ru/post/427449/) — read the article.
    * Video course. [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190) (6 lectures from 6)
    * Task. [How to train an object detection model easy for free](https://medium.com/swlh/how-to-train-an-object-detection-model-easy-for-free-f388ff3663e) and [deploy it on Android](https://github.com/foobar167/android/tree/master/object_detection_demo) (finished task and created demo)
    * Task. [Image Classifier Example](https://youtu.be/CzPYgRaYWUA) and [my resulting vertion](https://github.com/foobar167/junkyard/tree/master/object_classifier) of it (finished task and created demo)
