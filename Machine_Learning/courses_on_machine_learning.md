@@ -54,6 +54,7 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Task. Three [Generative Modeling Applications](https://youtu.be/FZBFV7xfGaY) to review.
    * Article. [Хабр. Как разобраться в Tensorflow и не умереть, а даже научить чему-то машину](https://habr.com/ru/post/427449/)
    * Video course. [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190) (6 lectures from 6)
    * Task. [How to train an object detection model easy for free](https://medium.com/swlh/how-to-train-an-object-detection-model-easy-for-free-f388ff3663e) and [deploy it on Android](https://github.com/foobar167/android/tree/master/object_detection_demo) (finished task and created demo)
