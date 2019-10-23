@@ -1,6 +1,7 @@
 How-to:
    - [`nvidia-smi` error after system update](#nvidia-smi-error)
    - [Add directory to the $PATH](#add_to_path)
+   - [Allow IP-address](#ip-address)
    - [Allow `sudo` commands and write permissions](#permissions)
    - [Calculator](#calculator)
    - [Clear out Git history](#clear-git)
@@ -57,6 +58,30 @@ sudo nano ~/.bashrc
 # export PATH="/path/to/dir:$PATH"
 # Run bashrc file to effect changes.
 source ~/.bashrc
+```
+
+---
+### <a name="ip-address" />Allow IP-address
+It is possible, that your IP-addres get into blacklist of `/etc/hosts.deny` file.
+Firstly add IP-mask to the `/etc/hosts.allow` file.
+Secondly delete you IP-address from `/etc/hosts.deny` file.
+```shell script
+# Edit /etc/hosts.allow file
+sudo nano /etc/hosts.allow
+```
+Add the something like:
+```shell script
+# Use this address to calculate the mask:
+# http://jodies.de/ipcalc?host=80.94.164.1&mask1=24
+ALL : 80.94.164.0/24
+ALL : 80.94.162.0/24
+ALL : 80.94.171.0/24
+```
+Make sure that your IP-addres is not in the blacklist of `/etc/hosts.deny` file:
+```shell script
+cat /etc/hosts.deny | grep "80.94."
+# Delete ip-address if necessary
+sudo nano /etc/hosts.deny
 ```
 
 ---
