@@ -54,7 +54,7 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
-   * Task. [Real-time face recognition](https://medium.com/@saidakbarp/real-time-face-recognition-tflite-3fb818ac039a): training and deploying on Android using Tensorflow lite and transfer learning — [made my version]() of the task.
+   * Task. [Real-time face recognition](https://medium.com/@saidakbarp/real-time-face-recognition-tflite-3fb818ac039a): training and deploying on Android using Tensorflow lite and transfer learning — read the article.
    * Task. Three [Generative Modeling Applications](https://youtu.be/FZBFV7xfGaY) — finished quick review.
    * Article. [Хабр. Как разобраться в Tensorflow и не умереть, а даже научить чему-то машину](https://habr.com/ru/post/427449/) — read the article.
    * Video course. [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190) (6 lectures from 6)
