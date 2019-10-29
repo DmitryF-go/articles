@@ -4,6 +4,9 @@
       - [Relative articles](#relative-articles)
       - [Allow to execute `sudo` commands](#allow-execute)
       - [Allow to write in the system folder](#allow-write)
+         - [Group `webmasters`](#webmasters)
+         - [Group `xray`](#xray)
+         - [Group `technology-sg`](#technology-sg)
    - [Autorun service](#autorun)
    - [Backup and delete deprecated user accounts](#accounts)
    - [Configure `nginx`](#configure)
@@ -13,34 +16,34 @@
    - [Work with Nginx server and its API](#work)
 
 ---
-### <a name="task" />Task
+## <a name="task" />Task
    - Install software for the website https://image.org.by
 
 ---
-### <a name="links" />Links
+## <a name="links" />Links
    - [Valery Malyshev project link](https://github.com/MalyshevValery/Generator_Back)
    - [Alexander Yaroshevich project link](https://github.com/Vozf/slide_analysis_api)
 
 ---
-### <a name="permissions" />Allow user permissions
+## <a name="permissions" />Allow user permissions
 
 :exclamation: **For trusted users only.** :exclamation:
 
-#### <a name="relative-articles" />Relative articles
+### <a name="relative-articles" />Relative articles
    * [Ubuntu Docs - Sudoers](https://help.ubuntu.com/community/Sudoers)
    * [How To Edit the Sudoers File on Ubuntu and CentOS](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
    * [Take Control of your Linux | sudoers file: How to with Examples](https://www.garron.me/en/linux/visudo-command-sudoers-file-sudo-default-editor.html)
    * [FilePermissionsACLs](https://help.ubuntu.com/community/FilePermissionsACLs)
    * [My answer on AskUbuntu.com](https://askubuntu.com/a/1098707/672237)
 
-#### <a name="allow-execute" />Allow to execute `sudo` commands
+### <a name="allow-execute" />Allow to execute `sudo` commands
 
 Allow to execute `sudo` commands without granting root permissions.
 
 Create and edit file with `visudo` editor
 in the directory `/etc/sudoers.d/`.
 
-```shell
+```shell script
 # Create and edit file for 'website' group
 sudo visudo -f /etc/sudoers.d/website
 
@@ -130,7 +133,8 @@ WEBMASTERS ALL = START1, STOP1, RESTART1, STATUS1, ENABLE1, DISABLE1, \
 ```
 
 Check it or edit broken configuration file:
-```shell
+
+```shell script
 # To edit broken configuration file
 pkexec visudo -f /etc/sudoers.d/website
 
@@ -149,11 +153,13 @@ sudo service slide_analysis_api start
 sudo fuser 3000/tcp  # view port 3000/tcp
 ```
 
-#### <a name="allow-write" />Allow to write in the system folder
+### <a name="allow-write" />Allow to write in the system folder
+
+#### <a name="webmasters" />Group `webmasters`
 
 Prepare `webmasters` group:
 
-```shell
+```shell script
 # Check 'webmasters' group doen't exist
 cat /etc/group | grep webmasters
 # Create 'webmasters' group
@@ -168,7 +174,7 @@ sudo usermod -a -G webmasters malyshevvalery
 
 For `webmasters` group give write permission to directories:
 
-```shell
+```shell script
 # /etc/systemd/system -- to start services automatically
 # /etc/nginx -- for Nginx
 # /etc/letsencrypt -- for Certbot
@@ -212,7 +218,7 @@ sudo -u username touch /etc/systemd/test.txt  # Permission denied
 
 Give read permission to files in the directory `/var/log/nginx`.
 
-```shell
+```shell script
 # There is read permission to the directory `/var/log/nginx` itself.
 # But the owner of files in this directory is `www-data` and the group is `adm`.
 ls -hal /var/log/nginx
@@ -232,8 +238,41 @@ sudo usermod -a -G adm malyshevvalery
 cat /etc/group | grep adm
 ```
 
+#### <a name="xray" />Group `xray`
+
+Prepare `xray` group. Group assignment changes won't take effect until the users log out and back in.
+
+```shell script
+# Check `xray` group doen't exist
+cat /etc/group | grep xray
+# Create `xray` group
+sudo addgroup xray
+# Add users to `xray` group
+sudo usermod -a -G xray skliff13
+sudo usermod -a -G xray sergeko
+sudo usermod -a -G xray toryscepeleva
+sudo usermod -a -G xray malyshevvalery
+sudo usermod -a -G xray pavlenko
+```
+
+Give write permission for `xray` group:
+
+```shell script
+# Add `xray` group to an ACL
+sudo setfacl -R -m g:xray:rwx /hdd_purple/PTD_Xray/xray_datasets
+
+# Check it by creating test file
+sudo -u pavlenko touch /hdd_purple/PTD_Xray/xray_datasets/test.txt
+```
+
+#### <a name="technology-sg" />Group `technology-sg`
+
+```shell script
+sudo setfacl -R -m g:technology-sg:rwx /hdd_purple/data_technology_sg
+```
+
 ---
-### <a name="autorun" />Autorun service
+## <a name="autorun" />Autorun service
 
 See [how-to run scripts on startup](02_How-tos.md/#autorun).
 
@@ -242,7 +281,7 @@ There are two services for autorun: `slide_analysis_api` and `generator`.
 Config file `cat /etc/systemd/system/slide_analysis_api.service`
 [link on GitHub](https://github.com/Vozf/slide_analysis_api):
 
-```shell
+```shell script
 [Unit]
 Description=uWSGI instance to serve slide_analysis_api
 After=network.target
@@ -261,7 +300,7 @@ WantedBy=multi-user.target
 Config file `cat /etc/systemd/system/generator.service`
 [link on GitHub](https://github.com/MalyshevValery/Generator_Back/blob/master/generator.service):
 
-```shell
+```shell script
 [Unit]
 Description=uWSGI instance to serve image factory
 After=network.target
@@ -279,11 +318,11 @@ WantedBy=multi-user.target
 ```
 
 ---
-### <a name="accounts" />Backup and delete deprecated user accounts
+## <a name="accounts" />Backup and delete deprecated user accounts
 
 Remember to backup and delete obsolede and unnecessary user accounts.
 
-```shell
+```shell script
 # Disable user accounts
 sudo usermod -L vozman
 sudo usermod -L romanroskach
@@ -309,14 +348,14 @@ ls /home | grep 'vozman\|romanroskach'
 ```
 
 ---
-### <a name="configure" />Configure `nginx`
+## <a name="configure" />Configure `nginx`
 
 Add configuration files to directories
 `/etc/nginx/sites-enabled` and `/etc/nginx/sites-available`.
 
 Open ports 80 for HTTP and 3000 for API
 
-```shell
+```shell script
 # Open ports. Allow incoming TCP and UDP packets.
 sudo ufw allow 80    # HTTP
 sudo ufw allow 443   # HTTPS
@@ -347,11 +386,11 @@ field http://image.org.by or via HTTPS https://image.org.by
 Website main page should open.
 
 ---
-### <a name="nginx" />Correctly delete `nginx`
+## <a name="nginx" />Correctly delete `nginx`
 
 [Original answer here](https://askubuntu.com/questions/235347/what-is-the-best-way-to-uninstall-nginx)
 
-```shell
+```shell script
 # Removes all but config files
 sudo apt remove nginx nginx-common
 # Removes everything
@@ -364,11 +403,11 @@ sudo apt autoremove
 ```
 
 ---
-### <a name="certbot" />Install Certbot for `nginx`
+## <a name="certbot" />Install Certbot for `nginx`
 
 [Link to Certbot installation instruction](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
 
-```shell
+```shell script
 # Add Certbot PPA
 sudo apt update
 sudo apt install software-properties-common
@@ -408,13 +447,13 @@ You should add read permission to `webmasters` group and
 make a secure backup of `/etc/letsencrypt` folder.
 
 ---
-### <a name="website" />Packages for the website
+## <a name="website" />Packages for the website
 
 Install packages for https://image.org.by
 
 Github repository with installation instructions https://github.com/Vozf/slide_analysis_api
 
-```shell
+```shell script
 sudo apt install git
 sudo apt install python3
 sudo apt install python3-pip
@@ -440,11 +479,11 @@ sudo apt install nginx
 ```
 
 ---
-### <a name="work" />Work with Nginx server and its API
+## <a name="work" />Work with Nginx server and its API
 
 - [Ubuntu Linux: Start / Restart / Stop Nginx Web Server](https://www.cyberciti.biz/faq/nginx-restart-ubuntu-linux-command)
 
-```shell
+```shell script
 sudo systemctl stop nginx
 sudo systemctl start nginx
 sudo systemctl restart nginx
@@ -480,7 +519,7 @@ Service ```slide_analysis_api``` is using config file
 ```/etc/systemd/system/slide_analysis_api.service``` for autorun.
 See [how-to run scripts on start up](02_How-tos.md/#autorun) for more details.
 
-```shell
+```shell script
 # Add slide_analysis_api to autorun
 sudo systemctl daemon-reload
 sudo systemctl enable slide_analysis_api.service
