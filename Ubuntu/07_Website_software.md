@@ -261,6 +261,9 @@ Give write permission for `xray` group:
 # Add `xray` group to an ACL
 sudo setfacl -R -m g:xray:rwx /hdd_purple/PTD_Xray/xray_datasets
 
+# Change group owner
+sudo chgrp -R xray /hdd_purple/PTD_Xray/xray_datasets
+
 # Check it by creating test file
 sudo -u pavlenko touch /hdd_purple/PTD_Xray/xray_datasets/test.txt
 ```
@@ -269,6 +272,7 @@ sudo -u pavlenko touch /hdd_purple/PTD_Xray/xray_datasets/test.txt
 
 ```shell script
 sudo setfacl -R -m g:technology-sg:rwx /hdd_purple/data_technology_sg
+sudo chgrp -R technology-sg /hdd_purple/data_technology_sg
 ```
 
 ---
