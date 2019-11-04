@@ -58,6 +58,10 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Article [Learn from ML experts at Google](https://ai.google/education/) — read the article.
+   * Article [40 Free Resources to Help You Learn Machine Learning on Your Own](https://www.springboard.com/blog/free-resources-to-learn-machine-learning) by CJ Haughey — read the article.
+   * Article [How to Learn Machine Learning](https://elitedatascience.com/learn-machine-learning). The Self-Starter Way — read the article.
+   * Article [7 Great Free Online Courses to Help You Learn about AI and Machine Learning](https://interestingengineering.com/7-great-free-online-courses-to-help-you-learn-about-ai-and-machine-learning) — read the article.
    * Task. [Real-time face recognition](https://medium.com/@saidakbarp/real-time-face-recognition-tflite-3fb818ac039a): training and deploying on Android using Tensorflow lite and transfer learning — read the article.
    * Task. Three [Generative Modeling Applications](https://youtu.be/FZBFV7xfGaY) — finished quick review.
    * Article. [Хабр. Как разобраться в Tensorflow и не умереть, а даже научить чему-то машину](https://habr.com/ru/post/427449/) — read the article.
