@@ -244,6 +244,10 @@ python -c "import tensorflow as tf;     \
     print('Version:', tf.__version__);  \
     print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 
+python -c "import tensorflow as tf;  \
+           msg = tf.constant('TensorFlow 2.0 Hello World');  \
+           tf.print(msg);"
+
 # Install all other packages into myenv
 pip install matplotlib scipy opencv-contrib-python \
             Pillow psutil spur cython scikit-learn scikit-image \
