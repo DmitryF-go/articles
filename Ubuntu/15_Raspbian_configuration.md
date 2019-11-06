@@ -1,4 +1,7 @@
 # Raspbian configuration
+Install and confibure [Raspbian](https://www.raspberrypi.org/downloads/raspbian)
+Buster with desktop and recommended software.
+
    - [Remote desktop](#remote-desktop)
    - [Set static IP-address](#static-ip)
    - [Set wi-fi](#wi-fi)
@@ -145,6 +148,14 @@ the toggle key-combination and have a panel indicator at the same time.
 sudo apt install mc
 # Delete wolfram package, because its upgrade is extremely slow
 sudo apt purge wolfram-engine
+# Install packages for Pillow
+#sudo apt install libtiff-dev libjpeg-dev zlib1g-dev zlibc libfreetype6-dev \
+#                 liblcms2-dev libwebp-dev tcl-dev tk-dev
+sudo apt install libjpeg-dev zlibc
+# Install it for TensorFlow - https://magpi.raspberrypi.org/articles/tensorflow-ai-raspberry-pi
+sudo apt install libatlas-base-dev
+# Install for OpenCV
+sudo apt install libjasper-dev
 # Install Python packages
 sudo apt install python-pip         python2.7           \
                  python3-pip        python3             \
@@ -169,47 +180,37 @@ sudo apt install python-pip         python2.7           \
                  python-pyparsing   python3-pyparsing   \
                  python-ipykernel   python3-ipykernel   \
                  python-dev         python3-dev         \
-                 python-yaml        python3-yaml
+                 python-yaml        python3-yaml        \
+                 python-setuptools  python3-setuptools
+
 ```
 Install packages for virtual environment
 ```shell script
 # Python virtual environment creator
-sudo apt install virtualenv
-sudo apt install python-virtualenv
-sudo apt install python3-virtualenv
-
+sudo apt install virtualenv python-virtualenv python3-virtualenv -y
 # Library for generating Python executable zip files
-sudo apt install pex
-sudo apt install python-pex
-sudo apt install python3-pex
-
+sudo apt install pex python-pex python3-pex -y
 # Node.js virtual environment builder
-sudo apt install nodeenv
-
+sudo apt install nodeenv -y
 # System for automatically handling virtual environments
-sudo apt install fades
-
+sudo apt install fades -y
 # Wrap and build python packages using virtualenv
-sudo apt install dh-virtualenv
-
+sudo apt install dh-virtualenv -y
 # Script for cloning a non-relocatable virtualenv
-sudo apt install virtualenv-clone
-
+sudo apt install virtualenv-clone -y
 # Extension to virtualenv for managing multiple virtual Python environments
-sudo apt install virtualenvwrapper
-
+sudo apt install virtualenvwrapper -y
 # apt virtual environment
-sudo apt install apt-venv
-
+sudo apt install apt-venv -y
 # pyvenv-3 binary for python 3.x
-sudo apt install python3-venv
+sudo apt install python3-venv -y
 ```
 Set up and configure virtual environment using `virtualenvwrapper`
 ```shell script
 # Check version of virtual environment
 virtualenv --version
 # We'll use virtualenvwrapper -- is a set of extensions to Ian Bicking's virtualenv tool.
-virtualenvwrapper
+virtualenvwrapper_load
 
 # Create virtual environment for Python 3.x
 mkvirtualenv -p /usr/bin/python3 myenv
@@ -230,10 +231,12 @@ workon myenv
 # (myenv) username@hostname:~/path/to/dir$
 # Make sure you "workon myenv" and install packages into myenv
 
-# Install TensorFlow 2.0 alpha0 -- make sure you need this version of TF.
-pip install -U --pre tensorflow-gpu
+# Install TensorFlow
+#pip install tensorflow  # version 1.13.1 for 2019.11.06
 # or
-pip install tensorflow-gpu==2.0.0-alpha0 
+cd ~/Downloads
+wget https://github.com/PINTO0309/Tensorflow-bin/raw/master/tensorflow-2.0.0-cp37-cp37m-linux_armv7l.whl
+pip install tensorflow-2.0.0-cp37-cp37m-linux_armv7l.whl
 
 # Check it
 python -c "import tensorflow as tf;     \
@@ -241,14 +244,18 @@ python -c "import tensorflow as tf;     \
     print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 
 # Install all other packages into myenv
-pip install tensorflow-gpu matplotlib scipy opencv-contrib-python Pillow \
-            scikit-learn scikit-image pandas ipython ipyparallel jupyter pyyaml
+pip install matplotlib scipy opencv-contrib-python \
+            Pillow psutil spur cython scikit-learn scikit-image \
+            pandas ipython ipyparallel jupyter pyyaml
+
+# Update all python packages. INSIDE your virtual environment
+pip freeze > requirements.txt && pip install --upgrade -r requirements.txt && rm requirements.txt
 
 # Deactivate myenv
 deactivate
 
 # Delete virtual environment if you don't need it any more.
-rmvirtualenv myenv
+#rmvirtualenv myenv
 ```
 Package actions
 ```shell script
@@ -296,6 +303,24 @@ MP4Box -add video.h264 video.mp4
 To change to console mode press `ctrl+alt+f1`.
 To change to graphical mode press `ctrl+alt+f7`.
 However don't do this via remote desktop.
+
+To check Python packages both inside [virtual environment](05_Virtual_environments.md)
+and outside of it call `ipython` or `ipython3` and copy-paste:
+```text
+from PIL import ImageTk  # check Pillow
+#import tensorflow  # check TensorFlow (inside virtual environment only)
+import numpy       # check NumPy
+import scipy       # check SciPy
+import matplotlib  # check MatPlotLib
+import sklearn     # check Scikit-learn
+import skimage     # check Scikit-image
+import cv2         # check OpenCV
+import pandas      # check Pandas
+import psutil      # check PsUtil
+import spur        # check Spur
+import cython      # check Cython
+exit()
+```
 
 ---
 ## <a name="mount-disk" />Mount flash disk
