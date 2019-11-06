@@ -119,14 +119,15 @@ You can remove them in order to free up space.
 ```shell script
 sudo apt install matchbox-keyboard
 ```
-Now you can access the keyboard: Menu → Accessories → Keyboard
+Now you can access the keyboard: `Menu` → `Accessories` → `Keyboard`
 
 If the keyboard isn't visible in the menu you can enable it by going to:
-Menu → Preferences → Main Menu Editor
+`Menu` → `Preferences` → `Main Menu Editor`
 
 ### <a name="screen-resolution" />Change screen resolution
 Edit file `/boot/config.txt` or go to:
-Menu → Preferences → Raspberry Pi Configuration → System → Set Resolution
+`Menu` → `Preferences` → `Raspberry Pi Configuration` → `System` → `Set Resolution`.
+Do not change it from 810×540 resolution if you have KeDei display installed.
 
 ### <a name="keyboard-layouts" />Multiple keyboard layouts
 There is a quick graphical way to change the keyboard layouts,
@@ -373,7 +374,7 @@ Install driver for [KeDei Raspberry Pi Display](http://kedei.net/raspberry/raspb
 wget http://kedei.net/raspberry/hdmi/LCD_show_35hdmi.tar.gz
 # Unpack it
 tar -xvzf LCD_show_35hdmi.tar.gz
-# Install LCD35_810_540 driver to get 810х540 display resolution
+# Install LCD35_810_540 driver to get 810×540 display resolution
 cd LCD_show_35hdmi
 ./LCD_backup
 sudo ./LCD35_810*540
