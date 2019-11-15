@@ -6,7 +6,6 @@
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * [TensorFlow Android Camera Demo](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android)
-   * [TensorFlow Eager execution](https://www.tensorflow.org/guide/eager)
    * Article [TensorFlow Object Detection API tutorial]() and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
    * Article [Artistic style transfer for Android](https://codelabs.developers.google.com/codelabs/tensorflow-style-transfer-android)
    * Task. [YOLO Object Detection (TensorFlow tutorial)](https://youtu.be/4eIBisqx9_g)
@@ -59,27 +58,29 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
-   * Article [Learn from ML experts at Google](https://ai.google/education/) — read the article.
-   * Article [40 Free Resources to Help You Learn Machine Learning on Your Own](https://www.springboard.com/blog/free-resources-to-learn-machine-learning) by CJ Haughey — read the article.
-   * Article [How to Learn Machine Learning](https://elitedatascience.com/learn-machine-learning). The Self-Starter Way — read the article.
-   * Article [7 Great Free Online Courses to Help You Learn about AI and Machine Learning](https://interestingengineering.com/7-great-free-online-courses-to-help-you-learn-about-ai-and-machine-learning) — read the article.
+   * Course. [Image Processing with Python](https://datacarpentry.org/image-processing/) — 10 lessons
+   * Task. [TensorFlow Eager execution](https://www.tensorflow.org/guide/eager) — finished task
+   * Article. [Learn from ML experts at Google](https://ai.google/education/) — read the article.
+   * Article. [40 Free Resources to Help You Learn Machine Learning on Your Own](https://www.springboard.com/blog/free-resources-to-learn-machine-learning) by CJ Haughey — read the article.
+   * Article. [How to Learn Machine Learning](https://elitedatascience.com/learn-machine-learning). The Self-Starter Way — read the article.
+   * Article. [7 Great Free Online Courses to Help You Learn about AI and Machine Learning](https://interestingengineering.com/7-great-free-online-courses-to-help-you-learn-about-ai-and-machine-learning) — read the article.
    * Task. [Real-time face recognition](https://medium.com/@saidakbarp/real-time-face-recognition-tflite-3fb818ac039a): training and deploying on Android using Tensorflow lite and transfer learning — read the article.
    * Task. Three [Generative Modeling Applications](https://youtu.be/FZBFV7xfGaY) — finished quick review.
    * Article. [Хабр. Как разобраться в Tensorflow и не умереть, а даже научить чему-то машину](https://habr.com/ru/post/427449/) — read the article.
-   * Video course. [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190) (6 lectures from 6)
-   * Task. [How to train an object detection model easy for free](https://medium.com/swlh/how-to-train-an-object-detection-model-easy-for-free-f388ff3663e) and [deploy it on Android](https://github.com/foobar167/android/tree/master/object_detection_demo) (finished task and created demo)
-   * Task. [Image Classifier Example](https://youtu.be/CzPYgRaYWUA) and [my resulting vertion](https://github.com/foobar167/junkyard/tree/master/object_classifier) of it (finished task and created demo)
-   * Video course. Visual group theory: https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv (7 lectures from 7)
-   * Video course Russian. Теория графов: https://www.coursera.org/learn/teoriya-grafov (8 недель из 8)
-   * Task. How to write a scientific (survey) paper: https://youtu.be/FupqqW3hZWQ , https://youtu.be/aeea2Xw237U (2 lectures from 2)
-   * Video course. Model thinking: https://www.coursera.org/learn/model-thinking (12 weeks from 12)
-   * Task. Neural Style Transfer with tf.keras: https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras (finished task)
-   * Task. Neural Style Transfer: Creating Art with Deep Learning using tf.keras and eager execution: https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398 (finished task)
-   * Task. Easily Build a Neural Net for Breast Cancer detection: http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection/ (<b>not finished</b>, there is an error, and I don't know how to fix it)
-   * Kaggle. Getting Started on Kaggle: https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW (9 videos from 9)
-   * Task. Medical-MNIST-Classification: https://github.com/apolanco3225/Medical-MNIST-Classification (finished task)
-   * TF. Coding TensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx (24 videos from 24)
-   * TF. TensorFlow Tip of the Week: https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB (9 tips from 9)
-   * TF. #AskTensorFlow: https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL (6 videos from 6)
-   * TF. Intro to TensorFlow for AI, ML and DL: https://www.coursera.org/learn/introduction-tensorflow (4 weeks from 4)
-   * TF. TensorFlow free course: https://classroom.udacity.com/courses/ud187 (6 lessons from 6, will be continued soon)
+   * Video course. [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190) — 6 lectures
+   * Task. [How to train an object detection model easy for free](https://medium.com/swlh/how-to-train-an-object-detection-model-easy-for-free-f388ff3663e) and [deploy it on Android](https://github.com/foobar167/android/tree/master/object_detection_demo) — finished task and created demo
+   * Task. [Image Classifier Example](https://youtu.be/CzPYgRaYWUA) and [my resulting vertion](https://github.com/foobar167/junkyard/tree/master/object_classifier) of it — finished task and created demo
+   * Video course. [Visual group theory](https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv) — 7 lectures
+   * Video course Russian. [Теория графов](https://www.coursera.org/learn/teoriya-grafov) — 8 недель
+   * Task. How to write a scientific (survey) paper: [lecture 1](https://youtu.be/FupqqW3hZWQ), [lecture 2](https://youtu.be/aeea2Xw237U) — 2 lectures
+   * Video course. [Model thinking](https://www.coursera.org/learn/model-thinking) — 12 weeks
+   * Task. [Neural Style Transfer with tf.keras](https://research.google.com/seedbank/seed/neural_style_transfer_with_tfkeras) — finished task
+   * Task. Neural Style Transfer: [Creating Art with Deep Learning using tf.keras and eager execution](https://medium.com/tensorflow/neural-style-transfer-creating-art-with-deep-learning-using-tf-keras-and-eager-execution-7d541ac31398) — finished task
+   * Task. [Easily Build a Neural Net for Breast Cancer detection](http://www.laurencemoroney.com/easily-build-a-neural-net-for-breast-cancer-detection) — <b>not finished</b>, there is an error, and I don't know how to fix it
+   * Kaggle. [Getting Started on Kaggle](https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW) — 9 videos
+   * Task. [Medical-MNIST-Classification](https://github.com/apolanco3225/Medical-MNIST-Classification) — finished task
+   * Video playlist. [Coding TensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx) — 24 videos
+   * Video playlist. [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) — 9 tips
+   * Video playlist. [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) — 6 videos
+   * Video course. [Intro to TensorFlow for AI, ML and DL](https://www.coursera.org/learn/introduction-tensorflow) — 4 weeks
+   * Video course. [Intro to TensorFlow for Deep Learning](https://classroom.udacity.com/courses/ud187) — 9 lessons
