@@ -160,6 +160,15 @@ or [Samsung Galaxy Tab](https://www.getdroidtips.com/enable-options-usb-debuggin
 Google it to set developer and debugging on other phone models.
    * Take USB cable (to connect Android device to your computer).
 
+Configuration steps for **MIUI 9 and above**:
+*Settings → Additional Settings → Developer options →*
+   01. Turn off `Turn on MIUI optimization` at the very bottom of `Developer options`
+       and **Restart** the phone.
+   02. Turn On `USB Debugging`.
+   03. Turn On `Install via USB`.
+   04. Set USB Configuration to Charging.
+       MTP(Media Transfer Protocol) is the default mode. Works even in MTP in some cases.
+
 After finishing previous example run **object detection** [example](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/android)
 using a quantized [MobileNet SSD](https://github.com/tensorflow/models/tree/master/research/object_detection)
 model trained on the [COCO dataset](http://cocodataset.org/#explore).
