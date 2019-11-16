@@ -160,7 +160,7 @@ or [Samsung Galaxy Tab](https://www.getdroidtips.com/enable-options-usb-debuggin
 Google it to set developer and debugging on other phone models.
    * Take USB cable (to connect Android device to your computer).
 
-Configuration steps for **MIUI 9 and above**:
+[Configuration steps](https://stackoverflow.com/a/48524656/7550928) for **MIUI 9 and above**:
 *Settings → Additional Settings → Developer options →*
    01. Turn off `Turn on MIUI optimization` at the very bottom of `Developer options`
        and **Restart** the phone.
