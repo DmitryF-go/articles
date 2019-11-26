@@ -5,8 +5,7 @@
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
-   * [TensorFlow Android Camera Demo](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android)
-   * Article [TensorFlow Object Detection API tutorial]() and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
+   * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73) and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
    * Article [Artistic style transfer for Android](https://codelabs.developers.google.com/codelabs/tensorflow-style-transfer-android)
    * Task. [YOLO Object Detection (TensorFlow tutorial)](https://youtu.be/4eIBisqx9_g)
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
@@ -45,11 +44,6 @@
    * Task. Build an AI Startup: https://youtu.be/NzmoPqte4V4
    * Task. An Introduction to Deep Learning with TensorFlow: https://youtu.be/vRF7ENlwD50
    * Task. Introducing TensorFlow.js: Machine Learning in Javascript: https://medium.com/tensorflow/introducing-tensorflow-js-machine-learning-in-javascript-bf3eab376db
-   * Mask R-CNN Deep Learning: https://youtu.be/uUYR6IEm5VM
-   * Mask R-CNN explanation: https://youtu.be/4tkgOzQ9yyo
-   * Mask R-CNN: https://youtu.be/g7z4mkfRjI4
-   * Mask R-CNN – How it Works: https://youtu.be/0vt05rQqk_I
-   * Mask RCNN course: https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg
    * Tutorial. TensorFlow workshops: https://github.com/tensorflow/workshops
    * Kaggle. Santander EDA and Prediction: https://www.kaggle.com/gpreda/santander-eda-and-prediction
    * Kaggle. Data ScienceTutorial for Beginners: https://www.kaggle.com/kanncaa1/data-sciencetutorial-for-beginners
@@ -58,6 +52,26 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Task. What is **Mask R-CNN** real-time object segmentation? — briefly read several articles and videos
+       * Mask R-CNN. [Article](https://arxiv.org/pdf/1703.06870.pdf)
+       * Mask R-CNN. How it Works: https://youtu.be/0vt05rQqk_I
+       * Mask R-CNN. Deep Learning: https://youtu.be/uUYR6IEm5VM
+       * Mask R-CNN. explanation: https://youtu.be/4tkgOzQ9yyo
+       * Mask R-CNN. https://youtu.be/g7z4mkfRjI4
+       * Mask R-CNN. course: https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg      
+   * Task. What is **YOLO** real-time object detection? — briefly read several articles
+       * YOLO. Article 1: [YOLO](https://arxiv.org/abs/1506.02640), article 2: [YOLO9000](https://arxiv.org/abs/1612.08242)
+       * YOLO. Joseph Chet Redmon [developer web-site](https://pjreddie.com/darknet/yolo/)
+       * YOLO. Article [What’s new in YOLO v3](https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b)
+   * Task. What is **MobileSSD** real-time object detection? — briefly read several articles
+       * MobileSSD. [Article](https://arxiv.org/abs/1512.02325), description [SSD: Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325)
+       * MobileSSD. Description articles:
+           * [Understand SSD and Implement It in Pytorch](https://medium.com/@smallfishbigsea/understand-ssd-and-implement-your-own-caa3232cd6ad) + [GitHub source code](https://github.com/qfgaohao/pytorch-ssd)
+           * [SSD object detection](https://medium.com/@jonathan_hui/ssd-object-detection-single-shot-multibox-detector-for-real-time-processing-9bd8deac0e06) article,
+           * [SSD object detection](https://towardsdatascience.com/understanding-ssd-multibox-real-time-object-detection-in-deep-learning-495ef744fab) article,
+           * [SSD object detection](https://towardsdatascience.com/review-ssd-single-shot-detector-object-detection-851a94607d11) article
+       * MobileSSD. [Simplified article in Russian](https://habr.com/ru/post/352804/)
+   * [TensorFlow Android Camera Demo](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android) — installed and runned the software
    * Course. [Image Processing with Python](https://datacarpentry.org/image-processing/) — 10 lessons
    * Task. [TensorFlow Eager execution](https://www.tensorflow.org/guide/eager) — finished task
    * Article. [Learn from ML experts at Google](https://ai.google/education/) — read the article.

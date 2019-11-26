@@ -56,62 +56,74 @@ User_Alias WEBMASTERS = username, malyshevvalery
 Cmnd_Alias START1   = /bin/systemctl start nginx,              \
                       /bin/systemctl start generator,          \
                       /bin/systemctl start slide_analysis_api, \
-                      /bin/systemctl start segmentation
+                      /bin/systemctl start segmentation,       \
+                      /bin/systemctl start demoxray
 
 Cmnd_Alias STOP1    = /bin/systemctl stop nginx,              \
                       /bin/systemctl stop generator,          \
                       /bin/systemctl stop slide_analysis_api, \
-                      /bin/systemctl stop segmentation
+                      /bin/systemctl stop segmentation,       \
+                      /bin/systemctl stop demoxray
 
 Cmnd_Alias RESTART1 = /bin/systemctl restart nginx,              \
                       /bin/systemctl restart generator,          \
                       /bin/systemctl restart slide_analysis_api, \
-                      /bin/systemctl restart segmentation
+                      /bin/systemctl restart segmentation,       \
+                      /bin/systemctl restart demoxray
 
 Cmnd_Alias STATUS1  = /bin/systemctl status nginx,              \
                       /bin/systemctl status generator,          \
                       /bin/systemctl status slide_analysis_api, \
-                      /bin/systemctl status segmentation
+                      /bin/systemctl status segmentation,       \
+                      /bin/systemctl status demoxray
 
 Cmnd_Alias ENABLE1  = /bin/systemctl enable nginx,              \
                       /bin/systemctl enable generator,          \
                       /bin/systemctl enable slide_analysis_api, \
-                      /bin/systemctl enable segmentation
+                      /bin/systemctl enable segmentation,       \
+                      /bin/systemctl enable demoxray
 
 Cmnd_Alias DISABLE1 = /bin/systemctl disable nginx,              \
                       /bin/systemctl disable generator,          \
                       /bin/systemctl disable slide_analysis_api, \
-                      /bin/systemctl disable segmentation
+                      /bin/systemctl disable segmentation,       \
+                      /bin/systemctl disable demoxray
 
 Cmnd_Alias START2   = /usr/sbin/service nginx start,              \
                       /usr/sbin/service generator start,          \
                       /usr/sbin/service slide_analysis_api start, \
-                      /usr/sbin/service segmentation start
+                      /usr/sbin/service segmentation start,       \
+                      /usr/sbin/service demoxray start
 
 Cmnd_Alias STOP2    = /usr/sbin/service nginx stop,              \
                       /usr/sbin/service generator stop,          \
                       /usr/sbin/service slide_analysis_api stop, \
-                      /usr/sbin/service segmentation stop
+                      /usr/sbin/service segmentation stop,       \
+                      /usr/sbin/service demoxray stop
 
 Cmnd_Alias RESTART2 = /usr/sbin/service nginx restart,              \
                       /usr/sbin/service generator restart,          \
                       /usr/sbin/service slide_analysis_api restart, \
-                      /usr/sbin/service segmentation restart
+                      /usr/sbin/service segmentation restart,       \
+                      /usr/sbin/service demoxray restart
 
 Cmnd_Alias STATUS2  = /usr/sbin/service nginx status,              \
                       /usr/sbin/service generator status,          \
                       /usr/sbin/service slide_analysis_api status, \
-                      /usr/sbin/service segmentation status
+                      /usr/sbin/service segmentation status,       \
+                      /usr/sbin/service demoxray status
 
 Cmnd_Alias ENABLE2  = /usr/sbin/service nginx enable,              \
                       /usr/sbin/service generator enable,          \
                       /usr/sbin/service slide_analysis_api enable, \
-                      /usr/sbin/service segmentation enable
+                      /usr/sbin/service segmentation enable,       \
+                      /usr/sbin/service demoxray enable
 
 Cmnd_Alias DISABLE2 = /usr/sbin/service nginx disable,              \
                       /usr/sbin/service generator disable,          \
                       /usr/sbin/service slide_analysis_api disable, \
-                      /usr/sbin/service segmentation disable
+                      /usr/sbin/service segmentation disable,       \
+                      /usr/sbin/service demoxray disable
 
 Cmnd_Alias FUSER1   = /bin/fuser 3000/tcp, /bin/fuser -k 3000/tcp
 Cmnd_Alias FUSER2   = /bin/fuser 4000/tcp, /bin/fuser -k 4000/tcp
