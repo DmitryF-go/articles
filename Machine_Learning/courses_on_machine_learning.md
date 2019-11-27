@@ -52,7 +52,9 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf) by Vincent Dumoulin and Francesco Visin — briefly read a guide 
    * Task. What is **Mask R-CNN** real-time object segmentation? — briefly read several articles and videos
+       * Faster R-CNN. [Faster R-CNN Explained](https://medium.com/@smallfishbigsea/faster-r-cnn-explained-864d4fb7e3f8)
        * Mask R-CNN. [Article](https://arxiv.org/pdf/1703.06870.pdf)
        * Mask R-CNN. How it Works: https://youtu.be/0vt05rQqk_I
        * Mask R-CNN. Deep Learning: https://youtu.be/uUYR6IEm5VM
@@ -60,6 +62,7 @@
        * Mask R-CNN. https://youtu.be/g7z4mkfRjI4
        * Mask R-CNN. course: https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg      
    * Task. What is **YOLO** real-time object detection? — briefly read several articles
+       * Video. [You Only Look Once: Unified, Real-Time Object Detection](https://youtu.be/NM6lrxy0bxs)
        * YOLO. Article 1: [YOLO](https://arxiv.org/abs/1506.02640), article 2: [YOLO9000](https://arxiv.org/abs/1612.08242)
        * YOLO. Joseph Chet Redmon [developer web-site](https://pjreddie.com/darknet/yolo/)
        * YOLO. Article [What’s new in YOLO v3](https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b)
@@ -67,10 +70,14 @@
        * MobileSSD. [Article](https://arxiv.org/abs/1512.02325), description [SSD: Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325)
        * MobileSSD. Description articles:
            * [Understand SSD and Implement It in Pytorch](https://medium.com/@smallfishbigsea/understand-ssd-and-implement-your-own-caa3232cd6ad) + [GitHub source code](https://github.com/qfgaohao/pytorch-ssd)
-           * [SSD object detection](https://medium.com/@jonathan_hui/ssd-object-detection-single-shot-multibox-detector-for-real-time-processing-9bd8deac0e06) article,
-           * [SSD object detection](https://towardsdatascience.com/understanding-ssd-multibox-real-time-object-detection-in-deep-learning-495ef744fab) article,
-           * [SSD object detection](https://towardsdatascience.com/review-ssd-single-shot-detector-object-detection-851a94607d11) article
+           * [Mobilenet Based Single Short Multi-box Detector in Pytorch, ONNX and Caffe2](https://medium.com/@smallfishbigsea/mobilenet-based-single-short-multi-box-detector-in-pytorch-onnx-and-caffe2-2509bd038427)
+           * [SSD object detection: Single Shot MultiBox Detector for real-time processing](https://medium.com/@jonathan_hui/ssd-object-detection-single-shot-multibox-detector-for-real-time-processing-9bd8deac0e06) article,
+           * [Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning](https://towardsdatascience.com/understanding-ssd-multibox-real-time-object-detection-in-deep-learning-495ef744fab) article,
+           * [Review: SSD — Single Shot Detector](https://towardsdatascience.com/review-ssd-single-shot-detector-object-detection-851a94607d11) article
        * MobileSSD. [Simplified article in Russian](https://habr.com/ru/post/352804/)
+   * Task. What is **RefineDet** real-time object detection? — briefly read several articles
+       * RefineDet. [Article](https://arxiv.org/pdf/1711.06897.pdf) and [link](https://arxiv.org/abs/1711.06897)
+       * Wikipedia. [Object detection](https://en.wikipedia.org/wiki/Object_detection#cite_note-9)
    * [TensorFlow Android Camera Demo](https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android) — installed and runned the software
    * Course. [Image Processing with Python](https://datacarpentry.org/image-processing/) — 10 lessons
    * Task. [TensorFlow Eager execution](https://www.tensorflow.org/guide/eager) — finished task

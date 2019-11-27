@@ -87,7 +87,7 @@ Additional useful tools everybody should know about:
    * [Kaggle Kernels](https://www.kaggle.com/kernels) --
      Free Jupyter notebook environment. If you tired to [read documentation](https://www.kaggle.com/docs/kernels),
      just try to find and see some [videos](https://youtu.be/sLAthlX816c).
-   * [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) --
+   * [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) —
      Fast and easy download of many images from Google Images. Menu
      _"Ask where to save each file before downloading"_ must be turned off before downloading images.
    * [google_images_download](https://pypi.org/project/google_images_download) is a Python
