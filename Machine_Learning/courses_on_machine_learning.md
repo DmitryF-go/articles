@@ -66,15 +66,18 @@
        * YOLO. Article 1: [YOLO](https://arxiv.org/abs/1506.02640), article 2: [YOLO9000](https://arxiv.org/abs/1612.08242)
        * YOLO. Joseph Chet Redmon [developer web-site](https://pjreddie.com/darknet/yolo/)
        * YOLO. Article [What’s new in YOLO v3](https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b)
+       * [YAD2K: Yet Another Darknet 2 Keras](https://github.com/allanzelener/YAD2K/) converts YOLO_v2 models to Keras.
+       * YOLO. Videos: [v1 presentation](https://youtu.be/NM6lrxy0bxs), [in Russian](https://youtu.be/L0tzmv--CGY)
    * Task. What is **MobileSSD** real-time object detection? — briefly read several articles
-       * MobileSSD. [Article](https://arxiv.org/abs/1512.02325), description [SSD: Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325)
-       * MobileSSD. Description articles:
+       * SSD. [Article](https://arxiv.org/abs/1512.02325), description [SSD: Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325)
+       * SSD. Description articles:
            * [Understand SSD and Implement It in Pytorch](https://medium.com/@smallfishbigsea/understand-ssd-and-implement-your-own-caa3232cd6ad) + [GitHub source code](https://github.com/qfgaohao/pytorch-ssd)
            * [Mobilenet Based Single Short Multi-box Detector in Pytorch, ONNX and Caffe2](https://medium.com/@smallfishbigsea/mobilenet-based-single-short-multi-box-detector-in-pytorch-onnx-and-caffe2-2509bd038427)
            * [SSD object detection: Single Shot MultiBox Detector for real-time processing](https://medium.com/@jonathan_hui/ssd-object-detection-single-shot-multibox-detector-for-real-time-processing-9bd8deac0e06) article,
            * [Understanding SSD MultiBox — Real-Time Object Detection In Deep Learning](https://towardsdatascience.com/understanding-ssd-multibox-real-time-object-detection-in-deep-learning-495ef744fab) article,
            * [Review: SSD — Single Shot Detector](https://towardsdatascience.com/review-ssd-single-shot-detector-object-detection-851a94607d11) article
        * MobileSSD. [Simplified article in Russian](https://habr.com/ru/post/352804/)
+       * SSD. [video in Russian](https://youtu.be/P8e-G-Mhx4k)
    * Task. What is **RefineDet** real-time object detection? — briefly read several articles
        * RefineDet. [Article](https://arxiv.org/pdf/1711.06897.pdf) and [link](https://arxiv.org/abs/1711.06897)
        * Wikipedia. [Object detection](https://en.wikipedia.org/wiki/Object_detection#cite_note-9)

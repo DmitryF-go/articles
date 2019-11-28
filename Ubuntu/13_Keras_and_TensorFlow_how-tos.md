@@ -140,7 +140,9 @@ IPython.display.HTML(iframe)
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
 
-[TensorFlow Lite guide](https://www.tensorflow.org/lite/guide) - this is your starting point.
+For iOS review [this blog](https://machinethink.net/blog/) of Matthijs Hollemans.
+
+[TensorFlow Lite guide](https://www.tensorflow.org/lite/guide) — this is your starting point.
 
 Video course [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190).
 
