@@ -134,7 +134,7 @@ IPython.display.HTML(iframe)
    * My own annotation tools: [Manual image annotation with polygons](https://github.com/foobar167/junkyard/tree/master/manual_image_annotation1)
      and [Manual image annotation with rectangles](https://github.com/foobar167/junkyard/tree/master/manual_image_annotation2)
      can annotate and cut rectangular images.
-   * Resize multiple images with [`resize_images.py`](https://github.com/foobar167/junkyard/blob/master/simple_scripts/resize_images.py)
+   * Resize multiple images with ratio [`resize_with_ratio.py`](https://github.com/skliff13/MilitaryDemo/blob/master/CreateDataset/resize_with_ratio.py)
      script.
    * [VGG Image Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/)
      is a simple and standalone manual annotation software for image, audio and video.
