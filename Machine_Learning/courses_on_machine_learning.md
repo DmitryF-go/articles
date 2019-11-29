@@ -3,6 +3,7 @@
    - [Completed courses](#completed-courses)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
+   * Video presentations. [How it works](https://www.youtube.com/playlist?list=PLDo7qx2mEhspspUcVUJx9cp1X3kx1j7nO) in Russian.
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73) and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
@@ -56,18 +57,22 @@
    * Task. What is **Mask R-CNN** real-time object segmentation? — briefly read several articles and videos
        * Faster R-CNN. [Faster R-CNN Explained](https://medium.com/@smallfishbigsea/faster-r-cnn-explained-864d4fb7e3f8)
        * Mask R-CNN. [Article](https://arxiv.org/pdf/1703.06870.pdf)
-       * Mask R-CNN. How it Works: https://youtu.be/0vt05rQqk_I
-       * Mask R-CNN. Deep Learning: https://youtu.be/uUYR6IEm5VM
-       * Mask R-CNN. explanation: https://youtu.be/4tkgOzQ9yyo
-       * Mask R-CNN. https://youtu.be/g7z4mkfRjI4
-       * Mask R-CNN. course: https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg      
+       * Mask R-CNN. [How it Works](https://youtu.be/0vt05rQqk_I),
+         [Custom Training of Image Mask R-CNN](https://youtu.be/uUYR6IEm5VM),
+         [explanation](https://youtu.be/4tkgOzQ9yyo),
+       [presentation](https://youtu.be/g7z4mkfRjI4)
+       * Mask R-CNN. [Video course](https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg)
    * Task. What is **YOLO** real-time object detection? — briefly read several articles
        * Video. [You Only Look Once: Unified, Real-Time Object Detection](https://youtu.be/NM6lrxy0bxs)
        * YOLO. Article 1: [YOLO](https://arxiv.org/abs/1506.02640), article 2: [YOLO9000](https://arxiv.org/abs/1612.08242)
-       * YOLO. Joseph Chet Redmon [developer web-site](https://pjreddie.com/darknet/yolo/)
+       * YOLO. Joseph Chet Redmon [developer web-site](https://pjreddie.com/darknet/yolo/),
+         [TensorFlow implementation of YOLO](https://github.com/thtrieu/darkflow),
+         [DarkNet implementation](https://github.com/pjreddie/darknet/wiki)
        * YOLO. Article [What’s new in YOLO v3](https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b)
        * [YAD2K: Yet Another Darknet 2 Keras](https://github.com/allanzelener/YAD2K/) converts YOLO_v2 models to Keras.
-       * YOLO. Videos: [v1 presentation](https://youtu.be/NM6lrxy0bxs), [in Russian](https://youtu.be/L0tzmv--CGY)
+       * YOLO. Videos: [v1 presentation](https://youtu.be/NM6lrxy0bxs),
+         [in Russian](https://youtu.be/L0tzmv--CGY),
+         [object detection with  Siraj Raval](https://youtu.be/4eIBisqx9_g)
    * Task. What is **MobileSSD** real-time object detection? — briefly read several articles
        * SSD. [Article](https://arxiv.org/abs/1512.02325), description [SSD: Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325)
        * SSD. Description articles:
