@@ -136,6 +136,12 @@ IPython.display.HTML(iframe)
      can annotate and cut rectangular images.
    * Resize multiple images with [`resize_images.py`](https://github.com/foobar167/junkyard/blob/master/simple_scripts/resize_images.py)
      script.
+   * [VGG Image Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/)
+     is a simple and standalone manual annotation software for image, audio and video.
+     VIA [runs in a web browser](http://www.robots.ox.ac.uk/~vgg/software/via/via.html)
+     and does not require any installation or setup.
+     The complete VIA software fits in a single self-contained HTML page of size less than 400 Kilobyte
+     that runs as an offline application in most modern web browsers.
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
