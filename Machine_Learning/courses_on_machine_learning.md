@@ -3,7 +3,6 @@
    - [Completed courses](#completed-courses)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
-   * Video presentations. [How it works](https://www.youtube.com/playlist?list=PLDo7qx2mEhspspUcVUJx9cp1X3kx1j7nO) in Russian.
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73) and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
@@ -53,6 +52,7 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Video presentations. [How it works](https://www.youtube.com/playlist?list=PLDo7qx2mEhspspUcVUJx9cp1X3kx1j7nO) in Russian — 9 videos
    * [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf) by Vincent Dumoulin and Francesco Visin — briefly read a guide 
    * Task. What is **Mask R-CNN** real-time object segmentation? — briefly read several articles and videos
        * Faster R-CNN. [Faster R-CNN Explained](https://medium.com/@smallfishbigsea/faster-r-cnn-explained-864d4fb7e3f8)
