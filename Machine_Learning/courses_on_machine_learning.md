@@ -13,6 +13,7 @@
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 480)
 ---
+   * Article. [Connectionist Temporal Classification](http://www.cs.toronto.edu/~graves/icml_2006.pdf)
    * Article. [Written Memories: Understanding, Deriving and Extending the LSTM](https://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html)
    * Article. [Introducing TensorFlow Graphics: Computer Graphics Meets Deep Learning](https://medium.com/tensorflow/introducing-tensorflow-graphics-computer-graphics-meets-deep-learning-c8e3877b7668)
    * Article. [Move Mirror: An AI Experiment with Pose Estimation in the Browser using TensorFlow.js](https://medium.com/tensorflow/move-mirror-an-ai-experiment-with-pose-estimation-in-the-browser-using-tensorflow-js-2f7b769f9b23)
@@ -53,7 +54,7 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
-   * Video presentations. [How it works](https://www.youtube.com/playlist?list=PLDo7qx2mEhspspUcVUJx9cp1X3kx1j7nO) in Russian — 9 videos
+   * Video presentations. [How it works](https://www.youtube.com/playlist?list=PLDo7qx2mEhspspUcVUJx9cp1X3kx1j7nO) in Russian: SSD, YOLO, LSTM, Neural Style, DeepLab — 9 videos
    * [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf) by Vincent Dumoulin and Francesco Visin — briefly read a guide 
    * Task. What is **Mask R-CNN** real-time object segmentation? — briefly read several articles and videos
        * Faster R-CNN. [Faster R-CNN Explained](https://medium.com/@smallfishbigsea/faster-r-cnn-explained-864d4fb7e3f8)
