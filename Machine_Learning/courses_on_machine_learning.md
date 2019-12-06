@@ -13,6 +13,8 @@
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 480)
 ---
+   * Course. [Basics of Modern Image Analysis (2016)](https://www.youtube.com/playlist?list=PLuRaSnb3n4kRVLplnBQYYN39S-fzOlM-e)
+   * Course. In Russian. [Практика программирования на Python3 (2019)](https://www.youtube.com/playlist?list=PLRDzFCPr95fLuusPXwvOPgXzBL3ZTzybY) from Тимофей Хирьянов
    * Article. [Connectionist Temporal Classification](http://www.cs.toronto.edu/~graves/icml_2006.pdf)
    * Article. [Written Memories: Understanding, Deriving and Extending the LSTM](https://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html)
    * Article. [Introducing TensorFlow Graphics: Computer Graphics Meets Deep Learning](https://medium.com/tensorflow/introducing-tensorflow-graphics-computer-graphics-meets-deep-learning-c8e3877b7668)
