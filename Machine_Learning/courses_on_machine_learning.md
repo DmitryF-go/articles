@@ -56,6 +56,7 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Video presentation. [Automatic Feature Engineering and Selection](https://youtu.be/W8HzK1M4KZU) by Alisa Dammer — reviewed
    * Video presentations. [How it works](https://www.youtube.com/playlist?list=PLDo7qx2mEhspspUcVUJx9cp1X3kx1j7nO) in Russian: SSD, YOLO, LSTM, Neural Style, DeepLab — 9 videos
    * [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf) by Vincent Dumoulin and Francesco Visin — briefly read a guide 
    * Task. What is **Mask R-CNN** real-time object segmentation? — briefly read several articles and videos
