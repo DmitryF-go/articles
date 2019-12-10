@@ -3,7 +3,7 @@
    - [Completed courses](#completed-courses)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
-   * Article. [o	Visualizing Machine Learning Datasets with Google’s FACETS](https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3) — review the article
+   * Article. [Visualizing Machine Learning Datasets with Google’s FACETS](https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3) — review the article
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73) and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
