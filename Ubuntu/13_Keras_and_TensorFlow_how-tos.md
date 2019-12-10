@@ -19,7 +19,9 @@ Helpful for me and I hope will be helpful for you:
 
    * How to write a scientific (survey) paper: [part1](https://youtu.be/FupqqW3hZWQ) & [part2](https://youtu.be/aeea2Xw237U) --
      Before learning Machine Learning, you must know how to write survey (scientific) paper
-     and how to work with survey papers.   
+     and how to work with survey papers.
+   * [TensorFlow learn ML](https://www.tensorflow.org/resources/learn-ml) web-page with many useful learning resources
+     (books, videos, examples, etc.).
    * [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
      Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
    * [TensorFlow free course](https://classroom.udacity.com/courses/ud187) --
@@ -142,6 +144,17 @@ IPython.display.HTML(iframe)
      and does not require any installation or setup.
      The complete VIA software fits in a single self-contained HTML page of size less than 400 Kilobyte
      that runs as an offline application in most modern web browsers.
+   * [TensorFlow Hub](https://tfhub.dev) is a library for the publication, discovery, and consumption
+     of reusable parts of machine learning models. A *module* is a self-contained piece of a TensorFlow graph,
+     along with its weights and assets, that can be reused across different tasks in a process known as
+     [transfer learning](https://en.wikipedia.org/wiki/Transfer_learning).
+     If you think of a model like a binary, think of a module like a library
+     ([video](https://youtu.be/rirzJ-e68cw?t=207)).
+   * [Facets](https://ai.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+     is an open source visualization tool for Machine Learning training data.
+     It helps to understand the various features of data and explore them without having to
+     explicitly code. Facets is released by Google under the
+     [PAIR (People + AI Research)](https://ai.google/research/teams/brain/pair) initiative.
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
