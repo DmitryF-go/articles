@@ -41,6 +41,7 @@
    * JS. TensorFlow.js? (not started)
    * Keras getting started: https://keras.io/getting-started/sequential-model-guide (part: getting started)
 ---
+   * Video course. [Introduction to Algorithms](https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)
    * Task. TensorFlow JS Demos: https://www.tensorflow.org/js/demos
    * Task. TensorFlow Lite example apps: https://www.tensorflow.org/lite/examples
    * Task. Train a model in tf.keras with Colab, and run it in the browser with TensorFlow.js: https://medium.com/tensorflow/train-on-google-colab-and-run-on-the-browser-a-case-study-8a45f9b1474e
