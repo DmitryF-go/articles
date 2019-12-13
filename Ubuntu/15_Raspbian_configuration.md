@@ -24,13 +24,14 @@ Install [AnyDesk](http://deb.anydesk.com/howto.html) remote desktop.
 Run the following commands as root user:
 ```shell script
 # Add repository key to Trusted software providers list
-wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | apt-key add -
+cd ~/Downloads
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
 # Add the repository
-echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list
+echo "deb http://deb.anydesk.com/ all main" | sudo tee -a /etc/apt/sources.list.d/anydesk-stable.list > /dev/null
 # Update apt cache
-apt update
+sudo apt update
 # Install anydesk
-apt install anydesk
+sudo apt install anydesk
 ```
 Add alias, password and login to your Raspberry Pi remotely.
 
@@ -86,7 +87,9 @@ network={
 
 ### <a name="raspi-config" />Enable SSH, VNC, camera, CLI and wi-fi
 ```shell script
-# Configuring Raspberry Pi
+# Configuring Raspberry Pi.
+# Select "5. Interfacing Options".
+# Enable SSH, VNC, camera, CLI and wi-fi.
 sudo raspi-config
 ```
 To disable desktop GUI on Raspberry Pi execute command `sudo raspi-config`
@@ -145,6 +148,8 @@ the toggle key-combination and have a panel indicator at the same time.
 ---
 ## <a name="necessary-software" />Install necessary software
 ```shell script
+# Check the Raspbian version
+cat /etc/os-release
 # Midnight Commander
 sudo apt install mc
 # Delete wolfram package, because its upgrade is extremely slow
