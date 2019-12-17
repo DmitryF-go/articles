@@ -3,7 +3,8 @@
    - [Completed courses](#completed-courses)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
-   * Article. [Visualizing Machine Learning Datasets with Google’s FACETS](https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3) — review the article
+   * [Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) — lecture videos on YouTube
+   * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) — watch 4 videos
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73) and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
@@ -58,6 +59,8 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Article. [Satellite Imagery Analysis with Python](https://medium.com/analytics-vidhya/satellite-imagery-analysis-with-python-3f8ccf8a7c32) — read article
+   * Article. [Visualizing Machine Learning Datasets with Google’s FACETS](https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3) — read article
    * Videos. Attention in neural networks: [v1](https://youtu.be/iDulhoQ2pro), [v2](https://youtu.be/W2rWgXJBZhU), [v3](https://youtu.be/H6Qiegq_36c) — watched videos
    * Jupyter Notebooks. [TensorFlow Hub Examples](https://github.com/tensorflow/hub/blob/master/examples/README.md) — reviewed several Jupyter Notebooks
    * Video presentation. [Automatic Feature Engineering and Selection](https://youtu.be/W8HzK1M4KZU) by Alisa Dammer — reviewed

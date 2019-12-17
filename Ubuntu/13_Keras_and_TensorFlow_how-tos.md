@@ -155,6 +155,9 @@ IPython.display.HTML(iframe)
      It helps to understand the various features of data and explore them without having to
      explicitly code. Facets is released by Google under the
      [PAIR (People + AI Research)](https://ai.google/research/teams/brain/pair) initiative.
+     Open [example **only in Chrome**](https://colab.research.google.com/drive/15XYYCo2D4sMYl0ZC3Tm8wVrp0UlzHljR#scrollTo=c-crf6ht1_mn).
+   * [10 Simple hacks to speed up your Data Analysis in Python](https://github.com/parulnith/10-Simple-hacks-to-speed-up-your-Data-Analysis-in-Python)
+   * [Awesome Open Source](https://awesomeopensource.com) find open source by browsing 7,000 topics across 59 categories.
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
