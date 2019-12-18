@@ -20,6 +20,10 @@ Helpful for me and I hope will be helpful for you:
    * How to write a scientific (survey) paper: [part1](https://youtu.be/FupqqW3hZWQ) & [part2](https://youtu.be/aeea2Xw237U) --
      Before learning Machine Learning, you must know how to write survey (scientific) paper
      and how to work with survey papers.
+   * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+     — watch 4 videos
+   * [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)
+     — intro into neural networks
    * [TensorFlow learn ML](https://www.tensorflow.org/resources/learn-ml) web-page with many useful learning resources
      (books, videos, examples, etc.).
    * [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
@@ -29,8 +33,6 @@ Helpful for me and I hope will be helpful for you:
    * [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) --
      Webpage with many tutorials. Everyone should make at least 5 exercises for beginners
      and then continue with more advanced tutorials.
-   * [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU) --
-     Intro into neural networks
      with the [source code](https://github.com/stephencwelch/Neural-Networks-Demystified).
    * [A Neural Network in 11 lines of Python (Part 1)](http://iamtrask.github.io/2015/07/12/basic-python-network) --
      Simple neural network in 11 lines of Python code with detailed explanation

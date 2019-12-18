@@ -3,8 +3,8 @@
    - [Completed courses](#completed-courses)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
+   * [Learning To See](https://www.youtube.com/playlist?list=PLiaHhY2iBX9ihLasvE8BKnS2Xg8AhY6iV) — 15 videos
    * [Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) — lecture videos on YouTube
-   * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) — watch 4 videos
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
    * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73) and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
@@ -17,6 +17,7 @@
 ---
    * Course. [Basics of Modern Image Analysis (2016)](https://www.youtube.com/playlist?list=PLuRaSnb3n4kRVLplnBQYYN39S-fzOlM-e)
    * Course. In Russian. [Практика программирования на Python3 (2019)](https://www.youtube.com/playlist?list=PLRDzFCPr95fLuusPXwvOPgXzBL3ZTzybY) from Тимофей Хирьянов
+   * Mini course. [Mask RCNN](https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg) — 3 videos
    * Article. [Connectionist Temporal Classification](http://www.cs.toronto.edu/~graves/icml_2006.pdf)
    * Article. [Written Memories: Understanding, Deriving and Extending the LSTM](https://r2rt.com/written-memories-understanding-deriving-and-extending-the-lstm.html)
    * Article. [Introducing TensorFlow Graphics: Computer Graphics Meets Deep Learning](https://medium.com/tensorflow/introducing-tensorflow-graphics-computer-graphics-meets-deep-learning-c8e3877b7668)
@@ -42,6 +43,7 @@
    * JS. TensorFlow.js? (not started)
    * Keras getting started: https://keras.io/getting-started/sequential-model-guide (part: getting started)
 ---
+   * Online Book. [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com)
    * Video course. [Introduction to Algorithms](https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)
    * Task. TensorFlow JS Demos: https://www.tensorflow.org/js/demos
    * Task. TensorFlow Lite example apps: https://www.tensorflow.org/lite/examples
@@ -59,6 +61,7 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) — watch 4 videos
    * Article. [Satellite Imagery Analysis with Python](https://medium.com/analytics-vidhya/satellite-imagery-analysis-with-python-3f8ccf8a7c32) — read article
    * Article. [Visualizing Machine Learning Datasets with Google’s FACETS](https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3) — read article
    * Videos. Attention in neural networks: [v1](https://youtu.be/iDulhoQ2pro), [v2](https://youtu.be/W2rWgXJBZhU), [v3](https://youtu.be/H6Qiegq_36c) — watched videos
