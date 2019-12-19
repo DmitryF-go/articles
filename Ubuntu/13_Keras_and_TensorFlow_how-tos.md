@@ -24,6 +24,8 @@ Helpful for me and I hope will be helpful for you:
      — watch 4 videos
    * [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)
      — intro into neural networks
+   * [Top 10 Deep Learning tools](https://medium.com/@chengweizhang2012/top-10-deep-learning-experiences-run-on-your-browser-458a64c9625f)
+     for your inspiration.
    * [TensorFlow learn ML](https://www.tensorflow.org/resources/learn-ml) web-page with many useful learning resources
      (books, videos, examples, etc.).
    * [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
@@ -160,6 +162,12 @@ IPython.display.HTML(iframe)
      Open [example **only in Chrome**](https://colab.research.google.com/drive/15XYYCo2D4sMYl0ZC3Tm8wVrp0UlzHljR#scrollTo=c-crf6ht1_mn).
    * [10 Simple hacks to speed up your Data Analysis in Python](https://github.com/parulnith/10-Simple-hacks-to-speed-up-your-Data-Analysis-in-Python)
    * [Awesome Open Source](https://awesomeopensource.com) find open source by browsing 7,000 topics across 59 categories.
+   * [mmdetection](https://github.com/open-mmlab/mmdetection) is an open source object detection toolbox based on
+     [PyTorch](https://pytorch.org). Plus [model zoo](https://github.com/open-mmlab/mmdetection/blob/master/docs/MODEL_ZOO.md).
+   * [Detectron](https://github.com/facebookresearch/Detectron) is Facebook AI Research's software system
+     that implements state-of-the-art object detection algorithms.
+     It is written in Python and powered by the [Caffe2](https://github.com/facebookarchive/caffe2)
+     deep learning framework.
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
