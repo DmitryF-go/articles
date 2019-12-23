@@ -25,7 +25,7 @@ Helpful for me and I hope will be helpful for you:
    * [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)
      — intro into neural networks
    * [Top 10 Deep Learning tools](https://medium.com/@chengweizhang2012/top-10-deep-learning-experiences-run-on-your-browser-458a64c9625f)
-     for your inspiration.
+     for your inspiration. For more tools go to the section [additional useful tools](#tools)
    * [TensorFlow learn ML](https://www.tensorflow.org/resources/learn-ml) web-page with many useful learning resources
      (books, videos, examples, etc.).
    * [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) --
@@ -168,6 +168,10 @@ IPython.display.HTML(iframe)
      that implements state-of-the-art object detection algorithms.
      It is written in Python and powered by the [Caffe2](https://github.com/facebookarchive/caffe2)
      deep learning framework.
+   * 
+   * [GeoGebra](https://www.geogebra.org/) is dynamic mathematics software for all levels of education
+     that brings together geometry, algebra, spreadsheets, graphing, statistics and calculus
+     in one easy-to-use package. [Mandelbrot example](https://www.geogebra.org/m/BUVhcRSv#material/Npd3kBKn).
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
