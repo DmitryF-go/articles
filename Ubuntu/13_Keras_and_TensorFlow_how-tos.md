@@ -168,7 +168,6 @@ IPython.display.HTML(iframe)
      that implements state-of-the-art object detection algorithms.
      It is written in Python and powered by the [Caffe2](https://github.com/facebookarchive/caffe2)
      deep learning framework.
-   * 
    * [GeoGebra](https://www.geogebra.org/) is dynamic mathematics software for all levels of education
      that brings together geometry, algebra, spreadsheets, graphing, statistics and calculus
      in one easy-to-use package. [Mandelbrot example](https://www.geogebra.org/m/BUVhcRSv#material/Npd3kBKn).
