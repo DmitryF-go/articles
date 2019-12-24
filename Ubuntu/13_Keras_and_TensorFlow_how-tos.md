@@ -171,6 +171,8 @@ IPython.display.HTML(iframe)
    * [GeoGebra](https://www.geogebra.org/) is dynamic mathematics software for all levels of education
      that brings together geometry, algebra, spreadsheets, graphing, statistics and calculus
      in one easy-to-use package. [Mandelbrot example](https://www.geogebra.org/m/BUVhcRSv#material/Npd3kBKn).
+   * [OpenAI](https://openai.com/resources/#platforms) builds free software for training, benchmarking,
+     and experimenting with AI. Reinforcement Learning (RL).
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
