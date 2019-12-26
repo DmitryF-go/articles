@@ -159,7 +159,7 @@ ls -hal /hdd_gold
 # Be careful with this command, make sure you have a backup.
 sudo rm -rf /home/*
 
-# Make $HOME permanent -- edit /etc/fstab configuration file
+# Make $HOME permanent — edit /etc/fstab configuration file
 sudo nano /etc/fstab
 
 # Change string

@@ -333,7 +333,7 @@ git --version
 ### <a name="additional" />Search and remove packages
 
 ```shell
-# To remove package (don't remove python3 -- it'll broke your Ubuntu)
+# To remove package (don't remove python3 — it'll broke your Ubuntu)
 #sudo apt purge --auto-remove packagename
 sudo apt remove packagename
 # To search for the packagename

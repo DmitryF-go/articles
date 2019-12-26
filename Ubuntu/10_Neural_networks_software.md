@@ -202,10 +202,10 @@ export PYTHONPATH
 # Install DIGITS to enable loading data and visualization plug-ins
 sudo pip install -e $DIGITS_ROOT
 
-Error -- AttributeError: 'module' object has no attribute 'open'
+Error — AttributeError: 'module' object has no attribute 'open'
 ```
 
-Errors -- AttributeError: 'module' object has no attribute 'open'
+Errors — AttributeError: 'module' object has no attribute 'open'
 
 It's seems NVIDIA DIGITS works for Python 2.7,
 but Caffe `apt` installation is for Python 3.x only. Ridiculous.

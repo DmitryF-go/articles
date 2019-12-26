@@ -164,7 +164,7 @@ pip install --user pipenv
 ```shell
 # Check version of virtual environment
 virtualenv --version
-# We'll use virtualenvwrapper -- is a set of extensions to Ian Bicking's virtualenv tool.
+# We'll use virtualenvwrapper — is a set of extensions to Ian Bicking's virtualenv tool.
 virtualenvwrapper
 
 # Create virtual environment for Python 3.x
@@ -186,7 +186,7 @@ workon myenv
 # (myenv) username@hostname:~/path/to/dir$
 # Make sure you "workon myenv" and install packages into myenv
 
-# Install TensorFlow 2.0 alpha0 -- make sure you need this version of TF.
+# Install TensorFlow 2.0 alpha0 — make sure you need this version of TF.
 pip install -U --pre tensorflow-gpu
 # or
 pip install tensorflow-gpu==2.0.0-alpha0 

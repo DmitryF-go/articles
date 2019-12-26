@@ -215,7 +215,7 @@ Set up and configure virtual environment using `virtualenvwrapper`
 ```shell script
 # Check version of virtual environment
 virtualenv --version
-# We'll use virtualenvwrapper -- is a set of extensions to Ian Bicking's virtualenv tool.
+# We'll use virtualenvwrapper — is a set of extensions to Ian Bicking's virtualenv tool.
 virtualenvwrapper_load
 
 # Create virtual environment for Python 3.x
@@ -302,7 +302,7 @@ free –h
 w  # who
 # Get Python version
 python --version
-python3 -- version
+python3 --version
 # Tesk camera
 raspistill -o image.jpg
 raspivid -o video.h264 -t 10000

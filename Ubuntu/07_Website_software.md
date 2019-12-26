@@ -150,7 +150,7 @@ Check it or edit broken configuration file:
 # To edit broken configuration file
 pkexec visudo -f /etc/sudoers.d/website
 
-# Check if it works -- view BIOS as 'username' (for root)
+# Check if it works — view BIOS as 'username' (for root)
 sudo -u username sudo dmidecode -t bios    # should work
 sudo -u username sudo dmidecode -t memory  # should NOT work
 
@@ -187,9 +187,9 @@ sudo usermod -a -G webmasters malyshevvalery
 For `webmasters` group give write permission to directories:
 
 ```shell script
-# /etc/systemd/system -- to start services automatically
-# /etc/nginx -- for Nginx
-# /etc/letsencrypt -- for Certbot
+# /etc/systemd/system — to start services automatically
+# /etc/nginx — for Nginx
+# /etc/letsencrypt — for Certbot
 
 # List ACLs
 getfacl /etc/nginx/

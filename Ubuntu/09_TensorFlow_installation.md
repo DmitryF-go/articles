@@ -40,7 +40,7 @@ sudo apt install python-pip   python3-pip \
                  python-wheel python3-wheel \
                  python-mock  python3-mock 
 
-# Keras -- deep learning framework running on Theano or TensorFlow
+# Keras — deep learning framework running on Theano or TensorFlow
 sudo apt install python3-keras
 sudo apt install keras-doc  # documents
 
@@ -51,7 +51,7 @@ umask 022
 sudo pip install -U Keras  # Deep Learning for humans
 exit
 
-# Lasagne -- deep learning library build on the top of Theano
+# Lasagne — deep learning library build on the top of Theano
 sudo apt install python-lasagne
 sudo apt install python3-lasagne
 sudo apt install lasagne-doc  # documents
@@ -327,7 +327,7 @@ computecpp_info
 
 ##### Install TensorRT if you're going to build TensorFlow with TensorRT support
 
-Install cuBLAS -- Dense Linear Algebra on GPUs
+Install cuBLAS — Dense Linear Algebra on GPUs
 Download CUDA Toolkit with cuBLAS: https://developer.nvidia.com/cublas
 
 ```shell
@@ -691,9 +691,9 @@ sudo pip install -U tables
 sudo pip install -U pytools
 # Statistical computations and models for Python
 sudo pip install -U statsmodels
-# Python wrapper for OpenCL -- Compilation failure
+# Python wrapper for OpenCL — Compilation failure
 ##sudo pip install -U pyopencl
-# Python Webtrends connector -- No matching version
+# Python Webtrends connector — No matching version
 ##sudo pip install -U pywt
 
 # Fix error with import of dot_parser

@@ -100,6 +100,7 @@ Additional useful tools everybody should know about:
      [Script](https://github.com/hardikvasa/google-images-download)
      for "searching" and "downloading" hundreds of Google images to the local hard disk.
    * [Google Dataset Search](https://toolbox.google.com/datasetsearch) is a search engine for datasets.
+   * [Kaggle datasets](https://www.kaggle.com/datasets) — search engine for 25 000 datasets on Kaggle.
    * [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
      list of a topic-centric public data sources.
    * [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
@@ -130,7 +131,7 @@ IPython.display.HTML(iframe)
      is a limited-functionality freeware available for trial and non-commercial use.
      Recommended especially for students who want to learn how to develop
      complex algorithms with images loaded from files.
-   * [nbviewer](https://nbviewer.jupyter.org/) -- A simple way to share Jupyter Notebooks.
+   * [nbviewer](https://nbviewer.jupyter.org/) — A simple way to share Jupyter Notebooks.
      It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
      Enter the location of a Jupyter Notebook to have it rendered.
    * Annotation tool [labelImg](https://tzutalin.github.io/labelImg).

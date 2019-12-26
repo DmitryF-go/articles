@@ -75,8 +75,8 @@ sudo rm -rf /usr/local/cuda*
 # Execute file and answer the questions during installation
 sudo ./NVIDIA-Linux-x86_64-410.93.run
 # Continue installation
-# Install NVIDIA's 32-bit compatibility libraries? -- Yes
-# Whould you like to run the nvidia-xconfig utility... -- Yes
+# Install NVIDIA's 32-bit compatibility libraries? — Yes
+# Whould you like to run the nvidia-xconfig utility... — Yes
 # OK
 
 # Start graphical interface
@@ -214,7 +214,7 @@ lspci | grep -i nvidia
 uname -m && cat /etc/*release
 
 # View linux kernel header
-uname -r  # somethins like -- 4.15.0-39-generic
+uname -r  # somethins like — 4.15.0-39-generic
 
 # Install gcc, kernel headers and development libraries
 sudo apt install gcc-6  # gcc compiler
