@@ -78,43 +78,35 @@ All code examples are placed [here](../Machine_Learning/code_examples).
 ### <a name="tools" />Additional useful tools
 
 Additional useful tools everybody should know about:
-   * [Six easy ways](https://www.dataschool.io/cloud-services-for-jupyter-notebook)
-     to run your Jupyter Notebook in the cloud:
-         [Binder](https://mybinder.org),
-         [Kaggle Kernels](https://www.kaggle.com),
-         [Google Colaboratory (Colab)](https://colab.research.google.com),
-         [Microsoft Azure Notebooks](https://notebooks.azure.com),
-         [CoCalc](https://cocalc.com),
-         [Datalore](https://datalore.io)
-   * [Google Colab](https://colab.research.google.com) --
-     Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
-     in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
-     and access powerful computing resources, all for free from your browser.
-   * [Kaggle Kernels](https://www.kaggle.com/kernels) --
-     Free Jupyter notebook environment. If you tired to [read documentation](https://www.kaggle.com/docs/kernels),
-     just try to find and see some [videos](https://youtu.be/sLAthlX816c).
-   * [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) —
-     Fast and easy download of many images from Google Images. Menu
-     _"Ask where to save each file before downloading"_ must be turned off before downloading images.
-   * [google_images_download](https://pypi.org/project/google_images_download) is a Python
-     [Script](https://github.com/hardikvasa/google-images-download)
-     for "searching" and "downloading" hundreds of Google images to the local hard disk.
-   * [Google Dataset Search](https://toolbox.google.com/datasetsearch) is a search engine for datasets.
-   * [Kaggle datasets](https://www.kaggle.com/datasets) — search engine for 25 000 datasets on Kaggle.
-   * [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
-     list of a topic-centric public data sources.
-   * [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
-     Demonstration of TensorBoard tool with the
-     [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
-   * [K3D Jupyter](https://github.com/K3D-tools/K3D-jupyter) --
-     Jupyter notebook extension for *3D visualization*
-     with [examples](https://github.com/K3D-tools/K3D-jupyter/tree/master/examples).
-     Just start to view the examples and you'll like it :-)
-   * [Juxtapose](https://juxtapose.knightlab.com/) --
-     Easy-to-make frame comparisons. Useful for presentations.
-     Generate an embedable code snippet that you can use on any website or Jupyter notebook.
-     There must be an Internet connection to obtain URL.
-     Copy-paste code below into your Jupyter notebook and replace the `url`:
+   * Jupyter Notebook:
+       * [Six easy ways](https://www.dataschool.io/cloud-services-for-jupyter-notebook)
+         to run your Jupyter Notebook in the cloud:
+             [Binder](https://mybinder.org),
+             [Kaggle Kernels](https://www.kaggle.com),
+             [Google Colaboratory (Colab)](https://colab.research.google.com),
+             [Microsoft Azure Notebooks](https://notebooks.azure.com),
+             [CoCalc](https://cocalc.com),
+             [Datalore](https://datalore.io)
+       * [Google Colab](https://colab.research.google.com) --
+         Colaboratory is a free Jupyter notebook environment that requires no setup and runs entirely
+         in the cloud. With Colaboratory you can write and execute code, save and share your analyses,
+         and access powerful computing resources, all for free from your browser.
+       * [Kaggle Kernels](https://www.kaggle.com/kernels) --
+         Free Jupyter notebook environment. If you tired to [read documentation](https://www.kaggle.com/docs/kernels),
+         just try to find and see some [videos](https://youtu.be/sLAthlX816c).
+       * [K3D Jupyter](https://github.com/K3D-tools/K3D-jupyter) --
+         Jupyter notebook extension for *3D visualization*
+         with [examples](https://github.com/K3D-tools/K3D-jupyter/tree/master/examples).
+         Just start to view the examples and you'll like it :-)
+       * [nbviewer](https://nbviewer.jupyter.org/) — A simple way to share Jupyter Notebooks.
+         It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
+         Enter the location of a Jupyter Notebook to have it rendered.
+       * [10 Simple hacks to speed up your Data Analysis in Python](https://github.com/parulnith/10-Simple-hacks-to-speed-up-your-Data-Analysis-in-Python)
+       * [Juxtapose](https://juxtapose.knightlab.com/) --
+         Easy-to-make frame comparisons. Useful for presentations.
+         Generate an embedable code snippet that you can use on any website or Jupyter notebook.
+         There must be an Internet connection to obtain URL.
+         Copy-paste code below into your Jupyter notebook and replace the `url`:
 
 ```python
 # Display the associated webpage in a new window
@@ -124,6 +116,19 @@ iframe = '<iframe frameborder="0" class="juxtapose" width="100%" height="600" sr
 IPython.display.HTML(iframe)
 ```
 
+   * Downloading tools:
+       * [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) —
+         Fast and easy download of many images from Google Images. Menu
+         _"Ask where to save each file before downloading"_ must be turned off before downloading images.
+       * [google_images_download](https://pypi.org/project/google_images_download) is a Python
+         [Script](https://github.com/hardikvasa/google-images-download)
+         for "searching" and "downloading" hundreds of Google images to the local hard disk.
+   * Datasets Search:
+       * [Google Dataset Search](https://toolbox.google.com/datasetsearch) is a search engine for datasets.
+       * [Kaggle datasets](https://www.kaggle.com/datasets) — search engine for 25 000 datasets on Kaggle.
+       * [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
+         list of a topic-centric public data sources.
+       * [Awesome Open Source](https://awesomeopensource.com) find open source by browsing 7,000 topics across 59 categories.
    * [Deep Learning add-on for Adaptive Vision Studio Lite](https://www.adaptive-vision.com/en/software/deep-learning) --
      If you need out-of-the-box solutions, you could try Adaptive Vision tool with Deep Learning add-on.
      Unfortunately, Deep Learning add-on has only trial version for 30 days for educational purposes.
@@ -131,49 +136,52 @@ IPython.display.HTML(iframe)
      is a limited-functionality freeware available for trial and non-commercial use.
      Recommended especially for students who want to learn how to develop
      complex algorithms with images loaded from files.
-   * [nbviewer](https://nbviewer.jupyter.org/) — A simple way to share Jupyter Notebooks.
-     It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
-     Enter the location of a Jupyter Notebook to have it rendered.
-   * Annotation tool [labelImg](https://tzutalin.github.io/labelImg).
-     This annotation tool supports both Windows and Linux, it will generate `xml` files inside
-     image directories. Tip: use shortcuts (`w`: draw box, `d`: next file, `a`: previous file, etc.)
-     to accelerate the annotation.
-   * My own annotation tools: [Manual image annotation with polygons](https://github.com/foobar167/junkyard/tree/master/manual_image_annotation1)
-     and [Manual image annotation with rectangles](https://github.com/foobar167/junkyard/tree/master/manual_image_annotation2)
-     can annotate and cut rectangular images.
-   * Resize multiple images with ratio [`resize_with_ratio.py`](https://github.com/skliff13/MilitaryDemo/blob/master/CreateDataset/resize_with_ratio.py)
-     script.
-   * [VGG Image Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/)
-     is a simple and standalone manual annotation software for image, audio and video.
-     VIA [runs in a web browser](http://www.robots.ox.ac.uk/~vgg/software/via/via.html)
-     and does not require any installation or setup.
-     The complete VIA software fits in a single self-contained HTML page of size less than 400 Kilobyte
-     that runs as an offline application in most modern web browsers.
-   * [TensorFlow Hub](https://tfhub.dev) is a library for the publication, discovery, and consumption
-     of reusable parts of machine learning models. A *module* is a self-contained piece of a TensorFlow graph,
-     along with its weights and assets, that can be reused across different tasks in a process known as
-     [transfer learning](https://en.wikipedia.org/wiki/Transfer_learning).
-     If you think of a model like a binary, think of a module like a library
-     ([video](https://youtu.be/rirzJ-e68cw?t=207)).
-   * [Facets](https://ai.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
-     is an open source visualization tool for Machine Learning training data.
-     It helps to understand the various features of data and explore them without having to
-     explicitly code. Facets is released by Google under the
-     [PAIR (People + AI Research)](https://ai.google/research/teams/brain/pair) initiative.
-     Open [example **only in Chrome**](https://colab.research.google.com/drive/15XYYCo2D4sMYl0ZC3Tm8wVrp0UlzHljR#scrollTo=c-crf6ht1_mn).
-   * [10 Simple hacks to speed up your Data Analysis in Python](https://github.com/parulnith/10-Simple-hacks-to-speed-up-your-Data-Analysis-in-Python)
-   * [Awesome Open Source](https://awesomeopensource.com) find open source by browsing 7,000 topics across 59 categories.
-   * [mmdetection](https://github.com/open-mmlab/mmdetection) is an open source object detection toolbox based on
-     [PyTorch](https://pytorch.org). Plus [model zoo](https://github.com/open-mmlab/mmdetection/blob/master/docs/MODEL_ZOO.md).
-   * [Detectron](https://github.com/facebookresearch/Detectron) is Facebook AI Research's software system
-     that implements state-of-the-art object detection algorithms.
-     It is written in Python and powered by the [Caffe2](https://github.com/facebookarchive/caffe2)
-     deep learning framework.
-   * [GeoGebra](https://www.geogebra.org/) is dynamic mathematics software for all levels of education
-     that brings together geometry, algebra, spreadsheets, graphing, statistics and calculus
-     in one easy-to-use package. [Mandelbrot example](https://www.geogebra.org/m/BUVhcRSv#material/Npd3kBKn).
+   * Annotation tools:
+       * Annotation tool [labelImg](https://tzutalin.github.io/labelImg).
+         This annotation tool supports both Windows and Linux, it will generate `xml` files inside
+         image directories. Tip: use shortcuts (`w`: draw box, `d`: next file, `a`: previous file, etc.)
+         to accelerate the annotation.
+       * My own annotation tools: [Manual image annotation with polygons](https://github.com/foobar167/junkyard/tree/master/manual_image_annotation1)
+         and [Manual image annotation with rectangles](https://github.com/foobar167/junkyard/tree/master/manual_image_annotation2)
+         can annotate and cut rectangular images.
+       * [VGG Image Annotator](http://www.robots.ox.ac.uk/~vgg/software/via/)
+         is a simple and standalone manual annotation software for image, audio and video.
+         VIA [runs in a web browser](http://www.robots.ox.ac.uk/~vgg/software/via/via.html)
+         and does not require any installation or setup.
+         The complete VIA software fits in a single self-contained HTML page of size less than 400 Kilobyte
+         that runs as an offline application in most modern web browsers.
+   * Model Zoo:
+       * [TensorFlow Hub](https://tfhub.dev) is a library for the publication, discovery, and consumption
+         of reusable parts of machine learning models. A *module* is a self-contained piece of a TensorFlow graph,
+         along with its weights and assets, that can be reused across different tasks in a process known as
+         [transfer learning](https://en.wikipedia.org/wiki/Transfer_learning).
+         If you think of a model like a binary, think of a module like a library
+         ([video](https://youtu.be/rirzJ-e68cw?t=207)).
+       * [mmdetection](https://github.com/open-mmlab/mmdetection) is an open source object detection toolbox based on
+         [PyTorch](https://pytorch.org). Plus [model zoo](https://github.com/open-mmlab/mmdetection/blob/master/docs/MODEL_ZOO.md).
+       * [Detectron](https://github.com/facebookresearch/Detectron) is Facebook AI Research's software system
+         that implements state-of-the-art object detection algorithms.
+         It is written in Python and powered by the [Caffe2](https://github.com/facebookarchive/caffe2)
+         deep learning framework.
+       * [Model Zoo](https://modelzoo.co/) website curates and provides a platform
+         for deep learning researchers to easily find pre-trained models for a variety of platforms and uses.
+   * Data visualization:
+       * [Facets](https://ai.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
+         is an open source visualization tool for Machine Learning training data.
+         It helps to understand the various features of data and explore them without having to
+         explicitly code. Facets is released by Google under the
+         [PAIR (People + AI Research)](https://ai.google/research/teams/brain/pair) initiative.
+         Open [example **only in Chrome**](https://colab.research.google.com/drive/15XYYCo2D4sMYl0ZC3Tm8wVrp0UlzHljR#scrollTo=c-crf6ht1_mn).
+       * [GeoGebra](https://www.geogebra.org/) is dynamic mathematics software for all levels of education
+         that brings together geometry, algebra, spreadsheets, graphing, statistics and calculus
+         in one easy-to-use package. [Mandelbrot example](https://www.geogebra.org/m/BUVhcRSv#material/Npd3kBKn).
+       * [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) --
+         Demonstration of TensorBoard tool with the
+         [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
    * [OpenAI](https://openai.com/resources/#platforms) builds free software for training, benchmarking,
      and experimenting with AI. Reinforcement Learning (RL).
+   * Resize multiple images with ratio [`resize_with_ratio.py`](https://github.com/skliff13/MilitaryDemo/blob/master/CreateDataset/resize_with_ratio.py)
+     script.
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
