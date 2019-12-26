@@ -1,4 +1,4 @@
-   - [Exercises and tutorials](#exercises)
+   - [Exercises and tutorials (for beginners)](#exercises)
    - [All video courses and tutorials](#video-courses)
    - [Code examples](#code-examples)
    - [Additional useful tools](#tools)
@@ -13,7 +13,7 @@
          - [Forcibly clean up resources](#force-clean)
 
 ---
-### <a name="exercises" />Exercises and tutorials
+### <a name="exercises" />Exercises and tutorials (for beginners)
 
 Helpful for me and I hope will be helpful for you:
 
