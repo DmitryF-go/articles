@@ -2,6 +2,7 @@
    - [All video courses and tutorials](#video-courses)
    - [Code examples](#code-examples)
    - [Additional useful tools](#tools)
+   - [Web sites to visit from time to time](#websites)
    - [TensorFlow for Android](#tensorflow-for-android)
    - [TensorFlow CPUs and GPUs Configuration](#cpu-gpu-configuration)
       - [Limit TensorFlow to one GPU](#limit-gpu)
@@ -182,6 +183,19 @@ IPython.display.HTML(iframe)
      and experimenting with AI. Reinforcement Learning (RL).
    * Resize multiple images with ratio [`resize_with_ratio.py`](https://github.com/skliff13/MilitaryDemo/blob/master/CreateDataset/resize_with_ratio.py)
      script.
+
+---
+### <a name="websites" />Web sites to visit from time to time
+Web sites for ML/DL:
+   * https://medium.com — Many articles in ML/DL. Very alike [Хабр in Russian]().
+   * https://distill.pub — Distillation of scientific publications.
+   * https://stackoverflow.com — and — [all](https://cs.stackexchange.com) — [its](https://cstheory.stackexchange.com) — [siblings](https://scicomp.stackexchange.com) — [are](https://stats.stackexchange.com) — vital for [ML/DL search](https://meta.stackexchange.com/questions/130524/which-stack-exchange-website-for-machine-learning-and-computational-algorithms).
+
+Video channels to explain scientific publications in ML/DL:
+   * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
+   * [Henry AI Labs](https://www.youtube.com/channel/UCHB9VepY6kYvZjj0Bgxnpbw)
+   * [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew/featured)
+   * [CodeEmporium](https://www.youtube.com/channel/UC5_6ZD6s8klmMu9TXEB_1IA/featured)
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
