@@ -191,6 +191,7 @@ Web sites for ML/DL:
    * https://distill.pub — Distillation of scientific publications.
    * https://stackoverflow.com — and — [all](https://cs.stackexchange.com) — [its](https://cstheory.stackexchange.com) — [siblings](https://scicomp.stackexchange.com) — [are](https://stats.stackexchange.com) — vital for [ML/DL search](https://meta.stackexchange.com/questions/130524/which-stack-exchange-website-for-machine-learning-and-computational-algorithms).
    * https://realpython.com — web site with high-quality articles about Python.
+   * https://www.dlology.com — blog of Chengwei Zhang aka [Tony607](https://github.com/Tony607)
 
 Video channels to explain scientific publications in ML/DL:
    * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
