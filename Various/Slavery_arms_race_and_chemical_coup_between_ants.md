@@ -1,4 +1,5 @@
 <h1>Slavery, arms race and chemical coup between ants</h1>
+<p>Publication date: 24.11.2019</p>
 
 <img src="https://raw.githubusercontent.com/foobar167/articles/master/Various/data/2013.09.12_protomognathus_americanus_head.jpg" alt="Protomognathus americanus ant head" />
 
