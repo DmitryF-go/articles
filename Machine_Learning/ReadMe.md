@@ -6,6 +6,6 @@ Articles about Machine Learning (ML) in **English**:
 
 Articles about ML in **Russian**:
    01. [Письмо начинающему изучать Data Science](pismo_nachinayushchemu_izuchat_data_science/pismo_nachinayushchemu_izuchat_data_science.md)
-   01. [Нейросети. Куда это все движется](neyroseti_kuda_eto_vse_dvizhetsya/neyroseti_kuda_eto_vse_dvizhetsya.md)
    01. [Брошюра «Введение в машинное обучение» в HTML формате](https://foobar167.github.io/page/vvedeniye-v-mashinnoye-obucheniye-i-iskusstvennyye-neyronnyye-seti.html)
    01. [Введение в машинное обучение и искусственные нейронные сети](Vvedeniye_v_mashinnoye_obucheniye_i_iskusstvennyye_neyronnyye_seti.pdf)
+   01. [Нейросети. Куда это все движется](neyroseti_kuda_eto_vse_dvizhetsya/neyroseti_kuda_eto_vse_dvizhetsya.md)
