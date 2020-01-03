@@ -179,6 +179,8 @@ IPython.display.HTML(iframe)
        * [Hands-on TensorBoard (TensorFlow Dev Summit 2017)](https://youtu.be/eBbEDRsCmv4) —
          Demonstration of TensorBoard tool with the
          [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
+       * [Streamlit](https://streamlit.io/docs/) is an open-source Python library
+         that makes it easy to build beautiful apps for machine learning. I didn't use it yet.
    * [OpenAI](https://openai.com/resources/#platforms) builds free software for training, benchmarking,
      and experimenting with AI. Reinforcement Learning (RL).
    * Resize multiple images with ratio [`resize_with_ratio.py`](https://github.com/skliff13/MilitaryDemo/blob/master/CreateDataset/resize_with_ratio.py)
