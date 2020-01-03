@@ -1,6 +1,8 @@
 # Письмо начинающему изучать Data Science
 Дата публикации: 31.12.2019
 
+[Статья опубликована на Хабре](https://habr.com/ru/post/482652/)
+
 Я бы хотел получить такое письмо три года назад, когда только начинал изучать [Data Science](https://youtu.be/xC-c7E5PK0Y) (DS). Чтобы там были необходимые ссылки на полезные материалы. Статья не претендует на полноту охвата необъятной области DS. Однако для начинающего специалиста будет полезна.
 
 ![Нейронные сети – это...](data/2019.12.27_neural_networks_are.jpg)
@@ -12,7 +14,7 @@
   * интегрированная среда разработки (IDE) [PyCharm](https://www.jetbrains.com/pycharm/download) , Community Edition бесплатная;
   * инфраструктура (framework) для машинного обучения (ML machine learning), глубокого обучения (DL deep learning) и создания нейросетей ([PyTorch](https://pytorch.org), [TensorFlow](https://www.tensorflow.org) и [десятки других](https://en.wikipedia.org/wiki/Comparison_of_deep-learning_software));
   * если нет своей [мощной видеокарты](https://catalog.onliner.by/videocard?desktop_gpu%5B0%5D=rtx2080ti&desktop_gpu%5Boperation%5D=union&order=price:asc) (GPU graphical processing unit), тогда следует пользоваться бесплатными облачными технологиями на основе [Jupyter Notebook](https://www.dataschool.io/cloud-services-for-jupyter-notebook/);
-  * умение пользоваться распределенной системой управления версиями [Git](https://ru.wikipedia.org/wiki/Git) (GitHub, GisLab, Bitbucket, etc.);
+  * умение пользоваться распределенной системой управления версиями [Git](https://ru.wikipedia.org/wiki/Git) ([GitHub](https://github.com), [GitLab](https://about.gitlab.com), [Bitbucket](https://bitbucket.org) и т.д.);
   * иметь учетную запись на StackOverflow и [всех его ответвлениях](https://meta.stackexchange.com/questions/130524/which-stack-exchange-website-for-machine-learning-and-computational-algorithms).
 
 Также со временем вам понадобятся множество различных дополнительных к Python библиотек и инструментов обработки изображений и данных. Их десятки. Наиболее полезные в **обработке изображений** для меня в порядке убывания важности:
@@ -30,6 +32,8 @@
   * [Scikit-learn](https://scikit-learn.org/stable) – алгоритмы машинного обучения.
   * [Scikit-image](https://scikit-image.org) – продвинутая обработка изображений.
   * [K3D](https://github.com/K3D-tools/K3D-jupyter) – работа с трехмерными графиками и изображениями в Jupyter Notebook.
+
+Машинное обудение (ML machine learning), а особенно глубокое обучение (Deep Learning) невозможны без данных. Необходимые базы данных (датасеты, datasets) можно поискать через сервис [Google Dataset Search](https://toolbox.google.com/datasetsearch) или среди [25-ти тысяч датасетов Kaggle](https://www.kaggle.com/datasets).
 
 ![Ну, давай, покажи нам примеры](data/2019.12.31_nu_davay_pokazhi_nam_primery.jpg)
 
