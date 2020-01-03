@@ -18,19 +18,17 @@
 
 Helpful for me and I hope will be helpful for you:
 
-   * How to write a scientific (survey) paper: [part1](https://youtu.be/FupqqW3hZWQ) & [part2](https://youtu.be/aeea2Xw237U) —
-     Before learning Machine Learning, you must know how to write survey (scientific) paper
-     and how to work with survey papers.
    * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
      — watch 4 videos
    * [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)
      — intro into neural networks
    * [Top 10 Deep Learning tools](https://medium.com/@chengweizhang2012/top-10-deep-learning-experiences-run-on-your-browser-458a64c9625f)
      for your inspiration. For more tools go to the section [additional useful tools](#tools)
+   * [Machine Learning for Everyone](https://vas3k.com/blog/machine_learning/)
+     ([Машинное обучение для людей](https://vas3k.ru/blog/machine_learning/))
+     and [my brochure in Russian](https://foobar167.github.io/page/vvedeniye-v-mashinnoye-obucheniye-i-iskusstvennyye-neyronnyye-seti.html)
    * [TensorFlow learn ML](https://www.tensorflow.org/resources/learn-ml) web-page with many useful learning resources
      (books, videos, examples, etc.).
-   * [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) —
-     Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
    * [TensorFlow free course](https://classroom.udacity.com/courses/ud187) —
      <b>Highly recommend</b> this course to ML newcomers, beginners, novices, rookies, etc.
    * [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) —
@@ -63,6 +61,8 @@ Helpful for me and I hope will be helpful for you:
      You will look at various parts of TensorFlow from a coding perspective.
    * Tips [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) —
      How to best use TensorFlow open source machine learning platform.
+   * [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) —
+     Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
 
 ---
 ### <a name="video-courses" />All video courses and tutorials
