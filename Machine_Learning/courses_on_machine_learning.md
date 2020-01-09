@@ -8,7 +8,6 @@
    * [CS231n Winter 2016](https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC) by Andrej Karpathy — 15 videos
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
-   * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73) and [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
    * Article [Artistic style transfer for Android](https://codelabs.developers.google.com/codelabs/tensorflow-style-transfer-android)
    * Task. [YOLO Object Detection (TensorFlow tutorial)](https://youtu.be/4eIBisqx9_g)
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
@@ -63,6 +62,8 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73)
+     and corresponding [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
    * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) — watch 4 videos
    * Article. [Satellite Imagery Analysis with Python](https://medium.com/analytics-vidhya/satellite-imagery-analysis-with-python-3f8ccf8a7c32) — read article
    * Article. [Visualizing Machine Learning Datasets with Google’s FACETS](https://towardsdatascience.com/visualising-machine-learning-datasets-with-googles-facets-462d923251b3) — read article
