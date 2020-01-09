@@ -185,6 +185,8 @@ IPython.display.HTML(iframe)
      and experimenting with AI. Reinforcement Learning (RL).
    * Resize multiple images with ratio [`resize_with_ratio.py`](https://github.com/skliff13/MilitaryDemo/blob/master/CreateDataset/resize_with_ratio.py)
      script.
+   * [Papers With Code](https://paperswithcode.com/task/object-detection) — Machine Learning papers,
+     code and evaluation tables all in one web-site.
 
 ---
 ### <a name="websites" />Web sites to visit from time to time
