@@ -24,6 +24,8 @@ Helpful for me and I hope will be helpful for you:
      — intro into neural networks
    * [Top 10 Deep Learning tools](https://medium.com/@chengweizhang2012/top-10-deep-learning-experiences-run-on-your-browser-458a64c9625f)
      for your inspiration. For more tools go to the section [additional useful tools](#tools)
+   * [Neural Networks from Scratch](https://youtu.be/G7RDn8Xtf_Y). Literally from stratch,
+     using Python and NumPy only. **It is not ready for now**, but will be in 6-8 month. 
    * [Machine Learning for Everyone](https://vas3k.com/blog/machine_learning/)
      ([Машинное обучение для людей](https://vas3k.ru/blog/machine_learning/))
      and [my brochure in Russian](https://foobar167.github.io/page/vvedeniye-v-mashinnoye-obucheniye-i-iskusstvennyye-neyronnyye-seti.html)
