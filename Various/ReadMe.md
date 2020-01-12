@@ -1,4 +1,5 @@
 Various articles in **English**
+   01. [Future economics for physicists](future_economics_for_physicists/2020.01.12_future_economics_for_physicists.md)
    01. [Slavery, arms race and chemical coup between ants](Slavery_arms_race_and_chemical_coup_between_ants.md)
 
 Various articles in **Russian**
