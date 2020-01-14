@@ -62,6 +62,8 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * [Optimizing Neural Network Structures with Keras-Tuner](https://youtu.be/vvC15l4CY1Q) — 1 video
+   * Video. [Graph Convolutional Networks](https://youtu.be/2bfxnj1J00A) and [article](https://medium.com/@julsimon/a-primer-on-graph-neural-networks-with-amazon-neptune-and-the-deep-graph-library-5ce64984a276) + [library](https://github.com/rusty1s/pytorch_geometric) — 1 video
    * Article [TensorFlow Object Detection API tutorial](https://becominghuman.ai/tensorflow-object-detection-api-tutorial-training-and-evaluating-custom-object-detector-ed2594afcf73)
      and corresponding [video course](https://www.youtube.com/playlist?list=PLQVvvaa0QuDcNK5GeCQnxYnSSaar2tpku).
    * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi) — watch 4 videos

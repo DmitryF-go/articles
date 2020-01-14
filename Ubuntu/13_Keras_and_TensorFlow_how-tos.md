@@ -187,8 +187,8 @@ IPython.display.HTML(iframe)
      and experimenting with AI. Reinforcement Learning (RL).
    * Resize multiple images with ratio [`resize_with_ratio.py`](https://github.com/skliff13/MilitaryDemo/blob/master/CreateDataset/resize_with_ratio.py)
      script.
-   * [Papers With Code](https://paperswithcode.com/task/object-detection) — Machine Learning papers,
-     code and evaluation tables all in one web-site.
+   * [Kite](https://kite.com) autocomplete plugin for Python IDE (PyCharm, Spyder, etc.).
+   * 
 
 ---
 ### <a name="websites" />Web sites to visit from time to time
@@ -198,12 +198,16 @@ Web sites for ML/DL:
    * https://stackoverflow.com — and — [all](https://cs.stackexchange.com) — [its](https://cstheory.stackexchange.com) — [siblings](https://scicomp.stackexchange.com) — [are](https://stats.stackexchange.com) — vital for [ML/DL search](https://meta.stackexchange.com/questions/130524/which-stack-exchange-website-for-machine-learning-and-computational-algorithms).
    * https://realpython.com — web site with high-quality articles about Python.
    * https://www.dlology.com — blog of Chengwei Zhang aka [Tony607](https://github.com/Tony607)
+   * https://pythonprogramming.net — a bunch of tutorials about Machine Learning and more + [video blog](https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ)
+   * https://paperswithcode.com — Machine Learning papers, code and evaluation tables all in one web-site.
+   * https://ods.ai — Open Data Science community
 
 Video channels to explain scientific publications in ML/DL:
    * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
    * [Henry AI Labs](https://www.youtube.com/channel/UCHB9VepY6kYvZjj0Bgxnpbw)
    * [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew/featured)
    * [CodeEmporium](https://www.youtube.com/channel/UC5_6ZD6s8klmMu9TXEB_1IA/featured)
+   * [sentdex](https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ)
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
