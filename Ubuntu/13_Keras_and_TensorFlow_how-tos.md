@@ -203,6 +203,7 @@ Web sites for ML/DL:
    * https://ods.ai — Open Data Science community
    * https://www.deeplearningweekly.com — Bringing you everything new and exciting in the world
      of  deep learning from academia to the grubby depth  of industry every week right to your inbox.
+   * https://www.pyimagesearch.com — Adrian Rosebrock's blog about Computer Vision, Deep Learning and OpenCV.
 
 Video channels to explain scientific publications in ML/DL:
    * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
