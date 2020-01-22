@@ -1,6 +1,7 @@
 ## Various interesting courses on Machine Learning and some other disciplines
    - [Courses to finish](#courses-to-finish)
    - [Completed courses](#completed-courses)
+   - [Interesting resources](#interesting-resources)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
    * [Learning To See](https://www.youtube.com/playlist?list=PLiaHhY2iBX9ihLasvE8BKnS2Xg8AhY6iV) — 15 videos
@@ -133,3 +134,10 @@
    * Video playlist. [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) — 6 videos
    * Video course. [Intro to TensorFlow for AI, ML and DL](https://www.coursera.org/learn/introduction-tensorflow) — 4 weeks
    * Video course. [Intro to TensorFlow for Deep Learning](https://classroom.udacity.com/courses/ud187) — 9 lessons
+
+---
+### <a name="interesting-resources" />Interesting resources
+   * [Run Forrest Project](https://github.com/Jabrils/Run-Forrest-FULL) — a machine learning based game,
+     an open source version ([for Windows](https://gamejolt.com/games/runforrest/312818),
+     [for Android](https://play.google.com/store/apps/details?id=com.SEFDStuff.RunForrest&hl=en))
+   * 
