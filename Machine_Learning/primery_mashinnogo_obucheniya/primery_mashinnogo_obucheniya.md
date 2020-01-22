@@ -10,7 +10,7 @@
   * [исходный код](https://colab.research.google.com/drive/1TJEfTkfuXscEndBe0Yb95x-BEDbLejYq#scrollTo=ODQEiw9TnjIY) в Google Colab;
   * [оригинальная статья](https://realpython.com/logistic-regression-python) на английском языке.
 
-Все примеры исходного кода собраны [тут](../code_examples).
+Все примеры исходного кода собраны [тут](../code_examples). Вы можете импортировать их в [Google CoLab](https://colab.research.google.com) и посмотреть, как это работает. 
 
 **Теги:** машинное обучение, machine learning, Data Science, алгоритмы, еще,
 
