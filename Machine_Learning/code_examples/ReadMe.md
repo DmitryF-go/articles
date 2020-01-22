@@ -1,6 +1,6 @@
-## Machine Learning code examples in Google Colab
-   * [Several callback examples](callbacks_usage_in_training.ipynb) and
-     [shareable link](https://colab.research.google.com/drive/1b8cTruDQbw_N_XXna0XOTPuj_FyOR2rW).
+## Machine Learning code examples in Google CoLab
+   * [Several callback examples](callbacks_usage_in_training.ipynb)
+     ([shareable link](https://colab.research.google.com/drive/1b8cTruDQbw_N_XXna0XOTPuj_FyOR2rW)).
      Callbacks are used to stop training to avoid overfitting or if learning rate is enough.
    * [U-Net segmentation](unet_segmentation.ipynb)
      ([shareable link](https://colab.research.google.com/drive/1oGDqlVuBFqzcYu12_L53bjkutBkz9_ne))
@@ -15,3 +15,6 @@
      is based on residual neural network and U-Net.
    * [TensorFlow Lite conversion examples](tf_lite_conversion_examples.ipynb) for video course
      [Introduction to TensorFlow Lite](https://www.udacity.com/course/intro-to-tensorflow-lite--ud190).
+   * [Logistic Regression](2020.01.22_Logistic_Regression.ipynb)
+     ([shareable link](https://colab.research.google.com/drive/1TJEfTkfuXscEndBe0Yb95x-BEDbLejYq#scrollTo=ODQEiw9TnjIY))
+     is a fundamental classification technique. It’s a relatively uncomplicated linear classifier.
