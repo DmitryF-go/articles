@@ -10,5 +10,5 @@ Articles about ML in **Russian**:
    01. [Брошюра «Введение в машинное обучение»](https://foobar167.github.io/page/vvedeniye-v-mashinnoye-obucheniye-i-iskusstvennyye-neyronnyye-seti.html) в HTML формате
    01. [Введение в машинное обучение и искусственные нейронные сети](Vvedeniye_v_mashinnoye_obucheniye_i_iskusstvennyye_neyronnyye_seti.pdf) в PDF формате
    01. [Нейросети. Куда это все движется](neyroseti_kuda_eto_vse_dvizhetsya/neyroseti_kuda_eto_vse_dvizhetsya.md)
-   01. [Примеры машинного обучения](primery_mashinnogo_obucheniya)
-   01. [Новые архитектуры нейросетей](novyye_arkhitektury_neyrosetey)
+   01. [Примеры машинного обучения](primery_mashinnogo_obucheniya/primery_mashinnogo_obucheniya.md)
+   01. [Новые архитектуры нейросетей](novyye_arkhitektury_neyrosetey/novyye_arkhitektury_neyrosetey.md)
