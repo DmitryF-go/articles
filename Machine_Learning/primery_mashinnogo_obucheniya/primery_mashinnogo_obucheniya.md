@@ -24,6 +24,7 @@
 
 **Метод опорных векторов** (Support Vector Machine, SVM) — 
   * [видео]() с пояснениями;
+  * [объяснение с нуля и реализация на Python](https://habr.com/ru/company/ods/blog/484148/)
   * [исходный код]() в Google Colab;
   * [статья]().
 
