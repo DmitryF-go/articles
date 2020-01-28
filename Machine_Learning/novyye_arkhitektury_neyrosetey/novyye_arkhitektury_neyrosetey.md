@@ -5,10 +5,14 @@
 
 Предыдущая статья «[Нейросети. Куда это все движется](https://habr.com/ru/post/482794/)»
 
+TODO:
+  * Посмотрю источники еще на [Papers With Code](https://paperswithcode.com).
+  * Посмотрю статьи из [этого списка](https://github.com/zhousy1993/paper). Может, что интересное будет.
+
 В прошлом 2019 году появилось множество новых архитектур нейросетей. В этой статье кратко рассматриваются некоторые наиболее популярные из них.
 
-  - [EfficientDet](#EfficientDet)
   - [EfficientNet](#EfficientNet)
+  - [EfficientDet](#EfficientDet)
   - [SpineNet](#SpineNet)
   - [CenterNet](#CenterNet)
   - [ThunderNet](#ThunderNet)
@@ -20,18 +24,35 @@
   - [DPM](#DPM)
 
 -------
-<a name="EfficientDet" />**EfficientDet**
-
--------
 <a name="EfficientNet" />![EfficientNet](data/2020.01.28_EfficientNet.png)
 
 **EfficientNet** — класс новых моделей, который получился из изучения масштабирования (скейлинг, scaling) моделей и балансирования между собой глубины и ширины (количества каналов) сети, а также разрешения изображений в сетке. Авторы [оригинальной статьи](https://arxiv.org/abs/1905.11946) предлагают новый метод составного масштабирования, который равномерно масштабирует глубину/ширину/разрешение с фиксированными пропорциями между ними. Из существующего метода «Neural Architecture Search» для создания новых сетей (ссылки на этот метод даны в статье) и своего метода масштабирования получают новый класс моделей под названием EfficientNets.
   * [оригинальная статья](https://arxiv.org/abs/1905.11946)
   * обзор оригинальной статьи [на русском](https://habr.com/ru/company/ods/blog/472672/#4-efficientnet-rethinking-model-scaling-for-convolutional-neural-networks)
-  * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet)
+  * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet) для TensorFlow
+  * [видео1](https://youtu.be/4U2WO8ObGGU), [видео2](https://youtu.be/3svIm5UC94I), [видео3](https://youtu.be/Vhz0quyvR7I)
 
 -------
-<a name="SpineNet" />**SpineNet**
+<a name="EfficientDet" />![EfficientDet](data/2020.01.28_EfficientDet.png)
+
+**EfficientDet** применяется для обнаружения объектов. Архитектура показана на рисунке ниже. Состоит из EfficientNet в качестве основы, к которой приделан слой по работе с пирамидой признаков под названием BiFPN, за которым идет «стандартная» сеть вычисления класс/рамка объекта.
+  * [оригинальная статья](https://arxiv.org/abs/1911.09070)
+  * [исходный код](https://github.com/xuannianz/EfficientDet) для TensorFlow
+  * [исходный код](https://github.com/toandaominh1997/EfficientDet.Pytorch) для PyTorch
+  * [видео1](https://youtu.be/UCPxzFPdAf8), [видео2](https://youtu.be/11jDC8uZL0E)
+
+![EfficientDet architecture](data/2020.01.28_EfficientDet_architecture.png)
+
+Рисунок — Архитектура EfficientDet = EfficientNet + BiFPN + сеть вычисления класс/рамка
+
+-------
+<a name="SpineNet" />![SpineNet](data/2020.01.28_SpineNet.png)
+
+**SpineNet** применяется для обнаружения объектов на изображении.
+  * [оригинальная статья](https://arxiv.org/abs/1912.05027)
+  * исходного кода не нашел
+  * [SpineNet online demo](http://zeus.robots.ox.ac.uk/spinenet/demo.html)
+  * видео пояснений не нашел
 
 -------
 <a name="CenterNet" />![CenterNet](data/2020.01.28_CenterNet.png)
@@ -41,24 +62,33 @@
   * [оригинальная статья](https://arxiv.org/abs/1904.08900) по CornerNet-Lite
 
 -------
-<a name="ThunderNet" />**ThunderNet**
+<a name="ThunderNet" />![ThunderNet](data/2020.01.28_ThunderNet.png)
+
+**ThunderNet** применяется для обнаружения объектов на изображении.
   * [оригинальная статья](https://arxiv.org/abs/1903.11752)
+
+![ThunderNet architecture](data/2020.01.28_ThunderNet_architecture.png)
+
+Рисунок — Архитектура ThunderNet
 
 -------
 <a name="CSPNet" />![CSPNet](data/2020.01.28_CSPNet.png)
 
-**CSPNet** (**C**ross **S**tage **P**artial **Net**work) работает на фреймворке [Darknet](https://github.com/AlexeyAB/darknet). Метод применяется не сам по себе, а как *улучшение* уже существующих остаточных нейросетей (residual neural networks). Основная концепция в том, чтобы поток градиента распространялся по разным сетевым путям через разделения потока градиента. Таким образом распространяемая информация о градиенте может иметь большую корреляционную разницу, если переключать этапы конкатенации и перехода. Кроме того, CSPNet может значительно сократить объем вычислений и повысить скорость вывода и точность. Как видно из картинки выше, суть CSPNet в более сложной обработки [пирамид фичей](https://youtu.be/4SxOkIN0CmA?t=495) (feature pyramid network, FPN).
+**CSPNet** (**C**ross **S**tage **P**artial **Net**work) работает на фреймворке [Darknet](https://github.com/AlexeyAB/darknet). Метод применяется не сам по себе, а как *улучшение* уже существующих остаточных нейросетей (residual neural networks). Основная концепция в том, чтобы поток градиента распространялся по разным сетевым путям через разделения потока градиента. Таким образом распространяемая информация о градиенте может иметь большую корреляционную разницу, если переключать этапы конкатенации и перехода. Кроме того, CSPNet может значительно сократить объем вычислений и повысить скорость вывода и точность. Как видно из картинки выше, суть CSPNet в более сложной обработки [пирамид фичей](https://youtu.be/4SxOkIN0CmA?t=495) (feature pyramid network, [FPN](https://arxiv.org/abs/1612.03144)).
   * [оригинальная статья](https://arxiv.org/abs/1911.11929v1)
   * [исходный код](https://github.com/WongKinYiu/CrossStagePartialNetworks)
 
 ![Feature pyramid network, FPN](data/2020.01.28_feature_pyramid_network.png)
-Пример пирамиды фичей
+
+Рисунок — Пример пирамиды фичей
 
 -------
 <a name="DetNASNet" />**DetNASNet**
-
+  * [оригинальная статья](https://arxiv.org/abs/1903.10979)
+  * [исходный код](https://github.com/megvii-model/DetNAS)
 -------
 <a name="SM-NAS" />**SM-NAS**
+  * [оригинальная статья](https://arxiv.org/abs/1911.09929)
 
 -------
 <a name="GNN" />![Graph Neural Network](data/2020.01.28_graph_neural_network.png)
@@ -70,9 +100,14 @@
 
 -------
 <a name="AmoebaNet" />**AmoebaNet**
+  * [оригинальная статья](https://arxiv.org/abs/1802.01548)
+  * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/amoeba_net)
 
 -------
-<a name="DPM" />**DPM** (**не** нейросеть)
+<a name="DPM" />**DPM**, **D**eformable **P**art **M**odel detector, **не** нейросеть.
+  * [видео демо](https://youtu.be/3LGGMe1wZGY)
+
+Есть большой [обзор обнаружения объектов за 20 лет](https://arxiv.org/pdf/1905.05055v2.pdf). Если будет время, то прочитаю его и выделю основные моменты.
 
 Спасибо за внимание!
 
