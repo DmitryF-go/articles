@@ -16,6 +16,8 @@
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 480)
 ---
+   * Course. [Machine Learning with Python](https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v) by sentdex — 72 videos
+   * Course. [mlcourse.ai](https://www.youtube.com/playlist?list=PLVlY_7IJCMJeRfZ68eVfEcu-UcN9BbwiX) from [mlcourse.ai](https://mlcourse.ai/) by Yury Kashnitsky ([ods.ai](https://ods.ai/)) — 23 videos
    * Course. [Robotics: Perception](https://www.coursera.org/learn/robotics-perception) — 4 weeks
    * Course. [Basics of Modern Image Analysis (2016)](https://www.youtube.com/playlist?list=PLuRaSnb3n4kRVLplnBQYYN39S-fzOlM-e)
    * Course. In Russian. [Практика программирования на Python3 (2019)](https://www.youtube.com/playlist?list=PLRDzFCPr95fLuusPXwvOPgXzBL3ZTzybY) from Тимофей Хирьянов
