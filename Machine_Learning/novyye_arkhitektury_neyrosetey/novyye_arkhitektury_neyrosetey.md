@@ -20,8 +20,9 @@ TODO list:
   - [CSPNet](#CSPNet)
   - [DetNASNet](#DetNASNet)
   - [SM-NAS](#SM-NAS)
-  - [Graph Neural Network](#GNN)
   - [AmoebaNet](#AmoebaNet)
+  - [Graph Neural Network](#GNN)
+  - [Growing Neural Cellular Automata](#cellular_automata)
   - [DPM](#DPM)
 
 -------
@@ -92,6 +93,11 @@ TODO list:
   * [оригинальная статья](https://arxiv.org/abs/1911.09929)
 
 -------
+<a name="AmoebaNet" />**AmoebaNet**
+  * [оригинальная статья](https://arxiv.org/abs/1802.01548)
+  * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/amoeba_net)
+
+-------
 <a name="GNN" />![Graph Neural Network](data/2020.01.28_graph_neural_network.png)
 
 **Graph Neural Network** или **нейронная сеть на графе**, где искусственные нейроны — это узлы графа, а соединения между нейронами — это ребра графа. Очень полезны для решения задач машинного обучения на графах. А на графах можно сделать очень многое и даже прововодить обработку изображений. Наиболее популярные библиотеки для машинного обучения на графах: [PyTorch Geometric](https://github.com/rusty1s/pytorch_geometric) для PyTorch, [Graph Nets](https://github.com/deepmind/graph_nets) для TensorFlow, [Deep Graph](https://www.dgl.ai) самая удобная для начала.
@@ -100,13 +106,14 @@ TODO list:
   * [документация](https://docs.dgl.ai/tutorials/basics/1_first.html) библиотеки DGL (**D**eep **G**raph **L**ibrary)
 
 -------
-<a name="AmoebaNet" />**AmoebaNet**
-  * [оригинальная статья](https://arxiv.org/abs/1802.01548)
-  * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/amoeba_net)
+<a name="cellular_automata" />**Growing Neural Cellular Automata**
+  * [видео](https://youtu.be/9Kec_7WFyp0) by Yannic Kilcher
 
 -------
 <a name="DPM" />**DPM**, **D**eformable **P**art **M**odel detector, **не** нейросеть.
   * [видео демо](https://youtu.be/3LGGMe1wZGY)
+  * [интерактивная статья](https://distill.pub/2020/growing-ca/)
+  * игра [«Жизнь»](https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%C2%AB%D0%96%D0%B8%D0%B7%D0%BD%D1%8C%C2%BB)
 
 Спасибо за внимание!
 
