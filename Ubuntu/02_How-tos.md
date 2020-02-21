@@ -45,10 +45,10 @@ It takes 5 minutes, but I would like to get rid of this problem in the future.
 # Temporary addition
 export PATH=$PATH:/usr/bin
 
-# Permanent for ALL users on the operating system
+# Permanently add to PATH for ALL users
 sudo nano /etc/environment
 # Edit the file. Make sure that the path is something like this:
-# PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+# PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/ASAP/bin"
 # Run environment file to effect changes.
 . /etc/environment
 
@@ -356,7 +356,13 @@ find . -iname "*.jpg" | wc -l    2>/dev/null  # count JPG files in the local dir
 ---
 ### <a name="deb" />Install deb file
 
-```shell
+```shell script
+sudo dpkg -i my.deb
+```
+If there are broken dependences:
+```shell script
+sudo apt --fix-broken install
+# and then
 sudo dpkg -i my.deb
 ```
 

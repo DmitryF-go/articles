@@ -1,6 +1,7 @@
    - [Task](#task)
    - [Installations](#install)
       - [All other different software](#other-software)
+      - [ASAP](#asap)
       - [Chromium](#Chromium)
       - [Elastix](#Elastix)
       - [Emacs](#Emacs)
@@ -39,6 +40,30 @@ sudo apt install traceroute  # traceroute command
 # Or in one command
 sudo apt install htop git mc autoconf make curl gcc gcc-6 g++ g++-6 \
                  net-tools traceroute
+```
+
+----
+#### <a name="asap" />ASAP
+[ASAP](https://github.com/computationalpathologygroup/ASAP),
+**A**utomated **S**lide **A**nalysis **P**latform is an open source platform for visualizing,
+annotating and automatically analyzing whole-slide histopathology images.
+
+Download DEB file from [here](https://github.com/computationalpathologygroup/ASAP/releases).
+```shell script
+# Fix broken dependences
+sudo apt --fix-broken install
+# Install
+sudo dpkg -i ASAP-1.9-Linux-Ubuntu1804.deb
+
+# Permanently add /opt/ASAP/bin to PATH for ALL users
+sudo nano /etc/environment
+# Edit the file. Make sure that the path is something like this:
+# PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/ASAP/bin"
+# Run environment file to effect changes.
+. /etc/environment
+
+# Check it
+ASAP &  # run ASAP
 ```
 
 ----
