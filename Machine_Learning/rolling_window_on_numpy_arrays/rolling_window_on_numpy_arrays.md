@@ -1,7 +1,7 @@
 # Сканирующее окно по массивам NumPy
 [Опубликовано на Хабре](https://habr.com/ru/post/489734/)
 
-[CoLab блокнот](https://colab.research.google.com/drive/1Zru_-zzbtylgitbwxbi0eDBNhwr8qYl6) с примерами
+[CoLab блокнот](https://colab.research.google.com/drive/1Zru_-zzbtylgitbwxbi0eDBNhwr8qYl6) с примерами.
 
 Возможно сделать [скользящее окно](https://wiki.loginom.ru/articles/windowing-method.html) (rolling window, [sliding window](https://stackoverflow.com/questions/8269916/what-is-sliding-window-algorithm-examples), moving window) по массивам NumPy на языке программирования Python **без явных циклов**. В данной статье рассматривается создание одно-, двух-, трех- и N-мерных скользящих окон по массивам NumPy. В результате скорость обработки данных увеличивается в несколько тысяч раз и сравнима по скорости с языком программирования **С**.
 
@@ -104,18 +104,16 @@ def roll(a,      # ND array
 
 ```python
 def show_results(a, b, dx=1, dy=1):
-    axis = a.ndim  # number of dimensions
-    # np.all over 2 dimensions of the rolling 2D window
-    bool_array = np.all(np.all(
-            roll(a, b, dx, dy) == b,
-        axis=axis),axis=axis)
+    n = a.ndim  # number of dimensions
+    # np.all over 2 dimensions of the rolling 2D window for 4D array
+    bool_array = np.all(roll(a, b, dx, dy) == b, axis=(n, n+1))
     counts = np.count_nonzero(bool_array)
     coords = np.transpose(np.nonzero(bool_array)) * [dy, dx]
     print("Found {counts} elements with coordinates:\n{coords}".format(
         counts=counts, coords=coords))
 ```
 
-Здесь `np.all` применяется к двум размерностям 2D скользящего окна. Для получения правильных координат совпадения `coords` результат домножается на вертикальный и горизонтальный шаги `[dy, dx]` скользящего окна.
+Здесь `np.all` применяется к двум размерностям 2D скользящего окна по четырехмерному 4D массиву. Для получения правильных координат совпадения `coords` результат домножается на вертикальный и горизонтальный шаги `[dy, dx]` скользящего окна.
 
 ---
 ## <a name="3d">3. Скользящее 3D окно по ND массиву в Numpy</a>
@@ -150,11 +148,9 @@ def roll(a,      # ND array
 
 ```python
 def show_results(a, b, dx=1, dy=1, dz=1):
-    axis = a.ndim  # number of dimensions == 3
-    # np.all over 3 dimensions of the rolling 3D window
-    bool_array = np.all(np.all(np.all(
-            roll(a, b, dx, dy, dz) == b,
-        axis=axis), axis=axis), axis=axis)
+    n = a.ndim  # number of dimensions == 3
+    # np.all over 3 dimensions of the rolling 3D window for 6D array
+    bool_array = np.all(roll(a, b, dx, dy, dz) == b, axis=(n, n+1, n+2))
     counts = np.count_nonzero(bool_array)
     coords = np.transpose(np.nonzero(bool_array)) * [dz, dy, dx]
     print("Found {counts} elements with coordinates:\n{coords}".format(
@@ -215,9 +211,8 @@ def show_results(a, b, d=None):
     if d is None:  # step sizes are equal to 1 by default
         d = np.ones(m, dtype=np.uint32)
     bool_array = roll(a, b, d) == b
-    # np.all over M dimensions of the rolling MD window
-    for i in range(m):
-        bool_array = np.all(bool_array, axis=n)
+    # np.all over M dimensions of the rolling MD window for (N+M)D array
+    bool_array = np.all(bool_array, axis=tuple(range(n, n + m)))
     counts = np.count_nonzero(bool_array)
     # flip 1D array of step sizes and concatenate it with remaining dimensions
     s = np.concatenate((np.ones(n-m, dtype=int), np.flip(d)))
@@ -227,13 +222,12 @@ def show_results(a, b, d=None):
 ```
 
 Нетривиальные части функции `show_results` следующие:
-  * Создание логического (двоичного) массива `bool_array` или **маски** для найденных совпадений. Затем применение [`numpy.all`](https://docs.scipy.org/doc/numpy/reference/generated/numpy.all.html) ко всем `m` размерностям для проверки, все ли элементы массива в данном измерении имеют значение `True`. Обратите внимание, что `bool_array` — это ND массив и он имеет `axis=n`, но `np.all` применяется `m` раз по всем размерностям скользящего MD окна:
+  * Создание логического (двоичного) массива `bool_array` или **маски** для найденных совпадений. Затем применение [`numpy.all`](https://docs.scipy.org/doc/numpy/reference/generated/numpy.all.html) ко всем `m` размерностям для проверки, все ли элементы массива в данном измерении имеют значение `True`. Обратите внимание, что `bool_array` — это (N+M)D массив, а `np.all` применяется `m` раз по всем размерностям скользящего MD окна:
 
 ```python
-    bool_array = roll(a, b, d) == b
-    # np.all over M dimensions of the rolling MD window
-    for i in range(m):
-        bool_array = np.all(bool_array, axis=n)
+    bool_array = roll(a, b, d) == b  # get (N+M)D boolean array
+    # np.all over M dimensions of the rolling MD window for (N+M)D array
+    bool_array = np.all(bool_array, axis=tuple(range(n, n + m)))
 ```
 
   * Еще одна нетривиальная часть для `M < N`. Если `M < N` мы должны не только перевернуть одномерный 1D массив шагов скользящего окна, но и объединить его с одномерным массивом из единиц для оставшихся размерностей `N-M` (шаг по высшим размерностям равен 1). Если `M == N`, то оставшиеся размерности равны нулю, и в этом случае конкатенация не требуется:
@@ -256,10 +250,9 @@ def get_results(a, b, d=None):  # the same as `show_results` function
     m = b.ndim  # rolling window dimensions == M
     if d is None:  # step sizes are equal to 1 by default
         d = np.ones(m, dtype=np.uint32)
-    bool_array = roll(a, b, d) == b
-    # np.all over M dimensions of the rolling MD window
-    for i in range(m):
-        bool_array = np.all(bool_array, axis=n)
+    bool_array = roll(a, b, d) == b  # get (N+M)D boolean array
+    # np.all over M dimensions of the rolling MD window for (N+M)D array
+    bool_array = np.all(bool_array, axis=tuple(range(n, n + m)))
     counts = np.count_nonzero(bool_array)
     # flip 1D array of step sizes and concatenate it with remaining dimensions
     s = np.concatenate((np.ones(n-m, dtype=int), np.flip(d)))
