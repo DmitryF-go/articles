@@ -11,8 +11,10 @@
    - [Backup and delete deprecated user accounts](#accounts)
    - [Configure `nginx`](#configure)
    - [Correctly delete `nginx`](#nginx)
+   - [File Compressor](#file-compressor)
    - [Install Certbot for `nginx`](#certbot)
    - [Packages for the website](#website)
+   - [SQLite 3](#sqlite)
    - [Work with Nginx server and its API](#work)
 
 ---
@@ -419,6 +421,14 @@ sudo apt autoremove
 ```
 
 ---
+## <a name="file-compressor" />File compressor library
+Install high-quality block-sorting file compressor library - development
+
+```shell script
+sudo apt install libbz2-dev
+```
+
+---
 ## <a name="certbot" />Install Certbot for `nginx`
 
 [Link to Certbot installation instruction](https://certbot.eff.org/lets-encrypt/ubuntubionic-nginx)
@@ -492,6 +502,14 @@ sudo apt install python3-flask
 # a mail proxy server, and a generic TCP/UDP proxy server,
 # originally written by Igor Sysoev.
 sudo apt install nginx
+```
+
+---
+## <a name="sqlite" />SQLite 3
+Install SQLite 3 development files:
+
+```shell script
+sudo apt install libsqlite3-dev
 ```
 
 ---
