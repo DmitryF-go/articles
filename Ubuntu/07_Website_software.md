@@ -11,7 +11,7 @@
    - [Backup and delete deprecated user accounts](#accounts)
    - [Configure `nginx`](#configure)
    - [Correctly delete `nginx`](#nginx)
-   - [File Compressor](#file-compressor)
+   - [File compressor library](#file-compressor)
    - [Install Certbot for `nginx`](#certbot)
    - [Packages for the website](#website)
    - [SQLite 3](#sqlite)
