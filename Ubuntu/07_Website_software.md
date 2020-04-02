@@ -267,6 +267,7 @@ sudo usermod -a -G xray sergeko
 sudo usermod -a -G xray toryscepeleva
 sudo usermod -a -G xray malyshevvalery
 sudo usermod -a -G xray pavlenko
+sudo usermod -a -G xray ahmed
 ```
 
 Give write permission for `xray` group:
