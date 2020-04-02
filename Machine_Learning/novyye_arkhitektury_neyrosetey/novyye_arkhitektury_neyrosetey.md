@@ -27,6 +27,7 @@ TODO list:
   - [DPM](#DPM)
 
 
+
 [Object Detection in 20 Years](https://arxiv.org/pdf/1905.05055v2.pdf) - большой обзор нейросетей для обнаружения объектов за 20 лет на 400+ статей.
 
 [The Neural Network Zoo](https://www.asimovinstitute.org/neural-network-zoo/) - зоопарк нейросетей, содержимое которого постоянно меняется.
