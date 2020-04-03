@@ -18,6 +18,7 @@ TODO list:
   - [CenterNet](#CenterNet)
   - [ThunderNet](#ThunderNet)
   - [CSPNet](#CSPNet)
+  - [DenseNet](#DenseNet)
   - [DetNASNet](#DetNASNet)
   - [SM-NAS](#SM-NAS)
   - [AmoebaNet](#AmoebaNet)
@@ -98,6 +99,11 @@ TODO list:
 ![Feature pyramid network, FPN](data/2020.01.28_feature_pyramid_network.png)
 
 Рисунок — Пример пирамиды фичей
+
+-------
+## <a name="DenseNet" />DenseNet
+DenseNet (Densely Connected Convolutional Network) была предложена в 2017 году. Успех ResNet (Deep Residual Network) позволил предположить, что укороченное соединение в CNN позволяет обучать более глубокие и точные модели. Авторы проанализировали это наблюдение и представили компактно соединенный блок, который соединяет каждый слой с каждым другим слоем.
+  * [оригинальная статья](https://arxiv.org/abs/1608.06993)
 
 -------
 ## <a name="DetNASNet" />DetNASNet
