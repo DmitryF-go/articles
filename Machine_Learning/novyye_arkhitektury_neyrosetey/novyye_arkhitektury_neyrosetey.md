@@ -10,7 +10,9 @@ TODO list:
   * Посмотрю источники еще на [Papers With Code](https://paperswithcode.com).
   * Сделаю обзор статей из [этого списка](https://github.com/zhousy1993/paper). Может, что интересное будет.
 
-В последние годы появилось множество новых архитектур нейронных сетей. Еще больше архитектур нейросетей не получили достаточной популярности, но имеют шансы стать популярными в ближайшем будущем. В этой статье кратко рассматриваются некоторые архитектуры нейросетей, чтобы найти будущие направления в этой быстро развивающейся области.
+В последние годы появилось множество новых архитектур нейронных сетей. Еще больше архитектур нейросетей не получили достаточной популярности, но имеют шансы стать популярными в ближайшем будущем. В этой статье кратко рассматриваются некоторые архитектуры нейросетей, чтобы найти (или хотя бы попытаться найти) будущие направления в этой быстро развивающейся области.
+
+Статья не претендует на полноту охвата. Автор уверен, что пока писал эту статью, появилось еще много новых архитектур.
 
   - [EfficientNet](#EfficientNet)
   - [EfficientDet](#EfficientDet)
@@ -26,6 +28,7 @@ TODO list:
   - [Growing Neural Cellular Automata](#cellular_automata)
   - [Импульсная нейронная сеть](#spiking-nn)
   - [DPM](#DPM)
+  - [Выводы](#conclusions)
 
 
 
@@ -151,10 +154,17 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 -------
 ## <a name="DPM" />DPM
 
-**DPM**, **D**eformable **P**art **M**odel detector, **не** нейросеть.
+**DPM**, **D**eformable **P**art **M**odel detector, **не** нейросеть. Была популярна при обнаружении пешеходов где-то в 2009 году, а затем, как пишут [в этой статье](https://arxiv.org/pdf/1905.05055v2.pdf), уступила первенство алгоритму Integral Channel Features ([ICF](https://pages.ucsd.edu/~ztu/publication/dollarBMVC09ChnFtrs_0.pdf)).
+  * [Object Detection with Discriminatively Trained Part Based Models](http://cs.brown.edu/people/pfelzens/papers/lsvm-pami.pdf)
+  * [Object Detection with Grammar Models](http://people.cs.uchicago.edu/~rbg/papers/grammar-nips11.pdf)
+  * [30Hz Object Detection with DPM V5](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.703.7588&rep=rep1&type=pdf)
   * [видео демо](https://youtu.be/3LGGMe1wZGY)
   * [интерактивная статья](https://distill.pub/2020/growing-ca/)
   * игра [«Жизнь»](https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%C2%AB%D0%96%D0%B8%D0%B7%D0%BD%D1%8C%C2%BB)
+
+-------
+## <a name="conclusions" />Выводы
+
 
 Спасибо за внимание!
 
