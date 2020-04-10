@@ -42,27 +42,28 @@ TODO list:
 ## <a name="EfficientNet" />EfficientNet
 ![EfficientNet](data/2020.01.28_EfficientNet.png)
 
-**EfficientNet** — класс новых моделей, который получился из изучения масштабирования (скейлинг, scaling) моделей и балансирования между собой глубины и ширины (количества каналов) сети, а также разрешения изображений в сетке. Авторы [оригинальной статьи](https://arxiv.org/abs/1905.11946) предлагают новый метод составного масштабирования, который равномерно масштабирует глубину/ширину/разрешение с фиксированными пропорциями между ними. Из существующего метода под названием «Neural Architecture Search» ([NAS](https://en.wikipedia.org/wiki/Neural_architecture_search), [статья1](https://arxiv.org/abs/1611.01578), [статья2](https://arxiv.org/abs/1807.11626), [видео](https://youtu.be/gZZKjiAKc5s)) для автоматического создания новых сетей и своего собственного метода масштабирования авторы получают новый класс моделей под названием EfficientNets.
+**EfficientNet** — класс новых моделей, который получился из изучения масштабирования (скейлинг, scaling) моделей и балансирования между собой глубины и ширины (количества каналов) сети, а также разрешения изображений в сети. Авторы [оригинальной статьи](https://arxiv.org/abs/1905.11946) предлагают новый метод составного масштабирования (compound scaling method), который равномерно масштабирует глубину/ширину/разрешение с фиксированными пропорциями между ними. Из существующего метода под названием «Neural Architecture Search» ([NAS](https://en.wikipedia.org/wiki/Neural_architecture_search), [статья1](https://arxiv.org/abs/1611.01578), [статья2](https://arxiv.org/abs/1807.11626), [видео](https://youtu.be/gZZKjiAKc5s)) для автоматического создания новых сетей и своего собственного метода масштабирования авторы получают новый класс моделей под названием EfficientNets.
 
   * [оригинальная статья](https://arxiv.org/abs/1905.11946): «EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks»
   * обзор оригинальной статьи [на русском](https://habr.com/ru/company/ods/blog/472672/#4-efficientnet-rethinking-model-scaling-for-convolutional-neural-networks)
   * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet) для TensorFlow
-  * [видео1](https://youtu.be/3svIm5UC94I), [видео2.1](https://youtu.be/4U2WO8ObGGU), [видео2.2](https://youtu.be/LRpzb17B1BM)
+  * [видео1](https://youtu.be/3svIm5UC94I), [видео2.1](https://youtu.be/4U2WO8ObGGU), [видео2.2](https://youtu.be/LRpzb17B1BM), [видео3](https://youtu.be/K4XXS4Tn1Ow)
 
 -------
 ## <a name="EfficientDet" />EfficientDet
 
 ![EfficientDet](data/2020.01.28_EfficientDet.png)
 
-**EfficientDet** применяется для обнаружения объектов. Архитектура показана на рисунке ниже. Состоит из EfficientNet в качестве основы, к которой приделан слой по работе с пирамидой признаков под названием BiFPN, за которым идет «стандартная» сеть вычисления класс/рамка объекта.
+**EfficientDet** применяется для обнаружения объектов. Архитектура показана на рисунке ниже. Состоит из [EfficientNet](#EfficientNet) в качестве основы, к которой приделан слой по работе с пирамидой признаков под названием BiFPN, за которым идет «стандартная» сеть вычисления класс/рамка объекта.
+
   * [оригинальная статья](https://arxiv.org/abs/1911.09070)
   * [исходный код](https://github.com/xuannianz/EfficientDet) для TensorFlow
   * [исходный код](https://github.com/toandaominh1997/EfficientDet.Pytorch) для PyTorch
-  * [видео1](https://youtu.be/UCPxzFPdAf8), [видео2](https://youtu.be/11jDC8uZL0E)
+  * [видео1](https://youtu.be/UCPxzFPdAf8)
 
 ![EfficientDet architecture](data/2020.01.28_EfficientDet_architecture.png)
 
-Рисунок — Архитектура EfficientDet = EfficientNet + BiFPN + сеть вычисления класс/рамка
+Рисунок — Архитектура EfficientDet == EfficientNet + BiFPN + сеть вычисления класс/рамка
 
 -------
 ## <a name="SpineNet" />SpineNet
@@ -167,7 +168,10 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 
 -------
 ## <a name="conclusions" />Выводы
-
+Видны усилия исследователей в направлении:
+   * «нейросеть генерирует нейросеть»;
+   * автоматический поиск оптимальных параметров нейросети;
+   * механизм внимания (attention mechanism).
 
 Спасибо за внимание!
 
