@@ -88,9 +88,21 @@ TODO list:
 ## <a name="CenterNet" />CenterNet
 ![CenterNet](data/2020.01.28_CenterNet.png)
 
-**CenterNet** а также **CornerNet-Lite** считаются мейнстримовыми (2019 год) системами обнаружения объектов. Статья «[Объекты как точки](https://arxiv.org/abs/1904.07850)»
-  * [оригинальная статья](https://arxiv.org/abs/1808.01244) по CenterNet
-  * [оригинальная статья](https://arxiv.org/abs/1904.08900) по CornerNet-Lite
+**CenterNet** а также **CornerNet-Lite** считались на 2019 год мейнстримовыми *легковесными* системами обнаружения объектов (cтатья «[Объекты как точки](https://arxiv.org/abs/1904.07850)») в реальном времени.
+
+CenterNet моделирует объект как одну точку, которая находится в центре ограничительной рамки. Размер объекта, его ориентация, поза и т.д. извлекаются в последствии через характеристики изображения (image features) около полученной точки. Авторы подают входное изображение в полносвязную сверточную сеть, которая генерирует тепловую карту (heatmap). Пики на этой тепловой карте соответствуют центрам объектов. Характеристики изображения в каждом пике тепловой карты предсказывают размеры ограничительной рамки вокруг объекта. С помощью CenterNet авторы статьи экспериментируют с определением 3D размеров объектов и оценкой позы человека по двумерному изображению.
+
+В другой [статье](https://arxiv.org/abs/1904.08189v3) исследователи используют 3 точки: левый верхний угол, правый нижний угол и центр объекта для более точного определения положения объекта.
+
+![CenterNet diagram](data/2020.04.14_CenterNet_diagram.png)
+
+Рисунок – Диаграмма CenterNet
+
+CornerNet является предшественником CenterNet. CornerNet обнаруживает объект, как пару точек: верхний левый и правый нижний углы ограничительной рамки (bounding box). Таким образом распознавание по набору фиксированных рамкок (anchor box), как у нейросетей SSD и YOLO, заменяется на определение пары точек верхнего левого и правого нижнего углов ограничительной рамки вокруг объекта. Также авторы предлагают архитектуру на основе последовательности нескольких нейросетей типа «песочные часы», которые до этого не использовались для определения объектов.
+
+  * [статья](https://arxiv.org/abs/1904.08189v3) по CenterNet: «CenterNet: Keypoint Triplets for Object Detection» + [исходный код 1](https://github.com/xingyizhou/CenterNet) + [исходный код 2](https://paperswithcode.com/paper/centernet-object-detection-with-keypoint)
+  * [статья](https://arxiv.org/abs/1904.08900) по CornerNet-Lite: «CornerNet-Lite: Efficient Keypoint Based Object Detection» + [исходный код](https://paperswithcode.com/paper/190408900)
+  * [статья](https://arxiv.org/abs/1808.01244) по CornerNet: «CornerNet: Detecting Objects as Paired Keypoints» + [исходный код](https://paperswithcode.com/paper/cornernet-detecting-objects-as-paired) + [видео презентация](https://youtu.be/aJnvTT1-spc)
 
 -------
 ## <a name="ThunderNet" />ThunderNet
