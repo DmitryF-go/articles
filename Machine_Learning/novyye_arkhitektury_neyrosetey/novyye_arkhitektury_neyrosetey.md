@@ -100,6 +100,12 @@ CenterNet моделирует объект как одну точку, кото
 
 CornerNet является предшественником CenterNet. CornerNet обнаруживает объект, как пару точек: верхний левый и правый нижний углы ограничительной рамки (bounding box). Таким образом распознавание по набору фиксированных рамкок (anchor box), как у нейросетей SSD и YOLO, заменяется на определение пары точек верхнего левого и правого нижнего углов ограничительной рамки вокруг объекта. Также авторы предлагают архитектуру на основе последовательности нескольких нейросетей типа «песочные часы», которые до этого не использовались для определения объектов.
 
+В CornerNet применяется механизм «corner pooling» для определения углов ограничительной рамки вокруг объектов. В CenterNet добавляется механизм «center pooling» для определения центра рамки.
+
+![CornerNet top-left corner pooling layer](data/2020.04.15_CornerNet_top-left_corner_pooling.jpg)
+
+Рисунок – Механизм «corner pooling» для верхнего левого угла. Сканирование проходит справа налево для горизонтального «max-pooling» и снизу вверх для вертикального «max-pooling». Затем две карты характеристик (feature maps) слаживаются.
+
   * [статья](https://arxiv.org/abs/1904.08189v3) по CenterNet: «CenterNet: Keypoint Triplets for Object Detection» + [исходный код 1](https://github.com/xingyizhou/CenterNet) + [исходный код 2](https://paperswithcode.com/paper/centernet-object-detection-with-keypoint)
   * [статья](https://arxiv.org/abs/1904.08900) по CornerNet-Lite: «CornerNet-Lite: Efficient Keypoint Based Object Detection» + [исходный код](https://paperswithcode.com/paper/190408900)
   * [статья](https://arxiv.org/abs/1808.01244) по CornerNet: «CornerNet: Detecting Objects as Paired Keypoints» + [исходный код](https://paperswithcode.com/paper/cornernet-detecting-objects-as-paired) + [видео презентация](https://youtu.be/aJnvTT1-spc)
@@ -108,8 +114,10 @@ CornerNet является предшественником CenterNet. CornerNet
 ## <a name="ThunderNet" />ThunderNet
 ![ThunderNet](data/2020.01.28_ThunderNet.png)
 
-**ThunderNet** применяется для обнаружения объектов на изображении.
-  * [оригинальная статья](https://arxiv.org/abs/1903.11752)
+**ThunderNet** применяется для обнаружения объектов на изображении. Является легковесным двуступенчатым детектором. Как утверждают авторы, является первым детектором объектов в реальном времени, который был запущен на платформах [ARM](https://ru.wikipedia.org/wiki/ARM_(%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0) (мобильные телефоны и одноплатные компьютеры) со скоростью 24.1 fps (frames per second, кадры в секунду) и точностью сравнимой с MobileNet-SSD.
+
+  * [оригинальная статья](https://arxiv.org/abs/1903.11752): ThunderNet: Towards Real-time Generic Object Detection
+  * [результаты](https://github.com/search?q=ThunderNet) поиска примеров в GitHub (совсем немного)
 
 ![ThunderNet architecture](data/2020.01.28_ThunderNet_architecture.png)
 
@@ -119,9 +127,10 @@ CornerNet является предшественником CenterNet. CornerNet
 ## <a name="CSPNet" />CSPNet
 ![CSPNet](data/2020.01.28_CSPNet.png)
 
-**CSPNet** (**C**ross **S**tage **P**artial **Net**work) работает на фреймворке [Darknet](https://github.com/AlexeyAB/darknet). Метод применяется не сам по себе, а как *улучшение* уже существующих остаточных нейросетей (residual neural networks). Основная концепция в том, чтобы поток градиента распространялся по разным сетевым путям через разделения потока градиента. Таким образом распространяемая информация о градиенте может иметь большую корреляционную разницу, если переключать этапы конкатенации и перехода. Кроме того, CSPNet может значительно сократить объем вычислений и повысить скорость вывода и точность. Как видно из картинки выше, суть CSPNet в более сложной обработки [пирамид фичей](https://youtu.be/4SxOkIN0CmA?t=495) (feature pyramid network, [FPN](https://arxiv.org/abs/1612.03144)).
-  * [оригинальная статья](https://arxiv.org/abs/1911.11929v1)
-  * [исходный код](https://github.com/WongKinYiu/CrossStagePartialNetworks)
+**CSPNet** (**C**ross **S**tage **P**artial **Net**work) работает на фреймворке [Darknet](https://github.com/AlexeyAB/darknet), [сайт](https://pjreddie.com/darknet/). Метод применяется не сам по себе, а как *улучшение* уже существующих остаточных нейросетей (residual neural networks, ResNet). Основная концепция в том, чтобы поток градиента распространялся по разным сетевым путям через разделения потока градиента. Таким образом распространяемая информация о градиенте может иметь большую корреляцию, если переключать этапы конкатенации и перехода. CSPNet может значительно сократить объем вычислений и повысить скорость вывода и точность. Как видно из картинки выше, суть CSPNet заключается в более сложной обработки [пирамид фичей](https://youtu.be/4SxOkIN0CmA?t=495) (feature pyramid network, [FPN](https://arxiv.org/abs/1612.03144)).
+
+  * [оригинальная статья](https://arxiv.org/abs/1911.11929v1): CSPNet: A New Backbone that can Enhance Learning Capability of CNN
+  * [исходный код 1](https://github.com/WongKinYiu/CrossStagePartialNetworks), [исходный код 2](https://paperswithcode.com/paper/cspnet-a-new-backbone-that-can-enhance)
 
 ![Feature pyramid network, FPN](data/2020.01.28_feature_pyramid_network.png)
 
