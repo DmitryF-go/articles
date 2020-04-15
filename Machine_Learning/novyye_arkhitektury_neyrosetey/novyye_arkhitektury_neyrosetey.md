@@ -139,12 +139,14 @@ CornerNet является предшественником CenterNet. CornerNet
 -------
 ## <a name="DenseNet" />DenseNet
 DenseNet (Densely Connected Convolutional Network) была предложена в 2017 году. Успех ResNet (Deep Residual Network) позволил предположить, что укороченное соединение в CNN позволяет обучать более глубокие и точные модели. Авторы проанализировали это наблюдение и представили компактно соединенный блок, который соединяет каждый слой с каждым другим слоем.
+
   * [оригинальная статья](https://arxiv.org/abs/1608.06993)
 
 -------
 ## <a name="DetNASNet" />DetNASNet
 
 **DetNASNet** — 
+
   * [оригинальная статья](https://arxiv.org/abs/1903.10979)
   * [исходный код](https://github.com/megvii-model/DetNAS)
 
@@ -152,12 +154,14 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 <a name="SM-NAS" />SM-NAS
 
 **SM-NAS** — 
+
   * [оригинальная статья](https://arxiv.org/abs/1911.09929)
 
 -------
 ## <a name="AmoebaNet" />AmoebaNet
 
 **AmoebaNet** — также относится к алгоритмам по автоматическому созданию нейросетей. AmoebaNet использует [эволюционные алгоритмы](https://ru.wikipedia.org/wiki/%D0%AD%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B) вместо алгоритмов обучения с подкреплением для автоматического поиска оптимальных архитектур нейросетей. AmoebaNet использует то же простарство поиска (search space), что и NASNet. Является очень затратной по вычислениям и использует сотни TPU (Tensor Processing Units) для вычислений.
+
   * [оригинальная статья](https://arxiv.org/abs/1802.01548): «Regularized Evolution for Image Classifier Architecture Search»
   * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/amoeba_net)
 
@@ -166,6 +170,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 ![Graph Neural Network](data/2020.01.28_graph_neural_network.png)
 
 **Graph Neural Network** или **нейронная сеть на графе**, где искусственные нейроны — это узлы графа, а соединения между нейронами — это ребра графа. Очень полезны для решения задач машинного обучения на графах. А на графах можно сделать очень многое и даже прововодить обработку изображений. Наиболее популярные библиотеки для машинного обучения на графах: [PyTorch Geometric](https://github.com/rusty1s/pytorch_geometric) для PyTorch, [Graph Nets](https://github.com/deepmind/graph_nets) для TensorFlow, [Deep Graph](https://www.dgl.ai) самая удобная для начала.
+
   * [простой пример](https://colab.research.google.com/drive/1-lGZyrCaNwq1ub8qdH4_g19erjFz3tU-) в CoLab
   * [видео](https://youtu.be/bA261BF0bdk) by Siraj Raval
   * [документация](https://docs.dgl.ai/tutorials/basics/1_first.html) библиотеки DGL (**D**eep **G**raph **L**ibrary)
@@ -174,20 +179,23 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 ## <a name="cellular_automata" />Growing Neural Cellular Automata
 
 **Growing Neural Cellular Automata** — 
+
   * [видео](https://youtu.be/9Kec_7WFyp0) by Yannic Kilcher
 
 -------
 ## <a name="spiking-nn" />Импульсная нейронная сеть
 
 **Импульсная нейронная сеть** или **Spiking neural network**
-  * [Википедия](https://ru.wikipedia.org/wiki/%D0%98%D0%BC%D0%BF%D1%83%D0%BB%D1%8C%D1%81%D0%BD%D0%B0%D1%8F_%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C)
 
 Первая научная модель импульсной нейросети была предложена еще в 1952 году Аланом Ходжкином и Эндрю Хаксли, однако данный вид искусственных нейронных сетей известен немногим специалистам в этой области.
+
+  * [Википедия](https://ru.wikipedia.org/wiki/%D0%98%D0%BC%D0%BF%D1%83%D0%BB%D1%8C%D1%81%D0%BD%D0%B0%D1%8F_%D0%BD%D0%B5%D0%B9%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C)
 
 -------
 ## <a name="DPM" />DPM
 
 **DPM**, **D**eformable **P**art **M**odel detector, **не** нейросеть. Была популярна при обнаружении пешеходов где-то в 2009 году, а затем, как пишут [в этой статье](https://arxiv.org/pdf/1905.05055v2.pdf), уступила первенство алгоритму Integral Channel Features ([ICF](https://pages.ucsd.edu/~ztu/publication/dollarBMVC09ChnFtrs_0.pdf)).
+
   * [Object Detection with Discriminatively Trained Part Based Models](http://cs.brown.edu/people/pfelzens/papers/lsvm-pami.pdf)
   * [Object Detection with Grammar Models](http://people.cs.uchicago.edu/~rbg/papers/grammar-nips11.pdf)
   * [30Hz Object Detection with DPM V5](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.703.7588&rep=rep1&type=pdf)
