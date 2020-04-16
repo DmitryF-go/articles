@@ -4,18 +4,16 @@
    - [Interesting resources](#interesting-resources)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
-   * [Learning To See](https://www.youtube.com/playlist?list=PLiaHhY2iBX9ihLasvE8BKnS2Xg8AhY6iV) — 15 videos
+   * ML. [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) (not started)
+   * Courses. [Machine Learning Tokyo](https://www.youtube.com/channel/UC88RC_4egFjV9jfjBHwDuvg/playlists) video blog and GitHub [resource](https://github.com/Machine-Learning-Tokyo)
    * [Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) — lecture videos on YouTube
    * [CS231n Winter 2016](https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC) by Andrej Karpathy — 15 videos
-   * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
-   * ML. Machine Learning Crash Course: https://developers.google.com/machine-learning/crash-course (not started)
-   * Article [Artistic style transfer for Android](https://codelabs.developers.google.com/codelabs/tensorflow-style-transfer-android)
-   * Task. [YOLO Object Detection (TensorFlow tutorial)](https://youtu.be/4eIBisqx9_g)
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
    * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 480)
 ---
+   * Course. [AI for Medicine Specialization](https://www.coursera.org/specializations/ai-for-medicine)
    * Course. [Machine Learning with Python](https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v) by sentdex — 72 videos
    * Course. [mlcourse.ai](https://www.youtube.com/playlist?list=PLVlY_7IJCMJeRfZ68eVfEcu-UcN9BbwiX) from [mlcourse.ai](https://mlcourse.ai/) by Yury Kashnitsky ([ods.ai](https://ods.ai/)) — 23 videos
    * Course. [Robotics: Perception](https://www.coursera.org/learn/robotics-perception) — 4 weeks
@@ -65,6 +63,10 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
+   * Article [Artistic style transfer for Android](https://codelabs.developers.google.com/codelabs/tensorflow-style-transfer-android)
+   * Task. [YOLO Object Detection (TensorFlow tutorial)](https://youtu.be/4eIBisqx9_g)
+   * [Learning To See](https://www.youtube.com/playlist?list=PLiaHhY2iBX9ihLasvE8BKnS2Xg8AhY6iV) — 15 videos
    * [Series on Neural Networks](https://www.youtube.com/playlist?list=PLs8w1Cdi-zvavXlPXEAsWIh4Cgh83pZPO) — 3 videos
    * [Optimizing Neural Network Structures with Keras-Tuner](https://youtu.be/vvC15l4CY1Q) — 1 video
    * Video. [Graph Convolutional Networks](https://youtu.be/2bfxnj1J00A) and [article](https://medium.com/@julsimon/a-primer-on-graph-neural-networks-with-amazon-neptune-and-the-deep-graph-library-5ce64984a276) + [library](https://github.com/rusty1s/pytorch_geometric) — 1 video

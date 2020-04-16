@@ -6,13 +6,11 @@
 Предыдущая статья «[Нейросети. Куда это все движется](https://habr.com/ru/post/482794/)»
 
 TODO list:
-  * Поищу новые архитектуры за март месяц на YouTube.
-  * Посмотрю источники еще на [Papers With Code](https://paperswithcode.com).
   * Сделаю обзор статей из [этого списка](https://github.com/zhousy1993/paper). Может, что интересное будет.
 
 В последние годы появилось множество новых архитектур нейронных сетей. Еще больше архитектур нейросетей не получили достаточной популярности, но имеют шансы стать популярными в ближайшем будущем. В этой статье кратко рассматриваются некоторые архитектуры нейросетей, чтобы найти (или хотя бы попытаться найти) будущие направления в этой быстро развивающейся области. *В последнее время исследователи экспериментируют с сетями, которые автоматически создают другие сети; с механизмом внимания.*
 
-Статья не претендует на полноту охвата. Автор уверен, что пока писал эту статью, появилось еще много новых архитектур.
+Статья не претендует на полноту охвата. Автор уверен, что пока писал эту статью, появилось еще много новых архитектур. Например, смотрите здесь: https://paperswithcode.com/area/computer-vision.
 
   - [EfficientNet](#EfficientNet)
   - [EfficientDet](#EfficientDet)
@@ -21,6 +19,7 @@ TODO list:
   - [ThunderNet](#ThunderNet)
   - [CSPNet](#CSPNet)
   - [DenseNet](#DenseNet)
+  - [SAUNet](#SAUNet)
   - [DetNASNet](#DetNASNet)
   - [SM-NAS](#SM-NAS)
   - [AmoebaNet](#AmoebaNet)
@@ -146,10 +145,25 @@ CornerNet является предшественником CenterNet. CornerNet
 
 Рисунок — DenseNet с тремя плотными блоками
 
-DenseNet (Densely Connected Convolutional Network) была предложена в 2017 году. Успех ResNet (Deep Residual Network) позволил предположить, что укороченное соединение в CNN позволяет обучать более глубокие и точные модели. Авторы проанализировали это наблюдение и представили компактно соединенный (dense) блок, который соединяет каждый слой с каждым другим слоем.
+DenseNet (Densely Connected Convolutional Network) была предложена в 2017 году. Успех ResNet (Deep Residual Network) позволил предположить, что укороченное соединение в CNN позволяет обучать более глубокие и точные модели. Авторы проанализировали это наблюдение и представили компактно соединенный (dense) блок, который соединяет каждый слой с каждым другим слоем. Важно отметить, что, в отличие от ResNet, признаки («фичи») прежде чем они будут переданы в следующий слой не суммируются, а конкатенируются (объединяются, channel-wise concatenation) в единый тензор. При этом количество параметров сети DenseNet намного меньше, чем у сетей с такой же точностью работы. Авторы [утверждают](https://youtu.be/-W6y8xnd--U?t=366), что DenseNet работает особенно хорошо на малых датасетах.
 
   * [оригинальная статья](https://arxiv.org/abs/1608.06993): Densely Connected Convolutional Networks
-  * [реализация](https://github.com/liuzhuang13/DenseNet) на Torch, обученные модели и [реализации](https://github.com/liuzhuang13/DenseNet#other-implementations) на других фреймворках
+  * [видео презентация](https://youtu.be/-W6y8xnd--U)
+  * [видео реализация](https://youtu.be/QKtoh9FJIWQ) на Keras + [исходный код](https://github.com/Machine-Learning-Tokyo/DL-workshop-series/blob/master/Part%20I%20-%20Convolution%20Operations/ConvNets.ipynb) этой и _**многих других моделей**_ в CoLab
+  * [реализация](https://github.com/liuzhuang13/DenseNet) на Torch от автора, обученные модели и [реализации](https://github.com/liuzhuang13/DenseNet#other-implementations) на других фреймворках
+
+-------
+## <a name="SAUNet" />SAUNet
+**SAUNet** (**S**hape **A**ttentive **U-Net**) показывает наилучшие на начало 2020 года результаты по сегментации изображений МРТ сердца и предлагается автомами, как сеть по сегментации медицинских изображений.
+
+![SAUNet architecture](data/2020.04.16_SAUNet.jpg)
+
+Рисунок — SAUNet состоит из двух частей: одна часть обрабатывает текстуры (texture stream); вторая часть обрабатывает формы (gated shape stream). В инкодере текстур сети U-Net используются блоки DenseNet-121 (смотрите выше [DenseNet](#DenseNet)), а в декодере — «блоки внимания» (dual attention decoder block).
+
+Архитектура SAUNet является модульной и состоит из многих различных блоков: U-Net, [DenseNet](https://arxiv.org/abs/1608.06993), [Gated-SCNN](https://arxiv.org/abs/1907.05740) и механизма внимания на основе [Squeeze-and-Excitation Networks](https://arxiv.org/abs/1709.01507).
+
+  * [оригинальная статья](https://arxiv.org/abs/2001.07645v3): SAUNet: Shape Attentive U-Net for Interpretable Medical Image Segmentation
+  * [исходный код](https://github.com/sunjesse/shape-attentive-unet) на PyTorch
 
 -------
 ## <a name="DetNASNet" />DetNASNet
@@ -214,10 +228,14 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 
 -------
 ## <a name="conclusions" />Выводы
-Видны усилия исследователей в направлении:
-   * «нейросеть генерирует нейросеть»;
-   * автоматический поиск оптимальных параметров нейросети;
-   * механизм внимания (attention mechanism).
+Усилия исследователей в направлении:
+   * «нейросеть генерирует нейросеть», Neural Architecture Search (NAS);
+   * автоматический поиск оптимальных параметров нейросети, развитие идей AutoML;
+   * механизм внимания (attention mechanism), карты внимания;
+   * популярны модели типа «песочные часы», которые часто используются как основная (backbone) модель в модульных архитектурах;
+   * модульность, state-of-the-art (SOTA) архитектуры сотоят из многих частей.
+
+P.S. Рекомендую видео блог [ML Tokyo](https://www.youtube.com/playlist?list=PLaPdEEY26UXywkvfCy0tmRoQorSSTfYq3), в котором автор объясняет и **делает** нейросети на Keras. К сожалению, авторы большинства статей не делают читабельный рабочий код.
 
 Спасибо за внимание!
 

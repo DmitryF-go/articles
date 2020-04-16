@@ -206,11 +206,12 @@ Web sites for ML/DL:
    * https://www.pyimagesearch.com — Adrian Rosebrock's blog about Computer Vision, Deep Learning and OpenCV.
 
 Video channels to explain scientific publications in ML/DL:
+   * [ML Tokyo](https://www.youtube.com/channel/UC88RC_4egFjV9jfjBHwDuvg/playlists)
+   * [sentdex](https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ)
    * [Two Minute Papers](https://www.youtube.com/user/keeroyz)
    * [Henry AI Labs](https://www.youtube.com/channel/UCHB9VepY6kYvZjj0Bgxnpbw)
    * [Yannic Kilcher](https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew/featured)
    * [CodeEmporium](https://www.youtube.com/channel/UC5_6ZD6s8klmMu9TXEB_1IA/featured)
-   * [sentdex](https://www.youtube.com/channel/UCfzlCWGWYyIQ0aLC5w48gBQ)
 
 ---
 ### <a name="tensorflow-for-android" />TensorFlow for Android
