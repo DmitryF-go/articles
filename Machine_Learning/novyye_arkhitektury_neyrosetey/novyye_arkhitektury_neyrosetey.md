@@ -138,9 +138,18 @@ CornerNet является предшественником CenterNet. CornerNet
 
 -------
 ## <a name="DenseNet" />DenseNet
-DenseNet (Densely Connected Convolutional Network) была предложена в 2017 году. Успех ResNet (Deep Residual Network) позволил предположить, что укороченное соединение в CNN позволяет обучать более глубокие и точные модели. Авторы проанализировали это наблюдение и представили компактно соединенный блок, который соединяет каждый слой с каждым другим слоем.
+![A dense block with 5 layers and growth rate 4](data/2020.04.16_DenseNet_block.jpg)
 
-  * [оригинальная статья](https://arxiv.org/abs/1608.06993)
+Рисунок — Один плотный блок DenseNet c 5 слоями и скоростью роста k = 4. Каждый слой принимает все предыдущие карты признаков в качестве входных данных.
+
+![DenseNet with three dense blocks](data/2020.04.16_DenseNet_3_blocks.jpg)
+
+Рисунок — DenseNet с тремя плотными блоками
+
+DenseNet (Densely Connected Convolutional Network) была предложена в 2017 году. Успех ResNet (Deep Residual Network) позволил предположить, что укороченное соединение в CNN позволяет обучать более глубокие и точные модели. Авторы проанализировали это наблюдение и представили компактно соединенный (dense) блок, который соединяет каждый слой с каждым другим слоем.
+
+  * [оригинальная статья](https://arxiv.org/abs/1608.06993): Densely Connected Convolutional Networks
+  * [реализация](https://github.com/liuzhuang13/DenseNet) на Torch, обученные модели и [реализации](https://github.com/liuzhuang13/DenseNet#other-implementations) на других фреймворках
 
 -------
 ## <a name="DetNASNet" />DetNASNet
