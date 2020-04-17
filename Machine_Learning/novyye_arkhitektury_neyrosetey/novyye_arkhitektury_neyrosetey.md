@@ -8,9 +8,9 @@
 TODO list:
   * Сделаю обзор статей из [этого списка](https://github.com/zhousy1993/paper). Может, что интересное будет.
 
-В последние годы появилось множество новых архитектур нейронных сетей. Еще больше архитектур нейросетей не получили достаточной популярности, но имеют шансы стать популярными в ближайшем будущем. В этой статье кратко рассматриваются некоторые архитектуры нейросетей, чтобы найти (или хотя бы попытаться найти) будущие направления в этой быстро развивающейся области. *В последнее время исследователи экспериментируют с сетями, которые автоматически создают другие сети; с механизмом внимания.*
+Появилось много новых архитектур нейронных сетей. Еще больше архитектур не получили достаточной популярности, но имеют шансы стать популярными в будущем. В этой статье кратко рассматриваются некоторые архитектуры нейросетей, в основном по задаче обнаружения объектов, чтобы найти (или хотя бы попытаться найти) будущие направления в этой быстро развивающейся области.
 
-Статья не претендует на полноту охвата. Автор уверен, что пока писал эту статью, появилось еще много новых архитектур. Например, смотрите здесь: https://paperswithcode.com/area/computer-vision.
+Статья не претендует на полноту охвата и хорошее понимание прочитанных (по диагонали) статей. Автор уверен, что пока писал эту статью, появилось еще много новых архитектур. Например, смотрите здесь: https://paperswithcode.com/area/computer-vision.
 
   - [EfficientNet](#EfficientNet)
   - [EfficientDet](#EfficientDet)
@@ -43,7 +43,7 @@ TODO list:
 
 **EfficientNet** — класс новых моделей, который получился из изучения масштабирования (скейлинг, scaling) моделей и балансирования между собой глубины и ширины (количества каналов) сети, а также разрешения изображений в сети. Авторы [оригинальной статьи](https://arxiv.org/abs/1905.11946) предлагают новый метод составного масштабирования (compound scaling method), который равномерно масштабирует глубину/ширину/разрешение с фиксированными пропорциями между ними. Из существующего метода под названием «Neural Architecture Search» ([NAS](https://en.wikipedia.org/wiki/Neural_architecture_search), [статья1](https://arxiv.org/abs/1611.01578), [статья2](https://arxiv.org/abs/1807.11626), [видео](https://youtu.be/gZZKjiAKc5s)) для автоматического создания новых сетей и своего собственного метода масштабирования авторы получают новый класс моделей под названием EfficientNets.
 
-  * [оригинальная статья](https://arxiv.org/abs/1905.11946): «EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks»
+  * [оригинальная статья](https://arxiv.org/abs/1905.11946): EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks
   * обзор оригинальной статьи [на русском](https://habr.com/ru/company/ods/blog/472672/#4-efficientnet-rethinking-model-scaling-for-convolutional-neural-networks)
   * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet) для TensorFlow
   * [видео1](https://youtu.be/3svIm5UC94I), [видео2.1](https://youtu.be/4U2WO8ObGGU), [видео2.2](https://youtu.be/LRpzb17B1BM), [видео3](https://youtu.be/K4XXS4Tn1Ow)
@@ -55,7 +55,7 @@ TODO list:
 
 **EfficientDet** применяется для обнаружения объектов. Архитектура показана на рисунке ниже. Состоит из [EfficientNet](#EfficientNet) в качестве основы, к которой приделан слой по работе с пирамидой признаков под названием BiFPN, за которым идет «стандартная» сеть вычисления класс/рамка объекта.
 
-  * [оригинальная статья](https://arxiv.org/abs/1911.09070)
+  * [оригинальная статья](https://arxiv.org/abs/1911.09070): EfficientDet: Scalable and Efficient Object Detection
   * [исходный код](https://github.com/xuannianz/EfficientDet) для TensorFlow
   * [исходный код](https://github.com/toandaominh1997/EfficientDet.Pytorch) для PyTorch
   * [видео1](https://youtu.be/UCPxzFPdAf8)
@@ -167,32 +167,42 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 
 -------
 ## <a name="DetNASNet" />DetNASNet
+![DetNASNet architecture](data/2020.04.17_DetNASNet_architecture.jpg)
 
-**DetNASNet** — 
+Рисунок — Архитектура DetNASNet
 
-  * [оригинальная статья](https://arxiv.org/abs/1903.10979)
-  * [исходный код](https://github.com/megvii-model/DetNAS)
+Многие детекторы объектов работают на сетях, которые спроектированы для классификации изображений, что не оптимально, потому что определение объектов (object detection) и классификация изображений (image classification) являются различными задачами. **DetNASNet** использует подход под названием Neural Architecture Search ([NAS](https://en.wikipedia.org/wiki/Neural_architecture_search)) для разработки архитектур для определения объектов. Авторы утверждают, что они впервые применили процесс NAS, т.е. автоматический поиск оптимальных гиперпараметров нейросети, для оптимизации задачи определения объектов. Количесто вычислений составило 44 GPU-дня на наборе данных COCO. Достигнутая точность лучше, чем у ResNet-101, с гораздо меньшим количеством FLOP-пов.
+
+  * [оригинальная статья](https://arxiv.org/abs/1903.10979): DetNAS: Backbone Search for Object Detection
+  * [исходный код](https://github.com/megvii-model/DetNAS) на PyTorch
 
 -------
-<a name="SM-NAS" />SM-NAS
+## <a name="SM-NAS" />SM-NAS
+![SM-NAS AP](data/2020.04.17_SM-NAS_AP.jpg)
 
-**SM-NAS** — 
+Рисунок — Сравнение времени вывода (мс) и точности обнаружения (mAP) на наборе данных COCO.
 
-  * [оригинальная статья](https://arxiv.org/abs/1911.09929)
+В **SM-NAS** предлагается двухэтапная стратегия грубого поиска под названием Structural-to-Modular NAS (SM-NAS): первый этап поиска на структурном уровне направлен на поиск эффективной комбинации различных модулей; второй этап поиска на модульном уровне развивает каждый конкретный модуль и продвигает (какой-то) фронт Pareto вперед к более быстрой сети для конкретных задач.
+
+  * Исходный код *не найден*.
+  * [оригинальная статья](https://arxiv.org/abs/1911.09929): SM-NAS: Structural-to-Modular Neural Architecture Search for Object Detection
 
 -------
 ## <a name="AmoebaNet" />AmoebaNet
+![AmoebaNet-A architecture](data/2020.04.17_AmoebaNet-A_architecture.jpg)
 
-**AmoebaNet** — также относится к алгоритмам по автоматическому созданию нейросетей. AmoebaNet использует [эволюционные алгоритмы](https://ru.wikipedia.org/wiki/%D0%AD%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B) вместо алгоритмов обучения с подкреплением для автоматического поиска оптимальных архитектур нейросетей. AmoebaNet использует то же простарство поиска (search space), что и NASNet. Является очень затратной по вычислениям и использует сотни TPU (Tensor Processing Units) для вычислений.
+Рисунок — Архитектура сети AmoebaNet-A. Слева общая модель. В центре блок «Normal Cell». Справа блок «Reduction Cell».
 
-  * [оригинальная статья](https://arxiv.org/abs/1802.01548): «Regularized Evolution for Image Classifier Architecture Search»
+**AmoebaNet** также относится к алгоритмам по автоматическому созданию нейросетей. AmoebaNet использует [эволюционные алгоритмы](https://ru.wikipedia.org/wiki/%D0%AD%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5_%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%8B) вместо алгоритмов обучения с подкреплением для автоматического поиска оптимальных архитектур нейросетей. AmoebaNet использует то же простарство поиска (search space), что и [NASNet](https://arxiv.org/abs/1707.07012). Является очень затратной по вычислениям и использует *сотни* TPU (Tensor Processing Units) для вычислений.
+
+  * [оригинальная статья](https://arxiv.org/abs/1802.01548): Regularized Evolution for Image Classifier Architecture Search
   * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/amoeba_net)
 
 -------
 ## <a name="GNN" />Graph Neural Network
 ![Graph Neural Network](data/2020.01.28_graph_neural_network.png)
 
-**Graph Neural Network** или **нейронная сеть на графе**, где искусственные нейроны — это узлы графа, а соединения между нейронами — это ребра графа. Очень полезны для решения задач машинного обучения на графах. А на графах можно сделать очень многое и даже прововодить обработку изображений. Наиболее популярные библиотеки для машинного обучения на графах: [PyTorch Geometric](https://github.com/rusty1s/pytorch_geometric) для PyTorch, [Graph Nets](https://github.com/deepmind/graph_nets) для TensorFlow, [Deep Graph](https://www.dgl.ai) самая удобная для начала.
+**Graph Neural Network** или **нейронная сеть на графе**, где искусственные нейроны — это узлы графа, а соединения между нейронами — это ребра графа. Очень полезны для решения задач машинного обучения на графах, т.е. если задачу можно представить в виде какого-нибудь графа. А на графах можно сделать очень многое и даже прововодить обработку изображений. Наиболее популярные библиотеки для машинного обучения на графах: [PyTorch Geometric](https://github.com/rusty1s/pytorch_geometric) для PyTorch, [Graph Nets](https://github.com/deepmind/graph_nets) для TensorFlow, [Deep Graph](https://www.dgl.ai) самая удобная для начала ознакомления.
 
   * [простой пример](https://colab.research.google.com/drive/1-lGZyrCaNwq1ub8qdH4_g19erjFz3tU-) в CoLab
   * [видео](https://youtu.be/bA261BF0bdk) by Siraj Raval
@@ -217,7 +227,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 -------
 ## <a name="DPM" />DPM
 
-**DPM**, **D**eformable **P**art **M**odel detector, **не** нейросеть. Была популярна при обнаружении пешеходов где-то в 2009 году, а затем, как пишут [в этой статье](https://arxiv.org/pdf/1905.05055v2.pdf), уступила первенство алгоритму Integral Channel Features ([ICF](https://pages.ucsd.edu/~ztu/publication/dollarBMVC09ChnFtrs_0.pdf)).
+**DPM**, **D**eformable **P**art **M**odel detector, **не** нейросеть. Была популярна при обнаружении пешеходов где-то в 2009 году, а затем, как пишут [в этой статье](https://arxiv.org/pdf/1905.05055v2.pdf), уступила первенство алгоритму Integral Channel Features ([ICF](https://pages.ucsd.edu/~ztu/publication/dollarBMVC09ChnFtrs_0.pdf)), который затем уступил первенство нейросетям.
 
   * [Object Detection with Discriminatively Trained Part Based Models](http://cs.brown.edu/people/pfelzens/papers/lsvm-pami.pdf)
   * [Object Detection with Grammar Models](http://people.cs.uchicago.edu/~rbg/papers/grammar-nips11.pdf)
@@ -229,7 +239,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
 -------
 ## <a name="conclusions" />Выводы
 Усилия исследователей в направлении:
-   * «нейросеть генерирует нейросеть», Neural Architecture Search (NAS);
+   * «нейросеть генерирует нейросеть», Neural Architecture Search ([NAS](https://arxiv.org/abs/1611.01578) и [NASNet](https://arxiv.org/abs/1707.07012));
    * автоматический поиск оптимальных параметров нейросети, развитие идей AutoML;
    * механизм внимания (attention mechanism), карты внимания;
    * популярны модели типа «песочные часы», которые часто используются как основная (backbone) модель в модульных архитектурах;
