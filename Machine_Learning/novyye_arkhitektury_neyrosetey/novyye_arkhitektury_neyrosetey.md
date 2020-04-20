@@ -15,6 +15,8 @@
 
 Статья не претендует на полноту охвата и хорошее понимание прочитанных (по диагонали) статей. Автор уверен, что пока писал эту статью, появилось еще много новых архитектур. Например, смотрите здесь: https://paperswithcode.com/area/computer-vision.
 
+<cut />
+
   - [EfficientNet](#EfficientNet)
   - [EfficientDet](#EfficientDet)
   - [SpineNet](#SpineNet)
@@ -31,8 +33,6 @@
   - [Импульсная нейронная сеть](#spiking-nn)
   - [DPM](#DPM)
   - [Выводы](#conclusions)
-
-
 
 [Object Detection in 20 Years](https://arxiv.org/pdf/1905.05055v2.pdf) - большой обзор на 400+ статей для обнаружения объектов за 20 лет.
 
