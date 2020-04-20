@@ -52,7 +52,7 @@
   * [видео1](https://youtu.be/3svIm5UC94I), [видео2.1](https://youtu.be/4U2WO8ObGGU), [видео2.2](https://youtu.be/LRpzb17B1BM), [видео3](https://youtu.be/K4XXS4Tn1Ow)
 
 -------
-## <a name="EfficientDet" />EfficientDet
+## <a name="EfficientDet">EfficientDet</a>
 
 ![EfficientDet](data/2020.01.28_EfficientDet.png)
 
@@ -68,7 +68,7 @@
   * [видео1](https://youtu.be/UCPxzFPdAf8)
 
 -------
-## <a name="SpineNet" />SpineNet
+## <a name="SpineNet">SpineNet</a>
 
 ![SpineNet](data/2020.01.28_SpineNet.png)
 
@@ -87,7 +87,7 @@
   * [SpineNet online demo](http://zeus.robots.ox.ac.uk/spinenet/demo.html)
 
 -------
-## <a name="CenterNet" />CenterNet
+## <a name="CenterNet">CenterNet</a>
 ![CenterNet](data/2020.01.28_CenterNet.png)
 
 **CenterNet** и **CornerNet-Lite** считались на 2019 год мейнстримовыми *легковесными* системами обнаружения объектов  в реальном времени (cтатья «[Объекты как точки](https://arxiv.org/abs/1904.07850)»).
@@ -113,7 +113,7 @@ CornerNet является предшественником CenterNet. CornerNet
   * [статья](https://arxiv.org/abs/1808.01244) по CornerNet: «CornerNet: Detecting Objects as Paired Keypoints» + [исходный код](https://paperswithcode.com/paper/cornernet-detecting-objects-as-paired) + [видео презентация](https://youtu.be/aJnvTT1-spc)
 
 -------
-## <a name="ThunderNet" />ThunderNet
+## <a name="ThunderNet">ThunderNet</a>
 ![ThunderNet](data/2020.01.28_ThunderNet.png)
 
 **ThunderNet** применяется для обнаружения объектов на изображении. Является легковесным двуступенчатым детектором. Как утверждают авторы, является первым детектором объектов в реальном времени, который был запущен на платформах [ARM](https://ru.wikipedia.org/wiki/ARM_(%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0) (мобильные телефоны и одноплатные компьютеры) со скоростью 24.1 fps (frames per second, кадров в секунду) и точностью сравнимой с MobileNet-SSD.
@@ -126,7 +126,7 @@ CornerNet является предшественником CenterNet. CornerNet
 Рисунок — Архитектура ThunderNet
 
 -------
-## <a name="CSPNet" />CSPNet
+## <a name="CSPNet">CSPNet</a>
 ![CSPNet](data/2020.01.28_CSPNet.png)
 
 **CSPNet** (**C**ross **S**tage **P**artial **Net**work) работает на фреймворке [Darknet](https://github.com/AlexeyAB/darknet), [сайт](https://pjreddie.com/darknet/). Метод применяется не сам по себе, а как *улучшение* уже существующих остаточных нейросетей (residual neural networks, ResNet). Основная концепция в том, чтобы поток градиента распространялся по разным сетевым путям через разделения потока градиента. Таким образом распространяемая информация о градиенте может иметь большую корреляцию, если переключать этапы конкатенации и перехода. CSPNet может значительно сократить объем вычислений и повысить скорость вывода и точность. Как видно из картинки выше, суть CSPNet заключается в более сложной обработке [пирамид фичей](https://youtu.be/4SxOkIN0CmA?t=495) (feature pyramid network, [FPN](https://arxiv.org/abs/1612.03144)).
@@ -139,7 +139,7 @@ CornerNet является предшественником CenterNet. CornerNet
 Рисунок — Пример пирамиды фичей
 
 -------
-## <a name="DenseNet" />DenseNet
+## <a name="DenseNet">DenseNet</a>
 ![A dense block with 5 layers and growth rate 4](data/2020.04.16_DenseNet_block.jpg)
 
 Рисунок — Один плотный блок DenseNet c 5 слоями и скоростью роста k = 4. Каждый слой принимает все предыдущие карты признаков в качестве входных данных.
@@ -156,7 +156,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * [реализация](https://github.com/liuzhuang13/DenseNet) на Torch от автора, обученные модели и [реализации](https://github.com/liuzhuang13/DenseNet#other-implementations) на других фреймворках
 
 -------
-## <a name="SAUNet" />SAUNet
+## <a name="SAUNet">SAUNet</a>
 **SAUNet** (**S**hape **A**ttentive **U-Net**) показывает наилучшие на начало 2020 года результаты по сегментации изображений МРТ сердца и предлагается автомами, как сеть по сегментации медицинских изображений.
 
 ![SAUNet architecture](data/2020.04.16_SAUNet.jpg)
@@ -169,7 +169,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * [исходный код](https://github.com/sunjesse/shape-attentive-unet) на PyTorch
 
 -------
-## <a name="DetNASNet" />DetNASNet
+## <a name="DetNASNet">DetNASNet</a>
 ![DetNASNet architecture](data/2020.04.17_DetNASNet_architecture.jpg)
 
 Рисунок — Архитектура DetNASNet
@@ -180,7 +180,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * [исходный код](https://github.com/megvii-model/DetNAS) на PyTorch
 
 -------
-## <a name="SM-NAS" />SM-NAS
+## <a name="SM-NAS">SM-NAS</a>
 ![SM-NAS AP](data/2020.04.17_SM-NAS_AP.jpg)
 
 Рисунок — Сравнение времени вывода (мс) и точности обнаружения (mAP) на наборе данных COCO.
@@ -191,7 +191,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * [статья](https://arxiv.org/abs/1911.09929) «SM-NAS: Structural-to-Modular Neural Architecture Search for Object Detection»
 
 -------
-## <a name="AmoebaNet" />AmoebaNet
+## <a name="AmoebaNet">AmoebaNet</a>
 ![AmoebaNet-A architecture](data/2020.04.17_AmoebaNet-A_architecture.jpg)
 
 Рисунок — Архитектура сети AmoebaNet-A. Слева общая модель. В центре блок «Normal Cell». Справа блок «Reduction Cell».
@@ -202,7 +202,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * [исходный код](https://github.com/tensorflow/tpu/tree/master/models/official/amoeba_net)
 
 -------
-## <a name="GNN" />Graph Neural Network
+## <a name="GNN">Graph Neural Network</a>
 ![Graph Neural Network](data/2020.01.28_graph_neural_network.png)
 
 **Graph Neural Network** или **нейронная сеть на графе**, где искусственные нейроны — это узлы графа, а соединения между нейронами — это ребра графа. Полезны для решения задач машинного обучения на графах, т.е. если задачу можно представить в виде какого-нибудь графа. А на графах можно сделать очень многое и даже прововодить обработку изображений. Наиболее популярные библиотеки для машинного обучения на графах: [PyTorch Geometric](https://github.com/rusty1s/pytorch_geometric) для PyTorch, [Graph Nets](https://github.com/deepmind/graph_nets) для TensorFlow, [Deep Graph](https://www.dgl.ai) самая удобная для начала ознакомления.
@@ -212,7 +212,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * [документация](https://docs.dgl.ai/tutorials/basics/1_first.html) библиотеки DGL (**D**eep **G**raph **L**ibrary)
 
 -------
-## <a name="cellular_automata" />Growing Neural Cellular Automata
+## <a name="cellular_automata">Growing Neural Cellular Automata</a>
 ![Growing Neural Cellular Automata](data/2020.04.18_Growing_Neural_Cellular_Automata.jpg)
 
 Рисунок — Один шаг обновления модели
@@ -227,7 +227,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * игра [«Жизнь»](https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%B0_%C2%AB%D0%96%D0%B8%D0%B7%D0%BD%D1%8C%C2%BB)
 
 -------
-## <a name="spiking-nn" />Импульсная нейронная сеть
+## <a name="spiking-nn">Импульсная нейронная сеть</a>
 
 **Импульсная нейронная сеть** или **Spiking neural network** является самой реалистичной с точки зрения физиологии. В ней нейроны обмениваются короткими импульсами одинаковой амплитуды. Первая научная модель импульсной нейросети была предложена еще в 1952 году Аланом Ходжкином и Эндрю Хаксли, однако данный вид искусственных нейронных сетей известен немногим специалистам в этой области. Основная идея состоит в том, чтобы скопировать поведение биологическкого нейрона. Такие модели могут быть полезны при изучении функций мозга. Для того, чтобы быстро летать, необязательно махать крыльями, однако при решении прикладных задач некоторые свойства можно позаимствовать у биологических организмов.
 
@@ -235,7 +235,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * [результаты поиска](https://paperswithcode.com/search?q_meta=&q=Spiking+Neural+Network) на сайте PapersWithCode.com
 
 -------
-## <a name="DPM" />DPM
+## <a name="DPM">DPM</a>
 
 **DPM**, **D**eformable **P**art **M**odel detector, **не** нейросеть. Использует [марковское случайное поле](https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%80%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F_%D1%81%D0%B5%D1%82%D1%8C) (смотрите [реализацию в CoLab](https://colab.research.google.com/drive/1mCBaNHKniYmtx0AxFpZfc_HmOm7wbfDg)) и гистограммы направленных градиентов ([HOG](https://ru.wikipedia.org/wiki/%D0%93%D0%B8%D1%81%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0_%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D1%85_%D0%B3%D1%80%D0%B0%D0%B4%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2)). Была популярна при *обнаружении пешеходов* где-то в 2009 году, а затем, как пишут в [статье](https://arxiv.org/pdf/1905.05055v2.pdf) «Object Detection in 20 Years: A Survey», уступила первенство алгоритму Integral Channel Features ([ICF](https://pages.ucsd.edu/~ztu/publication/dollarBMVC09ChnFtrs_0.pdf)), который затем уступил первенство нейросетям.
 
@@ -244,7 +244,7 @@ DenseNet (Densely Connected Convolutional Network) была предложена
   * [статья](https://arxiv.org/abs/1409.5403v2) «Deformable Part Models are Convolutional Neural Networks» + довольно устаревшая [реализация](https://github.com/rbgirshick/DeepPyramid) на MatLab и Caffe
 
 -------
-## <a name="conclusions" />Выводы
+## <a name="conclusions">Выводы</a>
 01. Усилия исследователей направлены на:
 
    * автоматический поиск оптимальных параметров нейросети, развитие идей AutoML, «нейросеть генерирует нейросеть», Neural Architecture Search ([NAS](https://arxiv.org/abs/1611.01578) и [NASNet](https://arxiv.org/abs/1707.07012));
