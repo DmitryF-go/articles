@@ -105,6 +105,7 @@ Additional useful tools everybody should know about:
          It is useful if your Jupyter Notebook `*.ipynb` won't load on Github.
          Enter the location of a Jupyter Notebook to have it rendered.
        * [10 Simple hacks to speed up your Data Analysis in Python](https://github.com/parulnith/10-Simple-hacks-to-speed-up-your-Data-Analysis-in-Python)
+       * Use Jupyter Notebook with [RISE](https://rise.readthedocs.io/en/stable/) plug-in to make presentations right in the notebook.
        * [Juxtapose](https://juxtapose.knightlab.com/) —
          Easy-to-make frame comparisons. Useful for presentations.
          Generate an embedable code snippet that you can use on any website or Jupyter notebook.
