@@ -170,6 +170,7 @@ IPython.display.HTML(iframe)
        * [Model Zoo](https://modelzoo.co/) website curates and provides a platform
          for deep learning researchers to easily find pre-trained models for a variety of platforms and uses.
    * Data visualization:
+       * [diagrams.net](https://www.diagrams.net/) is open source, online, desktop and container deployable diagramming software ([link](https://app.diagrams.net/)).
        * [Facets](https://ai.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
          is an open source visualization tool for Machine Learning training data.
          It helps to understand the various features of data and explore them without having to
