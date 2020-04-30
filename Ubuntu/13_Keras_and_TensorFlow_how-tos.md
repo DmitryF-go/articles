@@ -81,7 +81,9 @@ All code examples are placed [here](../Machine_Learning/code_examples).
 ### <a name="tools" />Additional useful tools
 
 Additional useful tools everybody should know about:
+
    * Jupyter Notebook:
+
        * [Six easy ways](https://www.dataschool.io/cloud-services-for-jupyter-notebook)
          to run your Jupyter Notebook in the cloud:
              [Binder](https://mybinder.org),
@@ -121,18 +123,22 @@ IPython.display.HTML(iframe)
 ```
 
    * Downloading tools:
+
        * [Fatkun Batch Download Image add-on for Chrome browser](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf) —
          Fast and easy download of many images from Google Images. Menu
          _"Ask where to save each file before downloading"_ must be turned off before downloading images.
        * [google_images_download](https://pypi.org/project/google_images_download) is a Python
          [Script](https://github.com/hardikvasa/google-images-download)
          for "searching" and "downloading" hundreds of Google images to the local hard disk.
+
    * Datasets Search:
+
        * [Google Dataset Search](https://toolbox.google.com/datasetsearch) is a search engine for datasets.
        * [Kaggle datasets](https://www.kaggle.com/datasets) — search engine for 25 000 datasets on Kaggle.
        * [Awesome Public Datasets](https://github.com/awesomedata/awesome-public-datasets)
          list of a topic-centric public data sources.
        * [Awesome Open Source](https://awesomeopensource.com) find open source by browsing 7,000 topics across 59 categories.
+
    * [Deep Learning add-on for Adaptive Vision Studio Lite](https://www.adaptive-vision.com/en/software/deep-learning) —
      If you need out-of-the-box solutions, you could try Adaptive Vision tool with Deep Learning add-on.
      Unfortunately, Deep Learning add-on has only trial version for 30 days for educational purposes.
@@ -140,7 +146,10 @@ IPython.display.HTML(iframe)
      is a limited-functionality freeware available for trial and non-commercial use.
      Recommended especially for students who want to learn how to develop
      complex algorithms with images loaded from files.
+
+
    * Annotation tools:
+
        * Annotation tool [labelImg](https://tzutalin.github.io/labelImg).
          This annotation tool supports both Windows and Linux, it will generate `xml` files inside
          image directories. Tip: use shortcuts (`w`: draw box, `d`: next file, `a`: previous file, etc.)
@@ -154,7 +163,11 @@ IPython.display.HTML(iframe)
          and does not require any installation or setup.
          The complete VIA software fits in a single self-contained HTML page of size less than 400 Kilobyte
          that runs as an offline application in most modern web browsers.
+       * [Computer Vision Annotation Tool](https://github.com/opencv/cvat) (CVAT). CVAT is free, online, interactive video and image annotation tool for computer vision.
+       * [https://supervise.ly](https://supervise.ly) The leading platform for entire computer vision lifecycle.
+
    * Model Zoo:
+
        * [TensorFlow Hub](https://tfhub.dev) is a library for the publication, discovery, and consumption
          of reusable parts of machine learning models. A *module* is a self-contained piece of a TensorFlow graph,
          along with its weights and assets, that can be reused across different tasks in a process known as
@@ -169,7 +182,9 @@ IPython.display.HTML(iframe)
          deep learning framework.
        * [Model Zoo](https://modelzoo.co/) website curates and provides a platform
          for deep learning researchers to easily find pre-trained models for a variety of platforms and uses.
+
    * Data visualization:
+
        * [diagrams.net](https://www.diagrams.net/) is open source, online, desktop and container deployable diagramming software ([link](https://app.diagrams.net/)).
        * [Facets](https://ai.googleblog.com/2017/07/facets-open-source-visualization-tool.html)
          is an open source visualization tool for Machine Learning training data.
@@ -185,10 +200,13 @@ IPython.display.HTML(iframe)
          [source code](https://github.com/martinwicke/tf-dev-summit-tensorboard-tutorial).
        * [Streamlit](https://streamlit.io/docs/) is an open-source Python library
          that makes it easy to build beautiful apps for machine learning. I didn't use it yet.
+
    * [OpenAI](https://openai.com/resources/#platforms) builds free software for training, benchmarking,
      and experimenting with AI. Reinforcement Learning (RL).
+
    * Resize multiple images with ratio [`resize_with_ratio.py`](https://github.com/skliff13/MilitaryDemo/blob/master/CreateDataset/resize_with_ratio.py)
      script.
+
    * [Kite](https://kite.com) autocomplete plugin for Python IDE (PyCharm, Spyder, etc.).
    * 
 
