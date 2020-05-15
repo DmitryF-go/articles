@@ -5,7 +5,6 @@
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
    * ML. [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) (not started)
-   * Courses. [Machine Learning Tokyo](https://www.youtube.com/channel/UC88RC_4egFjV9jfjBHwDuvg/playlists) video blog and GitHub [resource](https://github.com/Machine-Learning-Tokyo)
    * [Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) — lecture videos on YouTube
    * [CS231n Winter 2016](https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC) by Andrej Karpathy — 15 videos
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
@@ -63,6 +62,9 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
+   * Course. [Keras](https://deeplizard.com/learn/video/RznKVRTFkBY) with [my source code](https://colab.research.google.com/drive/1fAuHsL4yJecJSeosXoEjaOdYPa8SOzmn?usp=sharing)
+   * [Convolutions-1](https://www.saama.com/different-kinds-convolutional-filters/), [convolutions-2](https://towardsdatascience.com/a-comprehensive-introduction-to-different-types-of-convolutions-in-deep-learning-669281e58215), [convolutions-3](https://towardsdatascience.com/a-basic-introduction-to-separable-convolutions-b99ec3102728), [convolutions-4](https://ikhlestov.github.io/pages/machine-learning/convolutions-types/#depthwise-separable-convolutions-separable-convolutions)
+   * Course. Machine Learning Tokyo: [CNN Workshop](https://www.youtube.com/channel/UC88RC_4egFjV9jfjBHwDuvg/playlists) video blog and GitHub [resource](https://github.com/Machine-Learning-Tokyo) and [CNN Architectures - implementations](https://www.youtube.com/playlist?list=PLaPdEEY26UXyE3UchW0C742xh542yh0yI)
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
    * Article [Artistic style transfer for Android](https://codelabs.developers.google.com/codelabs/tensorflow-style-transfer-android)
    * Task. [YOLO Object Detection (TensorFlow tutorial)](https://youtu.be/4eIBisqx9_g)

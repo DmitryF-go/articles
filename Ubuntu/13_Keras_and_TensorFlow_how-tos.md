@@ -20,6 +20,8 @@ Helpful for me and I hope will be helpful for you:
 
    * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
      — watch 4 videos
+   * [TensorFlow free course](https://classroom.udacity.com/courses/ud187) —
+     <b>Highly recommend</b> this course to ML newcomers, beginners, novices, rookies, etc.
    * [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)
      — intro into neural networks
    * [Top 10 Deep Learning tools](https://medium.com/@chengweizhang2012/top-10-deep-learning-experiences-run-on-your-browser-458a64c9625f)
@@ -31,8 +33,6 @@ Helpful for me and I hope will be helpful for you:
      and [my brochure in Russian](https://foobar167.github.io/page/vvedeniye-v-mashinnoye-obucheniye-i-iskusstvennyye-neyronnyye-seti.html)
    * [TensorFlow learn ML](https://www.tensorflow.org/resources/learn-ml) web-page with many useful learning resources
      (books, videos, examples, etc.).
-   * [TensorFlow free course](https://classroom.udacity.com/courses/ud187) —
-     <b>Highly recommend</b> this course to ML newcomers, beginners, novices, rookies, etc.
    * [Get Started with TensorFlow](https://www.tensorflow.org/tutorials) —
      Webpage with many tutorials. Everyone should make at least 5 exercises for beginners
      and then continue with more advanced tutorials.
@@ -61,10 +61,7 @@ Helpful for me and I hope will be helpful for you:
      Good introduction course into TensorFlow.
    * Course [Coding TensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvwLbzbnKJ59NkZvQAW9wLbx) —
      You will look at various parts of TensorFlow from a coding perspective.
-   * Tips [TensorFlow Tip of the Week](https://www.youtube.com/playlist?list=PLQY2H8rRoyvxso6rsvcDeMzekGuLxbTEB) —
-     How to best use TensorFlow open source machine learning platform.
-   * [#AskTensorFlow](https://www.youtube.com/playlist?list=PLQY2H8rRoyvypL1nu_65Uhf5LuWlZdmSL) —
-     Answers on frequently asked questions about TensorFlow. Useful answers for beginners.
+   * Courses. Machine Learning Tokyo: [CNN Workshop](https://www.youtube.com/channel/UC88RC_4egFjV9jfjBHwDuvg/playlists) video blog and GitHub [resource](https://github.com/Machine-Learning-Tokyo) and [CNN Architectures - implementations](https://www.youtube.com/playlist?list=PLaPdEEY26UXyE3UchW0C742xh542yh0yI)
 
 ---
 ### <a name="video-courses" />All video courses and tutorials
