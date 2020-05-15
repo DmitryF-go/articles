@@ -330,11 +330,12 @@ You can dynamically reserve only necessary, but not all available memory:
 # Reserve necessary GPU memory
 import tensorflow as tf
 
+# For TensorFlow 1.x
 config = tf.ConfigProto()
 config.gpu_options.allow_growth=True  # dynamically grow the memory used on the GPU  
 sess = tf.Session(config=config)
 
-# For TensorFlow 2.0 Alpha and beyond
+# For TensorFlow 2.x
 tf.config.gpu.set_per_process_memory_growth()
 ```
 
@@ -347,16 +348,17 @@ by passing a `tf.GPUOptions` as part of the optional config argument:
 # Reserve GPU memory fraction
 import tensorflow as tf
 
+# For TensorFlow 1.x
 # Assume that you have 12GB of GPU memory and want to allocate ~4GB:
 gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
 sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 
-# or (the same)
+# or the same for TensorFlow 1.x
 config = tf.ConfigProto()
 config.gpu_options.per_process_gpu_memory_fraction = 0.333  # set fixed fraction of memory
 session = tf.Session(config=config)
 
-# For TensorFlow 2.0 Alpha and beyond
+# For TensorFlow 2.x
 tf.config.gpu.set_per_process_memory_fraction(0.333)
 ```
 The `per_process_gpu_memory_fraction` acts as a hard upper bound on the amount of GPU memory
