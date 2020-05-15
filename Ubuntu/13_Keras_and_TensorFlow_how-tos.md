@@ -420,6 +420,8 @@ sudo fuser -v /dev/nvidia*
 sudo kill -9 14282
 sudo kill -9 14295
 
+# Shows PIDs of processes
+# using the specified files or file systems
 sudo fuser -v /dev/nvidia*
-nvidia-smi
+nvidia-smi  # show nvidia system management interface
 ```
