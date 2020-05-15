@@ -394,6 +394,8 @@ os.kill(os.getpid(), signal.SIGTERM)  # you can use signal.SIGKILL for Linux, bu
 
 Root can forcibly clean up resources:
 ```shell
+# Shows PIDs of processes
+# using the specified files or file systems
 sudo fuser -v /dev/nvidia*
 
                      USER         PID ACCESS COMMAND
@@ -420,8 +422,6 @@ sudo fuser -v /dev/nvidia*
 sudo kill -9 14282
 sudo kill -9 14295
 
-# Shows PIDs of processes
-# using the specified files or file systems
 sudo fuser -v /dev/nvidia*
 nvidia-smi  # show nvidia system management interface
 ```
