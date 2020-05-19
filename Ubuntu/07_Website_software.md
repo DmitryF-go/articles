@@ -136,13 +136,14 @@ Cmnd_Alias FUSER6   = /bin/fuser 443/tcp,  /bin/fuser -k 443/tcp
 
 Cmnd_Alias STATUS   = /bin/systemctl status
 Cmnd_Alias DAEMON   = /bin/systemctl daemon-reload
+Cmnd_Alias LDCONFIG = /sbin/ldconfig
 Cmnd_Alias BIOS     = /usr/sbin/dmidecode -t bios
 
 # Allow members of WEBMASTERS to restart some services and view BIOS
 WEBMASTERS ALL = START1, STOP1, RESTART1, STATUS1, ENABLE1, DISABLE1, \
                  START2, STOP2, RESTART2, STATUS2, ENABLE2, DISABLE1, \
                  FUSER1, FUSER2, FUSER3, FUSER4, FUSER5, FUSER6,      \
-                 STATUS, DAEMON, BIOS
+                 STATUS, DAEMON, LDCONFIG, BIOS
 
 ```
 
@@ -503,6 +504,21 @@ sudo apt install python3-flask
 # a mail proxy server, and a generic TCP/UDP proxy server,
 # originally written by Igor Sysoev.
 sudo apt install nginx
+```
+
+Install [GDCM and Pydicom](https://github.com/HealthplusAI/python3-gdcm)
+
+```shell script
+git clone --branch master https://github.com/HealthplusAI/python3-gdcm.git && \
+cd python3-gdcm && \
+sudo dpkg -i build_1-1_amd64.deb && \
+sudo apt-get install -f
+
+# Not necessary for whole the system
+cp /usr/local/lib/gdcm.py /usr/local/lib/python3.6/site-packages/.
+cp /usr/local/lib/gdcmswig.py /usr/local/lib/python3.6/site-packages/.
+cp /usr/local/lib/_gdcmswig.so /usr/local/lib/python3.6/site-packages/.
+cp /usr/local/lib/libgdcm* /usr/local/lib/python3.6/site-packages/.
 ```
 
 ---
