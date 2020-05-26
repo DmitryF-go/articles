@@ -20,6 +20,7 @@ Helpful for me and I hope will be helpful for you:
 
    * [Neural Networks by 3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
      — watch 4 videos
+   * [fastai](https://course.fast.ai/videos/?lesson=1) course, part1.
    * [TensorFlow free course](https://classroom.udacity.com/courses/ud187) —
      <b>Highly recommend</b> this course to ML newcomers, beginners, novices, rookies, etc.
    * [Neural Networks Demystified](https://www.youtube.com/playlist?list=PLiaHhY2iBX9hdHaRr6b7XevZtgZRa1PoU)
