@@ -4,18 +4,24 @@
    - [Interesting resources](#interesting-resources)
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
-   * ML. [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) (not started)
-   * [Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/) — lecture videos on YouTube
-   * [CS231n Winter 2016](https://www.youtube.com/playlist?list=PLkt2uSq6rBVctENoVBg1TpCC7OQi31AlC) by Andrej Karpathy — 15 videos
+   * Course. [fastai](https://course.fast.ai/videos/?lesson=1)
+   * Some [Kaggle micro-courses](https://www.kaggle.com/learn/overview)
+   * Google [ML Practica](https://developers.google.com/machine-learning/practica?authuser=1)
+   * Google [TF beginner](https://www.tensorflow.org/tutorials/keras/keras_tuner?authuser=1)
+   * Course. [Sequences, Time Series and Prediction](https://www.coursera.org/learn/tensorflow-sequences-time-series-and-prediction)
+   * Course. [Deep Learning with PyTorch](https://deeplizard.com/learn/playlist/PLZbbT5o_s2xrfNyHZsM6ufI0iZENK9xgG) - DeepLizard
+   * Course. [Reinforcement Learning](https://deeplizard.com/learn/playlist/PLZbbT5o_s2xoWNVdDudn51XM8lOuZ_Njv) - DeepLizard
+   * [scikit-learn user guide](https://scikit-learn.org/stable/user_guide.html)
+   * [Keras guide](https://keras.io/guides/)
+---
    * Task. Jupyter Notebook Tutorial: The Definitive Guide: https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook
    * Task. Tensorflow Image Classification | Build Your Own Image Classifier In Tensorflow | Edureka: https://youtu.be/AACPaoDsd50
    * Task. Tensorflow and deep learning - without a PhD by Martin Görner: https://youtu.be/vq2nnJ4g6N0
-   * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 480)
----
    * Course. [AI for Medicine Specialization](https://www.coursera.org/specializations/ai-for-medicine)
    * Course. [Machine Learning with Python](https://www.youtube.com/playlist?list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v) by sentdex — 72 videos
    * Course. [mlcourse.ai](https://www.youtube.com/playlist?list=PLVlY_7IJCMJeRfZ68eVfEcu-UcN9BbwiX) from [mlcourse.ai](https://mlcourse.ai/) by Yury Kashnitsky ([ods.ai](https://ods.ai/)) — 23 videos
    * Course. [Robotics: Perception](https://www.coursera.org/learn/robotics-perception) — 4 weeks
+   * [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu/2017/) with [lecture videos 2017](https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv) on YouTube
    * Course. [Basics of Modern Image Analysis (2016)](https://www.youtube.com/playlist?list=PLuRaSnb3n4kRVLplnBQYYN39S-fzOlM-e)
    * Course. In Russian. [Практика программирования на Python3 (2019)](https://www.youtube.com/playlist?list=PLRDzFCPr95fLuusPXwvOPgXzBL3ZTzybY) from Тимофей Хирьянов
    * Mini course. [Mask RCNN](https://www.youtube.com/playlist?list=PLX-LrBk6h3wRAF22jBUxDgOvyhIgLN4Cg) — 3 videos
@@ -44,6 +50,7 @@
    * JS. TensorFlow.js? (not started)
    * Keras getting started: https://keras.io/getting-started/sequential-model-guide (part: getting started)
 ---
+   * Russian. Гонсалес Р., Вудс Р. «Цифровая обработка изображений» (стр. 480)
    * Online Book. [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com)
    * Video course. [Introduction to Algorithms](https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)
    * Task. TensorFlow JS Demos: https://www.tensorflow.org/js/demos
@@ -62,7 +69,8 @@
 
 ---
 ### <a name="completed-courses" />Completed courses
-   * Course. [Keras](https://deeplizard.com/learn/video/RznKVRTFkBY) with [my source code](https://colab.research.google.com/drive/1fAuHsL4yJecJSeosXoEjaOdYPa8SOzmn?usp=sharing)
+   * ML. [Machine Learning Crash Course](https://developers.google.com/machine-learning/crash-course) (finished)
+   * Course. [Keras](https://deeplizard.com/learn/video/RznKVRTFkBY) with [my source code](https://colab.research.google.com/drive/1fAuHsL4yJecJSeosXoEjaOdYPa8SOzmn?usp=sharing) - DeepLizard
    * [Convolutions-1](https://www.saama.com/different-kinds-convolutional-filters/), [convolutions-2](https://towardsdatascience.com/a-comprehensive-introduction-to-different-types-of-convolutions-in-deep-learning-669281e58215), [convolutions-3](https://towardsdatascience.com/a-basic-introduction-to-separable-convolutions-b99ec3102728), [convolutions-4](https://ikhlestov.github.io/pages/machine-learning/convolutions-types/#depthwise-separable-convolutions-separable-convolutions)
    * Course. Machine Learning Tokyo: [CNN Workshop](https://www.youtube.com/channel/UC88RC_4egFjV9jfjBHwDuvg/playlists) video blog and GitHub [resource](https://github.com/Machine-Learning-Tokyo) and [CNN Architectures - implementations](https://www.youtube.com/playlist?list=PLaPdEEY26UXyE3UchW0C742xh542yh0yI)
    * Task. TensorFlow For Poets: https://codelabs.developers.google.com/codelabs/tensorflow-for-poets
