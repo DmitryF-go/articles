@@ -127,7 +127,9 @@ IPython.display.HTML(iframe)
          _"Ask where to save each file before downloading"_ must be turned off before downloading images.
        * [google_images_download](https://pypi.org/project/google_images_download) is a Python
          [Script](https://github.com/hardikvasa/google-images-download)
-         for "searching" and "downloading" hundreds of Google images to the local hard disk.
+         for "searching" and "downloading" hundreds of Google images to the local hard disk
+       * For older versions of Firefox [Google Images Downloader](https://addons.mozilla.org/en-US/firefox/addon/google-images-downloader/?src=recommended) Firefox add-on by Rushikesh Tade
+       * [How to scrape the web for images](https://forums.fast.ai/t/how-to-scrape-the-web-for-images) forum
 
    * Datasets Search:
 
