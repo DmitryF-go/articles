@@ -5,6 +5,11 @@
 
 ### <a name="courses-to-finish" />Courses to finish (before the dash are first to learn)
    * Course. [fastai](https://course.fast.ai/videos/?lesson=1)
+   * Course. [Deep Learning from the Foundations](https://course.fast.ai/part2)
+   * Course. [Introduction to Machine Learning for Coders](http://course18.fast.ai/ml)
+   * Course. Andrew Ng [Machine Learning](https://www.coursera.org/learn/machine-learning)
+   * Course. [Computational Linear Algebra for Coders](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md)
+   * Course. [Natural Language Processing](https://www.fast.ai/2019/07/08/fastai-nlp/)
    * Some [Kaggle micro-courses](https://www.kaggle.com/learn/overview)
    * Google [ML Practica](https://developers.google.com/machine-learning/practica?authuser=1)
    * Google [TF beginner](https://www.tensorflow.org/tutorials/keras/keras_tuner?authuser=1)
