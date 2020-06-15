@@ -103,7 +103,7 @@ Use `sudo apt install python3` not `sudo apt install python3.7` command
 for python 3.x installation.
 
 If you need 3.7 or newer, install the **minimal versions** and use
-**local virtual environment** to install other packages.
+[**local virtual environment**](05_Virtual_environments.md) to install other packages.
 It's a bad idea to have several versions of python 3.x globally
 at the same time. Use only currently supported
 by Ubuntu python 3.x version globally. At this moment it is 3.6.
