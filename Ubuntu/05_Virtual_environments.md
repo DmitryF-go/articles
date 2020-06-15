@@ -200,6 +200,10 @@ python -c "import tensorflow as tf;     \
 pip install tensorflow-gpu matplotlib scipy opencv-contrib-python Pillow \
             scikit-learn scikit-image pandas ipython ipyparallel jupyter pyyaml
 
+# Install PyTorch if necessary
+# NOTE: check your installation here: https://pytorch.org/
+pip install torch torchvision
+
 # Deactivate myenv
 deactivate
 
