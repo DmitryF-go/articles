@@ -57,15 +57,22 @@ sudo apt install python3
 otherwise Ubuntu OS will _BROKE_.** :exclamation:
 
 <details close>
-  <summary>Better don't install the newest versions 3.7, 3.8, 4.0, etc.
-  globally (on the whole OS).</summary>
+  <summary>Configure the newer versions 3.7, 3.8, 4.0, etc
+  only into virtual environment. Don't install packages like
+  NumPy globally (on the whole OS) for the newer versions.
+  </summary>
     <blockquote>
 
 This command works:
 
 ```shell
-# Bad idea to install 3.7 while 3.6 is the current vertion.
-sudo apt install python3.7  # bad idea
+# Install only minimal versions 3.7, 3.8, etc.
+sudo apt install python3.7
+sudo apt install python3.7-venv
+sudo apt install python3.8
+sudo apt install python3.8-venv
+python3.7 --version
+python3.8 --version
 ```
 
 But it's a bad idea to use several versions globally, because in this case
@@ -93,9 +100,12 @@ sudo apt autoremove
 ```
 
 Use `sudo apt install python3` not `sudo apt install python3.7` command
-for python 3.x installation. If you need 3.7 or newer, use
-local virtual environment. It's a bad idea to have several versions of
-python 3.x globally at the same time. Use only currently supported
+for python 3.x installation.
+
+If you need 3.7 or newer, install the **minimal versions** and use
+**local virtual environment** to install other packages.
+It's a bad idea to have several versions of python 3.x globally
+at the same time. Use only currently supported
 by Ubuntu python 3.x version globally. At this moment it is 3.6.
 
 ---
