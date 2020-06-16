@@ -521,6 +521,17 @@ cp /usr/local/lib/_gdcmswig.so /usr/local/lib/python3.6/site-packages/.
 cp /usr/local/lib/libgdcm* /usr/local/lib/python3.6/site-packages/.
 ```
 
+Install ["libvips" package](https://zoomadmin.com/HowToInstall/UbuntuPackage/libvips).
+VIPS is an image processing system. It is good with large images
+(images larger than the amount of RAM in your machine),
+and for working with colour. It can perform many image manipulation
+tasks much faster than other packages.
+
+```shell script
+sudo apt-get update -y
+sudo apt-get install -y libvips
+```
+
 ---
 ## <a name="sqlite" />SQLite 3
 Install SQLite 3 development files:
