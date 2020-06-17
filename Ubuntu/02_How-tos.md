@@ -62,7 +62,9 @@ source ~/.bashrc
 
 ---
 ### <a name="ip-address" />Allow IP-address
-It is possible, that your IP-addres get into black list of `/etc/hosts.deny` file.
+It is possible, that your IP-addres get into black list
+of `/etc/hosts.deny` file.
+
 Firstly add IP-mask to the `/etc/hosts.allow` file.
 Secondly delete you IP-address from `/etc/hosts.deny` file.
 ```shell script
@@ -84,6 +86,10 @@ Actually IP-address can re-appear after several minutes, but if it was excepted 
 cat /etc/hosts.deny | grep "80.94."
 # Delete IP-address if necessary
 sudo nano /etc/hosts.deny
+```
+Check log file for failed attempts:
+```shell script
+cat /var/log/auth.log | grep username
 ```
 
 ---
