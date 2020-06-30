@@ -65,7 +65,14 @@ source ~/.bashrc
 It is possible, that your IP-addres get into black list
 of `/etc/hosts.deny` file.
 
-Firstly add IP-mask to the `/etc/hosts.allow` file.
+Check log file for failed attempts and delete all logs with user attempts:
+```shell script
+cat /var/log/auth.log | grep -n username
+cat /var/log/auth.log | grep -n ip-address
+sudo nano -c /var/log/auth.log
+```
+
+Add IP-mask to the `/etc/hosts.allow` file.
 Secondly delete you IP-address from `/etc/hosts.deny` file.
 ```shell script
 # Edit /etc/hosts.allow file
@@ -95,10 +102,6 @@ For more shortcuts, press `F1`.
 cat /etc/hosts.deny | grep -n "80.94."  # -n - show line numbers
 # Delete IP-address if necessary
 sudo nano -c /etc/hosts.deny  # -c - show line numbers
-```
-Check log file for failed attempts:
-```shell script
-cat /var/log/auth.log | grep username
 ```
 
 ---
