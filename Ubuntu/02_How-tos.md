@@ -92,7 +92,7 @@ To toggle backwards searching, you need to press `Alt + B` in the search dialog.
 For more shortcuts, press `F1`.
 
 ```shell script
-cat /etc/hosts.deny | grep -n "80.94."  # -n - get line numbers
+cat /etc/hosts.deny | grep -n "80.94."  # -n - show line numbers
 # Delete IP-address if necessary
 sudo nano -c /etc/hosts.deny  # -c - show line numbers
 ```
