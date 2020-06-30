@@ -82,10 +82,19 @@ ALL : 80.94.171.0/24
 Make sure that your IP-addres is not in the blacklist of `/etc/hosts.deny` file.
 Actually IP-address can re-appear after several minutes, but if it was excepted in
 `/etc/hosts.allow` file, then SSH connection should work anyway.
+
+To search in the `nano` editor. `Ctrl + W` is the shortcut for searching.
+The same effect can be achieved by pressing the `F6` key.
+After entering the search term, press `Enter`.
+To repeat the search, issue `Alt + W`.
+In this menu, you can select earlier searches using the arrow up/down keys.
+To toggle backwards searching, you need to press `Alt + B` in the search dialog.
+For more shortcuts, press `F1`.
+
 ```shell script
-cat /etc/hosts.deny | grep "80.94."
+cat /etc/hosts.deny | grep -n "80.94."  # -n - get line numbers
 # Delete IP-address if necessary
-sudo nano /etc/hosts.deny
+sudo nano -c /etc/hosts.deny  # -c - show line numbers
 ```
 Check log file for failed attempts:
 ```shell script
