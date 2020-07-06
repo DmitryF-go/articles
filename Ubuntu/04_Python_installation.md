@@ -13,6 +13,9 @@ Install Python and all needed packages on Ubuntu 18.04.
 
 My answer on AskUbuntu.com: https://askubuntu.com/a/1097135/672237
 
+**Warning**: use [virtual environments](05_Virtual_environments.md)
+instead of installing packages on default Python version.
+
 ---
 ### <a name="versus" />`apt` versus `pip` installer
 
