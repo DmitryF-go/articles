@@ -27,6 +27,7 @@ How-to:
    - [View computer resources](#resources)
    - [View disk usage](#disk-usage)
    - [View screen resolution](#resolution)
+   - [View temperature sensors](#temperature)
    - [Who is logged in](#who)
 
 ---
@@ -641,8 +642,8 @@ sudo dmidecode -s baseboard-product-name  # show product name
 sudo dmidecode -s baseboard-manufacturer  # show manufacturer
 
 # Install GUI application
-sudo apt install sysinfo
-sysinfo&
+sudo apt install xsysinfo
+xsysinfo &
 ```
 
 ---
@@ -790,6 +791,40 @@ sudo du -sh /home 2> /dev/null
 
 or open *System Settings* → *Display*.
 There you'll see a *Resolution* drop-down menu.
+
+---
+### <a name="temperature" />View temperature sensors
+
+Links: [01](https://askubuntu.com/questions/15832/how-do-i-get-the-cpu-temperature),
+       [02](https://itsfoss.com/check-laptop-cpu-temperature-ubuntu/),
+       [03](https://www.cyberciti.biz/faq/how-to-check-cpu-temperature-on-ubuntu-linux/),
+       [04](https://linoxide.com/linux-how-to/get-cpu-temperature-on-ubuntu-linux/)
+```shell script
+#Install lm-sensors
+sudo apt install lm-sensors 
+# After installation type the following in terminal
+sudo sensors-detect
+# You may also need to run
+sudo service kmod start
+# It will ask you few questions. Answer Yes for all of them.
+watch -n 2 sensors  # press <Ctrl>+<C> to exit
+
+# To see HDD temperature Install hddtemp
+sudo apt install hddtemp
+sudo hddtemp /dev/sda /dev/sdb /dev/sdc
+
+# Use psensor tool
+sudo apt install psensor
+psensor
+
+# Use conky tool
+sudo apt install conky
+conky &
+
+# Use hardinfo
+sudo apt install hardinfo
+hardinfo &
+```
 
 ---
 ### <a name="who" />Who is logged in
