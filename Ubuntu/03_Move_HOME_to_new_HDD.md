@@ -38,8 +38,28 @@ Otherwise to format disks use commands:
    3. `mkfs`, `man mkfs`
 
 ```shell
-sudo mkfs.ext4 -L purple /dev/sdb  # unsure about parameters, because used GUI "gnome-disks" utility
-sudo mkfs.ext4 -L gold   /dev/sdc  # unsure about parameters, because used GUI "gnome-disks" utility
+# Better use GUI "gnome-disks" utility
+# Make file system
+sudo mkfs.ext4 -L purple /dev/sdb
+sudo mkfs.ext4 -L gold   /dev/sdc
+```
+[Check disks for errors](https://smallbusiness.chron.com/run-chkdsk-ubuntu-54071.html)
+The command may take some time to complete,
+depending on the size of your drive.
+When the process is finished, a number will be displayed.
+`0` indicates that no errors were found;
+`1` means that errors were found and corrected;
+`2` means that the system should be rebooted;
+`4` indicates that file system errors were found,
+but could not be corrected.
+Any other number indicates that the utility did not run
+correctly. Run the `fsck` command a second time
+if any number other than zero appears.
+This ensures that all errors were corrected.
+```shell script
+# Check drive
+sudo fsck /dev/sdb
+sudo fsck /dev/sdc
 ```
 
 :exclamation: **Formatting will delete everything on your hard disk.** :exclamation:

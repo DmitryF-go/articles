@@ -1,6 +1,7 @@
    - [Task](#task)
    - [Installations](#install)
       - [All other different software](#other-software)
+      - [Anydesk](#anydesk)
       - [ASAP](#asap)
       - [Chromium](#Chromium)
       - [Elastix](#Elastix)
@@ -33,13 +34,25 @@ sudo apt install mc        # Midnight Commander
 sudo apt install autoconf  # automatic configure script builder
 sudo apt install make      # utility for directing compilation
 sudo apt install curl      # tool for transferring data with URL syntax
-sudo apt install gcc gcc-6 g++ g++-6  # GCC and C++ compilers
+sudo apt install gcc g++   # GCC and C++ compilers
 sudo apt install net-tools   # ifconfig command
 sudo apt install traceroute  # traceroute command 
 
 # Or in one command
-sudo apt install htop git mc autoconf make curl gcc gcc-6 g++ g++-6 \
+sudo apt install htop git mc autoconf make curl gcc g++ \
                  net-tools traceroute
+```
+
+---
+#### <a name="anydesk" />Anydesk
+Remote desktop sharing with
+[AnyDesk on Ubuntu 20.04](https://linuxconfig.org/remote-desktop-sharing-with-anydesk-on-ubuntu-20-04-focal-fossa)
+Focal Fossa.
+```shell script
+wget -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo apt-key add -
+sudo sh -c 'echo "deb http://deb.anydesk.com/ all main" > /etc/apt/sources.list.d/anydesk-stable.list'
+sudo apt update
+sudo apt install anydesk
 ```
 
 ----
@@ -49,6 +62,9 @@ sudo apt install htop git mc autoconf make curl gcc gcc-6 g++ g++-6 \
 annotating and automatically analyzing whole-slide histopathology images.
 
 Download DEB file from [here](https://github.com/computationalpathologygroup/ASAP/releases).
+
+NOTE: there is no DEP package
+for Ubuntu version 20.04 yet (2020.07.06)
 ```shell script
 # Fix broken dependences
 sudo apt --fix-broken install
@@ -73,14 +89,13 @@ ASAP &  # run ASAP
 # Install Chromium web browser
 sudo apt install chromium-browser
 # Start Chromium in terminal background
-chromium-browser &
-# If you don't want to see application output
 chromium-browser &> /dev/null
 ```
 
 ----
 #### <a name="Elastix" />Elastix
 
+NOTE: no installation for Ubuntu 20.04 yet (2020.06.07)
 ```shell script
 # Toolbox for rigid and nonrigid registration of images
 sudo apt install elastix
@@ -95,7 +110,7 @@ elastix --version
 
 ```shell script
 # Emacs editor
-sudo apt install emacs25
+sudo apt install emacs
 ```
 
 ----
@@ -103,7 +118,7 @@ sudo apt install emacs25
 
 ```shell script
 sudo apt-get install filezilla
-filezilla&
+filezilla &> /dev/null
 ```
 
 ----
@@ -117,7 +132,7 @@ It is useful to process images with it.
 ```shell script
 # Install image viewer using GTK+ and data files for Geeqie.
 sudo apt install geeqie geeqie-common
-geeqie &  # run Geeqie
+geeqie &> /dev/null  # run Geeqie
 
 # Uninstall Geeqie if you like
 sudo apt remove geeqie
@@ -132,7 +147,7 @@ sudo apt remove geeqie
 sudo snap install intellij-idea-community --classic
 
 # Run JetBrains IntelliJ IDEA Community edition
-intellij-idea-community &
+intellij-idea-community &> /dev/null
 ```
 
 ----
@@ -151,7 +166,7 @@ on Linux Ubuntu Distributions.
 sudo apt install snapd               # install Snap tool
 sudo apt install wine-stable         # install Wine tool
 sudo snap install notepad-plus-plus  # install Notepad++
-notepad-plus-plus &                  # run Notepad++
+notepad-plus-plus &> /dev/null       # run Notepad++
 ```
 
 ----
@@ -162,12 +177,10 @@ Install free of charge PyCharm Community edition.
 [How-to install needed version](https://snapcraft.io/pycharm-community)
 
 ```shell script
-# Install PyCharm Community 2018.3 stable release
-sudo snap install pycharm-community --channel=2018.3/stable --classic
-# or the last stable version
+# Install PyCharm Community last stable release
 sudo snap install pycharm-community --classic
 
-pycharm-community &  # run it in background mode
+pycharm-community &> /dev/null  # run it in background mode
 
 # Remove possible error with Canberra Gtk.
 # canberra-gtk-module translates GTK+ widgets signals to event sounds
@@ -196,12 +209,10 @@ sudo apt install tmux-plugin-manager
 # Create and manage tmux sessions easily
 sudo apt install tmuxinator
 
-# Python 2.x and 3.x scripting library and ORM for tmux
-sudo apt install python-libtmux
+# Python 3.x scripting library and ORM for tmux
 sudo apt install python3-libtmux
 
-# Tmux session manager (Python 2.x and 3.x)
-sudo apt install python-tmuxp
+# Tmux session manager
 sudo apt install python3-tmuxp
 
 # Terminal multiplexer with instant terminal sharing
@@ -250,7 +261,7 @@ is a GUI to install software for newbie.
 
 ```shell script
 sudo apt install ubuntu-software  # install Ubuntu Software Center
-ubuntu-software &
+gnome-software  # run ubuntu software center
 ```
 
 ----
@@ -259,7 +270,7 @@ ubuntu-software &
 ```shell script
 snap find torrent
 snap install utorrent
-utorrent &
+utorrent &> /dev/null
 ```
 
 ---
