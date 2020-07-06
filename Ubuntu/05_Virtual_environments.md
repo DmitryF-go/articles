@@ -216,7 +216,7 @@ python -c "import tensorflow as tf;     \
 
 # Install all other packages into myenv
 pip install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
-              scikit-image pandas ipython ipyparallel jupyter pyyaml
+            scikit-image pandas ipython ipyparallel jupyter pyyaml
 
 # Install PyTorch if necessary
 # NOTE: check your installation here: https://pytorch.org/
