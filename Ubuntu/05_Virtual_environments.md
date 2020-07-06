@@ -19,20 +19,21 @@ I recommend Anaconda virtual environment, but you could use common virtual env
 described in the next chapter.
 
 Links:
+   - [How to Install Anaconda on Ubuntu 20.04](https://tecnstuff.net/how-to-install-anaconda-on-ubuntu-20-04/)
    - [How To Install Anaconda on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart)
    - [Anaconda distribution](https://www.anaconda.com/distribution)
    - [Anaconda repository](https://repo.anaconda.com/archive)
 
 #### <a name="install-anaconda" />Install Anaconda
 
-```shell
+```shell script
 # Download latest Anaconda distribution
 mkdir -p ~/Documents/Install/Anaconda/
 cd ~/Documents/Install/Anaconda
-curl -O https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+curl -O https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
 
 # Run installation script
-bash Anaconda3-2019.10-Linux-x86_64.sh
+bash Anaconda3-2020.02-Linux-x86_64.sh
 
 # Next, you will be prompted to download Visual Studio Code,
 # which you can learn more about from the official VSCode website.
@@ -42,11 +43,19 @@ bash Anaconda3-2019.10-Linux-x86_64.sh
 source ~/.bashrc
 # Test installation
 conda list
+
+# Update Anaconda
+conda update conda
+conda update anaconda
+
+# Uninstall Anaconda
+#conda install anaconda-clean
+#anaconda-clean ––yes
 ```
 
 #### <a name="configure-anaconda" />Set up and configure Anaconda virtual environment
 
-```shell
+```shell script
 # To activate installed Anaconda use command:
 source ~/.bashrc
 
@@ -63,8 +72,7 @@ conda install tensorflow-gpu
 # Check it
 python -c "import tensorflow as tf;     \
     print('Version:', tf.__version__);  \
-    tf.enable_eager_execution();        \
-    print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
+    print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 
 # Activate and deactivate virtual environment
 conda deactivate  # exit to the "base" environment
@@ -75,20 +83,11 @@ conda activate myenv
 conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
               scikit-image pandas ipython ipyparallel jupyter pyyaml -n myenv
 
-# Or in many lines. Note: now Keras is a part of TensorFlow package.
-conda install -c michael_wild opencv-contrib  # use 'opencv' for Ubuntu
-conda install -c anaconda pillow  # use 'pillow' for Ubuntu
-conda install scikit-learn
-conda install scikit-image
-conda install scipy
-conda install matplotlib
-conda install pandas
-conda install ipython
-conda install jupyter
-conda install ipyparallel  # ipyparallel is needed for jupyter
-conda install pyyaml  # required to save models in YAML format
+# Install PyTorch if necessary.
+# Check https://pytorch.org for installation parameters
+conda install pytorch torchvision cudatoolkit=10.2 -c pytorch
 
-# Delete vitrual environment
+# Delete vitrual environment if necessary
 conda deactivate
 conda remove --name myenv --all
 conda info --envs
@@ -103,28 +102,20 @@ Links:
 
 #### <a name="install-packages" />Install packages for virtual environment
 
-```shell
+```shell script
 # Python virtual environment creator
 sudo apt install virtualenv
-sudo apt install python-virtualenv
 sudo apt install python3-virtualenv
 
 # Library for generating Python executable zip files
 sudo apt install pex
-sudo apt install python-pex
 sudo apt install python3-pex
 
 # Node.js virtual environment builder
 sudo apt install nodeenv
 
-# System for automatically handling virtual environments
-sudo apt install fades
-
-# Wrap and build python packages using virtualenv
-sudo apt install dh-virtualenv
-
 # Script for cloning a non-relocatable virtualenv
-sudo apt install virtualenv-clone
+sudo apt install python3-virtualenv-clone
 
 # Extension to virtualenv for managing multiple virtual Python environments
 sudo apt install virtualenvwrapper
@@ -138,7 +129,7 @@ sudo apt install python3-venv
 
 How-to install `virtualenvwrapper` [for Windows 10](https://pypi.org/project/virtualenvwrapper-win):
 
-```shell
+```shell script
 rem For TensorFlow you have to install
 rem Python >= 3.7.2 (64-bit); CUDA >= 10.0; cuDNN >= 7.5
 :
@@ -151,7 +142,7 @@ pip3 install virtualenvwrapper-win
 
 User can install packages locally, but it is better to use virtual environment.
 
-```shell
+```shell script
 # user installation
 # pip install --user packagename
 
@@ -161,7 +152,34 @@ pip install --user pipenv
 
 #### <a name="configure-venv" />Set up and configure virtual environment using `virtualenvwrapper`
 
-```shell
+**NOTE**: For Ubuntu 20.04 setting up a virtual environment is different:
+[How To Install Python 3 and Set Up a Programming Environment on an Ubuntu 20.04 Server](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server)
+
+Install Python 3.7 for Ubuntu 20.04:
+```shell script
+sudo apt update  
+sudo apt upgrade -y
+sudo apt install build-essential libssl-dev zlib1g-dev \
+                 libncurses5-dev libncursesw5-dev libreadline-dev \
+                 libsqlite3-dev libgdbm-dev libdb5.3-dev libbz2-dev \
+                 libexpat1-dev liblzma-dev tk-dev libffi-dev
+cd ~/Downloads/
+wget https://www.python.org/ftp/python/3.7.8/Python-3.7.8.tar.xz
+tar xf Python-3.7.8.tar.xz
+cd Python-3.7.8
+./configure --enable-optimizations
+sudo make -j 8
+sudo make altinstall
+# Check it
+python3.7
+
+# Create virtual environment for Python 3.7 for Ubuntu 20.04
+python3.7 -m venv python3.7
+source python3.7/bin/activate
+```
+
+Install virtual environment for Ubuntu 18.04:
+```shell script
 # Check version of virtual environment
 virtualenv --version
 # We'll use virtualenvwrapper — is a set of extensions to Ian Bicking's virtualenv tool.
@@ -189,7 +207,7 @@ workon myenv
 # Install TensorFlow 2.0 alpha0 — make sure you need this version of TF.
 pip install -U --pre tensorflow-gpu
 # or
-pip install tensorflow-gpu==2.0.0-alpha0 
+pip install tensorflow-gpu
 
 # Check it
 python -c "import tensorflow as tf;     \
@@ -197,8 +215,8 @@ python -c "import tensorflow as tf;     \
     print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 
 # Install all other packages into myenv
-pip install tensorflow-gpu matplotlib scipy opencv-contrib-python Pillow \
-            scikit-learn scikit-image pandas ipython ipyparallel jupyter pyyaml
+pip install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
+              scikit-image pandas ipython ipyparallel jupyter pyyaml
 
 # Install PyTorch if necessary
 # NOTE: check your installation here: https://pytorch.org/
@@ -236,7 +254,7 @@ Notes:
 You can install local software modules in EasyBuild environment
 or use [Anaconda virtual environment](#anaconda) from previous chapter.
 
-```shell
+```shell script
 module --help    # Get help about Modules package
 man module       # Get manual about Modules package
 module avail     # List all the modules which are available to be loaded.
@@ -254,7 +272,7 @@ eb -S MiniConda  # List Miniconda packages
 
 Install and configure Anaconda:
 
-```shell
+```shell script
 # Install Anaconda package. Wait for 5 minutes.
 module load eb   # Load EasyBuild framework
 eblocalinstall Anaconda3-5.3.0.eb --robot
@@ -295,7 +313,7 @@ conda info --envs
 
 Install and configure Python:
 
-```shell
+```shell script
 # There are several Python versions installed already
 module av Python
 # Load Python module
