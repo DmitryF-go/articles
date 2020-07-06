@@ -63,7 +63,7 @@ annotating and automatically analyzing whole-slide histopathology images.
 
 Download DEB file from [here](https://github.com/computationalpathologygroup/ASAP/releases).
 
-NOTE: there is no DEP package
+*NOTE*: there is no `deb` package
 for Ubuntu version 20.04 yet (2020.07.06)
 ```shell script
 # Fix broken dependences
@@ -95,7 +95,7 @@ chromium-browser &> /dev/null
 ----
 #### <a name="Elastix" />Elastix
 
-NOTE: no installation for Ubuntu 20.04 yet (2020.06.07)
+*NOTE*: there is no installation for Ubuntu 20.04 yet (2020.06.07)
 ```shell script
 # Toolbox for rigid and nonrigid registration of images
 sudo apt install elastix
