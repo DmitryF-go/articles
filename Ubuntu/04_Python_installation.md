@@ -296,9 +296,7 @@ sudo apt install python3-dev
 ```shell script
 # Temporary set environment variable
 export PATH=/usr/bin:$PATH
-# To check python 2.x and 3.x run
-python
-# and
+# To check python 3.x run
 python3
 
 # Then type in python 2.x or 3.x console
@@ -318,8 +316,6 @@ exit()
 
 ```shell script
 # To check IPython run
-ipython
-exit
 ipython3
 exit
 ```

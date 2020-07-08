@@ -184,7 +184,7 @@ python3.7 -m venv python3.7
 source ~/python3.7/bin/activate
 ```
 
-##### <a name="venv_20.04" />Virtual environment for Ubuntu 18.04
+##### <a name="venv_18.04" />Virtual environment for Ubuntu 18.04
 
 Install virtual environment for Ubuntu **18.04**:
 ```shell script
