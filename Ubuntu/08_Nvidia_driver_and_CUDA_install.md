@@ -1,3 +1,6 @@
+:exclamation: **NOTE**: for Ubuntu 20.04 NVIDIA drivers
+are installed *by default*. Just check it by `nvidia-smi` command.
+
    - [Task](#task)
    - [Related links](#links)
    - [NVIDIA driver installation](#driver)
@@ -185,7 +188,7 @@ sudo reboot
 nvidia-smi
 ```
 
-Reinstall [`nvidia-docker`](10_Neural_networks_software.md/#container) if necessary.
+Reinstall [`nvidia-docker`](old/10_Neural_networks_software.md/#container) if necessary.
 
 Troubleshooting:
 ```shell script

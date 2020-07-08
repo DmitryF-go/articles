@@ -31,7 +31,7 @@ You should login via SSH graphical interface
 `ssh -X user@website -p port` or via X2Go Client
 and then use `http://localhost:5000` to connect to DIGITS.
 
-```shell
+```shell script
 # Open port 5000 for NVIDIA DIGITS (not secure)
 ##sudo ufw allow 5000
 # Close port 5000 for NVIDIA DIGITS
@@ -43,7 +43,7 @@ sudo ufw status
 ---
 ### <a name="manage" />Manage Docker
 
-```shell
+```shell script
 # To show only running containers
 docker ps
 # or
@@ -63,13 +63,13 @@ systemctl is-active docker
 ---
 ### <a name="non-root" />Manage Docker as a non-root user
 
-If you don’t want to preface the ```docker``` command with ```sudo```,
-create a Unix group called ```docker``` and add users to it.
+If you don’t want to preface the `docker` command with `sudo`,
+create a Unix group called `docker` and add users to it.
 
 :exclamation: **Only trusted users should be allowed
 to control your Docker daemon.** :exclamation:
 
-```shell
+```shell script
 # Show docker group
 cat /etc/group | grep "docker"
 # Create the docker group if it doesn't exist
@@ -89,9 +89,9 @@ sudo deluser username docker
 ---
 ### <a name="start-container" />Start containers automatically
 
-It starts container, but not [Nvidia DIGITS](12_Nvidia_DIGITS.md) itself.
+It starts container, but not [Nvidia DIGITS](old/12_Nvidia_DIGITS.md) itself.
 
-```shell
+```shell script
 # Autostart
 docker run -dit --restart unless-stopped nvidia/digits:latest
 
@@ -102,7 +102,7 @@ docker run -dit --restart no nvidia/digits:latest
 ---
 ### <a name="stop-all" />Stop all docker containers
 
-```shell
+```shell script
 sudo docker kill $(sudo docker ps -q)
 ```
 
@@ -112,7 +112,7 @@ sudo docker kill $(sudo docker ps -q)
 [Docker Compose](https://docs.docker.com/compose) is a tool
 for defining and running multi-container Docker applications.
 
-```shell
+```shell script
 # Install Docker Compose tool. WARNING: current version could be different.
 sudo curl -L https://github.com/docker/compose/releases/download/1.24.0-rc1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose

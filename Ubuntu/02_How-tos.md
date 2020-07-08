@@ -15,7 +15,8 @@ How-to:
    - [Kill the tty](#tty-kill)
    - [List all environment variables](#printenv)
    - [List installed packages](#list-installed)
-   - [Lock Screen](#lock)
+   - [Lock screen](#lock)
+   - [Lock screen time](#lock_time)
    - [Manage software updates](#software-updates)
    - [Mount USB](#mount)
    - [Open console](#console)
@@ -42,7 +43,7 @@ It takes 5 minutes, but I would like to get rid of this problem in the future.
 ---
 ### <a name="add_to_path" />Add directory to the $PATH
 
-```shell
+```shell script
 # Temporary addition
 export PATH=$PATH:/usr/bin
 
@@ -113,7 +114,7 @@ sudo nano -c /etc/hosts.deny  # -c - show line numbers
 ---
 ### <a name="calculator" />Calculator
 
-```shell
+```shell script
 gnome-calculator &> /dev/null
 ```
 
@@ -123,7 +124,7 @@ gnome-calculator &> /dev/null
 Steps to [clear out the history](https://gist.github.com/stephenhardy/5470814)
 of a git/github repository.
 
-```shell
+```shell script
 # Remove history from Git directory
 rm -rf .git
 
@@ -156,7 +157,7 @@ Click *Add* button to add new user.
 
 Press `<Ctrl>+<Alt>+<T>` and open console window.
 
-```shell
+```shell script
 # Show list of all users
 cat /etc/passwd
 # or
@@ -201,7 +202,7 @@ sudo usermod -a -G groupname username
 ```
 
 Enable or disable the user account:
-```shell
+```shell script
 sudo adduser tempuser       # create temporal user
 sudo usermod -L tempuser    # disable user account
 sudo usermod -U tempuser    # enable user account
@@ -240,7 +241,7 @@ and click on *Change* button.
 [Open console](#console) and enter `passwd`.
 Type current password, type new password and retype new password. 
 
-```shell
+```shell script
 passwd
 Changing password for lab225.
 (current) UNIX password: 
@@ -258,7 +259,7 @@ sudo passwd username
 
 [How to check operating system version in Linux command line](https://www.cyberciti.biz/faq/how-to-check-os-version-in-linux-command-line)
 
-```shell
+```shell script
 # Find OS name and version
 cat /etc/os-release
 lsb_release -a
@@ -277,7 +278,7 @@ cat /etc/issue
 ---
 ### <a name="delete" />Delete package
 
-```shell
+```shell script
 # Remove package
 sudo apt remove packagename
 # Remove user data and configuration files
@@ -297,7 +298,7 @@ sudo apt purge --auto-remove packagename
 
 Read [how to exclude packages from apt-get upgrade](https://tecadmin.net/exclude-packages-from-apt-upgrade)
 
-```shell
+```shell script
 # Using apt
 sudo apt-mark hold package_name
 sudo apt-mark unhold package_name
@@ -324,7 +325,7 @@ The reason for this unmatched speed is that the `locate` command isn't actually 
 for the files or directories that you need to find, but more like reads through the `mlocate.db`
 database file which contains all file paths in your system.
 
-```shell
+```shell script
 sudo apt install locate  # install locate tool
 sudo updatedb  # update the mlocate.db database before first use
 locate $HOME/*.py  # search for Python files in the $HOME dir
@@ -352,7 +353,7 @@ and directories that the user is after.
 files that were modified or accessed recently, files that of a specific size range,
 hidden files, executables, read-only files, and files with certain permissions.
 
-```shell
+```shell script
 find / -name "*name*" 2> /dev/null  # search in / root directory (everything)
 find / -iname "*name*" 2> /dev/null  # ignore case
 # Search in $HOME dir for Python files bigger than 1MB of size.
@@ -388,7 +389,7 @@ sudo dpkg -i my.deb
 ---
 ### <a name="tty-kill" />Kill the tty
 
-```shell
+```shell script
 # Show who is logged in
 who
 username :1           2018-12-22 17:11 (:1)
@@ -418,7 +419,7 @@ kill -SIGKILL 26859 26878
 ---
 ### <a name="printenv" />List all environment variables
 
-```shell
+```shell script
 printenv  # list all or part of environment
 env  # list all or run a program in a modified environment
 # or
@@ -434,7 +435,7 @@ printenv | more
 
 [List installed packages](https://www.rosehosting.com/blog/list-all-installed-packages-with-apt-on-ubuntu)
 
-```shell
+```shell script
 sudo apt list --installed
 sudo apt list --installed | less
 sudo apt list --installed | grep -i nvidia
@@ -443,7 +444,7 @@ sudo dpkg -l | grep -i nvidia
 ```
 
 ---
-### <a name="lock" />Lock Screen
+### <a name="lock" />Lock screen
 
 To lock your screen press keys `<Ctrl>+<Alt>+<L>`.
 If it does n't work then press keys `<Win>+<L>` or
@@ -453,7 +454,7 @@ Also click on the *System* icon in the top right corner
 of the screen and select *Lock Screen* icon/menu.
 
 From console type:
-```shell
+```shell script
 # Lock the screen
 gnome-screensaver-command -l
 ```
@@ -464,6 +465,14 @@ with your mouse. Then enter your password, and press
 `<Enter>` or click *Unlock*.
 Alternatively, just start typing your password and the lock
 curtain will be automatically raised as you type.
+
+---
+### <a name="lock_time" />Lock screen time
+
+[Set screen lock time](https://askubuntu.com/questions/1042641/how-to-set-custom-lock-screen-time-in-ubuntu-18-04)
+
+Open *Settings → Privacy → Screen Lock*:
+![Screen lock time](data/2020.07.08_screen_lock_time.png)
 
 ---
 ### <a name="software-updates" />Manage software updates
@@ -496,24 +505,24 @@ Press `<CTRL>+<ALT>+<T>` keys or press `<Win>` key and enter `terminal`.
 ### <a name="autorun" />Run scripts on start up
 
 There are several ways to run scripts on start up:
-   1. systemd (```man systemd.service```)
-   2. SysV (```man update-rc.d```). System V init (also known as classic init).
-   3. Add script to ```/etc/rc.local``` file.
-   4. cron (```man cron```)
-   5. Use ```~/.config/systemd/``` or ```/.config/autostart/``` directories
+   1. systemd (`man systemd.service`)
+   2. SysV (`man update-rc.d`). System V init (also known as classic init).
+   3. Add script to `/etc/rc.local` file.
+   4. cron (`man cron`)
+   5. Use `~/.config/systemd/` or `/.config/autostart/` directories
       for user sessions. Only after user login.
 
 For Ubuntu 14.04 **and older** one can use [Upstart](http://upstart.ubuntu.com/getting-started.html).
 
-1\. Create ```systemd``` unit files. Links:
+1\. Create `systemd` unit files. Links:
   - [How to run scripts on start up](https://askubuntu.com/a/719157/672237)
   - [Writing unit files](https://wiki.archlinux.org/index.php/systemd#Writing_unit_files)
   - [systemd.service - Service unit configuration](http://manpages.ubuntu.com/manpages/xenial/en/man5/systemd.service.5.html)
   - [systemd.service - Service unit configuration. Copy](https://www.freedesktop.org/software/systemd/man/systemd.service.html)
 
-Create ```/etc/systemd/system/slide_analysis_api.service``` containing:
+Create `/etc/systemd/system/slide_analysis_api.service` containing:
 
-```shell
+```text
 [Unit]
 Description=uWSGI instance to serve slide_analysis_api
 After=network.target
@@ -531,15 +540,15 @@ WantedBy=multi-user.target
 
 Then run:
 
-```shell
+```shell script
 # Add slide_analysis_api to autorun
 sudo systemctl daemon-reload
 sudo systemctl enable slide_analysis_api.service
 ```
 You can run multiple commands from the same service file,
-using multiple ```ExecStart``` lines:
+using multiple `ExecStart` lines:
 
-```shell
+```text
 [Service]
 ExecStart=/some/command
 ExecStart=/another/command some args
@@ -548,12 +557,12 @@ ExecStart=-/a/third/command ignore failure
 
 The command must always be given with the full path.
 If any command fails, the rest aren't run.
-A ```-``` before the path tells systemd to ignore a non-zero exit status
+A `-` before the path tells systemd to ignore a non-zero exit status
 (instead of considering it a failure).
 
-2\. Create script file ```/etc/init.d/myscript.sh```. Run the commands:
+2\. Create script file `/etc/init.d/myscript.sh`. Run the commands:
 
-```shell
+```shell script
 # To add use
 sudo update-rc.d myscript.sh defaults  # default run levels are: 2,3,4 and 5
 # To remove use
@@ -566,18 +575,18 @@ More info:
    - [How to Enable or Disable Services in Ubuntu Systemd/Upstart](https://linoxide.com/linux-how-to/enable-disable-services-ubuntu-systemd-upstart)
    - [How can I configure a service to run at startup](https://askubuntu.com/a/9384/672237)
 
-3\. Edit the file ```/etc/rc.local```.
-```shell
+3\. Edit the file `/etc/rc.local`.
+```shell script
 sudo nano /etc/rc.local
 ```
 
-Add commands, but make sure that the line ```exit 0``` is at the end.
+Add commands, but make sure that the line `exit 0` is at the end.
 
 If command runs continuously (in an infinite loop) or is likely not to exit,
-you must be sure to fork the process by adding an ampersand ```&``` to the end
+you must be sure to fork the process by adding an ampersand `&` to the end
 of the command, like so:
 
-```shell
+```shell script
 python3 /home/pi/myscript.py &
 ```
 
@@ -588,42 +597,42 @@ The ampersand allows the command to run in a separate process and continue
 booting with the process running.
 
 4\. One approach is to add an @reboot [cron](https://en.wikipedia.org/wiki/Cron) task:
-   1. Running ```crontab -e``` will allow you to edit your cron.
-   2. Adding a line like this to it: ```@reboot /path/to/script```
+   1. Running `crontab -e` will allow you to edit your cron.
+   2. Adding a line like this to it: `@reboot /path/to/script`
       will execute that script once your computer boots up.
 
 5\. For user sessions, you can create the systemd unit in
-```~/.config/systemd``` instead. This should work with 16.04 onwards,
+`~/.config/systemd` instead. This should work with 16.04 onwards,
 but not earlier releases of Ubuntu with systemd
 (since those still used Upstart for user sessions).
 User session units can be controlled with the same commands
-as with system services, but with the ```--user``` option added:
+as with system services, but with the `--user` option added:
 
-```shell
+```shell script
 systemctl --user daemon-reload
 systemctl --user status foo.service
 ```
 
-A shell script named ```.gnomerc``` in your home directory is automatically
+A shell script named `.gnomerc` in your home directory is automatically
 sourced each time you log in to a GNOME session. You can put arbitrary
 commands in there; environment variables that you set in this script
 will be seen by any program that you run in your session.
 
-Note that the session does not start until the ```.gnomerc``` script
+Note that the session does not start until the `.gnomerc` script
 is finished; therefore, if you want to autostart some long-running program,
-you need to append ```&``` to the program invocation,
+you need to append `&` to the program invocation,
 in order to detach it from the running shell.
 
 The menu option **System -> Preferences -> Startup Applications** allows 
 to define what applications should be started when your graphical session starts
 (Ubuntu predefines quite some). This has almost the same purpose and scope
-of the ```.gnomerc``` script, except you don't need to know ```sh``` syntax
-(but neither can you use any ```sh``` programming construct).
+of the `.gnomerc` script, except you don't need to know `sh` syntax
+(but neither can you use any `sh` programming construct).
 
 ---
 ### <a name="envvar" />Set environment variable
 
-```shell
+```shell script
 PYTHONPATH=/usr/lib/python3/dist-packages/caffe
 export PYTHONPATH
 ```
@@ -631,7 +640,7 @@ export PYTHONPATH
 ---
 ### <a name="#show_the_model" />Show the model of the computer
 
-```shell
+```shell script
 # The first line will be product name.
 sudo lshw | grep product
 # or
@@ -655,7 +664,7 @@ On Ubuntu 18.04 the default shortcut is `<Win>+<Space>`.
 [Instructions](https://askubuntu.com/a/1029605/672237)
 for Ubuntu 18.04 LTS with Gnome desktop from Gnome Tweaks.
 
-```shell
+```shell script
 # Install Gnome Tweaks
 sudo apt-get install gnome-tweaks
 # Open Gnome Tweaks
@@ -679,16 +688,16 @@ Or enter in console `gnome-screenshot&`, but this works only in Gnome.
 Screen shot application will appear.
 
    * Flameshot GUI
-```shell
+```shell script
 sudo apt install flameshot  # install Flameshot
 flameshot gui  # start it
 ```
 There is an icon on the panel menu after `flameshot gui` is started.
 
    * Kazam (Flameshot tool is better)
-```shell
+```shell script
 sudo apt install kazam  # install Kazam
-kazam&  # start it in background mode
+kazam &  # start it in background mode
 ```
 
 ---
@@ -696,7 +705,7 @@ kazam&  # start it in background mode
 
    * GPU
 
-```shell
+```shell script
 # View NVIDIA resources
 nvidia-smi
 # or in non-stop mode (exit with Ctrl+C)
@@ -705,7 +714,7 @@ watch -n 0.5 nvidia-smi
 
    * CPU
 
-```shell
+```shell script
 # Check memory and CPU usage per process
 top
 ```
@@ -716,7 +725,7 @@ HTOP is a lightweight text-mode process viewer packed with handy features
 such as killing processes without entering their PID,
 displaying full command lines, etc with a colour display.
 
-```shell
+```shell script
 # Install HTOP interactive processes viewer
 sudo apt install htop
 # Run it
@@ -731,7 +740,7 @@ Press `<Super>` or `<Win>` key, type "system monitor".
 
 Run *Gnome System Monitory* from command line:
 
-```shell
+```shell script
 # Run Gnome System Monitor in background
 gnome-system-monitor &
 ```
@@ -740,7 +749,7 @@ gnome-system-monitor &
 
    * Show system status
 
-```shell
+```shell script
 systemctl status
 ```
 
@@ -752,7 +761,7 @@ Exit with `<Q>` key.
 
    * Memory usage
 
-```shell
+```shell script
 # Display memory usage in MBs
 free -m
 # Read /proc/meminfo file
@@ -763,7 +772,7 @@ vmstat -s
 
    * Hardware info
 
-```shell
+```shell script
 # DMI table decoder
 sudo dmidecode
 # Show BIOS info
@@ -773,7 +782,7 @@ sudo dmidecode -t bios
 ---
 ### <a name="disk-usage" />View disk usage
 
-```shell
+```shell script
 gnome-disks&  # open disks utility in background mode
 
 # Disk Usage Analyzer - view only bootable disk
@@ -829,6 +838,6 @@ hardinfo &
 ---
 ### <a name="who" />Who is logged in
 
-```shell
+```shell script
 who
 ```

@@ -1,3 +1,6 @@
+:exclamation: **NOTE**: for Ubuntu 20.04 and 18.04 there is no
+need to build TensorFlow from sources.
+
    - [Task](#task)
    - [Related links](#links)
    - [Previous instructions](#previous)
@@ -24,9 +27,9 @@
 
 ---
 ### <a name="previous" />Previous instructions
-   1. [Prepare Python](04_Python_installation.md)
-   2. [Install software for virtual environments](05_Virtual_environments.md)
-   3. [Prepare GPU driver and CUDA](08_Nvidia_driver_and_CUDA_install.md)
+   1. [Prepare Python](../04_Python_installation.md)
+   2. [Install software for virtual environments](../05_Virtual_environments.md)
+   3. [Prepare GPU driver and CUDA](../08_Nvidia_driver_and_CUDA_install.md)
 
 #### Install Dependencies
 

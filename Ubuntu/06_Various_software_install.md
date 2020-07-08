@@ -41,7 +41,7 @@ sudo apt install python-is-python3  # for Ubuntu 20.04 default Python
 
 # Or in one command
 sudo apt install htop git mc autoconf make curl gcc g++ \
-                 net-tools traceroute
+                 net-tools traceroute python-is-python3
 ```
 
 ---

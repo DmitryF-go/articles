@@ -307,7 +307,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "1"        # "0,1" for multiple GPU or "-1"
 # Note: it seems option "0,1" does not work for different GPU models.
 ```
 
-```shell
+```shell script
 # For Jupyter Notebook one has to restart the kernel
 # after changing of environment variables.
 
@@ -393,7 +393,7 @@ os.kill(os.getpid(), signal.SIGTERM)  # you can use signal.SIGKILL for Linux, bu
 ##### <a name="force-clean" />Forcibly clean up resources
 
 Root can forcibly clean up resources:
-```shell
+```shell script
 # Shows PIDs of processes
 # using the specified files or file systems
 sudo fuser -v /dev/nvidia*

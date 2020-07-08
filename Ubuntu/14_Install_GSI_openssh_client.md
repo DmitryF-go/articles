@@ -60,7 +60,7 @@ Installation of GSI SSH client:
 [certification center UIIP NASB](http://uiip.bas-net.by/ca/misc).
 Edit config file and change `default_bits` from 1024 to 2048.
 
-```shell
+```shell script
 #
 # Belarusian Grid Certification Authority
 # Configuration for user certificate requests
@@ -83,7 +83,7 @@ commonName_max                   = 64
 
 ---
 &zwnj;1.3. Generate a request for Grid certificate:
-```shell
+```shell script
 # Run OpenSSL utility and generate file: usercert_request.pem
 # Enter and remember your pass phrase for the file: userkey.pem
 
@@ -116,7 +116,7 @@ openssl req -new -config globus-user-ssl.conf -out usercert_request.pem -sha256
 `userkey.pem` (an encrypted private key, hide it).
 
 Verify created request PEM file:
-```shell
+```shell script
 # Verify request
 openssl req -in usercert_request.pem -noout -text
 
@@ -201,7 +201,7 @@ From the local request authority you should receive `usercert.pem` file with per
 &zwnj;1.6. Check the certificate
 
 After receiving your certificate via e-mail (filename `Surname_usercert.pem`) verify it:
-```shell
+```shell script
 # Have to be OK. Any other output means verification is wrong.
 openssl verify -verbose -CAfile BYGCA.pem Surname_usercert.pem
 
@@ -223,7 +223,7 @@ Login only from whitelisted IP-address.
 
 GSI SSH client installation:
 
-```shell
+```shell script
 mkdir -p ~/Documents/Install/Globus_Toolkit
 cd ~/Documents/Install/Globus_Toolkit
 
@@ -253,7 +253,7 @@ sudo dpkg -i osg-ca-certs-1.79NEW-0.deb
 You must have certificate `usercert.pem` and
 encrypted private key `userkey.pem` to configure your GSI SSH client:
 
-```shell
+```shell script
 # Login to the computer with whitelisted IP-address, i.e. DeepLab3.
 
 # Create .globus/certificates directory in your $HOME
@@ -278,7 +278,7 @@ cp /etc/grid-security/certificates/* ~/.globus/certificates/
 Configuration of GSI SSH client is finished. Then to connect to the server
 you should create proxy and use `gsissh` command.
 
-```shell
+```shell script
 # Create proxy connection for 12 hours. Must enter GRID pass phrase.
 grid-proxy-init -debug -verify
 
@@ -331,7 +331,7 @@ Links to read:
    * [How to Use Linux SFTP Command to Transfer Files](https://linuxize.com/post/how-to-use-linux-sftp-command-to-transfer-files)
    * [Linux sftp command](https://www.computerhope.com/unix/sftp.htm)
 
-```shell
+```shell script
 # Download from the URL
 export DIR=Downloads/mydata  # set directory environment variable
 mkdir -p ~/"$DIR"  # make directory
@@ -415,7 +415,7 @@ Calculating on 1 GPU node for 1 hour is equal to
 
 Use resources carefully.
 
-```shell
+```shell script
 # Hours are trackable on the system like this:
 budget-overview  # get a more dynamic and accurate overview of the current state of your account's budget
 accinfo          # view the budget, user list, and other details
@@ -433,7 +433,7 @@ Keep in mind that any file on `scratch` folder than 14 days will be **automatica
 If necessary we can request for additional space in the `Projects` file system
 or `/projects/0/<project_name>` directory.
 
-```shell
+```shell script
 myquota  # check the disk quota
 
 # 200 GiB on the $HOME directory
@@ -450,13 +450,13 @@ cp validation-horse-or-human.zip /scratch-local/paulenka/
 ```
 
 Activate conda `DL3` virtual environment:
-```shell
+```shell script
 module load Anaconda3/5.3.0  # load installed Anaconda
 source activate DL3          # activate DL3 virtual environment
 ```
 
 Create simple SLURM batch file `~/Downloads/example.slurm`:
-```shell
+```shell script
 mkdir -p ~/Downloads/
 touch ~/Downloads/example.slurm
 # Make file executable, otherwise it will not run with 'srun' command
@@ -467,7 +467,7 @@ nano ~/Downloads/example.slurm
 
 Contents of `example.slurm` batch file:
 
-```shell
+```shell script
 #!/bin/bash
 #SBATCH -t 30:00
 #SBATCH -N 1
@@ -493,7 +493,7 @@ where:
 
 Run simple Slurm batch file `example.slurm`.
 
-```shell
+```shell script
 srun -N 1 -t 30:00 -p gpu ~/Downloads/example.slurm  # run job in foreground mode
     Start of job at Thu May  2 12:35:54 CEST 2019
     1.13.1
@@ -516,7 +516,7 @@ by setting certain `sbatch` parameters.
 
 Control your jobs:
 
-```shell
+```shell script
 squeue -u $USER     # check the current state of the queue
 scancel -j <jobid>  # remove one of your jobs from the queue
 ```

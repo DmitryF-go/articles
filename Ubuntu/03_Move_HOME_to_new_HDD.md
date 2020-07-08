@@ -23,7 +23,7 @@ My answer on AskUbuntu.com: https://askubuntu.com/a/1097160/672237
 
 Plug in all necessary SATA and power cables to your HDDs. Load Ubuntu.
 Press `<Win>` keyboard and type "*Disks*" or type in terminal:
-```shell
+```shell script
 gnome-disks&  # open disks utility
 ```
 
@@ -37,7 +37,7 @@ Otherwise to format disks use commands:
    2. `parted`, `man parted`
    3. `mkfs`, `man mkfs`
 
-```shell
+```shell script
 # Better use GUI "gnome-disks" utility
 # Make file system
 sudo mkfs.ext4 -L purple /dev/sdb
@@ -74,7 +74,7 @@ Slow formatting should take a lot of time. From 16 upto 20 hours for 4 TB disk.
 
 Press `<CTRL>+<ALT>+<T>` keys and open a console.
 
-```shell
+```shell script
 # Check your /dev/sdb and /dev/sdc discs are visible
 lsblk
 
@@ -107,28 +107,28 @@ that will be mounted at boot (permanently).
 
    1. Get UUID of HDD and backup `/etc/fstab` file.
 
-```shell
+```shell script
 # 1. Show and copy UUID of the HDD with this command:
 sudo blkid
 ```
 
 My data is:
 
-```shell
+```shell script
 /dev/sdb1: LABEL="purple" UUID="6ce9ec1f-3bf5-420f-8502-1b4f55f2fc60" TYPE="ext4" PARTUUID="a14c8357-a8ce-42e4-9772-64ccfad3e226"
 /dev/sdc1: LABEL="gold" UUID="1d049c7c-4565-480b-a181-2459e8ff8c1b" TYPE="ext4" PARTUUID="4c691b21-b4e3-4dab-ab91-d7bf7272b2b5"
 ```
 
 Make a backup of `/etc/fstab` file to be able to revert changes.
 
-```shell
+```shell script
 # Make backup
-sudo cp /etc/fstab /etc/fstab.2018.11.29.bak
+sudo cp /etc/fstab /etc/fstab.2020.07.08.bak
 ```
 
    2. Add a new partitions by editing `/etc/fstab` file as root.
 
-```shell
+```shell script
 # Edit /etc/fstab
 sudo nano /etc/fstab
 
@@ -139,18 +139,19 @@ UUID=1d049c7c-4565-480b-a181-2459e8ff8c1b   /hdd_gold     ext4   defaults       
 
 **Your UUID is different.**
 
-Write the file with keys `<Ctrl>+<O>` then hit `<Return>`.
+Save `/etc/fstab` file with keys `<Ctrl>+<S>`.
 Quit the editor with `<Ctrl>+<X>`.
 
-If you have *Midnight Commander* running, then save before quitting with
-`<Ctrl>+<X>`, because `<Ctrl>+<O>` will switch from `nano` editor to your *MC*.
+**Note**. If you have *Midnight Commander* running,
+then `<Ctrl>+<O>` will switch from `nano` editor to your *MC*.
+Use `<Ctrl>+<S>` (save) or `<Ctrl>+<X>` (exit) instead.
 
    3. Check and reboot
 
 To see if the drive is mounted correctly we can simulate the mount process
 at boot.
 
-```shell
+```shell script
 # Simulate the mount process
 sudo mount -a
 df -h
@@ -168,7 +169,7 @@ perform all actions to move `$HOME` directory from a terminal with
 Press `<Ctrl>+<Alt>+<F3>` hotkeys and switch to console mode.
 Login in the console mode.
 
-```shell
+```shell script
 # Copy /home directory to the new location
 sudo rsync -avx /home/ /hdd_gold
 

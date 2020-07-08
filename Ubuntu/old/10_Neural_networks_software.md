@@ -18,9 +18,9 @@ This manual will install and verify additional software.
 ---
 ### <a name="previous" />Previous installations
 
-   1. [Prepare Python](04_Python_installation.md)
-   2. [Install software for virtual environments](05_Virtual_environments.md)
-   3. [Prepare GPU driver and CUDA](08_Nvidia_driver_and_CUDA_install.md)
+   1. [Prepare Python](../04_Python_installation.md)
+   2. [Install software for virtual environments](../05_Virtual_environments.md)
+   3. [Prepare GPU driver and CUDA](../08_Nvidia_driver_and_CUDA_install.md)
    4. [Install TensorFlow using `pip` or build it from source](09_TensorFlow_installation.md)
    
 ---
@@ -70,10 +70,10 @@ Caffe2 is designed with expression, speed, and modularity in mind,
 allowing for a more flexible way to organize computation. 
 
 Install stable PyTorch on Linux using `pip` for Python 2.7 and CUDA 10.0:
-![Stable PyTorch on Linux using `pip` for Python 2.7 and CUDA 10.0](data/2018.12.21-pytorch-installation-python27.png)
+![Stable PyTorch on Linux using `pip` for Python 2.7 and CUDA 10.0](../data/2018.12.21-pytorch-installation-python27.png)
 
 Install stable PyTorch on Linux using `pip` for Python 3.6 and CUDA 10.0:
-![Stable PyTorch on Linux using `pip` for Python 3.x and CUDA 10.0](data/2018.12.21-pytorch-installation-python36.png)
+![Stable PyTorch on Linux using `pip` for Python 3.x and CUDA 10.0](../data/2018.12.21-pytorch-installation-python36.png)
 
 ```shell
 sudo su
@@ -268,7 +268,7 @@ sudo docker run hello-world
 
 Install [nVidia-Docker](https://github.com/NVIDIA/nvidia-docker).
 
-![NVIDIA Container Runtime for Docker](data/2018.12.22-nvidia-container-runtime-for-docker.png)
+![NVIDIA Container Runtime for Docker](../data/2018.12.22-nvidia-container-runtime-for-docker.png)
 
 ```shell
 # If you have nvidia-docker 1.0 installed: we need to remove it
@@ -330,7 +330,7 @@ libdc1394 error: Failed to initialize libdc1394
 http://localhost:5000
 ```
 
-![NVIDIA DIGITS main page](data/2018.12.22-nvidia-digits-main-page.png)
+![NVIDIA DIGITS main page](../data/2018.12.22-nvidia-digits-main-page.png)
 
 There is an error after run:
 ```libdc1394 error: Failed to initialize libdc1394```.
