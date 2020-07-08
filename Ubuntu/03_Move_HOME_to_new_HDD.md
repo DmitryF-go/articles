@@ -155,6 +155,14 @@ at boot.
 # Simulate the mount process
 sudo mount -a
 df -h
+# Change the owner
+sudo chown -R root:root /hdd_purple
+sudo chown -R root:root /hdd_gold
+# Set write permissions to disks
+sudo chmod ugo+rwx /hdd_purple  # use -R for recursion
+sudo chmod ugo+rwx /hdd_gold    # use -R for recursion
+# Check it
+ls -hal /
 # Reboot
 sudo reboot
 ```
