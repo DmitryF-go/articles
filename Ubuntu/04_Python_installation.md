@@ -1,6 +1,9 @@
+:exclamation: **Warning**: use [virtual environments](05_Virtual_environments.md)
+instead of installing packages on default Python version.
+
    - [Task](#task)
    - [`apt` versus `pip` installer](#versus)
-   - [Python 2.x and 3.x installation](#python)
+   - [Python 3.x installation](#python)
    - [Install additional packages](#packages)
    - [Install and upgrade via `pip`](#pip)
    - [Check installations](#check)
@@ -9,33 +12,31 @@
 ---
 ### <a name="task" />Task
 
-Install Python and all needed packages on Ubuntu 18.04.
-
-My answer on AskUbuntu.com: https://askubuntu.com/a/1097135/672237
-
-**Warning**: use [virtual environments](05_Virtual_environments.md)
-instead of installing packages on default Python version.
+Install Python and all needed packages on Ubuntu 18.04 and 20.04.
+[My answer](https://askubuntu.com/a/1097135/672237) on AskUbuntu.com.
 
 ---
 ### <a name="versus" />`apt` versus `pip` installer
 
-It is better use `apt` (`apt-get`) command instead of `pip` command, because:
+Cases to install Python packages on default Python version via
+`apt` command instead of `pip` command:
    1. `apt` installs only tested on Ubuntu packages and depencences;
    2. `sudo apt` `update` / `upgrage` command keeps packages up to date;
    3. if you want install / update packages for all users on Ubuntu system,
       not only for your own local account;
    4. if you want packages for Ubuntu, so operating system could use them too.
-https://askubuntu.com/a/1097211/672237
-For other versions of packages one should use virtual environment.
-See [virtual environment installation instruction](05_Virtual_environments.md).
-Or build and test packages from the source codes (_for specialists only_).
+
+For other Python versions it is better to use
+[virtual environment](05_Virtual_environments.md)
+or build and test packages from the source codes
+(_for specialists only_).
 
 ---
-### <a name="python" />Python 2.x and 3.x installation
+### <a name="python" />Python 3.x installation
 
 Update Ubuntu before every significant software installation.
 
-```shell
+```shell script
 # Refresh repositories
 sudo apt update
 # Update software
@@ -44,13 +45,8 @@ sudo apt upgrade
 
 Install Pip and then install Python.
 
-```shell
-# install pip for 2.x
-sudo apt install python-pip
-# Install python 2.7 version
-sudo apt install python2.7
-
-# install pip for 3.x
+```shell script
+# Install pip for 3.x
 sudo apt install python3-pip
 # Install currently supported by Ubuntu python 3.x version.
 sudo apt install python3
@@ -66,9 +62,9 @@ otherwise Ubuntu OS will _BROKE_.** :exclamation:
   </summary>
     <blockquote>
 
-This command works:
+These commands work for Ubuntu 18.04, but not for 20.04:
 
-```shell
+```shell script
 # Install only minimal versions 3.7, 3.8, etc.
 sudo apt install python3.7
 sudo apt install python3.7-venv
@@ -78,13 +74,15 @@ python3.7 --version
 python3.8 --version
 ```
 
-But it's a bad idea to use several versions globally, because in this case
-import of NumPy (`import numpy`) and other modules will fail for python 3.7.
+It's a bad idea to use several versions globally, because in this case
+import of NumPy (`import numpy`) and other modules will fail for
+additional Python versions.
 
-Currently installed NumPy is for 3.6 (global) python version for Ubuntu,
-not 3.7. So it'll fail to import in the 3.7 version when you'll try.
+For example, if default Python version is 3.6,
+then installed via `apt` NumPy package will not work for 3.7.
+So it'll fail to import in the 3.7 version when you'll try.
 
-```shell
+```shell script
 # For example:
 sudo apt install python3.7  # bad idea - 3.6 and 3.7 at the same time
 sudo apt install python3-numpy  # install NumPy for 3.6, not 3.7
@@ -102,14 +100,12 @@ sudo apt remove python3.7
 sudo apt autoremove
 ```
 
-Use `sudo apt install python3` not `sudo apt install python3.7` command
-for python 3.x installation.
-
 If you need 3.7 or newer, install the **minimal versions** and use
 [**local virtual environment**](05_Virtual_environments.md) to install other packages.
 It's a bad idea to have several versions of python 3.x globally
 at the same time. Use only currently supported
-by Ubuntu python 3.x version globally. At this moment it is 3.6.
+by Ubuntu python 3.x version globally. At this moment it is 3.6
+for Ubuntu 18.04 and 3.8 for Ubuntu 20.04.
 
 ---
   </blockquote>
@@ -123,7 +119,7 @@ Install additional packages. Choose which package you need for work.
 Here are most common packages from everyday usage. However you could
 have another list.
 
-```shell
+```shell script
 # Install packages:
 sudo apt install python-numpy  # numpy
 sudo apt install python3-numpy
@@ -174,12 +170,11 @@ sudo apt install python-ipykernel
 sudo apt install python3-ipykernel
 ```
 
-Install it ALL with one command :-)
-
+Install it ALL with one command.
 However try to use [virtual environments](05_Virtual_environments.md) instead
 to escape possible problems.
 
-```shell
+```shell script
 # Install it ALL with one command :-)
 # However try to use virtual environments to escape possible problems.
 sudo apt install python-pip         python2.7           \
@@ -212,7 +207,7 @@ Install TensorFlow for all users on the operating system,
 but you should have [CUDA and cuDNN installed](08_Nvidia_driver_and_CUDA_install.md)
 beforehand:
 
-```shell
+```shell script
 # Install CUDA beforehand
 # Install cuDNN beforehand
 
@@ -231,12 +226,10 @@ pip3 install tensorflow-gpu
 # Check it
 python -c "import tensorflow as tf;     \
     print('Vertion:', tf.__version__);  \
-    tf.enable_eager_execution();        \
-    print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
+    print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 python3 -c "import tensorflow as tf;    \
     print('Vertion:', tf.__version__);  \
-    tf.enable_eager_execution();        \
-    print(tf.reduce_sum(tf.random_normal([1000, 1000])));"
+    print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 ```
 
 ---
@@ -246,7 +239,7 @@ See also [set up and configure Anaconda virtual environment](05_Virtual_environm
 
 Install and upgrade packages via `pip` under Windows OS.
 
-```shell
+```shell script
 # Upgrade pip
 python -m pip install --upgrade pip
 # Install packages
@@ -275,13 +268,13 @@ https://github.com/foobar167/articles/blob/master/Ubuntu/05_Virtual_environments
 
 Upgrade packages for Anaconda under Windows OS.
 
-```shell
+```shell script
 conda update --prefix C:\ProgramData\Anaconda3 anaconda
 ```
 
 Upgrade packages for Anaconda under Ubuntu OS.
 
-```shell
+```shell script
 # Update conda and then anaconda
 conda update
 anaconda update
@@ -294,13 +287,13 @@ conda update -n myenv --all
 ---
 ### <a name="check" />Check installations
 
-```shell
+```shell script
 # Check installation for Python header files and a static library
 sudo apt install python-dev
 sudo apt install python3-dev
 ```
 
-```shell
+```shell script
 # Temporary set environment variable
 export PATH=/usr/bin:$PATH
 # To check python 2.x and 3.x run
@@ -323,7 +316,7 @@ import cython      # check Cython
 exit()
 ```
 
-```shell
+```shell script
 # To check IPython run
 ipython
 exit
@@ -331,13 +324,13 @@ ipython3
 exit
 ```
 
-```shell
+```shell script
 # To check Jupyter run
 jupyter notebook
 # and check both python versions 2.x and 3.x in "New" menu of the browser.
 ```
 
-```shell
+```shell script
 # To check GIT run
 git --version
 ```
@@ -345,7 +338,7 @@ git --version
 ---
 ### <a name="additional" />Search and remove packages
 
-```shell
+```shell script
 # To remove package (don't remove python3 — it'll broke your Ubuntu)
 #sudo apt purge --auto-remove packagename
 sudo apt remove packagename

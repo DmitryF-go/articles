@@ -36,7 +36,8 @@ sudo apt install make      # utility for directing compilation
 sudo apt install curl      # tool for transferring data with URL syntax
 sudo apt install gcc g++   # GCC and C++ compilers
 sudo apt install net-tools   # ifconfig command
-sudo apt install traceroute  # traceroute command 
+sudo apt install traceroute  # traceroute command
+sudo apt install python-is-python3  # for Ubuntu 20.04 default Python
 
 # Or in one command
 sudo apt install htop git mc autoconf make curl gcc g++ \

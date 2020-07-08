@@ -4,7 +4,9 @@
       - [Set up and configure Anaconda virtual environment](#configure-anaconda)
    - [Common virtual environment](#venv)
       - [Install packages for virtual environment](#install-packages)
-      - [Set up and configure virtual environment using `virtualenvwrapper`](#configure-venv)
+      - [Set up and configure virtual environment](#configure-venv)
+         - [Virtual environment for Ubuntu 20.04](#venv_20.04)
+         - [Virtual environment for Ubuntu 18.04](#venv_18.04)
    - [EasyBuild environment on SURFsara server](#easy-build)
 
 ---
@@ -60,7 +62,7 @@ conda update anaconda
 source ~/.bashrc
 
 # Set up Anaconda virtual environment
-conda create --name myenv python=3
+conda create --name myenv python=3.7
 # Show virtual envs
 conda info --envs
 # Activate the new environment
@@ -79,9 +81,10 @@ conda deactivate  # exit to the "base" environment
 conda deactivate  # exit from Anaconda base env
 conda activate myenv
 
-# Install necessary packages for Ubuntu 18.04 in one line:
-conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
-              scikit-image pandas ipython ipyparallel jupyter pyyaml -n myenv
+# Install necessary packages:
+conda install tensorflow-gpu matplotlib scipy opencv pillow \
+              scikit-learn scikit-image pandas ipython \
+              ipyparallel jupyter pyyaml graphviz -n myenv
 
 # Install PyTorch if necessary.
 # Check https://pytorch.org for installation parameters
@@ -140,7 +143,7 @@ pip3 --version
 pip3 install virtualenvwrapper-win
 ```
 
-User can install packages locally, but it is better to use virtual environment.
+It is better to use virtual environment.
 
 ```shell script
 # user installation
@@ -150,12 +153,14 @@ User can install packages locally, but it is better to use virtual environment.
 pip install --user pipenv
 ```
 
-#### <a name="configure-venv" />Set up and configure virtual environment using `virtualenvwrapper`
+#### <a name="configure-venv" />Set up and configure virtual environment
+
+##### <a name="venv_20.04" />Virtual environment for Ubuntu 20.04
 
 **NOTE**: For Ubuntu 20.04 setting up a virtual environment is different:
 [How To Install Python 3 and Set Up a Programming Environment on an Ubuntu 20.04 Server](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server)
 
-Install Python 3.7 for Ubuntu 20.04:
+Install Python 3.7 for Ubuntu **20.04** (build from source):
 ```shell script
 sudo apt update  
 sudo apt upgrade -y
@@ -174,11 +179,14 @@ sudo make altinstall
 python3.7
 
 # Create virtual environment for Python 3.7 for Ubuntu 20.04
+cd ~
 python3.7 -m venv python3.7
-source python3.7/bin/activate
+source ~/python3.7/bin/activate
 ```
 
-Install virtual environment for Ubuntu 18.04:
+##### <a name="venv_20.04" />Virtual environment for Ubuntu 18.04
+
+Install virtual environment for Ubuntu **18.04**:
 ```shell script
 # Check version of virtual environment
 virtualenv --version
@@ -215,8 +223,9 @@ python -c "import tensorflow as tf;     \
     print(tf.reduce_sum(tf.random.normal([1000, 1000])));"
 
 # Install all other packages into myenv
-pip install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
-            scikit-image pandas ipython ipyparallel jupyter pyyaml
+conda install tensorflow-gpu matplotlib scipy opencv pillow \
+              scikit-learn scikit-image pandas ipython \
+              ipyparallel jupyter pyyaml graphviz
 
 # Install PyTorch if necessary
 # NOTE: check your installation here: https://pytorch.org/
@@ -294,8 +303,9 @@ conda info --envs
 source activate test
 
 # Install necessary packages with one line in activated 'test' environment
-conda install tensorflow-gpu matplotlib scipy opencv pillow scikit-learn \
-              scikit-image pandas ipython ipyparallel jupyter pyyaml -n test
+conda install tensorflow-gpu matplotlib scipy opencv pillow \
+              scikit-learn scikit-image pandas ipython \
+              ipyparallel jupyter pyyaml graphviz -n test
 
 # Update Anaconda if necessary
 conda update -n base -c defaults conda
@@ -331,8 +341,9 @@ python --version
 python3
 
 # Install necessary packages with one line in activated 'test' environment
-pip install tensorflow-gpu matplotlib scipy opencv-contrib-python Pillow \
-            scikit-learn scikit-image pandas ipython ipyparallel jupyter pyyaml
+pip install tensorflow-gpu matplotlib scipy opencv pillow \
+              scikit-learn scikit-image pandas ipython \
+              ipyparallel jupyter pyyaml graphviz
 
 # Deactivate 'test' environment
 deactivate
