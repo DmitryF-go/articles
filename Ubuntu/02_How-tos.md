@@ -11,6 +11,7 @@ How-to:
    - [Delete package](#delete)
    - [Exclude packages from `sudo apt upgrade`](#exclude-packages)
    - [Find file by name](#find)
+   - [Find files owned by the user](#find-user)
    - [Install deb file](#deb)
    - [Kill the tty](#tty-kill)
    - [List all environment variables](#printenv)
@@ -371,6 +372,19 @@ find ~/ -amin  -3 2> /dev/null  # accessed less than 3 minutes ago
 find ~/ -atime -3 -iname "*.png" 2> /dev/null  # accessed less than 3 days ago
 
 find . -iname "*.jpg" | wc -l    2>/dev/null  # count JPG files in the local dir
+```
+
+---
+### <a name="find-user" />Find files owned by the user
+
+[Find all the files owned by a particular user / group](https://www.cyberciti.biz/faq/how-do-i-find-all-the-files-owned-by-a-particular-user-or-group/)
+
+How to find files by users `vivek` and `wendy`
+```shell script
+# Match files only
+find / -type f -user vivek -o -user wendy
+# Match dirs only
+find / -type d -user vivek -o -user wendy
 ```
 
 ---

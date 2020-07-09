@@ -343,6 +343,9 @@ WantedBy=multi-user.target
 Remember to backup and delete obsolede and unnecessary user accounts.
 
 ```shell script
+# Find all directories owned by a particular user
+find / -user vozman -type d
+
 # Disable user accounts
 sudo usermod -L vozman
 sudo usermod -L romanroskach
