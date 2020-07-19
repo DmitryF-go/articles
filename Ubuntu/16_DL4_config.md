@@ -28,7 +28,7 @@ nano ~/.bashrc  # edit .bashrc file
 # the following to the end of ~/.bashrc file:
 export PATH="/home/lab225/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#eval "$(pyenv virtualenv-init -)"
 
 exec $SHELL  # restart shell
 pyenv update  # update
@@ -61,15 +61,14 @@ python --version  # get current Python version
 # Create virtual environment
 # pyenv virtualenv <python_version> <environment_name>
 pyenv virtualenv 3.8.4 myproject
-
 pyenv local myproject  # activate environment
-#pyenv global myproject  # set global environment
 pyenv deactivate  # deactivate environment
+
 ```
 
 For example, install Anaconda:
 
 ```shell script
 pyenv install anaconda3-2020.02
-
+pyenv global anaconda3-2020.02
 ```
