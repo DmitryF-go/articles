@@ -118,7 +118,7 @@ sudo apt install emacs
 #### <a name="filezilla" />FileZilla
 
 ```shell script
-sudo apt-get install filezilla
+sudo apt install filezilla
 filezilla &> /dev/null
 ```
 
