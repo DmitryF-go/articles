@@ -17,6 +17,7 @@ Periodically updated instructions:
    * [Keras and TensorFlow How-to and use](13_Keras_and_TensorFlow_how-tos.md)
    * [Install GSI openssh client (Ubuntu and Debian)](14_Install_GSI_openssh_client.md)
    * [Raspbian configuration instruction](15_Raspbian_configuration.md)
+   * [DL4 Ubuntu 20.04 configuration instructions](16_DL4_config.md)
 
 Not supported instructions in the `old` directory:
    * [TensorFlow installation](old/09_TensorFlow_installation.md)
