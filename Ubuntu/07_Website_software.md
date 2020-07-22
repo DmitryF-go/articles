@@ -36,6 +36,7 @@
    * [How To Edit the Sudoers File on Ubuntu and CentOS](https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos)
    * [Take Control of your Linux | sudoers file: How to with Examples](https://www.garron.me/en/linux/visudo-command-sudoers-file-sudo-default-editor.html)
    * [FilePermissionsACLs](https://help.ubuntu.com/community/FilePermissionsACLs)
+   * [Nagayoshi answer on StackOverflow](https://unix.stackexchange.com/a/584507/323648)
    * [My answer on AskUbuntu.com](https://askubuntu.com/a/1098707/672237)
 
 ### <a name="allow-execute" />Allow to execute `sudo` commands

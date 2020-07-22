@@ -2,7 +2,7 @@ Configurations I've made on DL4 server for **Ubuntu 20.04**.
 
    - [Install useful software](#software)
    - [`pyenv` virtual environment](#pyenv)
-   - [](#)
+   - [Shows PIDs of NVIDIA processes](#permissions)
 
 ---
 ## <a name="software" />Install useful software
@@ -119,4 +119,37 @@ pyenv local anaconda3-2020.02
 pyenv virtualenv anaconda3-2020.02 myproject2
 pyenv local myproject2  # activate environment
 conda --version  # check it
+```
+
+---
+## <a name="permissions" />Shows PIDs of NVIDIA processes
+
+Create and edit file with `visudo` editor
+in the directory `/etc/sudoers.d/`.
+
+```shell script
+# Create and edit file
+sudo visudo -f /etc/sudoers.d/show_nvidia_pid
+
+# Write these lines into the file /etc/sudoers.d/show_nvidia_pid
+
+# Members of the bioimage and genomics groups
+# can view NVIDIA processes
+User_Alias USERS = %bioimage, %genomics
+
+# $USER $HOST = (root) NOPASSWD: /the/absolute/path/to/your/command
+USERS ALL=NOPASSWD: /bin/fuser -v /dev/nvidia*
+```
+
+For more information about `sudoers.d` see
+[allow user permissions](07_Website_software.md#permissions).
+
+```shell script
+# Create alias for the command
+alias nvidia-show='sudo fuser -v /dev/nvidia*'
+
+# Or create nvidia-show executable file
+echo 'sudo fuser -v /dev/nvidia*' | sudo tee -a /usr/bin/nvidia-show
+sudo chmod u=rwx,g=rx,o=rx /usr/bin/nvidia-show
+ls -hal /usr/bin/nvidia-show /usr/bin/nvidia-smi  # check it
 ```
