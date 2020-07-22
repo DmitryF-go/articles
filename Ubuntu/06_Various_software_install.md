@@ -10,12 +10,14 @@
       - [Geeqie](#Geeqie)
       - [JebBrains IntelliJ](#IntelliJ)
       - [Notepad++](#notepad-plus-plus)
+      - [OpenSSH server](#openssh)
       - [PyCharm Community](#PyCharm)
       - [Tmux](#Tmux)
       - [Ubuntu Software Center](#Ubuntu-Software-Center)
       - [uTorrent](#uTorrent)
    - [Starting any process in background mode](#background-mode)
    - [Snap commands](#snap)
+   - [X2Go server/client](#x2go)
 
 ---
 ### <a name="task" />Task
@@ -168,6 +170,21 @@ sudo apt install snapd               # install Snap tool
 sudo apt install wine-stable         # install Wine tool
 sudo snap install notepad-plus-plus  # install Notepad++
 notepad-plus-plus &> /dev/null       # run Notepad++
+```
+
+----
+#### <a name="openssh" />OpenSSH server
+[Install OpenSSH server](https://www.cyberciti.biz/faq/ubuntu-linux-install-openssh-server/)
+for Ubuntu Linux.
+```shell script
+sudo apt install -y openssh-server
+sudo systemctl status ssh  # verify
+
+#sudo systemctl enable ssh
+#sudo systemctl start ssh
+#sudo ufw allow ssh
+#sudo ufw enable
+#sudo ufw status
 ```
 
 ----
@@ -334,4 +351,23 @@ sudo snap enable <package>
 sudo nano /etc/environment
 # Run environment file to effect changes.
 . /etc/environment
+```
+
+----
+#### <a name="x2go" />X2Go server/client
+Install X2Go [server](https://wiki.x2go.org/doku.php/doc:installation:x2goserver)
+and [client](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) software.
+```shell script
+# Install X2Go server
+sudo apt install -y software-properties-common
+sudo add-apt-repository ppa:x2go/stable
+sudo apt update
+sudo apt install -y x2goserver x2goserver-xsession
+sudo apt-get install -y x2gomatebindings  # if you use MATE/mubuntu
+sudo apt-get install -y x2golxdebindings  # if you use LXDE/lubuntu
+
+# Install X2Go client
+sudo apt-add-repository ppa:x2go/stable
+sudo apt update
+sudo apt install -y x2goclient
 ```
