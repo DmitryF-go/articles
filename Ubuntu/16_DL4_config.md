@@ -146,7 +146,7 @@ For more information about `sudoers.d` see
 
 ```shell script
 # Create alias for the command
-alias nvidia-show='sudo fuser -v /dev/nvidia*'
+alias nvidia-pids='sudo fuser -v /dev/nvidia*'
 
 # Or create nvidia-show executable file
 echo 'sudo fuser -v /dev/nvidia*' | sudo tee -a /usr/bin/nvidia-show
