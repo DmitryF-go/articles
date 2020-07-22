@@ -59,7 +59,7 @@ sudo apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
 libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
 xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
 
-sudo apt install libedit-dev
+sudo apt install -y libedit-dev
 
 # The automatic installer
 curl https://pyenv.run | bash
@@ -68,7 +68,7 @@ nano ~/.bashrc  # edit .bashrc file
 
 # Load pyenv automatically by adding
 # the following to the end of ~/.bashrc file:
-export PATH="/home/lab225/.pyenv/bin:$PATH"
+export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
