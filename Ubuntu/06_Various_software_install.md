@@ -363,11 +363,16 @@ sudo apt install -y software-properties-common
 sudo add-apt-repository ppa:x2go/stable
 sudo apt update
 sudo apt install -y x2goserver x2goserver-xsession
-sudo apt-get install -y x2gomatebindings  # if you use MATE/mubuntu
-sudo apt-get install -y x2golxdebindings  # if you use LXDE/lubuntu
+sudo apt install -y x2gomatebindings  # if you use MATE/mubuntu
+sudo apt install -y x2golxdebindings  # if you use LXDE/lubuntu
 
 # Install X2Go client
 sudo apt-add-repository ppa:x2go/stable
 sudo apt update
 sudo apt install -y x2goclient
+
+# Install LXDE, Lightweight X11 Desktop Environment
+# for X2Go remote sessions.
+# Set lightdm display manager in the appeared config window.
+sudo apt install -y lxde
 ```
