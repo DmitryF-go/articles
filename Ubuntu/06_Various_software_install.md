@@ -12,6 +12,7 @@
       - [Notepad++](#notepad-plus-plus)
       - [OpenSSH server](#openssh)
       - [PyCharm Community](#PyCharm)
+      - [TeamViewer Host](#teamviewer)
       - [Tmux](#Tmux)
       - [Ubuntu Software Center](#Ubuntu-Software-Center)
       - [uTorrent](#uTorrent)
@@ -204,6 +205,15 @@ pycharm-community &> /dev/null  # run it in background mode
 # canberra-gtk-module translates GTK+ widgets signals to event sounds
 # This module is needed for PyCharm successful start
 sudo apt install libcanberra-gtk-module
+```
+
+----
+#### <a name="teamviewer" />TeamViewer Host
+[Download](https://www.teamviewer.com/en/download/linux)
+deb package for TeamViewer **Host**.
+```shell script
+sudo apt install -y ./teamviewer-host_15.7.6_amd64.deb
+teamviewer  # launch and configure TeamViewer
 ```
 
 ----
